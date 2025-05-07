@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.CommandDataParams
+    name: CommandDataParams
+    fullName: CommandDataParams
+    children:
+      - Api.Js.SxcJs.CommandDataParams.contentType
+      - Api.Js.SxcJs.CommandDataParams.filters
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Parameters used for the command `data`.
+      <br>
+      The content-type name determines what items will be managed.
+      <br>
+      ⤴️ back to [All Command Names](xref:Api.Js.SxcJs.CommandNames)
+    extends:
+      name: Api.Js.SxcJs.CommandContentTypeParams
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandDataParams.contentType
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The content-type name
+    syntax:
+      content: 'contentType: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandDataParams.filters
+    name: filters
+    fullName: filters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Filters to apply to the list of items.
+
+      <br>
+
+      Each property targets a field.
+
+      The value is a string, number or array for filtering EntityIds or
+      EntityGuids
+    optional: true
+    syntax:
+      content: 'filters?: Record<string, string | number | string[] | number[]>'
+      return:
+        type:
+          - 'Record<string, string | number | string[] | number[]>'
+        description: ''
+    package: Api.Js.SxcJs
+references:
+  - uid: Api.Js.SxcJs.CommandContentTypeParams
+    name: CommandContentTypeParams
+    spec.typeScript:
+      - name: CommandContentTypeParams
+        fullName: CommandContentTypeParams
+        uid: Api.Js.SxcJs.CommandContentTypeParams

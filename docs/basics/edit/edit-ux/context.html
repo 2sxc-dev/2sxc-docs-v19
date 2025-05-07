@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>In-Page Editing Context (technical) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="In-Page Editing Context (technical) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/edit/edit-ux/context.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Browser.EditUx.EditContext">
+<h1 id="in-page-editing-context-technical">In-Page Editing Context (technical)</h1>
+
+<p>To ensure that client-side commands like <em>edit</em> can work (this includes all toolbar functionalities), the in-page scripts must pick up various things like AppId and more. This is provided as an <strong>Edit-Context</strong> and looks a bit like this:</p>
+<pre><code class="lang-html">&lt;div data-edit-context='{
+  &quot;Environment&quot;:{&quot;WebsiteId&quot;:0,&quot;WebsiteUrl&quot;:&quot;//.../en/&quot;,&quot;PageId&quot;:56,&quot;PageUrl&quot;:&quot;http://.../en/&quot;,&quot;parameters&quot;:[{&quot;Key&quot;:&quot;TabId&quot;,&quot;Value&quot;:&quot;56&quot;},{&quot;Key&quot;:&quot;language&quot;,&quot;Value&quot;:&quot;en-US&quot;}],&quot;InstanceId&quot;:421,&quot;SxcVersion&quot;:&quot;9.30.0.40333&quot;,&quot;SxcRootUrl&quot;:&quot;/&quot;,&quot;IsEditable&quot;:true},
+  &quot;User&quot;:{&quot;CanDesign&quot;:true,&quot;CanDevelop&quot;:true},
+  &quot;Language&quot;:{&quot;Current&quot;:&quot;en-us&quot;,&quot;Primary&quot;:&quot;en-us&quot;,&quot;All&quot;:[]},
+  &quot;ContentBlock&quot;:{&quot;ShowTemplatePicker&quot;:true,&quot;IsEntity&quot;:false,&quot;VersioningRequirements&quot;:&quot;DraftOptional&quot;,&quot;Id&quot;:421,&quot;ParentFieldName&quot;:null,&quot;ParentFieldSortOrder&quot;:0,&quot;PartOfPage&quot;:true},
+  &quot;ContentGroup&quot;:{&quot;IsCreated&quot;:true,&quot;IsList&quot;:false,&quot;TemplateId&quot;:3770,&quot;QueryId&quot;:null,&quot;ContentTypeName&quot;:&quot;e2351b42-87f2-427e-9566-ff271e3e5a9f&quot;,&quot;AppUrl&quot;:&quot;/Portals/0/2sxc/Content&quot;,&quot;AppSettingsId&quot;:null,&quot;AppResourcesId&quot;:null,&quot;IsContent&quot;:true,&quot;HasContent&quot;:true,&quot;SupportsAjax&quot;:true,&quot;ZoneId&quot;:2,&quot;AppId&quot;:2,&quot;Guid&quot;:&quot;c238e78b-a6e5-4811-a5c9-51d5ebf48b39&quot;,&quot;Id&quot;:3894},
+  &quot;error&quot;:{&quot;type&quot;:null},
+  &quot;Ui&quot;:{&quot;AutoToolbar&quot;:true}}'&gt;
+  &lt;span&gt;more stuff...&lt;/span&gt;
+&lt;/div&gt;
+
+</code></pre>
+<h2 id="how-the-edit-context-is-added">How the Edit-Context is Added</h2>
+<p>By default, it is automatically added if the system detects that the current user has edit-permissions. In 2sxc 9.30 a feature was added to add the context in code, using the <a class="xref" href="../../../net-code/razor/edit.enable.html">Edit.Enable(...)</a> command.</p>
+<h2 id="inner-context-for-inner-content">Inner-Context for Inner Content</h2>
+<p>When <a class="xref" href="../../cms/inner-content/index.html">inner content</a> is used, each block of inner-content will change the context, because it will have different IDs etc. So inner-content blocks will add their own context-attributes. See also [Edit.ContextAttributes](xref:Razor.ContextAttributes].</p>
+<h2 id="how-js-picks-up-the-context">How JS Picks up the Context</h2>
+<p>In most cases the context is picked up automatically - like in such a code:</p>
+<pre><code class="lang-html">&lt;a onclick=&quot;$2sxc(this).run('edit', ...)&quot;&gt;edit&lt;/a&gt;
+</code></pre>
+<p>This kind of code traverses the HTML to look for the closes context-node, and uses it to figure out everything automatically.</p>
+<p>The second auto-pickup method uses the module/content-block ID, like this:</p>
+<pre><code class="lang-html">&lt;a onclick=&quot;$2sxc(4203).run('edit', ...)&quot;&gt;edit&lt;/a&gt;
+</code></pre>
+<p>This will also find the context, but instead of traversing the DOM upwards, it will check all DOM objects on the page and find the appropriate one for this ID.</p>
+<h2 id="whats-in-the-context">What's in the Context</h2>
+<p>This information is just conceptual. <em>Do NOT try to access these values in your code, because they will change, and it's not part of any public API!</em>.</p>
+<p>The concept contains things like:</p>
+<ol>
+<li>versions (so that the UI can behave as needed and correctly load scripts with cache-breaking)</li>
+<li>urls so the GUI can perform certain actions correctly</li>
+<li>language information for the GUI</li>
+<li>various IDs like the current zone/app, item-IDs, module-IDs etc.</li>
+</ol>
+<h2 id="using-edit-context-in-your-code">Using Edit Context in Your Code</h2>
+<p>You should not use this in your code, as it's not a public api and will change from time to time.</p>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 1.0</li>
+<li>constantly modified/extended in future versions</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/edit/edit-ux/context.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

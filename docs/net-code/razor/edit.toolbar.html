@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title> and  Methods in Razor / .net | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" and  Methods in Razor / .net | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/edit.toolbar.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Razor.Edit.Toolbar">
+<h1 id="-and--methods-in-razor--net">@Edit.TagToolbar and @Edit.Toolbar Methods in Razor / .net</h1>
+
+<p>2sxc has a cool in-page toolbar system - here you'll find a <a class="xref" href="../../basics/edit/edit-ux/toolbars/index.html">conceptual overview around the toolbar</a>. These toolbars are usually hover-buttons like this:</p>
+<p><img src="../../pages/net-code/razor/assets/example-hover-toolbar.png" alt="hover inline toolbar example"></p>
+<p>Technically the entire Edit-UI is JavaScript based, so all the buttons, events etc. are client side scripts. Writing this JS would be complicated to say the least, so the <code>@Edit.TagToolbar(...)</code> and <code>@Edit.Toolbar(...)</code> are your tools of choice for adding toolbars from Razor.</p>
+<div style="background: #0088F444; overflow: auto">
+  <img src="../../shared/tutorials/assets/razor.png" width="200px" style="padding-right: 20px; float: left">
+  <div style="font-size: x-large;font-weight: bold; margin-bottom: 20px;">
+    Discover More in the Razor Tutorials
+  </div>
+<p>We have an rich series of <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor">Razor tutorials</a>. You should really check them out 👍.</p>
+</div>
+<br>
+<h2 id="how-to-use">How to use</h2>
+<p>Here's a quick example of using the <code>Edit</code> object in a Razor template:</p>
+<pre><code class="lang-razor">&lt;h1 @Edit.TagToolbar(Content)&gt;
+  @Content.Title
+&lt;/h1&gt;
+</code></pre>
+<p>This example will output the item title in an <code>h1</code> tag and add a hidden, appear-on-mouse-over toolbar with editing-buttons for the item named <code>Content</code>.</p>
+<p>Let's assume you're building the details-page of a news-app and you only want the edit/remove buttons, to improve the UI for your use case. Additionally, you want the mouse-hover to react on the whole article, not just oven the title. Here's how:</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>2sxc 10.27 introduces a new, simpler API to customize the toolbar.
+So the instructions below are technically correct, but not recommended any more.
+Check out the <a class="xref" href="../../js-code/toolbars/simple.html">much simpler toolbar customizations</a></p>
+</div>
+<pre><code class="lang-razor">@* this will show an &quot;edit and remove&quot; button for the current item *@
+&lt;div @Edit.TagToolbar(Content, actions: &quot;edit,remove&quot;)&gt;
+  &lt;h1&gt;
+    @Content.Title
+  &lt;/h1&gt;
+  @Html.Raw(Content.Body)
+&lt;/div&gt;
+</code></pre>
+<p>Here's a different example, how to create a toolbar with only one button, namely an <em>add new item</em> button to create a new BlogPost-item.</p>
+<pre><code class="lang-razor">@* this will show an &quot;add&quot; button if the current user is an editor *@
+&lt;h1 @Edit.TagToolbar(actions: &quot;new&quot;, contentType: &quot;BlogPost&quot;)&gt;
+  @Content.Title
+&lt;/h1&gt;
+</code></pre>
+<p>As you can see, the <code>actions: &quot;new&quot;</code> tells the toolbar to only show this one button, while the <code>contentType: &quot;BlogPost&quot;</code> says what content-type this new item should be. As this toolbar won't have buttons that modify an existing item, it doesn't need that parameter.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>This command is part of the <a class="xref" href="edit.html">Edit</a> object and used in Razor templates. It provides a simple API to generate in-page buttons if the current user is an editor.</p>
+<p>It also checks if edit should be enabled (based on security specs) and will then generate some HTML/JavaScript at that location.</p>
+<h2 id="common-tasks">Common Tasks</h2>
+<p>Here are a few snippets that you'll typically need, saving you from reading all the docs in common scenarios:</p>
+<ol>
+<li><code>Edit.Toolbar(employee)</code> creates a default toolbar for the content-item <code>employee</code> with all default buttons like edit, change-view, more, etc.</li>
+<li><code>Edit.Toolbar(employee, actions: &quot;edit&quot;)</code> creates a toolbar for the item <code>employee</code> but only with the <code>edit</code>-button.</li>
+<li><code>Edit.Toolbar(employee, actions: &quot;edit,add,remove&quot;)</code> creates a toolbar with three buttons <code>edit</code>, <code>add</code>, <code>remove</code></li>
+<li><code>Edit.Toolbar(actions: &quot;new&quot;, contentType: &quot;BlogPost&quot;)</code> creates a toolbar with one button, namely <code>new</code> which will open a new <code>BlogPost</code> form.</li>
+<li><code>@Edit.Toolbar(actions: &quot;new&quot;, contentType: &quot;BlogPost&quot;,  prefill: new { Title = &quot;Hello&quot;, Color = &quot;red&quot; } )</code> creates a toolbar with one button, namely <code>new</code> which will open a new <code>BlogPost</code> form, and prefills the <code>Title</code> and <code>Color</code> field.</li>
+</ol>
+<h2 id="the-toolbar-actions">The Toolbar Actions</h2>
+<p><em>Note:</em> at the moment, the buttons are grouped into bundles like</p>
+<ol>
+<li>initial buttons</li>
+<li>list buttons</li>
+<li>template / view buttons</li>
+<li>app buttons</li>
+</ol>
+<p>The actions can be a combination of known button-names. Here's the current <a class="xref" href="../../js-code/commands/index.html">JavaScript catalog of commands</a>:</p>
+<p>The following commands all require <code>target</code> to be set, or they only make sense in a List-setup - see also <a class="xref" href="https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content">content and not as data</a>.</p>
+<ol>
+<li><code>new</code> open a dialog to create a new item, requires a <code>target</code> <em>or</em> a <code>contentType</code> parameter</li>
+<li><code>edit</code> to edit the current item</li>
+<li><code>publish</code> will optionally show the publish-button, but only if the current item is not published.</li>
+<li><code>add</code> opens a dialog to create a new item just like new, but will add it below the current item in the <a class="xref" href="https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content">content list</a></li>
+<li><code>remove</code> will remove (not delete) this item from the <a class="xref" href="https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content">content list</a></li>
+<li><code>moveup</code> will move the item up one position in the <a class="xref" href="https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content">content list</a></li>
+<li><code>movedown</code> will move the item down one position in the <a class="xref" href="https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content">content list</a></li>
+<li><code>sort</code> will open the sort dialog of the <a class="xref" href="https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content">content list</a></li>
+<li><code>replace</code> will open a dialog to swap the current item in the
+<a class="xref" href="https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content">content list</a></li>
+</ol>
+<p><em>Note: the command <code>metadata</code> - is a bit special, not supported in the <code>actions</code> parameter - use the complex  <code>toolbar:</code> instead and read the instructions for the <a class="xref" href="../../js-code/commands/index.html">JS Commands</a>.</em></p>
+<p>For many more commands you should check the <a class="xref" href="../../js-code/commands/index.html">JS Commands</a>), which covers many more like <code>app-import</code>, <code>layout</code>, <code>develop</code>, <code>contenttype</code>, <code>contentitems</code>, <code>app</code>, <code>zone</code>, <code>more</code> etc.</p>
+<h2 id="more-about-the-prefill">More About the Prefill</h2>
+<p>Basically this is a .net object which will be serialized to JSON and used to prefill a new item. Usually you'll just create a new, anonymous object like <code>new { Title = &quot;xyz&quot;, Date = ... }</code>.</p>
+<p>example</p>
+<pre><code class="lang-Razor">@Edit.Toolbar(actions: &quot;new&quot;, 
+  contentType: &quot;BlogPost&quot;, 
+  prefill: new { Title = &quot;Hello&quot;, Color = &quot;red&quot;, Link = &quot;page:&quot; + Dnn.Tab.TabID } )
+</code></pre>
+<p>This example will prefill the title, the color and in the link field add a reference to the current page.</p>
+<h2 id="multiple-entities-prefil">Multiple Entities Prefil</h2>
+<p>For this you must simply provide an array of strings, like this:</p>
+<pre><code class="lang-Razor">@Edit.Toolbar(actions: &quot;new&quot;, contentType: &quot;BlogPost&quot;, prefill: new { Tags = new string[] {&quot;08387a10-1aac-494a-9eb5-1383e31490eb&quot;,&quot;b498a694-047a-4e51-a285-50f9a64edda1&quot;} })
+</code></pre>
+<h2 id="styling-the-toolbar">Styling the Toolbar</h2>
+<p>As of now there are only limited stying functions:</p>
+<h3 id="floating-the-toolbar">Floating the Toolbar</h3>
+<p>This happens automatically, if a surrounding HTML-tag has a class &quot;sc-element&quot;. <a href="http://2sxc.org/en/Docs-Manuals/Feature/feature/2875">more...</a></p>
+<h2 id="what-really-happens-with-the-toolbar">What Really Happens with the toolbar</h2>
+<p>As previously noted, the toolbar actually puts some html/js into the page, which the javascript <a class="xref" href="../../api/js/SxcGlobal.html#Api_Js_SxcJs_SxcGlobal">$2sxc</a> object will pick up and work with. Quite a lot happens on the client, and that will be documented some other day. Here just the short version:</p>
+<ol>
+<li>js runs, picks up Toolbars</li>
+<li>jc reviews DOM to see what context it's in (either the module-instance or an inner-content)</li>
+<li>js generates buttons</li>
+<li>if a button is clicked, an action-manager then executes the correct action on the correct item</li>
+</ol>
+<h2 id="older--syntax-is-deprecated">Older @Content.Toolbar Syntax Is Deprecated</h2>
+<p><em>Note</em>: there was an older <code>@SomeContentItem.Toolbar</code> syntax and this still works, but we ran into architecture issues, so we decided to place all advanced functions into the <code>Edit.Toolbar(...)</code> method. This is the way to go from now on, the old syntax will continue to work but is not recommended any more.</p>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a class="xref" href="../../js-code/toolbars/index.html">In-Page Edit Toolbars and Buttons</a></li>
+<li><a class="xref" href="../../js-code/toolbars/settings.html">Toolbar Settings</a></li>
+<li><a class="xref" href="../../js-code/toolbars/buttons.html">Toolbar Button Definitions</a></li>
+</ul>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<ul>
+<li><a href="http://2sxc.org/en/apps/app/faq-with-categories-and-6-views">FAQ with Categories</a></li>
+</ul>
+<p>More links: <a href="http://2sxc.org/en/Docs-Manuals/Feature/feature/2683">Description of the feature on 2sxc docs</a></p>
+<h2 id="history">History</h2>
+<ol>
+<li>.Toolbar() Introduced in 2sxc 8.04</li>
+<li>.TagToolbar() introduced in 2sxc 9.40</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/edit.toolbar.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

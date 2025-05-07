@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IPageService | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IPageService | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc/new/develop/apiSpec/new?filename=ToSic_Sxc_Services_IPageService.md&amp;value=---%0Auid%3A%20ToSic.Sxc.Services.IPageService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.IPageService">
+
+
+
+  <h1 id="ToSic_Sxc_Services_IPageService" data-uid="ToSic.Sxc.Services.IPageService" class="text-break">
+Interface IPageService  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService_TurnOn.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Sxc.html">Sxc</a>.<a class="xref" href="ToSic.Sxc.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Sxc.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Page"><code>Kit.Page</code></a> to make changes to the page - usually from Razor.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+public interface IPageService</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="ToSic_Sxc_Services_IPageService_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>History</p>
+<ul>
+<li>Introduced in v12.02 but on another namespace which still works for compatibility</li>
+<li>Moved to ToSic.Sxc.Services in v13</li>
+<li>Added ability to use placeholder <code>[original]</code> in v13.11</li>
+<li>Most commands were updated to return an empty string in v14.02 so that they could be used as inline razor (previously <code>void</code>)</li>
+</ul>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ToSic_Sxc_Services_IPageService_Activate_" data-uid="ToSic.Sxc.Services.IPageService.Activate*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_Activate_System_String___" data-uid="ToSic.Sxc.Services.IPageService.Activate(System.String[])">
+  Activate(params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService_Features.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activate a feature on this page, such as <code>turnOn</code>, <code>2sxc.JsCore</code> etc.
+For list of features, see <a class="xref" href="../../net-code/services/page/page-service-activate.html">Page Service to Activate Features &amp; WebResources (JS, CSS, etc.)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Activate(params string[] keys)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>One or more strings containing Page-Feature keys</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.Activate(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_Activate_" data-uid="ToSic.Sxc.Services.IPageService.Activate*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_Activate_ToSic_Lib_Coding_NoParamOrder_System_Boolean_System_String___" data-uid="ToSic.Sxc.Services.IPageService.Activate(ToSic.Lib.Coding.NoParamOrder,System.Boolean,System.String[])">
+  Activate(NoParamOrder, bool, params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService_Features.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activate a feature on this page, such as <code>turnOn</code>, <code>2sxc.JsCore</code> etc.
+For list of features, see <a class="xref" href="../../net-code/services/page/page-service-activate.html">Page Service to Activate Features &amp; WebResources (JS, CSS, etc.)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Activate(NoParamOrder noParamOrder = default, bool condition = true, params string[] features)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Condition to determine if activation should happen</p>
+</dd>
+    <dt><code>features</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>One or more strings containing Page-Feature keys</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.Activate(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_IPageService_Activate_ToSic_Lib_Coding_NoParamOrder_System_Boolean_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>This overload with <code>condition</code> added in v15.03</li>
+</ul>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddCsp_" data-uid="ToSic.Sxc.Services.IPageService.AddCsp*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddCsp_System_String_System_String___" data-uid="ToSic.Sxc.Services.IPageService.AddCsp(System.String,System.String[])">
+  AddCsp(string, params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService_Security.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a CSP rule where you also specify the name.
+Best check the <a class="xref" href="../../abyss/security/csp/index.html">CSP Guide</a>.</p>
+<p>For an example, see <a class="xref" href="../../abyss/security/csp/coded-rules.html">Coded CSP</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddCsp(string name, params string[] values)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddCsp(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddIcon_" data-uid="ToSic.Sxc.Services.IPageService.AddIcon*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddIcon_System_String_ToSic_Lib_Coding_NoParamOrder_System_String_System_Int32_System_String_" data-uid="ToSic.Sxc.Services.IPageService.AddIcon(System.String,ToSic.Lib.Coding.NoParamOrder,System.String,System.Int32,System.String)">
+  AddIcon(string, NoParamOrder, string, int, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add an Icon header tag to the Page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddIcon(string path, NoParamOrder noParamOrder = default, string rel = &quot;&quot;, int size = 0, string type = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path to the image/icon file</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>rel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the rel-text, default is 'icon'. common terms are also 'shortcut icon' or 'apple-touch-icon'</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Will be used in size='#x#' tag; only relevant if you want to provide multiple separate sizes</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>An optional type. If not provided, will be auto-detected from known types or remain empty</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddIcon(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddIconSet_" data-uid="ToSic.Sxc.Services.IPageService.AddIconSet*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddIconSet_System_String_ToSic_Lib_Coding_NoParamOrder_System_Object_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_Int32__" data-uid="ToSic.Sxc.Services.IPageService.AddIconSet(System.String,ToSic.Lib.Coding.NoParamOrder,System.Object,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Int32})">
+  AddIconSet(string, NoParamOrder, object, IEnumerable&lt;string&gt;, IEnumerable&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a set of icons to the page</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddIconSet(string path, NoParamOrder noParamOrder = default, object favicon = null, IEnumerable&lt;string&gt; rels = null, IEnumerable&lt;int&gt; sizes = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path to the image/icon file</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>favicon</code> <span class="xref">object</span></dt>
+    <dd><p>path to favicon, default is '/favicon.ico'</p>
+</dd>
+    <dt><code>rels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>sizes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddIconSet(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddJsonLd_" data-uid="ToSic.Sxc.Services.IPageService.AddJsonLd*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddJsonLd_System_Object_" data-uid="ToSic.Sxc.Services.IPageService.AddJsonLd(System.Object)">
+  AddJsonLd(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a JSON-LD header according <a href="https://developers.google.com/search/docs/guides/intro-structured-data">https://developers.google.com/search/docs/guides/intro-structured-data</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddJsonLd(object jsonObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jsonObject</code> <span class="xref">object</span></dt>
+    <dd><p>A object which will be converted to JSON. We recommend using dictionaries to build the object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddJsonLd(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddJsonLd_" data-uid="ToSic.Sxc.Services.IPageService.AddJsonLd*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddJsonLd_System_String_" data-uid="ToSic.Sxc.Services.IPageService.AddJsonLd(System.String)">
+  AddJsonLd(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a JSON-LD header according <a href="https://developers.google.com/search/docs/guides/intro-structured-data">https://developers.google.com/search/docs/guides/intro-structured-data</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddJsonLd(string jsonString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jsonString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A prepared JSON string</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddJsonLd(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddMeta_" data-uid="ToSic.Sxc.Services.IPageService.AddMeta*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddMeta_System_String_System_String_" data-uid="ToSic.Sxc.Services.IPageService.AddMeta(System.String,System.String)">
+  AddMeta(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a standard meta header tag.
+You may also want to use <a class="xref" href="ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_AddOpenGraph_System_String_System_String_">AddOpenGraph(string, string)</a> or <a class="xref" href="ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_AddJsonLd_System_String_">AddJsonLd(string)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddMeta(string name, string content)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddMeta(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddOpenGraph_" data-uid="ToSic.Sxc.Services.IPageService.AddOpenGraph*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddOpenGraph_System_String_System_String_" data-uid="ToSic.Sxc.Services.IPageService.AddOpenGraph(System.String,System.String)">
+  AddOpenGraph(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add an open-graph header according to <a href="http://ogp.me/">http://ogp.me/</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddOpenGraph(string property, string content)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>property</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Open Graph property name, like title or image:width. 'og:' is automatically prefixed if not included</p>
+</dd>
+    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>value of this property</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddOpenGraph(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddToHead_" data-uid="ToSic.Sxc.Services.IPageService.AddToHead*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddToHead_System_String_" data-uid="ToSic.Sxc.Services.IPageService.AddToHead(System.String)">
+  AddToHead(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a tag to the header of the page
+Will simply not do anything if an error occurs, like if the page object doesn't exist</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddToHead(string tag)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddToHead(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AddToHead_" data-uid="ToSic.Sxc.Services.IPageService.AddToHead*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AddToHead_ToSic_Razor_Blade_IHtmlTag_" data-uid="ToSic.Sxc.Services.IPageService.AddToHead(ToSic.Razor.Blade.IHtmlTag)">
+  AddToHead(IHtmlTag)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a RazorBlade Tag to the headers of the page
+Will simply not do anything if an error occurs, like if the page object doesn't exist</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AddToHead(IHtmlTag tag)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tag</code> <a class="xref" href="https://razor-blade.net/api/ToSic.Razor.Blade.IHtmlTag.html">IHtmlTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.AddToHead(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_AssetAttributes_" data-uid="ToSic.Sxc.Services.IPageService.AssetAttributes*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_AssetAttributes_ToSic_Lib_Coding_NoParamOrder_System_Boolean_System_Int32_System_String_System_Boolean_" data-uid="ToSic.Sxc.Services.IPageService.AssetAttributes(ToSic.Lib.Coding.NoParamOrder,System.Boolean,System.Int32,System.String,System.Boolean)">
+  AssetAttributes(NoParamOrder, bool, int, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService_Security.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add common html attributes to a <code>script</code> or <code>link</code> tag to <a class="xref" href="../../basics/server/asset-optimization/index.html">enable optimizations</a>
+and <a class="xref" href="../../abyss/security/csp/parts.html#auto-white-listing-explicit">automatically whitelist in the Content Security Policy</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRawHtmlString AssetAttributes(NoParamOrder noParamOrder = default, bool optimize = true, int priority = 0, string position = null, bool whitelist = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>optimize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Activate optimize, default is true</p>
+</dd>
+    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Optional priority of optimization. Must be more than 100 to have an effect.</p>
+</dd>
+    <dt><code>position</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional position of the resource (<code>head</code>, <code>body</code>, <code>bottom</code>)</p>
+</dd>
+    <dt><code>whitelist</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Automatically add to CSP-whitelist. This uses a random key to protect against XSS.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IRawHtmlString</span></dt>
+    <dd><p>The asset attributes in a format which will be preserved in HTML</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_IPageService_AssetAttributes_ToSic_Lib_Coding_NoParamOrder_System_Boolean_System_Int32_System_String_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>History: Created in 2sxc 13.10</p>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_SetBase_" data-uid="ToSic.Sxc.Services.IPageService.SetBase*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_SetBase_System_String_" data-uid="ToSic.Sxc.Services.IPageService.SetBase(System.String)">
+  SetBase(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a standard base header tag or replace it if one is already provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SetBase(string url = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the optional url for the base tag - if null, will try to default to the real url for the current page</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.SetBase(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_SetDescription_" data-uid="ToSic.Sxc.Services.IPageService.SetDescription*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_SetDescription_System_String_System_String_" data-uid="ToSic.Sxc.Services.IPageService.SetDescription(System.String,System.String)">
+  SetDescription(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the Page Description.
+It will either try to replace the placeholder (second parameter)
+or <em>prefix</em> it to the existing description (unless <code>[original]</code> is given).</p>
+<p>See also the details with placeholder or <code>[original]</code> as explained on <a class="xref" href="ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_SetTitle_System_String_System_String_">SetTitle(string, string)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SetDescription(string value, string placeholder = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>placeholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.SetDescription(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_SetHttpStatus_" data-uid="ToSic.Sxc.Services.IPageService.SetHttpStatus*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_SetHttpStatus_System_Int32_System_String_" data-uid="ToSic.Sxc.Services.IPageService.SetHttpStatus(System.Int32,System.String)">
+  SetHttpStatus(int, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the page status code if possible (it will work in DNN, but probably not in Oqtane)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SetHttpStatus(int statusCode, string message = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>statusCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An HTTP status code like 404</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Message / Description text (optional) which would be included in the header</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.SetHttpStatus(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_SetKeywords_" data-uid="ToSic.Sxc.Services.IPageService.SetKeywords*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_SetKeywords_System_String_System_String_" data-uid="ToSic.Sxc.Services.IPageService.SetKeywords(System.String,System.String)">
+  SetKeywords(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the Page Keywords.
+It will either try to replace the placeholder (second parameter)
+or <em>prefix</em> it to the existing keywords  (unless <code>[original]</code> is given).</p>
+<p>See also the details with placeholder or <code>[original]</code> as explained on <a class="xref" href="ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_SetTitle_System_String_System_String_">SetTitle(string, string)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SetKeywords(string value, string placeholder = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>placeholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.SetKeywords(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_SetTitle_" data-uid="ToSic.Sxc.Services.IPageService.SetTitle*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_SetTitle_System_String_System_String_" data-uid="ToSic.Sxc.Services.IPageService.SetTitle(System.String,System.String)">
+  SetTitle(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the Page Title. Behavior:</p>
+<ul>
+<li>By default it will <em>prefix</em> the new title - <code>SetTitle('My New Title - ')</code> = <code>My New Title - Blog - 2sxc.org</code></li>
+<li>You can also use the new <code>[original]</code> token like <code>SetTitle('[original] - My New Title')</code> = <code>Blog - 2sxc.org - My New Title</code></li>
+<li>You can add a placeholder to the page-title and tell SetTitle what it is. <code>SetTitle('My New Title', '2sxc.org') = </code>Blog - My New Title`</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SetTitle(string value, string placeholder = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>placeholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Empty string, so it can be used on inline razor such as <code>@Kit.Page.SetTitle(...)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IPageService_TurnOn_" data-uid="ToSic.Sxc.Services.IPageService.TurnOn*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IPageService_TurnOn_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Object_System_Object_System_Collections_Generic_IEnumerable_System_Object__System_Boolean_System_Nullable_System_Boolean__System_String_" data-uid="ToSic.Sxc.Services.IPageService.TurnOn(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Object,System.Object,System.Collections.Generic.IEnumerable{System.Object},System.Boolean,System.Nullable{System.Boolean},System.String)">
+  TurnOn(object, NoParamOrder, object, object, IEnumerable&lt;object&gt;, bool, bool?, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService_TurnOn.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turn on some javascript code when all requirements have been met.
+Uses <a class="xref" href="../../js-code/turn-on/index.html">turnOn</a>.</p>
+<p>Will automatically activate the feature and set hidden data on the page for the turnOn JS to pick up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string TurnOn(object runOrSpecs, NoParamOrder noParamOrder = default, object require = null, object data = null, IEnumerable&lt;object&gt; args = null, bool condition = true, bool? noDuplicates = null, string addContext = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runOrSpecs</code> <span class="xref">object</span></dt>
+    <dd><ul>
+<li>either a run <code>string</code> like <code>window.myObject.myJs()</code> (must always start with window)</li>
+<li>or an object containing all the parameters which turnOn requires</li>
+</ul>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>require</code> <span class="xref">object</span></dt>
+    <dd><p><em>optional</em> One or more requirements which must be met before the code starts.
+Can be one or many values and/or functions.</p>
+<ul>
+<li>a <code>string</code> such as <code>window.myObject</code> or <code>window.myObject.readyToStart()</code></li>
+<li>an array of such strings</li>
+</ul>
+</dd>
+    <dt><code>data</code> <span class="xref">object</span></dt>
+    <dd><p><em>optional</em> any value such as a string, or an object - to pass into the run-command</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">dynamic</span>&gt;</dt>
+    <dd><p><em>optional</em> array of values to pass to the run function (new v18.00)</p>
+</dd>
+    <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><em>optional</em> condition when this should happen - if false, it won't add anything (new v16.02)</p>
+</dd>
+    <dt><code>noDuplicates</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>Will not add this turnOn if an identical one is already added to the page (new 16.05)</p>
+</dd>
+    <dt><code>addContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><em>optional</em> when <code>args</code> is used, the context is usually not needed or given.
+If you do need it, it can be merged with data (if that's also provided and is an object - so use <code>data</code>) or added to the end of the args list <code>end</code>.
+(new v18.00)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>An empty string, just so you can use it directly in Razor like <code>@Kit.Page.TurnOn(&quot;...&quot;)</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_IPageService_TurnOn_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Object_System_Object_System_Collections_Generic_IEnumerable_System_Object__System_Boolean_System_Nullable_System_Boolean__System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>Added in v15.x</li>
+<li><code>condition</code> added in 16.02</li>
+<li><code>noDuplicates</code> added in 16.05</li>
+<li><code>args</code> and <code>addContext</code> added in v18.0</li>
+</ul>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/PageService/IPageService_TurnOn.cs/#L3" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

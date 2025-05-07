@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Razor File Names | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Razor File Names | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/file-names.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Razor.FileNames">
+<h1 id="razor-file-names">Razor File Names</h1>
+
+<p>Topics</p>
+<ul>
+<li><a href="#underscore-prefix">Underscore Prefix</a></li>
+<li><a href="#spaces-in-file-names">Spaces</a></li>
+<li><a href="#casing">Casing</a></li>
+<li><a href="#naming-partial-files">Partial Files</a></li>
+</ul>
+<h2 id="underscore-prefix">Underscore Prefix</h2>
+<h3 id="no-more-underscore-in-v15">No More Underscore in v15</h3>
+<p>Previously our recommendation was to stick to the conventions of prefixing Razor files with an underscore <code>_</code>.</p>
+<p>In 2sxc v15 we are changig this recommendation, to <em>not</em> use an undescore.
+It is simply not relevant and adds a technical feeling to it, which simply is not necessary.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Starting in 2sxc v15, the default for Razor files is not to use an underscore.</p>
+</div>
+<h3 id="old-convention-with-underscore">Old Convention with Underscore</h3>
+<p>There is an official convention to prefix all razor files with an underscore <code>_</code>.
+This would result in files such as <code>_Default.cshtml</code>.</p>
+<p>This is because IIS will not run any razor files with an underscore, so if a user (or an attacker) would try:</p>
+<pre><code class="lang-text">https://yourdomain.com/_default.cshtml
+</code></pre>
+<p>...the code would not run. Basically IIS does not run any Razor files with a leading underscore.
+In addition to that, such files would not be added to the page-tree when creating menus in asp.net MVC.
+This makes sense in asp.net MVC.</p>
+<h3 id="underscore-not-relevant-for-2sxc">Underscore not Relevant for 2sxc</h3>
+<p>In 2sxc the Razor files themselves cannot be accessed.</p>
+<ol>
+<li>DNN doesn't have a handler for <code>.cshtml</code> files</li>
+<li>Oqtane has the files in a protected location which is not publicly available</li>
+<li>All 2sxc Razor files inherit from a custom class, which makes them unusable if called directly</li>
+</ol>
+<h2 id="spaces-in-file-names">Spaces in File Names</h2>
+<p>You can use spaces in file names.
+All of the following are valid:</p>
+<ul>
+<li><code>I Like Spaces.cshtml</code></li>
+<li><code>IDontLikeSpaces.cshtml</code></li>
+<li><code>I-Would-Rather-use-dashes.cshtml</code></li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The 2sxc Recommendation for Razor files is to use spaces.
+We believe it makes the files/folders easier to skim in a code editor.</p>
+</div>
+<h2 id="casing">Casing</h2>
+<p>You can use any casing you prefer.
+All of the following are valid:</p>
+<ul>
+<li><code>My Razor File.cshtml</code></li>
+<li><code>myrazorfile.cshtml</code></li>
+<li><code>MyRazorFile.cshtml</code></li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The 2sxc Recommendation for Razor files is to start with upper case.</p>
+<p>If you do not use spaces in your file names, you should use PascalCase.</p>
+</div>
+<h2 id="naming-partial-files">Naming Partial Files</h2>
+<p>Partial Razor files are called by other files to render parts.
+A common use case is a sub-template for a complex item in a list.</p>
+<p>You can name this anyhow you want.
+But we recommend that parts are named in a way that makes it obvious...</p>
+<ul>
+<li>... that they are a part</li>
+<li>... if they are shared, or just used by a single other Razor</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The 2sxc Recommendation is to use the term <code>Part</code> for partial files.</p>
+<ul>
+<li>We suggest <code>Part User Info.cshtml</code> for parts which are used by many files</li>
+<li>We suggest <code>[originalfile].part.cshtml</code> for parts which are only used by a single file</li>
+</ul>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/file-names.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

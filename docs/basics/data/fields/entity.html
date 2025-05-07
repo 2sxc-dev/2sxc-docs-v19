@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Field Data Type: Entity (List of Entity-Items) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Field Data Type: Entity (List of Entity-Items) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/fields/entity.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Data.Fields.Entity">
+<h1 id="field-data-type-entity-list-of-entity-items">Field Data Type: Entity (List of Entity-Items)</h1>
+
+<div class="overlay-container">
+  <div class="overlay-box" style="left: 28.5%; top: 46%; height: 45%; width: 47.5%"></div>
+  <img src="../../../pages/basics/data/assets/app-data.png" class="full-width">
+</div>
+
+<p>This explains <strong>Entity Fields</strong>. For an overview check out <a class="xref" href="../index.html">Understanding Data...</a>.</p>
+<hr>
+<p><strong>Entity</strong> or <strong>Item</strong> data is a basic <a class="xref" href="index.html">data type</a> and is used to mark item-relationships, like books-to-authors or blog-to-tags.</p>
+<h2 id="features">Features</h2>
+<p>The basic <strong>entity</strong> field simply allows you to select items of a specific type, with various add/remove/create/delete features.</p>
+<h2 id="sub-types-of-entity-fields">Sub-Types of Entity Fields</h2>
+<ol>
+<li><a class="xref" href="entity-default.html">entity-default</a> - standard selector with type, add/remove, one/multi, delete, etc.</li>
+<li><a class="xref" href="entity-query.html">entity-query</a> for picking entities which were pre-processed in a query</li>
+</ol>
+<h2 id="shared-settings">Shared Settings</h2>
+<p>All Entity-Field Types have the following settings:</p>
+<img src="../../../pages/basics/data/fields/assets/entity.png" width="50%" class="float-end">
+<ul>
+<li>Basic
+<ul>
+<li><strong>Entity Type</strong></li>
+</ul>
+</li>
+<li>Advanced UI Settings
+<ul>
+<li><strong>Multiple Items</strong></li>
+<li><strong>Enable Edit</strong></li>
+<li><strong>Enable Create New</strong></li>
+<li><strong>Enable Add Existing</strong></li>
+<li><strong>Enable Remove</strong></li>
+<li><strong>Enable Delete</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="specials-of-the-entity-type">Specials of the Entity type:</h2>
+<p>The entity-type has these specials it's good to know about</p>
+<ol>
+<li>It's always a list</li>
+<li>It preserves the relationship order</li>
+</ol>
+<h3 id="special-1-its-always-a-list">Special #1: It's always a List</h3>
+<p>Since it could contain 1 or many items (and the configuration can change whenever you want), reading it always means reading a list. So you'll always use something like this (C#):</p>
+<pre><code class="lang-cs">// full name of author
+var fn = Book.Author[0].FullName; 
+
+// in case you're not sure if the author was added or null, you can do
+var fn2 = (Book.Author.Any() ? Book.Author[0].FirstOrDefault : &quot;&quot;);
+
+// This will also work in newer versions of C#
+// making fullName either the name, or a null
+var fn3 = Book.Author.FirstOrDefault()?.FullName;
+
+// the following won't work!
+var wontWork = Book.Author.FullName; // this won't work
+</code></pre>
+<p>Or the same in JavaScript:</p>
+<pre><code class="lang-javascript">var fn = Book.Author[0].FullName;
+
+// in case you're not sure if it has any
+// this uses the JS-syntax which returns the last-value of an &amp;&amp; condition  
+var fn = Book.Author &amp;&amp; Book.Author[0].FullName;
+</code></pre>
+<h3 id="special-2-it-preserves-order">Special #2: It preserves Order</h3>
+<p>If the user said a book has 2 authors:</p>
+<ol>
+<li>Daniel</li>
+<li>Abraham</li>
+</ol>
+<p>Then it's sometimes useful to preserve the order - in this case Daniel was probably the <em>main author</em> and Abraham helped out a bit. To allow for this, the <strong>Entity</strong> field will keep the order of items as they were added.</p>
+<p>Side-effect: Sometimes you want to have an A-Z order when showing items. As the order is not auto-sorted, you will have to do this yourself if you want to have them sorted. Use <a class="xref" href="../../../net-code/data/linq/index.html">LINQ</a> to do that.</p>
+<hr>
+<h2 id="technical-information">Technical Information</h2>
+<h3 id="storage-in-the-sql-database-in-the-eav-model">Storage in the SQL Database in the EAV-Model</h3>
+<p>This is stored in a special relationships-table, so internally the current DB IDs are used to track relationships.</p>
+<h3 id="storage-in-the-sql-database-in-the-json-model">Storage in the SQL Database in the JSON-Model</h3>
+<p>This is stored as an array of strings, which contain the GUIDs of the related information.</p>
+<h2 id="null-values-not-possible">Null Values not Possible</h2>
+<p>These fields will never return a null. If there is no content, you'll just get an empty list.</p>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/linq-basics">Razor LINQ Tutorials</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in EAV 1.0 / 2sxc 1.0</li>
+<li>Changed in EAV 3.0 / 2sxc 6.0 (it used to have many configuration fields for all kinds of uses, which were then moved to sub-types)</li>
+<li>Enhanched in EAV 4 / 2sxc 7 when item-delete was introduced, to allow for &quot;private&quot; items</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/fields/entity.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

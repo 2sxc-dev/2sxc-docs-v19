@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Event CustomizeSearch() on the Razor Page (Dnn ☢️ only) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Event CustomizeSearch() on the Razor Page (Dnn ☢️ only) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/customizesearch.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Razor.CustomizeSearch">
+<h1 id="event-customizesearch-on-the-razor-page-dnn--only">Event <em>CustomizeSearch()</em> on the Razor Page (Dnn ☢️ only)</h1>
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This is an older way to customize the Dnn search index.</p>
+<p>It is deprecated.</p>
+<p>Use the new mechanisms explained in <a class="xref" href="../search/index.html">Search Customizations</a></p>
+</div>
+<p>This event is called by the view-engine <em>after</em> calling <a class="xref" href="customizedata.html">CustomizeData</a> and before passing the <code>Data</code> object to the Dnn Search Indexer.</p>
+<p>You can override this event to change how data is presented to the search, for example by bundling items together, or by giving items different URLs so that search knows that they are to appear on a sub-page.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>2sxc 11 introduces Code-Behind. You can now place the <code>CustomizeSearch(...)</code> method in the <a class="xref" href="organize-code.html">code-behind</a> file.</p>
+</div>
+<div style="background: #0088F444; overflow: auto">
+  <img src="../../shared/tutorials/assets/razor.png" width="200px" style="padding-right: 20px; float: left">
+  <div style="font-size: x-large;font-weight: bold; margin-bottom: 20px;">
+    Discover More in the Razor Tutorials
+  </div>
+<p>We have an rich series of <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor">Razor tutorials</a>. You should really check them out 👍.</p>
+</div>
+<br>
+<h2 id="how-to-use">How to use</h2>
+<p>In your razor page (.cshtml file) you can add a script block implementing this, as follows:</p>
+<pre><code class="lang-cs">@using ToSic.Eav.Run;
+@using ToSic.Sxc.Dnn.Run;
+@using ToSic.Sxc.Search;
+@functions
+{
+    // this method is optional - your code wouldn't need it, but it's in here to show how it would work together
+    // the CustomizeData would be called first, and potentially modify what is in the Data-object
+    public override void CustomizeData()
+    {
+        // Don't customize anything, nothing to customize in this case
+    }
+
+    /// &lt;summary&gt;
+    /// Populate the search - ensure that each entity has an own url/page
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;searchInfos&quot;&gt;&lt;/param&gt;
+    /// &lt;param name=&quot;moduleInfo&quot;&gt;&lt;/param&gt;
+    /// &lt;param name=&quot;startDate&quot;&gt;&lt;/param&gt;
+    public override void CustomizeSearch(Dictionary&lt;string, List&lt;ISearchItem&gt;&gt; searchInfos, IContainer moduleInfo, DateTime beginDate)
+    {
+        foreach (var si in searchInfos[&quot;Default&quot;])
+        {
+            // tell the search system what url it should use in the result
+            si.QueryString = &quot;mid=&quot;+ (moduleInfo as DnnContainer).Id + &quot;&amp;feature=&quot; + si.Entity.EntityId;
+        }
+    }
+}
+
+</code></pre>
+<p>The code above will skip customizing any data (but often you would want that too), then CustomizeSearch modifies the list of search-items before they are indexed.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>In general everything will work automatically. This is what happens:</p>
+<ol>
+<li>2sxc will retrieve the data added to this module</li>
+<li>2sxc will call the <a class="xref" href="customizedata.html">CustomizeData()</a> event if the template has such an event. In this event, your code can add more data to the module as needed.
+<ol>
+<li>Note that during the search index, no Request-variables exist.</li>
+<li>So your method will cause an error if it does something like var x = Request[&quot;Category&quot;].</li>
+<li>In case of an error, the index will still continue to work, but your changes to the data will fail</li>
+<li>To help you with this, a new property called Purpose was added. It tells you if this view/template was created for displaying or for indexing.</li>
+</ol>
+</li>
+<li>2sxc will then use the data and create SearchItems, ready to index.
+<ol>
+<li>Each entity will be turned into a SearchItem</li>
+<li>Each Content-Type will have an own list (so you can differentiate between all the SearchItems for the Categories and the SearchItems for the Questions)</li>
+<li>Multi-Language is handled correctly, so the English index will contain the English content, etc.</li>
+</ol>
+</li>
+<li>2sxc will then call a CustomizeSearch() event, so your code could provide changes.
+<ol>
+<li>A common scenario is to say that each entity (say each question) has a different URL (say a details-page).</li>
+<li>So even though all entities belong to the module (and Dnn only knows of this one module), the module can say that each entity has an own details page.</li>
+</ol>
+</li>
+<li>One this is done, the SearchItems are converted to official SearchDocument-objects and handed over to Dnn</li>
+</ol>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a class="xref" href="purpose.html">Purpose</a> - which tells you why the current code is running so you could change the data added</li>
+<li><a class="xref" href="customizedata.html">CustomizeData</a></li>
+</ul>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<p>You should find some code examples in this demo App</p>
+<ul>
+<li><a href="http://2sxc.org/en/apps/app/faq-with-categories-and-6-views">FAQ with Categories</a></li>
+</ul>
+<p>More links: <a href="http://2sxc.org/en/Docs-Manuals/Feature/feature/2683">Description of the feature on 2sxc docs</a></p>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 6.2</li>
+<li>Added support for newer Dnn versions at a later time - not sure when</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/customizesearch.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

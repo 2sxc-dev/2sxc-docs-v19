@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ICacheService | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ICacheService | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc/new/develop/apiSpec/new?filename=ToSic_Sxc_Services_ICacheService.md&amp;value=---%0Auid%3A%20ToSic.Sxc.Services.ICacheService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.ICacheService">
+
+
+
+  <h1 id="ToSic_Sxc_Services_ICacheService" data-uid="ToSic.Sxc.Services.ICacheService" class="text-break">
+Interface ICacheService  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Sxc.html">Sxc</a>.<a class="xref" href="ToSic.Sxc.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Sxc.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Cache"><code>Kit.Cache</code></a> to help your code cache data.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+public interface ICacheService</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="ToSic_Sxc_Services_ICacheService_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>It does quite a bit of magic, for example:</p>
+<ul>
+<li>scope the cache to the current App, so a key like <code>main-list</code> will not bleed to other apps</li>
+<li>help invalidate the cache if the app data changes</li>
+<li>vary the cache by specific parameters such as the <code>category</code> in the URL.</li>
+<li>vary the cache by the current user only</li>
+<li>...and more.</li>
+</ul>
+<p>In most cases, you'll</p>
+<ol>
+<li>start by creating <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a> using a call to <a class="xref" href="ToSic.Sxc.Services.ICacheService.html#ToSic_Sxc_Services_ICacheService_CreateSpecs_System_String_ToSic_Lib_Coding_NoParamOrder_System_String_System_Nullable_System_Boolean__">CreateSpecs(string, NoParamOrder, string, bool?)</a></li>
+<li>use a fluid API on the specs to determine what you want, like <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html#ToSic_Sxc_Services_Cache_ICacheSpecs_VaryByPageParameters_System_String_ToSic_Lib_Coding_NoParamOrder_System_Boolean_">VaryByPageParameters(string, NoParamOrder, bool)</a>, <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html#ToSic_Sxc_Services_Cache_ICacheSpecs_VaryByUser">VaryByUser()</a><a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html#ToSic_Sxc_Services_Cache_ICacheSpecs_WatchAppData_ToSic_Lib_Coding_NoParamOrder_">WatchAppData(NoParamOrder)</a> or just set different expiry options.</li>
+<li>Then use these specs to either check if it <a class="xref" href="ToSic.Sxc.Services.ICacheService.html#ToSic_Sxc_Services_ICacheService_Contains_ToSic_Sxc_Services_Cache_ICacheSpecs_">Contains(ICacheSpecs)</a> or use <a class="xref" href="ToSic.Sxc.Services.ICacheService.html#ToSic_Sxc_Services_ICacheService_TryGet__1_ToSic_Sxc_Services_Cache_ICacheSpecs___0__">TryGet&lt;T&gt;(ICacheSpecs, out T)</a> or <a class="xref" href="ToSic.Sxc.Services.ICacheService.html#ToSic_Sxc_Services_ICacheService_GetOrSet__1_ToSic_Sxc_Services_Cache_ICacheSpecs_ToSic_Lib_Coding_NoParamOrder_System_Func___0__">GetOrSet&lt;T&gt;(ICacheSpecs, NoParamOrder, Func&lt;T&gt;)</a></li>
+</ol>
+<p>History</p>
+<ul>
+<li>Was in internal beta since v17.09</li>
+<li>Released v19.01</li>
+<li>Requires the <a href="https://patrons.2sxc.org/features/feat/DataCache">SmartDataCache</a> feature (Patron Perfectionist); if not enabled, will work without caching anything.</li>
+</ul>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_Contains_" data-uid="ToSic.Sxc.Services.ICacheService.Contains*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_Contains_ToSic_Sxc_Services_Cache_ICacheSpecs_" data-uid="ToSic.Sxc.Services.ICacheService.Contains(ToSic.Sxc.Services.Cache.ICacheSpecs)">
+  Contains(ICacheSpecs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the cache contains data for the given specs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains(ICacheSpecs specs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>specs</code> <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_Contains_" data-uid="ToSic.Sxc.Services.ICacheService.Contains*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_Contains__1_ToSic_Sxc_Services_Cache_ICacheSpecs_" data-uid="ToSic.Sxc.Services.ICacheService.Contains``1(ToSic.Sxc.Services.Cache.ICacheSpecs)">
+  Contains&lt;T&gt;(ICacheSpecs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the cache contains data of specified type for the given specs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains&lt;T&gt;(ICacheSpecs specs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>specs</code> <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_CreateSpecs_" data-uid="ToSic.Sxc.Services.ICacheService.CreateSpecs*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_CreateSpecs_System_String_ToSic_Lib_Coding_NoParamOrder_System_String_System_Nullable_System_Boolean__" data-uid="ToSic.Sxc.Services.ICacheService.CreateSpecs(System.String,ToSic.Lib.Coding.NoParamOrder,System.String,System.Nullable{System.Boolean})">
+  CreateSpecs(string, NoParamOrder, string, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create cache specs for a specific key and optional segment.</p>
+<p>This is used for complex setups where the same specs will be reused for multiple operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICacheSpecs CreateSpecs(string key, NoParamOrder protector = default, string regionName = null, bool? shared = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The main cache key (name) to use. It will be extended internally, to prevent collisions, so it can be fairly short.</p>
+</dd>
+    <dt><code>protector</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>regionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>a cache region to segment the cache into multiple regions</p>
+</dd>
+    <dt><code>shared</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>If set to <code>true</code> it will make this key available on other apps which access the data with allApps = <code>true</code>.
+By default, each app has its own region, preventing key collisions between apps.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_GetOrSet_" data-uid="ToSic.Sxc.Services.ICacheService.GetOrSet*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_GetOrSet__1_ToSic_Sxc_Services_Cache_ICacheSpecs_ToSic_Lib_Coding_NoParamOrder_System_Func___0__" data-uid="ToSic.Sxc.Services.ICacheService.GetOrSet``1(ToSic.Sxc.Services.Cache.ICacheSpecs,ToSic.Lib.Coding.NoParamOrder,System.Func{``0})">
+  GetOrSet&lt;T&gt;(ICacheSpecs, NoParamOrder, Func&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set data in the cache for the given specs, with optional generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T GetOrSet&lt;T&gt;(ICacheSpecs specs, NoParamOrder protector = default, Func&lt;T&gt; generate = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>specs</code> <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+    <dt><code>protector</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>generate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_Get_" data-uid="ToSic.Sxc.Services.ICacheService.Get*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_Get__1_ToSic_Sxc_Services_Cache_ICacheSpecs_ToSic_Lib_Coding_NoParamOrder___0_" data-uid="ToSic.Sxc.Services.ICacheService.Get``1(ToSic.Sxc.Services.Cache.ICacheSpecs,ToSic.Lib.Coding.NoParamOrder,``0)">
+  Get&lt;T&gt;(ICacheSpecs, NoParamOrder, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get data from the cache of the given type for the given specs, with optional fallback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T Get&lt;T&gt;(ICacheSpecs specs, NoParamOrder protector = default, T fallback = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>specs</code> <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+    <dt><code>protector</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_Remove_" data-uid="ToSic.Sxc.Services.ICacheService.Remove*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_Remove_ToSic_Sxc_Services_Cache_ICacheSpecs_" data-uid="ToSic.Sxc.Services.ICacheService.Remove(ToSic.Sxc.Services.Cache.ICacheSpecs)">
+  Remove(ICacheSpecs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove a cache entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object Remove(ICacheSpecs key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">object</span></dt>
+    <dd><p>The object if it was in the cache, otherwise null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_Set_" data-uid="ToSic.Sxc.Services.ICacheService.Set*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_Set__1_ToSic_Sxc_Services_Cache_ICacheSpecs___0_ToSic_Lib_Coding_NoParamOrder_" data-uid="ToSic.Sxc.Services.ICacheService.Set``1(ToSic.Sxc.Services.Cache.ICacheSpecs,``0,ToSic.Lib.Coding.NoParamOrder)">
+  Set&lt;T&gt;(ICacheSpecs, T, NoParamOrder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set a value in the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Set&lt;T&gt;(ICacheSpecs specs, T value, NoParamOrder protector = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>specs</code> <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>protector</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ICacheService_TryGet_" data-uid="ToSic.Sxc.Services.ICacheService.TryGet*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ICacheService_TryGet__1_ToSic_Sxc_Services_Cache_ICacheSpecs___0__" data-uid="ToSic.Sxc.Services.ICacheService.TryGet``1(ToSic.Sxc.Services.Cache.ICacheSpecs,``0@)">
+  TryGet&lt;T&gt;(ICacheSpecs, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Try to get data of the specified type from the cache for the given specs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryGet&lt;T&gt;(ICacheSpecs specs, out T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>specs</code> <a class="xref" href="ToSic.Sxc.Services.Cache.ICacheSpecs.html">ICacheSpecs</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if found, <code>false</code> if not found</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/Cache/ICacheService.cs/#L30" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

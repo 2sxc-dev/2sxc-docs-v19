@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>JSON Data Format used in WebAPI calls (technical) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="JSON Data Format used in WebAPI calls (technical) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/data-formats/json/web-api/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.DataFormats.Json.WebApi.Index">
+<h1 id="json-data-format-used-in-webapi-calls-technical">JSON Data Format used in WebAPI calls (technical)</h1>
+
+<div class="float-end context-box-summary highlight-max" width="400px">
+  <div class="fancybox-auto svg-highlight" style="width: 100%">
+<svg version="1.1" baseprofile="full" viewbox="0 0 3229 2529" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../../../pages/basics/stack/assets/stack-detailed.png" x="0" y="0" height="100%" width="100%"></image>
+  <!-- Data Highlights -->
+  <rect class="svg-highlight prepared data-all" x="0%" y="82%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-data" x="19%" y="82%" width="64%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-all" x="3%" y="82%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-app" x="3%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-assets-entities" x="18.5%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-configuration" x="3%" y="93%" width="17%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared data-entities" x="34%" y="82%" width="33%" height="10.5%"></rect>
+  <rect class="svg-highlight prepared data-content-types" x="34%" y="89%" width="33%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-app" x="34%" y="89%" width="17.5%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-global" x="50%" y="89%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-external" x="65.5%" y="82%" width="17%" height="10.5%"></rect>
+  <!-- ADAM -->
+  <rect class="svg-highlight prepared adam" x="18.5%" y="89%" width="17%" height="8%"></rect>
+  <!-- Server -->
+  <rect class="svg-highlight prepared server-all" x="0%" y="41%" width="84%" height="38%"></rect>
+  <!-- Prepare -->
+  <rect class="svg-highlight prepared prepare-all" x="0%" y="61%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared query" x="44.5%" y="61%" width="34%" height="18%"></rect>
+  <rect class="svg-highlight prepared query-engine" x="44.5%" y="70%" width="34%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-built-in" x="44.5%" y="62.5%" width="18%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-app" x="60.5%" y="62.5%" width="17%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-datasource" x="71%" y="70%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-params" x="65%" y="70%" width="10%" height="7%"></rect>
+  <!-- Data Source -->
+  <rect class="svg-highlight prepared datasource" x="86%" y="51%" width="13%" height="16%"></rect>
+  <rect class="svg-highlight prepared datasource-custom" x="87.5%" y="54.5%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared datasource-built-in" x="87.5%" y="59%" width="12%" height="7%"></rect>
+  <rect class="svg-highlight prepared lookup" x="86%" y="66%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared lookup-engine" x="87.5%" y="69%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared lookup-sources" x="87.5%" y="73%" width="12%" height="7%"></rect>
+  <!-- Optimzers -->
+  <rect class="svg-highlight prepared asset-optimizer" x="3%" y="49.5%" width="13.5%" height="8%"></rect>
+  <rect class="svg-highlight prepared image-resizer" x="15%" y="30%" width="17%" height="34%"></rect>
+  <!-- Process / Awesomize -->
+  <rect class="svg-highlight prepared process-all" x="0%" y="41%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-cs" x="34%" y="41%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-razor" x="34.3%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-razor-app" x="34.3%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-razor-engine" x="34.3%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-apis" x="50%" y="42%" width="34%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api" x="50%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api-app" x="50%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-web-api-engine" x="50%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-libraries" x="47%" y="47%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-headless" x="65.5%" y="49.5%" width="17%" height="7%"></rect>
+  <!-- Libraries -->
+  <rect class="svg-highlight prepared libraries" x="86%" y="38%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared libraries-app" x="87.5%" y="41%" width="12%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared libraries-built-in" x="87.5%" y="46%" width="12%" height="6%"></rect>
+  <!-- data formats -->
+  <rect class="svg-highlight prepared format-json-custom" x="50%" y="32%" width="17%" height="14%"></rect>
+  <rect class="svg-highlight prepared format-json-headless" x="65.5%" y="32%" width="17%" height="21%"></rect>
+  <rect class="svg-highlight prepared format-json-edit" x="74%" y="30%" width="19%" height="23%"></rect>
+  <!-- Browser -->
+  <rect class="svg-highlight prepared browser-all" x="0%" y="0%" width="100%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-show" x="0%" y="0%" width="50%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact-edit" x="47%" y="0%" width="37%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact" x="47%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit" x="64%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit-ui" x="81.5%" y="0%" width="18%" height="34%"></rect>
+  <!-- Frameworks -->
+  <rect class="svg-highlight prepared frameworks-browser" x="0%" y="0%" width="17.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared frameworks-CSS" x="0%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-js" x="0%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-spa" x="0%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- App show parts -->
+  <rect class="svg-highlight prepared show-html" x="15.8%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-js" x="15.8%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-spa" x="15.8%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- Interact parts -->
+  <rect class="svg-highlight prepared interact-mobile" x="48.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared interact-2sxc" x="48.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit parts -->
+  <rect class="svg-highlight prepared edit-auto" x="65.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared edit-custom" x="65.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit UI parts -->
+  <rect class="svg-highlight prepared edit-ui" x="82.5%" y="3%" width="17.5%" height="18%"></rect>
+  <rect class="svg-highlight prepared edit-ui-custom" x="82.5%" y="20%" width="17.5%" height="12%"></rect>
+  <!-- SPA parts -->
+  <rect class="svg-highlight prepared spa-all" x="0%" y="21%" width="83%" height="12%"></rect>
+  <rect class="svg-highlight prepared spa-2sxc-js" x="31.5%" y="21%" width="52%" height="12%"></rect>
+  <!-- Custom highlight boxes - can be controlled by in-page CSS -->
+  <rect class="svg-highlight highlight1"></rect>
+  <rect class="svg-highlight highlight2"></rect>
+  <rect class="svg-highlight highlight3"></rect>
+  <rect class="svg-highlight highlight4"></rect>
+  <rect class="svg-highlight highlight5"></rect>
+</svg>
+  </div>
+  <div class="overlay-description">
+<p>you are here (click to zoom) - discover the <a class="xref" href="../../../../basics/index.html">stack</a></p>
+  </div>
+</div>
+<style>.context-box-summary .format-json-headless { visibility: visible; } </style>
+<p>When reading or writing data to/from the <a class="xref" href="../../../../web-api/headless/index.html">Headless WebAPI</a> the data format used is JSON. Here are the basics:</p>
+<h2 id="read-single-item-is-super-simple-json">Read Single Item is Super-Simple JSON</h2>
+<p>Here's an example of a <code>BusinessUnit</code> item:</p>
+<pre><code class="lang-json">{
+  &quot;Name&quot;: &quot;Web&quot;,
+  &quot;Description&quot;: &quot;&lt;p&gt;We create websites!&lt;/p&gt;&quot;,
+  &quot;Id&quot;: 19403,
+  &quot;Guid&quot;: &quot;1252c52c-30e4-4c9f-8d45-e094160ca251&quot;,
+  &quot;Title&quot;: &quot;Web&quot;,
+  &quot;Modified&quot;: &quot;2021-02-25T20:32:52.94Z&quot;,
+  &quot;Created&quot;: &quot;2021-02-18T20:47:58.827Z&quot;
+}
+</code></pre>
+<p>Some notes</p>
+<ol>
+<li>All the value fields have their real names, usually uppercase as that's how the fields are typically named</li>
+<li>A few internal fields are also included
+<ol>
+<li><code>Id</code> (int)</li>
+<li><code>Title</code> (string)</li>
+<li><code>Modified</code> (date)</li>
+<li><code>Created</code> (date)</li>
+<li><code>Guid</code> (string with GUID) - this is only supplied on queries or if the REST API requests includes a <code>?includeGuid=true</code></li>
+</ol>
+</li>
+<li>Dates are transferred as strings, using the international ISO format</li>
+<li>Html strings contain the real html</li>
+</ol>
+<h2 id="read-lists-arrays-of-items">Read Lists: Arrays of Items</h2>
+<pre><code class="lang-json">[
+  {
+    &quot;Name&quot;: &quot;Web&quot;,
+    &quot;Description&quot;: &quot;&lt;p&gt;We create websites!&lt;/p&gt;&quot;,
+    &quot;Id&quot;: 19403,
+    &quot;Guid&quot;: &quot;1252c52c-30e4-4c9f-8d45-e094160ca251&quot;,
+    &quot;Title&quot;: &quot;Web&quot;,
+    &quot;Modified&quot;: &quot;2021-02-25T20:32:52.94Z&quot;,
+    &quot;Created&quot;: &quot;2021-02-18T20:47:58.827Z&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;Dev&quot;,
+    &quot;Description&quot;: &quot;&lt;p&gt;Our development unit&lt;/p&gt;&quot;,
+    &quot;Id&quot;: 19404,
+    &quot;Guid&quot;: &quot;c89cb53b-0f7b-441a-9e6c-5467dd9322e9&quot;,
+    &quot;Title&quot;: &quot;Dev&quot;,
+    &quot;Modified&quot;: &quot;2021-02-25T18:02:52.327Z&quot;,
+    &quot;Created&quot;: &quot;2021-02-18T20:47:58.827Z&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;Eff&quot;,
+    &quot;Description&quot;: &quot;&lt;p&gt;Everything regarding efficiency - like &lt;a href=\&quot;https://sphosting.ch\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener\&quot;&gt;SharePoint&lt;/a&gt;, Word &amp;amp; Excel automation, &lt;a href=\&quot;https://azing.org\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener\&quot;&gt;azing.org&lt;/a&gt;&lt;/p&gt;&quot;,
+    &quot;Id&quot;: 19405,
+    &quot;Guid&quot;: &quot;fa4a1de9-adf5-4e1d-ab70-63281b3e797b&quot;,
+    &quot;Title&quot;: &quot;Eff&quot;,
+    &quot;Modified&quot;: &quot;2021-02-25T18:03:12.84Z&quot;,
+    &quot;Created&quot;: &quot;2021-02-18T20:47:58.827Z&quot;
+  }
+]
+</code></pre>
+<h2 id="write--put-has-the-same-data-format">Write / PUT has the Same Data Format</h2>
+<p>To create data or update it, use the identical format. Some notes:</p>
+<ol>
+<li>When creating, the ID must be blank (otherwise an update is assumed)</li>
+<li>When creating, the Guid is usually blank and will be generated automatically (see special notes below)</li>
+</ol>
+<h2 id="special-system-properties-when-saving">Special System Properties when Saving</h2>
+<p>When creating or updating data, there are some system properties you can also set, which affect how things are saved</p>
+<h3 id="entityguid-on-create-ca-v8"><code>EntityGuid</code> on Create (ca. v8)</h3>
+<p>You can provide an <code>EntityGuid</code> if necessary, for example when other code needs to know the Guid before creating.
+This would then be saved and returned on the Guid property on the next call.</p>
+<h3 id="publishstate-controls-publishing-v1303"><code>PublishState</code> Controls Publishing (v13.03)</h3>
+<p>If you set the property <code>PublishState</code> it can have these values and effects:</p>
+<ul>
+<li><code>null</code> or <code>&quot;&quot;</code> will save new as is preset by permissions; on update it will leave the existing state unchanged</li>
+<li><code>true</code>, <code>&quot;true&quot;</code>, <code>1</code> will always set the published to true (if permissions allow)</li>
+<li><code>false</code>, <code>&quot;false&quot;</code>, <code>0</code> will alwyays set published to false</li>
+<li><code>&quot;draft&quot;</code> will set published to false; if it's an update and there was a published one before, that will remain published</li>
+</ul>
+<h3 id="for-determines-metadata-target-ca-v11"><code>For</code> Determines Metadata-Target (ca. v11)</h3>
+<p><code>For</code> can contain metadata headers to anchor this item to another thing. Will only affect new data, and be ignored on updates.</p>
+<p>This is the schema of this object</p>
+<pre><code class="lang-js">{
+  TargetType: int; // one of known target types
+  Number?: number; // Key if it's a number key
+  String?: string; // Key if it's a string ey
+  Guid?: string;   // Guid if it's a GUID key
+}
+</code></pre>
+<p>Note that you must provide one of the keys, othewise it will fail.</p>
+<ul>
+<li>See also <a class="xref" href="../../../../basics/metadata/target-types.html">Metadata Target Types</a></li>
+<li>See also <a class="xref" href="../../../../api/js/SxcData.html#Api_Js_SxcJs_SxcData">SxcData</a></li>
+</ul>
+<h3 id="parentrelationship-adds-item-to-a-parent-v1303"><code>ParentRelationship</code> Adds Item to a Parent (v13.03)</h3>
+<p>If your data has a property <code>ParentRelationship</code> with these fields:</p>
+<ol>
+<li><code>Parent</code> - a GUID to the parent</li>
+<li><code>Field</code> - the name of the field it should be added to (must be an entity-field)</li>
+<li><code>Index</code> - the location it should be added to in that field which is a list of items</li>
+</ol>
+<p>Then upon creating the new item, it will also be added to that parent and it's list of items.</p>
+<h2 id="read--write-multi-language-data">Read / Write Multi-Language Data</h2>
+<p>This does not exist yet as a simple REST API but is a planned feature for 2022. For now, create your own WebApi if you need this.</p>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>REST API added ca. v7 on the path <code>/app/content</code></li>
+<li>Ability to also set <code>EntityGuid</code> added ca. v8</li>
+<li><code>For</code> feature added ca. v11</li>
+<li>primary path changed to <code>/app/data/</code></li>
+<li><code>PublishState</code> added v13.03</li>
+<li><code>ParentRelationship</code> added v13.03</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/data-formats/json/web-api/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

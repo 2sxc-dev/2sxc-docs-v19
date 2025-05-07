@@ -1,0 +1,14 @@
+- name: Target
+  uid: ToSic.Sxc.Services.ToolbarBuilder.Target
+- name: Tweak Buttons
+  topicUid: ToSic.Sxc.Services.ToolbarBuilder.TweakButtons
+- name: UI
+  uid: ToSic.Sxc.Services.ToolbarBuilder.Ui
+- name: Parameters
+  uid: ToSic.Sxc.Services.ToolbarBuilder.Parameters
+- name: Prefill
+  uid: ToSic.Sxc.Services.ToolbarBuilder.Prefill
+- name: Filter (for Data)
+  uid: ToSic.Sxc.Services.ToolbarBuilder.DataFilter
+- name: Operation
+  uid: ToSic.Sxc.Services.ToolbarBuilder.Operation

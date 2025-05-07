@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Content Security Policy (CSP) Parts in 2sxc | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Content Security Policy (CSP) Parts in 2sxc | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/parts.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Security.Csp.Parts">
+
+<img src="../../../assets/features/content-security-policy.svg" class="feature">
+<h1 id="content-security-policy-csp-parts-in-2sxc">Content Security Policy (CSP) Parts in 2sxc</h1>
+<p>Content Security Policy (CSP) is a security policy that helps you to protect your web application from <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting attacks</a>.</p>
+<p>This should give you an overview as to the parts that make CSP work in 2sxc with Dnn and Oqtane.</p>
+<h2 id="2sxc-implementation">2sxc Implementation</h2>
+<p>2sxc uses the following parts to make it work</p>
+<ol>
+<li><a href="#global-csp-features">Global Features which can be enabled/disabled</a></li>
+<li><a href="#settings">CSP Settings</a> at <a href="#global-and-site-settings">Site / Global level</a></li>
+<li>Settings at the <a href="#app-settings">App-Level which will be included automatically</a></li>
+<li><a href="#content-security-policies-by-user-groups">Policies for different user groups</a></li>
+<li><a href="#automatic-white-listing-trusted-resources">Automatic White-Listing of Trusted Resources</a></li>
+<li><a href="#c-apis-for-advanced-scenarios">C# / Razor APIs</a> for advanced scenarios</li>
+<li><a href="#special-all-src-shorthand">Special <code>all-src</code> shorthand</a></li>
+<li><a href="#test-configurations-for-development">Test configurations which can be activated during development</a></li>
+<li>Really <a href="#smart-csp-engine">Smart CSP Engine</a> which combines everything to make the rules you need</li>
+<li><a href="#turnon-javascript">turnOn JavaScript</a> to run scripts which need Razor data</li>
+<li><a href="#dnn-page-integration">DNN Page Integration</a></li>
+<li><a href="#lightspeed-integration">LightSpeed Integration</a></li>
+</ol>
+<h2 id="global-csp-features">Global CSP Features</h2>
+<p>You can manage CSP features in the system administration to enable/disable just the rules you want.</p>
+<p>For example, you could only enable dev-rules until you are happy with the configuration.</p>
+<img src="../../../pages/abyss/security/csp/assets/manage-features-csp.jpg" width="100%" class="full-width">
+<div class="NOTE">
+<h5>Note</h5>
+<p>The CSP features are very advanced features.
+They are exclusive to patrons who support 2sxc.
+To use them, you must enable the bundle <code>Patron Sentinel</code>.</p>
+</div>
+<h2 id="settings">Settings</h2>
+<h3 id="global-and-site-settings">Global and Site Settings</h3>
+<p>You can configure CSP settings at the site- and global-level.
+Anything that is configured at global, but not site-level, will use the global settings.</p>
+<img src="../../../pages/abyss/security/csp/assets/site-settings-to-csp.jpg" width="100%" class="full-width">
+<p>With these settings you can:</p>
+<ol>
+<li>Enable/Disable CSP</li>
+<li>Determine if it's report-only or fully enforced</li>
+<li>Set a bunch of rules which will be applied</li>
+</ol>
+<p>Note that if you set CSP rules at the site level, they will apply to that site and not inherit global settings any more.
+This is by design, because it could lead to very confusing, hard-to-debug configurations.</p>
+<h3 id="app-settings">App Settings</h3>
+<p>The same configuration which is applied to the site or global can also be configured at the app-level.
+The main difference is that this will only be applied to pages which have that App.
+In addition, these settigs will be mixed in with the site/global settings.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>All default 2sxc Apps have been built with CSP in mind, so all of them already include the CSP settings they need.
+You may need to get the latest releases to see this in action.</p>
+</div>
+<h2 id="content-security-policies-by-user-groups">Content Security Policies by User Groups</h2>
+<p>Different users typically need different CSP policies.
+For example, we can really harden the Content Security Policy for end-users, as we can clearly restrict what they need and can do.
+Admins and super-users cannot work with the most restrictive rules, because some of the admin-functionality needs more permissions.</p>
+<p>2sxc has policies for these user groups:</p>
+<ol>
+<li><strong>SystemAdmin</strong> - a policy which will only apply to system admins</li>
+<li><strong>SiteAdmin</strong> - a policy which will only apply to site admins</li>
+<li><strong>Anonymous</strong> - a policy which will only apply to anonymous users</li>
+<li><strong>Default</strong> - the default policy which is used if no other policy is defined</li>
+<li><strong>Dev</strong> - a policy which will only apply if the url has <code>?csp=dev</code></li>
+</ol>
+<h2 id="automatic-white-listing-trusted-resources">Automatic White-Listing Trusted Resources</h2>
+<p>As a developer, you want your code to just-work.
+So ideally any JS/CSS you add, is automatically white-listed.
+But we cannot just white-list every <code>&lt;script&gt;</code> tag in your code, as that would make CSP useless again.
+So to make this easy <em>and</em> secure, there are two ways to white-list your trusted resources.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>All default 2sxc Apps apply these practices.
+You may need to get the latest releases to see this in action.</p>
+</div>
+<h3 id="option-1-registered-web-resources">Option 1: Registered Web-Resources</h3>
+<p>Every registered web-resource used by your code will be white-listed automatically.
+<a class="xref" href="../../../basics/configuration/settings/settings-webresources.html">Web Resources are registered in the Settings</a>
+at global, site or app-level, and then activated using the <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_Activate_">Razor API</a>.</p>
+<pre><code class="lang-c#">Kit.Page.Activate(&quot;fancybox4&quot;, &quot;MySpecialFormJs&quot;);
+</code></pre>
+<p><a name="auto-white-listing-explicit"></a></p>
+<h3 id="option-2-explicitly-whitelist-assets">Option 2: Explicitly Whitelist Assets</h3>
+<p>If you have inline scripts or styles, you can mark them as trusted by using the <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_AssetAttributes_">Razor API</a>.</p>
+<pre><code class="lang-html">&lt;script src=&quot;@App.Path/@Edition/dist/scripts.min.js&quot; @pageSvc.AssetAttributes()&gt;&lt;/script&gt;
+</code></pre>
+<p>The <code>AssetAttributes(...)</code> will also do other things like set script priorities.
+But anywhere it's applied it will also mark it for whitelisting in CSP (if CSP is enabled).</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The Asset-Attributes will add a secret <a href="https://content-security-policy.com/nonce/">nonce</a> to the HTML.
+Internally it will be processed and removed again, but this ensures that the HTML can carry a single-use key
+to whitelist the resource, while making it impossible for an attacker to guess the key.</p>
+</div>
+<h2 id="c-apis-for-advanced-scenarios">C# APIs for Advanced Scenarios</h2>
+<p>The previously mentioned features cover 99.9% of all use cases.
+We ourselves have not seen a scenario that would need more than this.
+But you may want to create other rules for your own use-cases.
+In this case, you can use the <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_AddCsp_">IPageService.AddCsp</a> method.</p>
+<h2 id="special-all-src-shorthand">Special <code>all-src</code> Shorthand</h2>
+<p>CSP is a funny beast. If you set a rule such as <code>default-src: https:</code>
+it will be be applied automatically for js, css, fonts etc.
+...But only if you don't set those rules as well.
+As soon as you set <code>script-src: 'self'</code>, it will not include the previous <code>https:</code> rule.</p>
+<p>I assume there are cases where this makes sense.
+But in our experience this leads to a lot of mistakes.
+For example, if the site already whitelists <code>https:</code> an an App also needs whitelist another font,
+it would have to also manually add all the previous rules.
+We felt this is not a good idea.</p>
+<p>So we've added a special <code>all-src</code> shorthand which will apply the rule to all resources.
+It works as follows:</p>
+<ol>
+<li>Everything you add to <code>all-src</code> is added to <code>default-src</code></li>
+<li>Whenever other rules are added - such as <code>font-src</code> - it will add all the rules ever added to <code>all-src</code> as well</li>
+</ol>
+<h2 id="test-configurations-for-development">Test Configurations for Development</h2>
+<p>Testing and developing your CSP rules can be very tricky, especially on a live site.
+Because if the HTTP headers block something, the site may become unusable.
+There are three distinct challenges:</p>
+<ol>
+<li>Step-by-step tweaking your rules</li>
+<li>Improving your rules on a site which already has CSP</li>
+<li>Testing rules for different roles / user-groups</li>
+</ol>
+<p>...and all this on a live site, without accidentally blocking the site for everyone.</p>
+<p>2sxc makes this possible with a combination of 3 features:</p>
+<ol>
+<li>A global feature which enables this dev-mode</li>
+<li>A special Setting called <code>Dev</code> which is only used for development</li>
+<li>A url-parameter <code>?csp=true</code> which will switch a page to use the <code>Dev</code> settings</li>
+</ol>
+<img src="../../../pages/abyss/security/csp/assets/site-settings-csp-dev.jpg" width="100%" class="full-width">
+<p>This way you can test modified rules in all kinds of combinations and with various users.
+Once you're happy, you can then copy/paste the configuration to the live Settings.</p>
+<h2 id="smart-csp-engine">Smart CSP Engine</h2>
+<p>Technically the HTTP-header can only be set once.
+So to make it possible to merge rules / configurations from the Site, App and Razor code,
+we've implemented a Smart Engine.</p>
+<p>It will collect all the requirements and before rendering the final page,
+it merges everything to a final rule-set and generates the HTTP-Header.</p>
+<h2 id="turnon-javascript">turnOn JavaScript</h2>
+<p>2sxc introduced <a class="xref" href="../../../js-code/turn-on/index.html">turnOn</a> in v12.04 in preparation for CSP.</p>
+<p>It is a crucial part in the entire concept, because it allows you to place your scripts in external files,
+and still use parameters/configuration from Razor (such as the ModuleId) in your scripts.
+Do check it out 😉.</p>
+<h2 id="dnn-page-integration">DNN Page Integration</h2>
+<p>All of this leaves just one final piece of the puzzle:
+DNN Pages without 2sxc on it. We also want to protect these pages.</p>
+<p>Technically this requires the CSP Smart-Engine to be activate on the skin.
+We do this automatically, the moment you access DynamicCode using the <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IDynamicCodeService.html">IDynamicCodeService</a> on the skin.</p>
+<p>To make it work, you must get DynamicCode of the Site or any App from the theme.
+The rest will happen automatically. Something like this will do the trick:</p>
+<pre><code>&lt;%-- This has all common 2sxc services and GetScopedService(...)  --%&gt;
+&lt;%@ Import Namespace=&quot;ToSic.Sxc.Services&quot; %&gt;
+&lt;%-- This namespace provides IDynamicCode --%&gt;
+&lt;%@ Import Namespace=&quot;ToSic.Sxc.Code&quot; %&gt;
+&lt;script runat=&quot;server&quot;&gt;
+  // Get the Dynamic Code of this Site = OfSite() and keep for re-use
+  protected IDynamicCode SiteDynCode { 
+    get { return _sdc ?? (_sdc = this.GetScopedService&lt;IDynamicCodeService&gt;().OfSite()); } 
+  }
+  private IDynamicCode _sdc;
+&lt;/script&gt;
+</code></pre>
+<p><em>Note that your code must access the <code>SiteDynCode</code> somewhere so the <code>OfSite()</code> is actually run.</em></p>
+<h2 id="lightspeed-integration">LightSpeed Integration</h2>
+<p>We've ensured that CSP will also work with <a class="xref" href="../../lightspeed/index.html">LightSpeed Cache</a>.
+So even cached modules and Apps will still apply the CSP rules.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>👉🏼 <a class="xref" href="index.html">Learn how to setup CSP in your website</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/parts.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Content Security Policy (CSP) Guide for 2sxc, Dnn and Oqtane | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Content Security Policy (CSP) Guide for 2sxc, Dnn and Oqtane | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/guide.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Security.Csp.Guide">
+
+<img src="../../../assets/features/content-security-policy.svg" class="feature">
+<h1 id="content-security-policy-csp-guide-for-2sxc-dnn-and-oqtane">Content Security Policy (CSP) Guide for 2sxc, Dnn and Oqtane</h1>
+<p>Content Security Policy (CSP) is a security policy that helps you to protect your web application from <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting attacks</a>.</p>
+<p>In this guide we'll give you step-by-step instructions how to harden a website in no time.
+With a bit of practice you can harden a DNN with Content-Security-Policy in one to two hours 🚀.</p>
+<p>🎬 Before you start, be sure you've read the <a class="xref" href="index.html">background, parts and best-practices</a>.</p>
+<h2 id="general-process">General Process</h2>
+<ol>
+<li>Plan and prepare</li>
+<li>Setup CSP for anonymous users in reporting-only-mode with a reporting-server</li>
+<li>Setup CSP for other users - reporting-only</li>
+<li>Go productive</li>
+<li>Monitor for a few days</li>
+<li>Switch to full-mode</li>
+</ol>
+<h2 id="csp-preparations">CSP Preparations</h2>
+<h3 id="planning-csp">Planning CSP</h3>
+<blockquote>
+<p>Think before you act</p>
+</blockquote>
+<p>Some choices made ahead of time will save you time and effort later.</p>
+<ol>
+<li>Will you make different CSP rules for admins and anonymous users?</li>
+<li>Will you use a reporting-server?</li>
+<li>Are you doing this just to &quot;tick the box, yes we did it&quot; or do you want it as secure as possible?</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We highly suggest you segment this by users.
+That will allow you to make much stricter rules for anonymous users and less strict for admins.</p>
+<p>This also gives you a better score in most penetration tests, because they will evaluate the rules for anonymous users.</p>
+</div>
+<p>In addition, we suggest you ask yourself these questions ahead of time, because it will make it easier to hand off work:</p>
+<ol>
+<li>When you have a situation where a code-change would let you make the rule more strict, will you make the code change, or use a lax rule?</li>
+<li>When you have CDN resources, will you want to whitelist them, or move them to your server?</li>
+<li>If you have resources from CDNs, will you whitelist the entire CDNs or just these resources?</li>
+</ol>
+<h3 id="prepare--harden-a-site-for-csp">Prepare / Harden a Site for CSP</h3>
+<p>Before you try to configure CSP it's best to have a good setup which makes it more secure.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you follow these recommendations, you will be able to have much stricter policies.
+If you don't, you can still activate CSP but will need a much laxer setup.</p>
+</div>
+<p>Rework your Skins / Apps to match a secure architecture, following the best practices.
+Things such as:</p>
+<ol>
+<li>Get rid of unused js/css code/files</li>
+<li>Reduce or better still, remove all jQuery dependent code (especially for anonymous users)</li>
+<li>Reduce all CDN references to as few as possible</li>
+<li>Place all your inline scripts and styles in files</li>
+<li>Change all inline <code>onclick</code> or <code>href:javascript:...</code> to be bound by the loaded code</li>
+<li>Use <a class="xref" href="../../../js-code/turn-on/index.html">turnOn</a> to couple the JS with Razor-data such as the ModuleId</li>
+<li>Use <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_Activate_">IPageService.Activate(...)</a> and <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IPageService.html#ToSic_Sxc_Services_IPageService_AssetAttributes_">IPageService.AssetAttributes(...)</a> wherever possible</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>All the latest standard 2sxc apps implement all these best practices.
+If you still have older Apps, we suggest you install the latest on another server and copy the parts you need.</p>
+</div>
+<h3 id="prepare-for-monitoring">Prepare for Monitoring</h3>
+<p>Once you've deployed CSP you should get notified of any violations.
+The idea is that violations could just be a sign that something wasn't configured correctly and you may have missed this.</p>
+<p>There are some cool online services which can do this, like <a href="https://report-uri.com/">https://report-uri.com/</a>.
+So we highly recommend you get an account to use for monitoring.</p>
+<h2 id="develop-csp-rules">Develop CSP Rules</h2>
+<h3 id="general-pattern">General Pattern</h3>
+<ol>
+<li>Always do dry-run tests first
+<ol>
+<li>Create a new <code>Dev</code> policy and set it to <em>Report-Only</em></li>
+<li>Test it using <code>?csp=dev</code> in the url</li>
+</ol>
+</li>
+<li>Choose to start restrictive or lax
+<ol>
+<li>either start restrictive and open up the rules step-by-step</li>
+<li>or start with lax rules and tighten step-by-step</li>
+</ol>
+</li>
+<li>Once it works, apply to production as <code>...-Report-Only</code></li>
+<li>Repeat with other user roles</li>
+</ol>
+<h3 id="dry-run-without-enforcing-policies">Dry-Run Without Enforcing Policies</h3>
+<p>First you must enable the dev-feature.</p>
+<img src="../../../pages/abyss/security/csp/assets/manage-features-csp.jpg" width="100%" class="full-width">
+<p>Now you can test the policy by adding <code>?csp=dev</code> to any page.
+It will work with any login - as soon as you add the parameter, it will use the <code>Dev</code> settings.
+This is how the dev settings could look:</p>
+<img src="../../../pages/abyss/security/csp/assets/site-settings-csp-dev.jpg" width="100%" class="full-width">
+<h3 id="browser-setup">Browser Setup</h3>
+<p>You will want to have a logged-in window to make configuration changes, and another window to test the policy.
+You can either use two browsers (chrome+canary, chrome+firefox, firefox+edge, etc.)
+or a single browser with anonymous/guest modes to have different login states.</p>
+<p>As we're testing this, you will always need to add <code>?csp=dev</code> to the url you're testing.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In the window where you make the configuration, use Ctl+S to just save and not close the widow.
+This will make it much faster to try various setups.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>During development, please disable <a class="xref" href="../../lightspeed/index.html">LightSpeed Cache</a>
+as it may cache some settings, making it hard to debug.</p>
+</div>
+<h3 id="strict-first-method-recommended">Strict-First Method (recommended)</h3>
+<p>With Strict-First you start with very strict rules in <code>...-Report-Only</code> mode.
+You will then review the errors you see in the browsers F12 console.
+Then you will loosen up the rules step-by-step.</p>
+<h3 id="lax-first-method">Lax-First Method</h3>
+<p>The Lax-First method assumes that you start with rules that allow everything, then you tighten them up step-by-step.
+Here's an example of a very lax rule set, taken from <a href="https://stackoverflow.com/questions/35978863/allow-all-content-security-policy">StackOverflow</a>:</p>
+<pre><code class="lang-text">default-src *  data: blob: filesystem: about: ws: wss: 'unsafe-inline' 'unsafe-eval' 'unsafe-dynamic' ;
+script-src * data: blob: 'unsafe-inline' 'unsafe-eval' ;
+connect-src * data: blob: 'unsafe-inline' ;
+img-src * data: blob: 'unsafe-inline' ;
+frame-src * data: blob: ;
+style-src * data: blob: 'unsafe-inline' ;
+font-src * data: blob: 'unsafe-inline' ;
+frame-ancestors * data: blob: 'unsafe-inline' ;
+</code></pre>
+<p>for 2sxc it can be shorted to:</p>
+<pre><code>// all-src would always be applied to all rules
+all-src * data: blob: 'unsafe-inline'
+default-src filesystem: about: ws: wss: 'unsafe-eval' 'unsafe-dynamic'
+script-src 'unsafe-eval'
+</code></pre>
+<p>You can now start to tighten up the rules.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/guide.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

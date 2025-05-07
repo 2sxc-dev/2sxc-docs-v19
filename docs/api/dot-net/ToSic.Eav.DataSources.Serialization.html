@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Class Serialization | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Serialization | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/eav-server/new/develop/apiSpec/new?filename=ToSic_Eav_DataSources_Serialization.md&amp;value=---%0Auid%3A%20ToSic.Eav.DataSources.Serialization%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Eav.DataSources.Serialization">
+
+
+
+  <h1 id="ToSic_Eav_DataSources_Serialization" data-uid="ToSic.Eav.DataSources.Serialization" class="text-break">
+Class Serialization  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Eav.html">Eav</a>.<a class="xref" href="ToSic.Eav.DataSources.html">DataSources</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Eav.DataSources.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The base class for all DataSources, especially custom DataSources.
+It must always be inherited.
+It provides a lot of core functionality to get configurations, ensure caching and more.</p>
+<p>Important: in most cases you will inherit the <a class="xref" href="ToSic.Eav.DataSource.CustomDataSource.html">CustomDataSource</a> DataSource for custom data sources.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+[VisualQuery(NiceName = &quot;Serialization Configuration&quot;, UiHint = &quot;Determine how this data is Serialized&quot;, Icon = &quot;settings_ethernet&quot;, Type = DataSourceType.Modify, NameId = &quot;2952e680-4aaa-4a12-adf7-325cb2854358&quot;, DynamicOut = true, OutMode = &quot;mirror-in&quot;, In = new string[] { &quot;Default&quot; }, ConfigurationType = &quot;5c84cd3f-f853-40b3-81cf-dee6a07dc411&quot;, HelpLink = &quot;https://go.2sxc.org/DsSerializationConfiguration&quot;)]
+public class Serialization : DataSourceBase, IDataSource, IAppIdentity, IZoneIdentity, IAppIdentityLight, ICacheKey, ICacheExpiring, ITimestamped, IHasLog, IDataSourceLinkable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">ServiceBase</span></div>
+      <div><span class="xref">ServiceBase</span>&lt;<a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html">DataSourceBase</a>.<a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html">MyServices</a>&gt;</div>
+      <div><a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html">DataSourceBase</a></div>
+      <div><span class="xref">Serialization</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ToSic.Eav.DataSource.IDataSource.html">IDataSource</a></div>
+      <div><a class="xref" href="ToSic.Eav.Apps.IAppIdentity.html">IAppIdentity</a></div>
+      <div><a class="xref" href="ToSic.Eav.Apps.IZoneIdentity.html">IZoneIdentity</a></div>
+      <div><a class="xref" href="ToSic.Eav.Apps.IAppIdentityLight.html">IAppIdentityLight</a></div>
+      <div><a class="xref" href="ToSic.Eav.Caching.ICacheKey.html">ICacheKey</a></div>
+      <div><a class="xref" href="ToSic.Eav.Caching.ICacheExpiring.html">ICacheExpiring</a></div>
+      <div><a class="xref" href="ToSic.Eav.Caching.ITimestamped.html">ITimestamped</a></div>
+      <div><a class="xref" href="ToSic.Lib.Logging.IHasLog.html">IHasLog</a></div>
+      <div><a class="xref" href="ToSic.Eav.DataSource.IDataSourceLinkable.html">IDataSourceLinkable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Immutable">DataSourceBase.Immutable</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_AppId">DataSourceBase.AppId</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_ZoneId">DataSourceBase.ZoneId</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Guid">DataSourceBase.Guid</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Error">DataSourceBase.Error</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_CacheTimestamp">DataSourceBase.CacheTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_CacheChanged_System_Int64_">DataSourceBase.CacheChanged(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Configuration">DataSourceBase.Configuration</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Link">DataSourceBase.Link</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_In">DataSourceBase.In</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_TryGetIn_System_String_">DataSourceBase.TryGetIn(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_TryGetOut_System_String_">DataSourceBase.TryGetOut(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Item_System_String_">DataSourceBase.this[string]</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_GetStream_System_String_ToSic_Lib_Coding_NoParamOrder_System_Boolean_System_Boolean_">DataSourceBase.GetStream(string, NoParamOrder, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_List">DataSourceBase.List</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Attach_ToSic_Eav_DataSource_IDataSource_">DataSourceBase.Attach(IDataSource)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Attach_System_String_ToSic_Eav_DataSource_IDataSource_System_String_">DataSourceBase.Attach(string, IDataSource, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_Attach_System_String_ToSic_Eav_DataSource_IDataStream_">DataSourceBase.Attach(string, IDataStream)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_ProvideOut_System_Func_System_Collections_Generic_IEnumerable_ToSic_Eav_Data_IEntity___System_String_">DataSourceBase.ProvideOut(Func&lt;IEnumerable&lt;IEntity&gt;&gt;, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.DataSource.DataSourceBase.html#ToSic_Eav_DataSource_DataSourceBase_ProvideOut_System_Func_System_Collections_Immutable_IImmutableList_ToSic_Eav_Data_IEntity___System_String_">DataSourceBase.ProvideOut(Func&lt;IImmutableList&lt;IEntity&gt;&gt;, string)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="ToSic_Eav_DataSources_Serialization_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Had a major, breaking update in v15.
+Consult the guide to upgrade your custom data sources.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_DropFalseValues_" data-uid="ToSic.Eav.DataSources.Serialization.DropFalseValues*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_DropFalseValues" data-uid="ToSic.Eav.DataSources.Serialization.DropFalseValues">
+  DropFalseValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>todo</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration(Field = &quot;RemoveFalseValues&quot;)]
+public string DropFalseValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeAppId_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeAppId*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeAppId" data-uid="ToSic.Eav.DataSources.Serialization.IncludeAppId">
+  IncludeAppId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the AppId be included in serialization.
+Especially for scenarios where data is retrieved from multiple Apps</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeAppId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeCreated_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeCreated*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeCreated" data-uid="ToSic.Eav.DataSources.Serialization.IncludeCreated">
+  IncludeCreated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Created date be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeCreated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeGuid_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeGuid*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeGuid" data-uid="ToSic.Eav.DataSources.Serialization.IncludeGuid">
+  IncludeGuid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the GUID be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeGuid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeId_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeId*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeId" data-uid="ToSic.Eav.DataSources.Serialization.IncludeId">
+  IncludeId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the ID be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeMetadata_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadata*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeMetadata" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadata">
+  IncludeMetadata
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Metadata ID be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeMetadata { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeMetadataFor_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataFor*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeMetadataFor" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataFor">
+  IncludeMetadataFor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Metadata target/for information be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeMetadataFor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeMetadataForId_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataForId*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeMetadataForId" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataForId">
+  IncludeMetadataForId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Metadata target/for information be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeMetadataForId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeMetadataForType_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataForType*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeMetadataForType" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataForType">
+  IncludeMetadataForType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Metadata target/for information be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeMetadataForType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeMetadataGuid_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataGuid*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeMetadataGuid" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataGuid">
+  IncludeMetadataGuid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Metadata GUID be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeMetadataGuid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeMetadataId_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataId*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeMetadataId" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataId">
+  IncludeMetadataId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Metadata ID be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeMetadataId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeMetadataTitle_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataTitle*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeMetadataTitle" data-uid="ToSic.Eav.DataSources.Serialization.IncludeMetadataTitle">
+  IncludeMetadataTitle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the default Title of the Metadata be included as &quot;Title&quot; in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeMetadataTitle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeModified_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeModified*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeModified" data-uid="ToSic.Eav.DataSources.Serialization.IncludeModified">
+  IncludeModified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Modified date be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeModified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipGuid_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipGuid*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipGuid" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipGuid">
+  IncludeRelationshipGuid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Relationship GUID be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeRelationshipGuid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipId_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipId*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipId" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipId">
+  IncludeRelationshipId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Relationship ID be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeRelationshipId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipTitle_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipTitle*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipTitle" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipTitle">
+  IncludeRelationshipTitle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the default Title of the Relationship be included as &quot;Title&quot; in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeRelationshipTitle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeRelationships_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationships*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeRelationships" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationships">
+  IncludeRelationships
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Relationships be included in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeRelationships { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipsAsCsv_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipsAsCsv*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipsAsCsv" data-uid="ToSic.Eav.DataSources.Serialization.IncludeRelationshipsAsCsv">
+  IncludeRelationshipsAsCsv
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the Relationships be included as CSV like &quot;42,27,999&quot;.
+Possible values</p>
+<ul>
+<li>null or false: they are sub-objects</li>
+<li>true or &quot;csv&quot;: they are CSV strings</li>
+<li>&quot;array&quot; return array of ID or GUID</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration(Fallback = false)]
+public string IncludeRelationshipsAsCsv { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="ToSic_Eav_DataSources_Serialization_IncludeRelationshipsAsCsv_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>adding in v15.03</li>
+<li>extended purpose in v18.00 to also have &quot;array&quot; as possible value</li>
+</ul>
+</div>
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeTitle_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTitle*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeTitle" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTitle">
+  IncludeTitle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the default Title be included as &quot;Title&quot; in serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeTitle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeTypeAs_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTypeAs*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeTypeAs" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTypeAs">
+  IncludeTypeAs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Values probably</p>
+<ul>
+<li>empty (default) - don't include</li>
+<li>&quot;object&quot; make an object</li>
+<li>&quot;flat&quot;</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeTypeAs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeTypeId_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTypeId*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeTypeId" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTypeId">
+  IncludeTypeId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeTypeId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeTypeName_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTypeName*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeTypeName" data-uid="ToSic.Eav.DataSources.Serialization.IncludeTypeName">
+  IncludeTypeName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeTypeName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_IncludeZoneId_" data-uid="ToSic.Eav.DataSources.Serialization.IncludeZoneId*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_IncludeZoneId" data-uid="ToSic.Eav.DataSources.Serialization.IncludeZoneId">
+  IncludeZoneId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should the AppId be included in serialization.
+Especially for scenarios where data is retrieved from multiple Apps</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string IncludeZoneId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_Out_" data-uid="ToSic.Eav.DataSources.Serialization.Out*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_Out" data-uid="ToSic.Eav.DataSources.Serialization.Out">
+  Out
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the Dictionary of Out-Streams. This is the internal accessor, as usually you'll use this[&quot;name&quot;] instead. <br>
+In rare cases you need the Out, for example to list the stream names in the data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyDictionary&lt;string, IDataStream&gt; Out { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="ToSic.Eav.DataSource.IDataStream.html">IDataStream</a>&gt;</dt>
+    <dd><p>A dictionary of named <a class="xref" href="ToSic.Eav.DataSource.IDataStream.html">IDataStream</a> objects, case insensitive</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_RemoveEmptyStrings_" data-uid="ToSic.Eav.DataSources.Serialization.RemoveEmptyStrings*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_RemoveEmptyStrings" data-uid="ToSic.Eav.DataSources.Serialization.RemoveEmptyStrings">
+  RemoveEmptyStrings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>todo</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration(Field = &quot;RemoveEmptyStringValues&quot;)]
+public string RemoveEmptyStrings { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_RemoveNullValues_" data-uid="ToSic.Eav.DataSources.Serialization.RemoveNullValues*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_RemoveNullValues" data-uid="ToSic.Eav.DataSources.Serialization.RemoveNullValues">
+  RemoveNullValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>todo</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string RemoveNullValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_RemoveZeroValues_" data-uid="ToSic.Eav.DataSources.Serialization.RemoveZeroValues*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_RemoveZeroValues" data-uid="ToSic.Eav.DataSources.Serialization.RemoveZeroValues">
+  RemoveZeroValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>todo</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration]
+public string RemoveZeroValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataSources_Serialization_TypePropertyNames_" data-uid="ToSic.Eav.DataSources.Serialization.TypePropertyNames*"></a>
+
+  <h3 id="ToSic_Eav_DataSources_Serialization_TypePropertyNames" data-uid="ToSic.Eav.DataSources.Serialization.TypePropertyNames">
+  TypePropertyNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Configuration(Fallback = &quot;Type&quot;)]
+public string TypePropertyNames { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.DataSources/DataSources/Serialization/Serialization.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

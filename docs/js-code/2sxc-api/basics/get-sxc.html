@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Get the Current Sxc Object | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Get the Current Sxc Object | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/2sxc-api/basics/get-sxc.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.2sxcApi.GetSxc.Index">
+
+<img src="../../../assets/features/js-api.svg" class="feature">
+<h1 id="get-the-current-sxc-object">Get the Current <code>Sxc</code> Object</h1>
+<div class="float-end context-box-summary highlight-max" width="400px">
+  <div class="fancybox-auto svg-highlight" style="width: 100%">
+<svg version="1.1" baseprofile="full" viewbox="0 0 3229 2529" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../../pages/basics/stack/assets/stack-detailed.png" x="0" y="0" height="100%" width="100%"></image>
+  <!-- Data Highlights -->
+  <rect class="svg-highlight prepared data-all" x="0%" y="82%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-data" x="19%" y="82%" width="64%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-all" x="3%" y="82%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-app" x="3%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-assets-entities" x="18.5%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-configuration" x="3%" y="93%" width="17%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared data-entities" x="34%" y="82%" width="33%" height="10.5%"></rect>
+  <rect class="svg-highlight prepared data-content-types" x="34%" y="89%" width="33%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-app" x="34%" y="89%" width="17.5%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-global" x="50%" y="89%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-external" x="65.5%" y="82%" width="17%" height="10.5%"></rect>
+  <!-- ADAM -->
+  <rect class="svg-highlight prepared adam" x="18.5%" y="89%" width="17%" height="8%"></rect>
+  <!-- Server -->
+  <rect class="svg-highlight prepared server-all" x="0%" y="41%" width="84%" height="38%"></rect>
+  <!-- Prepare -->
+  <rect class="svg-highlight prepared prepare-all" x="0%" y="61%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared query" x="44.5%" y="61%" width="34%" height="18%"></rect>
+  <rect class="svg-highlight prepared query-engine" x="44.5%" y="70%" width="34%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-built-in" x="44.5%" y="62.5%" width="18%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-app" x="60.5%" y="62.5%" width="17%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-datasource" x="71%" y="70%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-params" x="65%" y="70%" width="10%" height="7%"></rect>
+  <!-- Data Source -->
+  <rect class="svg-highlight prepared datasource" x="86%" y="51%" width="13%" height="16%"></rect>
+  <rect class="svg-highlight prepared datasource-custom" x="87.5%" y="54.5%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared datasource-built-in" x="87.5%" y="59%" width="12%" height="7%"></rect>
+  <rect class="svg-highlight prepared lookup" x="86%" y="66%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared lookup-engine" x="87.5%" y="69%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared lookup-sources" x="87.5%" y="73%" width="12%" height="7%"></rect>
+  <!-- Optimzers -->
+  <rect class="svg-highlight prepared asset-optimizer" x="3%" y="49.5%" width="13.5%" height="8%"></rect>
+  <rect class="svg-highlight prepared image-resizer" x="15%" y="30%" width="17%" height="34%"></rect>
+  <!-- Process / Awesomize -->
+  <rect class="svg-highlight prepared process-all" x="0%" y="41%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-cs" x="34%" y="41%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-razor" x="34.3%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-razor-app" x="34.3%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-razor-engine" x="34.3%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-apis" x="50%" y="42%" width="34%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api" x="50%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api-app" x="50%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-web-api-engine" x="50%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-libraries" x="47%" y="47%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-headless" x="65.5%" y="49.5%" width="17%" height="7%"></rect>
+  <!-- Libraries -->
+  <rect class="svg-highlight prepared libraries" x="86%" y="38%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared libraries-app" x="87.5%" y="41%" width="12%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared libraries-built-in" x="87.5%" y="46%" width="12%" height="6%"></rect>
+  <!-- data formats -->
+  <rect class="svg-highlight prepared format-json-custom" x="50%" y="32%" width="17%" height="14%"></rect>
+  <rect class="svg-highlight prepared format-json-headless" x="65.5%" y="32%" width="17%" height="21%"></rect>
+  <rect class="svg-highlight prepared format-json-edit" x="74%" y="30%" width="19%" height="23%"></rect>
+  <!-- Browser -->
+  <rect class="svg-highlight prepared browser-all" x="0%" y="0%" width="100%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-show" x="0%" y="0%" width="50%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact-edit" x="47%" y="0%" width="37%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact" x="47%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit" x="64%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit-ui" x="81.5%" y="0%" width="18%" height="34%"></rect>
+  <!-- Frameworks -->
+  <rect class="svg-highlight prepared frameworks-browser" x="0%" y="0%" width="17.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared frameworks-CSS" x="0%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-js" x="0%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-spa" x="0%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- App show parts -->
+  <rect class="svg-highlight prepared show-html" x="15.8%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-js" x="15.8%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-spa" x="15.8%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- Interact parts -->
+  <rect class="svg-highlight prepared interact-mobile" x="48.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared interact-2sxc" x="48.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit parts -->
+  <rect class="svg-highlight prepared edit-auto" x="65.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared edit-custom" x="65.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit UI parts -->
+  <rect class="svg-highlight prepared edit-ui" x="82.5%" y="3%" width="17.5%" height="18%"></rect>
+  <rect class="svg-highlight prepared edit-ui-custom" x="82.5%" y="20%" width="17.5%" height="12%"></rect>
+  <!-- SPA parts -->
+  <rect class="svg-highlight prepared spa-all" x="0%" y="21%" width="83%" height="12%"></rect>
+  <rect class="svg-highlight prepared spa-2sxc-js" x="31.5%" y="21%" width="52%" height="12%"></rect>
+  <!-- Custom highlight boxes - can be controlled by in-page CSS -->
+  <rect class="svg-highlight highlight1"></rect>
+  <rect class="svg-highlight highlight2"></rect>
+  <rect class="svg-highlight highlight3"></rect>
+  <rect class="svg-highlight highlight4"></rect>
+  <rect class="svg-highlight highlight5"></rect>
+</svg>
+  </div>
+  <div class="overlay-description">
+<p>you are here (click to zoom) - discover the <a class="xref" href="../../../basics/index.html">stack</a></p>
+  </div>
+</div>
+<style>.context-box-summary .interact-2sxc { visibility: visible; } </style>
+<p>This assumes you have the JS API page features enabled,
+either because you are logged in as Admin, or because you <a class="xref" href="activate.html">activated them</a>.</p>
+<h2 id="get-the-sxc-using-2sxc">Get the <code>Sxc</code> using <code>$2sxc</code></h2>
+<p>There are four get-signatures:</p>
+<ol>
+<li>With an HTML Tag: <code>$2sxc(tag: HTMLElement)</code> - recommended</li>
+<li>With a Module ID: <code>$2sxc(moduleId: number)</code> - oldest way, very common</li>
+<li>Using a Context: <code>$2sxc(context: ContextIdentifier)</code> - new in v11.11</li>
+<li><del><code>$2sxc(moduleId, contentBlockId)</code></del> - a special version for internal use only</li>
+</ol>
+<p>For demos it depends a bit on your scenario.</p>
+<ul>
+<li>Vanilla JavaScript or TypeScript
+<ul>
+<li><a href="#get-sxc-with-inline-javascript">Inline JavaScript</a> - easiest to use</li>
+<li><a href="#get-sxc-with-external-javascript">External JavaScript</a></li>
+<li><a href="#get-sxc-with-external-javascript-and-turnon">External JavaScript with turnOn</a> - recommended! 🚀</li>
+</ul>
+</li>
+<li>External JavaScript Framework such as Angular, Vue or React</li>
+</ul>
+<h2 id="get-sxc-with-inline-javascript">Get <code>Sxc</code> with Inline JavaScript</h2>
+<p>This is the easiest to use, but we suggest you try to avoid it, because of <a class="xref" href="../../../abyss/security/csp/index.html">CSP-Hardening</a>.</p>
+<h3 id="get-with-an-html-tag-inline">Get with an HTML Tag (Inline)</h3>
+<p>We recommend the <strong>HTMLElement syntax</strong>.
+With this syntax, <code>$2sxc</code> will go up through the DOM-tree and find the module it's in (or the content-block).
+It will then auto-configure itself.
+What's nice about this is that this method works without any server-side support (which you need for the other methods).
+Here's a simple example:</p>
+<pre><code class="lang-html">&lt;a onclick='$2sxc(this).cms.run(&quot;layout&quot;)'&gt;layout&lt;/a&gt;
+</code></pre>
+<p>In the above example, the HTMLElement is given by the current click, which puts the current <code>&lt;a&gt;</code> node in the <code>this</code> object.</p>
+<p>Here's a JS example:</p>
+<pre><code class="lang-javascript">var x = document.getElementById(&quot;myApp&quot;); // get a dom element inside this 2sxc app
+var sxc1 = $2sxc(x);                      // use it
+
+// the same thing in 1 line
+var sxc2 = $2sxc(document.getElementById(&quot;myApp&quot;));
+</code></pre>
+<p>With jQuery (not recommended, jQuery should be seen as <a class="xref" href="../../dnn/jquery.html">end-of-life</a>):</p>
+<pre><code class="lang-javascript">// the same thing in 1 line
+var sxc = $2sxc($(&quot;#myApp&quot;)[0]);
+</code></pre>
+<p>Note that the simple example above assumes that there is only one item on the page, but there can often be more.
+In that scenario you'll need to loop or something.</p>
+<h3 id="get-with-a-module-id-inline">Get with a Module ID (Inline)</h3>
+<p>In this method, you need to get the ModuleId from somewhere, usually provided by the server-side template.
+In a Token-Template you would use <code>[Module:ModuleId]</code> and in a Razor-Template it's <code>@Dnn.Module.ModuleID</code> (large &quot;ID&quot;).</p>
+<p>The same code in <strong>Razor</strong> for Dnn and Oqtane would be:</p>
+<pre><code class="lang-JavaScript">$(function () {
+  var sxc = $2sxc(@CmsContext.Module.Id);
+  alert(&quot;edit mode: &quot; + sxc.isEditMode());
+})
+</code></pre>
+<p>The same code in <strong>Tokens</strong> would be:</p>
+<pre><code class="lang-JavaScript">$(function () {
+  var sxc = $2sxc([Module:ModuleId]);
+  alert(&quot;edit mode: &quot; + sxc.isEditMode());
+})
+</code></pre>
+<p>You can also find an example of finding all of our nodes and initializing them in the <a class="xref" href="https://2sxc.org/en/apps/app/timelinejs-app-for-dnn-dotnetnuke">TimeLineJS App</a>.
+If you're interested, here's the <a href="https://github.com/2sic/app-TimeLineJS/blob/master/assets/scripts.js">js-initializer</a>.</p>
+<h2 id="get-sxc-with-external-javascript">Get <code>Sxc</code> with External JavaScript</h2>
+<p>When using external vanilla JavaScript, you will need:</p>
+<ol>
+<li>either a strong naming convention - such as making sure your app always has a tag with id <code>myAmazingApp</code></li>
+<li>or pass it a tag or ID to get started.</li>
+</ol>
+<p>If you use a strong naming convention, this is the same as the inline-JavaScript-method.</p>
+<pre><code class="lang-js">// the same thing in 1 line
+var sxc = $2sxc(document.getElementById(&quot;myAmazingApp&quot;));
+</code></pre>
+<p>If you want to pass in the name or something, then the <strong>external</strong> file would look something like this:</p>
+<pre><code class="lang-JavaScript">function startWithId(moduleId) {
+  var sxc = $2sxc(moduleId);
+  alert(&quot;edit mode: &quot; + sxc.isEditMode());
+}
+
+function alertFromTag(tag) {
+  var sxc = $2sxc(tag);
+  alert(&quot;edit mode: &quot; + sxc.isEditMode());
+}
+</code></pre>
+<p>And the page would contain code such as:</p>
+<pre><code class="lang-html">&lt;!-- Run a script--&gt;
+&lt;script&gt;
+  startWithId(@CmsContext.Module.Id);
+&lt;/script&gt;
+
+&lt;!-- use the this-dom element --&gt;
+&lt;a onclick='alertFromTag(this)'&gt;show edit mode&lt;/a&gt;
+</code></pre>
+<h2 id="get-sxc-with-external-javascript-and-turnon">Get <code>Sxc</code> with External JavaScript and turnOn</h2>
+<p><strong>turnOn</strong> is a special helper to <strong>boot your JavaScript</strong>.
+It's especially useful because you cannot always rely on the loading order / speed of scripts,
+on scripts which may depend on other libraries to run as well.
+Read more about <a class="xref" href="../../turn-on/index.html">turnOn</a>.</p>
+<h3 id="use-module-id-with-turnon">Use Module ID with turnOn</h3>
+<p>Razor File - example taken from the <a class="xref" href="https://2sxc.org/en/apps/app/counter2-hybrid-for-dnn-and-oqtane">Counter App</a>:</p>
+<pre><code class="lang-razor">@inherits Custom.Hybrid.Razor14
+@using ToSic.Sxc.Services;
+@{
+  // Basics / Preparation
+  Kit.Page.Activate(&quot;turnOn&quot;);
+  var domId = &quot;app-counter2-js-&quot; + CmsContext.Module.Id;
+}
+&lt;div id=&quot;@domId&quot; data-count=&quot;@fact.Number&quot;&gt;
+  &lt;!-- more --&gt;
+&lt;/div&gt;
+
+@* include the JS, at the bottom of the page *@
+&lt;script src=&quot;@App.Path/scripts.js&quot; @pageSvc.AssetAttributes(position: &quot;bottom&quot;) &gt;&lt;/script&gt;
+&lt;turnOn turn-on='{ &quot;run&quot;: &quot;window.initMyApp()&quot;, &quot;data&quot;: { &quot;domId&quot;: &quot;@domId&quot; }}'&gt;&lt;/turnOn&gt;
+</code></pre>
+<p>JavaScript / TypeScript File:</p>
+<pre><code class="lang-ts">function initMyApp({ domId } : { domId: string }) {
+  var sxc = $2sxc(document.getElementById(domId));
+  // ...
+}
+</code></pre>
+<h3 id="use-tag-with-turnon">Use Tag with turnOn</h3>
+<p>This is almost the same as with the Module ID, but the tag is passed in automatically.
+Note that this requires v14.02 with turnOn v0.1.2.</p>
+<p>JavaScript / TypeScript File:</p>
+<pre><code class="lang-ts">function initMyApp(data: any, context: any) {
+  var sxc = $2sxc(document.getElementById(context.tag));
+  // ...
+}
+</code></pre>
+<hr>
+<h2 id="technical-features-explained">Technical Features Explained</h2>
+<h3 id="everything-is-cached">Everything is Cached</h3>
+<p>We optimized for just about every thinkable situation, so the $2sxc will build a controller-object for a module,
+but following calls to it will use the cached information. Example:</p>
+<pre><code class="lang-javascript">var sxc = $2sxc(42); // initial call, will build controller for Module 42
+var sxc2 = $2sxc(42); // second call, will use cached controller
+var sxc3 = $2sxc(domNodeInsideTheModule42); // another call, will also used cached controller
+</code></pre>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 04.00</li>
+<li>Enhanced the <code>$2sxc(...)</code> constructor with the ContextIdentifier in v11.11</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/2sxc-api/basics/get-sxc.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

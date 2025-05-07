@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Wysiwyg - Guide | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Wysiwyg - Guide | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/guides/wysiwyg/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Guides.Wysiwyg.Index">
+<h1 id="wysiwyg---guide">Wysiwyg - Guide</h1>
+
+<p>This guide will help you understand how to use the Wysiwyg editor and output it in 2sxc.</p>
+<h2 id="what-is-wysiwyg">What is Wysiwyg?</h2>
+<p>2sxc has various fields and input types.
+<a class="xref" href="../../basics/data/fields/string.html">String</a> fields can have a <a class="xref" href="../../basics/data/fields/string-wysiwyg/index.html">WYSIWYG</a> input type.
+When content is edited this way, it will be stored as a string containing HTML.</p>
+<h2 id="types-of-wysiwyg">Types of Wysiwyg</h2>
+<p>As of v15.0x there are two core types of Wysiwyg content.
+The main difference is how the edit UI provides special features and adds styling to the content.</p>
+<ol>
+<li><strong>Standard wysiwyg</strong> (the only option before v15)
+<ul>
+<li>In standard mode the editor is limited in what he/she can do, and styling (eg. image size or alignment) is applied directly to the HTML as <code>style</code> attributes.</li>
+<li>Since the HTML contains everything, you simply have to output it as raw HTML.</li>
+<li>Use <code>@Html.Raw(item.FieldName)</code> to output it.</li>
+</ul>
+</li>
+<li><strong>Text wysiwyg</strong> (new v15)
+<ul>
+<li>In text mode the editor is limited in what he/she can do, for example (WIP) they can't add images</li>
+<li>Since the HTML contains everything, you simply have to output it as raw HTML.</li>
+<li>Use <code>@Html.Raw(item.FieldName)</code> to output it.</li>
+</ul>
+</li>
+<li><strong>Rich wysiwyg</strong> (new in v15)
+<ul>
+<li>In rich mode the editor can do more, and styling is applied as CSS <strong>classes</strong>.</li>
+<li>An important difference is that images are <em>not</em> inside <code>p</code> tags, but always outside of them.</li>
+<li>Since the HTML only specifies classes, these classes must be defined in your CSS to have an effect.</li>
+<li>Use <code>@Cms.Show(item.Field(&quot;FieldName&quot;))</code> to output it, which also ensures that the default CSS is added to the page. You can set more parameters on <code>Show(...)</code> for finer control.</li>
+</ul>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>As we'll improve the features, the differences in the editor will become more apparent.
+We plan to also introduce lightweight <strong>Text</strong> modes which prevent image uploading and more.</p>
+</div>
+<p>TODO: how to select these modes</p>
+<h2 id="rich-wysiwyg-classes">Rich Wysiwyg Classes</h2>
+<p>The following should explain the various features in <strong>Rich</strong> mode so you have an idea of their purpose and how they are applied.
+When using the <code>@Cms.Show(...)</code> method, it will create a wrapper with a <code>wysiwyg</code> classes, so it will look ca. like this:</p>
+<pre><code class="lang-html">...
+&lt;div class='wysiwyg-container'&gt;
+  ...
+  &lt;img class='wysiwyg-left wysiwyg-50' src='...'&gt;
+  &lt;hr class='wysiwyg-splitter wysiwyg-spacer-s'&gt;
+  &lt;img class='wysiwyg-right wysiwyg-33' src='...'&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can of course specify a different tag than <code>div</code> and also change other defaults.</p>
+</div>
+<p>The CSS that is automatically added will do some magic:</p>
+<ul>
+<li>the main <code>wysiwyg-container</code> will receive a <code>container-type</code> of <code>inline-size</code> - see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries">mdn docs</a></li>
+</ul>
+<h3 id="image-alignment">Image Alignment</h3>
+<p>todo</p>
+<p>Classes</p>
+<ul>
+<li><code>wysiwyg-left</code></li>
+<li><code>wysiwyg-right</code></li>
+<li><code>wysiwyg-center</code></li>
+</ul>
+<p>In the standard implementation, alignments apply to large, desktop/ipad-sized containers.
+This means that if final HTML is shown on a wide div, the alignments will be applied.
+However, if the final HTML is shown in a narrow div, the alignment will be ignored.</p>
+<p>Your skin or module CSS can override this behavior - see below.</p>
+<h3 id="image-size">Image Size</h3>
+<p>Sizes in rich mode are meant to be responsive, so they are not absolute pixel sizes, but relative sizes.
+The ratios like <code>33</code> (1 of 3) are what desktop users should see, and the built-in CSS will adjust the size for mobile devices.</p>
+<p>Classes</p>
+<ul>
+<li><code>wysiwyg-100</code> - full width</li>
+<li><code>wysiwyg-50</code> - half width</li>
+<li><code>wysiwyg-33</code> - 1/3 width</li>
+<li><code>wysiwyg-66</code> - 2/3 width</li>
+<li><code>wysiwyg-25</code> - 1/4 width</li>
+<li><code>wysiwyg-75</code> - 3/4 width</li>
+</ul>
+<p>In the standard implementation, alignments apply to large, desktop/ipad-sized containers.
+This means that if final HTML is shown on a wide div, the alignments will be applied.
+However, if the final HTML is shown in a narrow div, the alignment will be ignored.</p>
+<h3 id="splitters-and-spacers">Splitters and Spacers</h3>
+<p>Splitters break the page into sections, so that the content following a splitter is freshly aligned.
+This is important to ensure that aligned content doesn't get stacked, but starts anew below the previous content.
+Splitters are implemented as <code>&lt;hr&gt;</code> tags with special CSS classes (see below).</p>
+<p>Spacers are splitters with additional CSS classes which determine the height of the gap.
+This allows the editor to add standardized space between content.</p>
+<p>Classes</p>
+<ul>
+<li><code>wysiwyg-splitter</code></li>
+<li><code>wysiwyg-spacer-0</code></li>
+<li><code>wysiwyg-spacer-s</code></li>
+<li><code>wysiwyg-spacer-m</code></li>
+<li><code>wysiwyg-spacer-l</code></li>
+</ul>
+<h2 id="what-cmsshow-does">What Cms.Show does</h2>
+<p>todo: link to Cms...</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/guides/wysiwyg/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

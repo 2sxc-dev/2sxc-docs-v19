@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>DataSource Configuration | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DataSource Configuration | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data-sources/custom/configuration.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.DataSources.Custom.Configuration">
+<h1 id="datasource-configuration">DataSource Configuration</h1>
+
+<div class="float-end context-box-summary highlight-max" width="400px">
+  <div class="fancybox-auto svg-highlight" style="width: 100%">
+<svg version="1.1" baseprofile="full" viewbox="0 0 3229 2529" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../../pages/basics/stack/assets/stack-detailed.png" x="0" y="0" height="100%" width="100%"></image>
+  <!-- Data Highlights -->
+  <rect class="svg-highlight prepared data-all" x="0%" y="82%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-data" x="19%" y="82%" width="64%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-all" x="3%" y="82%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-app" x="3%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-assets-entities" x="18.5%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-configuration" x="3%" y="93%" width="17%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared data-entities" x="34%" y="82%" width="33%" height="10.5%"></rect>
+  <rect class="svg-highlight prepared data-content-types" x="34%" y="89%" width="33%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-app" x="34%" y="89%" width="17.5%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-global" x="50%" y="89%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-external" x="65.5%" y="82%" width="17%" height="10.5%"></rect>
+  <!-- ADAM -->
+  <rect class="svg-highlight prepared adam" x="18.5%" y="89%" width="17%" height="8%"></rect>
+  <!-- Server -->
+  <rect class="svg-highlight prepared server-all" x="0%" y="41%" width="84%" height="38%"></rect>
+  <!-- Prepare -->
+  <rect class="svg-highlight prepared prepare-all" x="0%" y="61%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared query" x="44.5%" y="61%" width="34%" height="18%"></rect>
+  <rect class="svg-highlight prepared query-engine" x="44.5%" y="70%" width="34%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-built-in" x="44.5%" y="62.5%" width="18%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-app" x="60.5%" y="62.5%" width="17%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-datasource" x="71%" y="70%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-params" x="65%" y="70%" width="10%" height="7%"></rect>
+  <!-- Data Source -->
+  <rect class="svg-highlight prepared datasource" x="86%" y="51%" width="13%" height="16%"></rect>
+  <rect class="svg-highlight prepared datasource-custom" x="87.5%" y="54.5%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared datasource-built-in" x="87.5%" y="59%" width="12%" height="7%"></rect>
+  <rect class="svg-highlight prepared lookup" x="86%" y="66%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared lookup-engine" x="87.5%" y="69%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared lookup-sources" x="87.5%" y="73%" width="12%" height="7%"></rect>
+  <!-- Optimzers -->
+  <rect class="svg-highlight prepared asset-optimizer" x="3%" y="49.5%" width="13.5%" height="8%"></rect>
+  <rect class="svg-highlight prepared image-resizer" x="15%" y="30%" width="17%" height="34%"></rect>
+  <!-- Process / Awesomize -->
+  <rect class="svg-highlight prepared process-all" x="0%" y="41%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-cs" x="34%" y="41%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-razor" x="34.3%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-razor-app" x="34.3%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-razor-engine" x="34.3%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-apis" x="50%" y="42%" width="34%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api" x="50%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api-app" x="50%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-web-api-engine" x="50%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-libraries" x="47%" y="47%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-headless" x="65.5%" y="49.5%" width="17%" height="7%"></rect>
+  <!-- Libraries -->
+  <rect class="svg-highlight prepared libraries" x="86%" y="38%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared libraries-app" x="87.5%" y="41%" width="12%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared libraries-built-in" x="87.5%" y="46%" width="12%" height="6%"></rect>
+  <!-- data formats -->
+  <rect class="svg-highlight prepared format-json-custom" x="50%" y="32%" width="17%" height="14%"></rect>
+  <rect class="svg-highlight prepared format-json-headless" x="65.5%" y="32%" width="17%" height="21%"></rect>
+  <rect class="svg-highlight prepared format-json-edit" x="74%" y="30%" width="19%" height="23%"></rect>
+  <!-- Browser -->
+  <rect class="svg-highlight prepared browser-all" x="0%" y="0%" width="100%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-show" x="0%" y="0%" width="50%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact-edit" x="47%" y="0%" width="37%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact" x="47%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit" x="64%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit-ui" x="81.5%" y="0%" width="18%" height="34%"></rect>
+  <!-- Frameworks -->
+  <rect class="svg-highlight prepared frameworks-browser" x="0%" y="0%" width="17.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared frameworks-CSS" x="0%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-js" x="0%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-spa" x="0%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- App show parts -->
+  <rect class="svg-highlight prepared show-html" x="15.8%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-js" x="15.8%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-spa" x="15.8%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- Interact parts -->
+  <rect class="svg-highlight prepared interact-mobile" x="48.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared interact-2sxc" x="48.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit parts -->
+  <rect class="svg-highlight prepared edit-auto" x="65.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared edit-custom" x="65.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit UI parts -->
+  <rect class="svg-highlight prepared edit-ui" x="82.5%" y="3%" width="17.5%" height="18%"></rect>
+  <rect class="svg-highlight prepared edit-ui-custom" x="82.5%" y="20%" width="17.5%" height="12%"></rect>
+  <!-- SPA parts -->
+  <rect class="svg-highlight prepared spa-all" x="0%" y="21%" width="83%" height="12%"></rect>
+  <rect class="svg-highlight prepared spa-2sxc-js" x="31.5%" y="21%" width="52%" height="12%"></rect>
+  <!-- Custom highlight boxes - can be controlled by in-page CSS -->
+  <rect class="svg-highlight highlight1"></rect>
+  <rect class="svg-highlight highlight2"></rect>
+  <rect class="svg-highlight highlight3"></rect>
+  <rect class="svg-highlight highlight4"></rect>
+  <rect class="svg-highlight highlight5"></rect>
+</svg>
+  </div>
+  <div class="overlay-description">
+<p>you are here (click to zoom) - discover the <a class="xref" href="../../../basics/index.html">stack</a></p>
+  </div>
+</div>
+<style>
+  .context-box-summary .datasource-custom,
+  .context-box-summary .query-params,
+  .context-box-summary .data-configuration
+  { visibility: visible; }
+</style>
+<p>DataSources are consumed in code and in VisualQuery.
+In both cases they may need some configuration.</p>
+<p>When used in code, the code will look a bit like this:</p>
+<pre><code class="lang-c#">var withConfig = Kit.Data.GetSource(name: &quot;WithConfig&quot;, parameters: new {
+  AmountOfItems = 3,
+  FavoriteColor = &quot;dark blue&quot;
+});
+</code></pre>
+<p>When used in VisualQuery, the developer will specify the configuration in the UI, and the Query system will automatically transfer all the values to the DataSource.</p>
+<h2 id="how-it-works">How It Works</h2>
+<p>For all of this to work, there is a robust <strong>Configuration System</strong>.
+Here's how it works in summary:</p>
+<ol>
+<li>All properties of a DataSource which are part of the configuration are decorated using the <a class="xref" href="configuration-attribute.html">Configuration Attribute</a></li>
+<li>When the object is created, the class is scanned for these attributes and a internal dictionary of all configuration values is created</li>
+<li>These configurations use <code>Tokens</code> - so internally it will be something like <code>AmountOfItems = [MyConfiguration:AmountOfItems||3]</code></li>
+<li>If code set a new value, the token is flushed and the new value is set</li>
+<li>If a query is used, then the token part <code>[MyConfiguration:AmountOfItems]</code> returns what was in the data</li>
+<li>If no value is set, the fallback value is used, since <code>[MyConfiguration:AmountOfItems]</code> doesn't return anything</li>
+</ol>
+<p>The foundation of this is built using:</p>
+<ol>
+<li>The <strong><a class="xref" href="configuration-attribute.html">Configuration Attribute</a></strong> and an internal loader</li>
+<li>The <strong><a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSource.IDataSourceConfiguration.html">Configuration manager</a></strong> on the DataSource which helps you get the configuration</li>
+<li>The <strong><a class="xref" href="../../../abyss/parts/look-up/engine.html">LookUp Engine</a></strong> which resolves any Tokens in the configuration</li>
+</ol>
+<p>For it to work in VisualQuery, it also needs:</p>
+<ol>
+<li>A <strong><a class="xref" href="configuration-data.html">Content-Type</a></strong> with fields matching the property names</li>
+<li>The <strong><a class="xref" href="visual-query-attribute.html">VisualQuery Attribute</a></strong> on your DataSource which references that Content-Type</li>
+<li>The internal <strong>Query Engine</strong> which provides the data on the lookup called <code>MyConfiguration</code></li>
+</ol>
+<h2 id="examples-of-configurations-needed">Examples of Configurations Needed</h2>
+<ul>
+<li>a <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.Paging.html">Paging</a> needs to know what page size it should use and what page it's on</li>
+<li>A <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.Csv.html">CSV Data Source</a> needs to know what file it should load</li>
+<li>a <a class="xref" href="../../../api/dot-net/ToSic.Sxc.DataSources.CmsBlock.html">CmsBlock</a> needs to know the module ID</li>
+<li>an <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.OwnerFilter.html">Owner-Filter DataSource</a> needs to know who the current user is, to find his items</li>
+</ul>
+<p>Some of this information depends on the current context (ModuleId, UserId), others on configured settings (page size) and some on Url-parameters (Page number). In addition, we sometimes want to say <em>&quot;use the page-size configured in the App-Settings&quot;</em> or even more complex <em>&quot;use from url, but if not specified, try app-settings, and if that isn't defined, use 10&quot;</em>.</p>
+<h2 id="how-to-build-a-configurable-datasource">How to Build a Configurable DataSource</h2>
+<p>👉 Best check the <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/datasources-dynamic">Dynamic DataSources Tutorials</a> for some easy examples</p>
+<h2 id="configuration-basics">Configuration Basics</h2>
+<p>Each configuration value of a <a class="xref" href="../datasource.html">DataSource</a> must be a value (string, int etc.).
+But to allow greater flexibility in configuration, it usually starts as a string <a class="xref" href="../../../abyss/parts/look-up/tokens.html">Token</a> like <code>[MyConfiguration:PageNumber]</code>.
+This token is parsed <em>before any data is queried</em> using <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSource.IDataSourceConfiguration.html">Configuration.GetThis()</a> to convert the Token to the expected value type.
+Best read more about <a class="xref" href="../../../abyss/parts/look-up/tokens.html">Tokens</a> and how fallbacks, defaults and recursion work.</p>
+<p>The Tokens allow quite some fancy features:</p>
+<ol>
+<li>Your DataSource will use <code>[MyConfiguration:...]</code> tokens and will automatically get the settings as they were added in the UI</li>
+<li>Since tokens also allow for default/fallback values, your code will often have <code>[MyConfiguration:Id||0]</code></li>
+<li>As tokens are recursive, the admin can specify things like <code>[QueryString:Id||752]</code> in the UI and your code (asking for <code>[MyConfiguration:Id]</code>) will get the ID from the URL or the default <code>752</code> as the Admin specified it.</li>
+<li>Thanks to <a class="xref" href="../../../abyss/parts/look-up/tokens.html">Token Stacking</a> a lot more is possible 😉</li>
+</ol>
+<p>When a DataSource is configured, it has many parameter LookUp Sources like <code>Module</code>, <code>QueryString</code>, <code>App</code> etc.
+These are shared and are identical for all objects. Read more about the <a class="xref" href="../../../abyss/parts/look-up/sources.html">LookUp Sources</a>.</p>
+<p>In your code you will usually not use these sources, but only use the <a class="xref" href="../../../abyss/parts/look-up/lookup-settings.html"><code>MyConfiguration</code> source</a>.
+This source only exists in C# and contains all the values the Admin/Editor entered in the <a class="xref" href="configuration-data.html">Configuration-UI</a>.
+So the token <code>[MyConfiguration:PageNumber]</code> will deliver the number or text in the input-field <code>pagenumber</code>.</p>
+<h2 id="how-tokens-are-defined-settings-edited-and-resolved">How Tokens are Defined, Settings Edited and Resolved</h2>
+<p>When you're using the <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> designer, the configuration created is saved as an Entity (aka Content-Item) which must be injected into the DataSource configuration automatically. But when you use the object is your code, your code must be able to provide other values. But how does this work?</p>
+<ol>
+<li>Each DataSource object has a property called <code>Configuration</code> which is a dictionary containing all configuration properties the data source will care about. For example, the <code>EntityIdFilter</code> has a Configuration with only one property which is called <code>EntityIds</code>.</li>
+<li>The each property is first initialized with a Token-Template. This happens through the <code>[Configuration]</code> <a class="xref" href="configuration-attribute.html">attribute</a>.
+For example, the Csv DataSource has a <code>[Configuration(Fallback = &quot;\t&quot;)]</code>
+This says that the delimiter should come from the Settings-Entity field <code>Delimiter</code> and if not provided, fall back to <code>\t</code> (which is a tab character)</li>
+<li>For the programmer who wants to set a number or whatever, this would be fairly unreliable to access from outside, so the DataSource should also have a real property which internally also modifies the dictionary. For example, the Csv DataSource has a string-property <code>Delimiter</code> which internally will get/set the in the Configuration dictionary.</li>
+<li>When the DataSource is first <em>sucked</em> from, which happens when something tries to access the Out-Property, it will automatically run a token-engine to resolve the values, then run whatever action the data-source wants.</li>
+</ol>
+<p>So how does each scenario work out?</p>
+<ol>
+<li>If the programmer overwrote the <code>Delimiter</code> property, then internally the <code>Configuration[&quot;Delimiter&quot;]</code> is now not a token any more, but instead just a character like <code>,</code>. So the token-engine won't change anything.</li>
+<li>If the programmer didn't do anything but the  <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a>  engine gave a settings-entity to the system, then the token is resolved and whatever the user entered is used.</li>
+<li>if the neither the programmer nor the user provided settings, then the token-engine will resolve to the fallback and use the <code>\t</code> as was defined.</li>
+</ol>
+<h2 id="also-read">Also Read</h2>
+<ul>
+<li><a class="xref" href="guide/big-picture.html">Guide DataSources - Big Picture</a></li>
+<li><a class="xref" href="../../../abyss/parts/look-up/index.html">LookUp System</a></li>
+<li><a class="xref" href="../../../abyss/parts/look-up/tokens.html">LookUp Tokens Explained</a></li>
+<li><a class="xref" href="pre-v15/configuration-parse.html">DataSource Configuration: Configuration.Parse()</a></li>
+<li><a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSource.IDataStream.html">IDataStream</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>General Tokens introduced in 2sxc 1.0</li>
+<li>Most enhancements were in 2sxc 07.00</li>
+<li>Completely reworked in v15/16</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data-sources/custom/configuration.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

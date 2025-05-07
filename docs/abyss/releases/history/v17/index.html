@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>All Changes in 2sxc and EAV v17 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="All Changes in 2sxc and EAV v17 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v17/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Releases.History.V17">
+<h1 id="all-changes-in-2sxc-and-eav-v17">All Changes in 2sxc and EAV v17</h1>
+
+<h2 id="version-17">Version 17</h2>
+<h3 id="2sxc-v1700-2023-12-23">2sxc v17.00 (2023-12-23)</h3>
+<ol>
+<li>✅ DNN: Require CodeDome C# 7.3 to be installed</li>
+<li>✅ Docs infrastructure can now be multi-versioned</li>
+<li>✅ Show app icon in admin UI</li>
+<li>✅ Ctrl+Click on toolbar buttons to open in new tab</li>
+<li>✅ Completely refactor internal APIs to do advanced work and save data</li>
+<li>✅ Change UI to use Angular 17 (from Angular 14)</li>
+<li>✅ Get intellisense to work in VS Code
+<ol>
+<li>✅ Work out best way to do this in VS Code</li>
+<li>✅ Work out best way to hide non-public APIs</li>
+<li>✅ Work out best way to include docs (xml files, nuget, etc.)</li>
+</ol>
+</li>
+<li>✅ Support C# 7.3 in DNN with warning if not installed</li>
+<li>✅ System Capabilities Framework for tagging apps which need certain technologies/features</li>
+<li>✅ Crazy new compiled typed <em>shared</em> code <code>/ThisApp/Code</code> - see <a class="xref" href="../../../../guides/hot-build/index.html">Hot App Code</a></li>
+<li>✅ New APIs on Typed Code
+<ol>
+<li><code>IsPublished</code></li>
+<li><code>Publishing</code></li>
+</ol>
+<ul>
+<li><code>Publishing.HasPublished</code>, <code>Publishing.HasUnpublished</code>, <code>Publishing.HasBoth</code></li>
+<li><code>Publishing.GetPublished()</code>, <code>Publishing.GetUnpublished()</code>, <code>Publishing.GetOpposite()</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="2sxc-v1701-2024-01-18">2sxc v17.01 (2024-01-18)</h3>
+<ol>
+<li>Moved almost all internal APIs in the ToSic.Sxc namespace to hidden locations #3189</li>
+<li>Marked a lot of internal APIs so that they won't appear in IntelliSense</li>
+<li>♨️ HotBuild: Improved errors in Razor so the user can better find them #3246</li>
+<li>♨️ HotBuild: Improved errors when compiling ThisApp #3247</li>
+<li>♨️ HotBuild: Support Editions such as <code>live</code> and <code>staging</code> with auto-fallback #3248</li>
+<li>♨️ Roslyn: Improve error if <code>@inherits</code> ends in semicolon #3245</li>
+<li>♨️ HotBuild: Show all compiled types in insights</li>
+<li>♨️ HotBuild: Minimize exact pre-included namespaces</li>
+<li>♨️ HotBuild: Performance Improvements</li>
+<li>🟣 Toolbars: Show hover on <code>layout</code> button after a delay with module-infos #3251</li>
+</ol>
+<p>New Features / Important Improvements</p>
+<ol>
+<li><code>Kit.PageParameters</code> now has new commands <code>Toggle(...)</code>, <code>Remove(...)</code> and <code>Filter(...)</code> see docs #3241 #3242 #3243</li>
+<li>🟣 Toolbars: Tweak Notes can now <code>delay</code> and <code>linger</code> #3250 docs</li>
+<li>Create-New File now shows templates for <code>RazorTyped</code>, <code>CodeTyped</code> and ApiTyped</li>
+<li>✏️ App-Management UI now uses a left-menu (experimental)</li>
+<li>✏️ Edit-UI: Boolean fields can now be toggled by clicking on the label</li>
+<li>🖼️ Resizer: Improve handling of images in virtual-application folders</li>
+</ol>
+<p>Bugfixes</p>
+<ol>
+<li><code>ITypedItem.Equals</code> now works #3213</li>
+<li>Old Render APIs were broken, which affected News App 4.1.1 and others #3252</li>
+<li>Fix bug with <code>UniqueKey</code> which affected HotSpots App</li>
+<li>Various minor UI bugfixes related to the entity-picker and dropdowns</li>
+</ol>
+<h3 id="2sxc-v170104">2sxc v17.01.04</h3>
+<p>Minor enhancements and bugfixes</p>
+<ol>
+<li>Image toolbar now shows resize specs 🌟 #3270</li>
+<li>Toolbar notes now support a <code>format</code> = <code>html</code> #3271</li>
+<li>Edit inner-content in accordions for non-website-admins #3234</li>
+<li>Old Razor base class - <code>PageData</code> didn't always work #3260</li>
+<li>HotBuild now respects additional assemblies from web.config #3272</li>
+</ol>
+<h3 id="2sxc-v170105">2sxc v17.01.05</h3>
+<p>minor bugfixes l enhancements including</p>
+<ol>
+<li>dropdown pills fixed #3269</li>
+<li>REST Query API fails when used from &quot;outside&quot; #3274</li>
+<li>page picker in UI is broken in 17.01.04 #3276</li>
+<li>auto-serialized <code>ITypedItem</code> and <code>IEnumerable&lt;ITypedItem&gt;</code> #3277</li>
+<li>refactor an internal old API to init app-objects #3275</li>
+<li>HotBuild Performance Improvements (locking / caching)</li>
+<li>HotBuild improve detection when CS files inherit from ThisApp base 1. classes</li>
+<li>Internal Lookup System Performance Improvements</li>
+<li>internal work for the new Picker-UI system</li>
+</ol>
+<h3 id="2sxc-v170106">2sxc v17.01.06</h3>
+<ol>
+<li>Upgrade System.Data.SqlClient #3209</li>
+<li>TweakButton on dynamic code #3279</li>
+<li>Edit menu in Dnn fix #3280</li>
+<li>Bug with dropdowns #3281</li>
+<li>Export/Import App now includes hidden entities #3282</li>
+<li>Export/Import App now includes Attribute SysSettings #3283</li>
+</ol>
+<h3 id="2sxc-v170107">2sxc v17.01.07</h3>
+<ol>
+<li>ajax reload on details-pages eg. blog-post #3287</li>
+<li>SQL DataSource can't connect #sql #3285</li>
+</ol>
+<h3 id="2sxc-v1702-2024-02-22">2sxc v17.02 (2024-02-22)</h3>
+<ol>
+<li>✅ Improve infos about layout in toolbar</li>
+<li>✅ Improve infos about image resizer in toolbar</li>
+<li>✅ Improve Create New App Experience
+<ol>
+<li>✅ Create new app template</li>
+<li>✅ Improve the new app wizard - allow selecting template</li>
+<li>✅ Improve create-app code to use the new template</li>
+</ol>
+</li>
+<li>✅ Update Monaco to latest version</li>
+<li>✅ Ability to change input config types/metadata - eg. skip <code>@String</code> when never needed</li>
+<li>✅ Improve HotBuild
+<ol>
+<li>✅ Improve initial list of included assemblies and namespaces @STV</li>
+<li>✅ Improve caching of information how to build/compile to improve speed</li>
+<li>✅ Add support for sub-folders</li>
+<li>✅ Support Editions</li>
+<li>✅ Improve error messages on building the ThisCode folder</li>
+<li>✅ Improve error messages when building Razor and C# using Roslyn</li>
+<li>✅ Improve detection so that build is locking (prevent multiple builds on high-load)</li>
+<li>✅ Create system to generate models</li>
+<li>✅ Provide special UI to build the code and debug <strong>Copilot</strong></li>
+<li>✅ Switch to <code>AppCode</code> <del>ThisApp</del></li>
+<li>✅ Provide final place for base type
+<ol>
+<li>✅ <code>Custom.Data.CustomItem</code> base class</li>
+<li>✅ GPS data</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>✅ fix/improve date picker</li>
+<li>✅ Ability to share field configurations
+<ol>
+<li>✅ Custom config inherit from multiple sources for keeping the Label</li>
+<li>✅ Preserve config on export/import</li>
+</ol>
+</li>
+</ol>
+<p><a href="https://github.com/2sic/2sxc/releases/tag/v17.02.00">https://github.com/2sic/2sxc/releases/tag/v17.02.00</a></p>
+<h3 id="2sxc-v1703-2024-03-04">2sxc v17.03 (2024-03-04)</h3>
+<ol>
+<li>✅ New Pickers released with a lot of features, incl. Sources, custom labels, help, tooltips, multi-select and much more!</li>
+<li>✅ Ability to install recommended apps in a later step!</li>
+<li>✅ New typed razor <code>RazorTyped&lt;TModel&gt;</code></li>
+<li>✅ New typed App using <code>IAppTyped&lt;TSettings, TResources&gt;</code></li>
+<li>✅ Publish <code>As&lt;Type&gt;</code> and <code>AsList&lt;Type&gt;</code> API</li>
+<li>✅ Publish <code>App.Data.GetAll&lt;TModel&gt;()</code> and <code>App.Data.GetOne&lt;TModel&gt;(id)</code> APIs</li>
+<li>✅ New <code>Custom.Data.CustomItem</code> base class with GPS data, <code>As&lt;Type&gt;</code> and <code>AsList&lt;Type&gt;</code> API</li>
+<li>✅ improve <code>App_Data/app.json</code> schema to include <code>editions</code> for Copilot</li>
+<li>✅ Add template app <code>Basic</code> and <code>Empty</code></li>
+<li>✅ Intellisense: Find way to link to the official docs from inside the help</li>
+</ol>
+<h3 id="2sxc-v1704-2024-03-11">2sxc v17.04 (2024-03-11)</h3>
+<h4 id="improvements">Improvements</h4>
+<ol>
+<li><code>MyView.Resources</code> added to complement existing <code>MyView.Settings</code> #3315</li>
+<li><code>ITypedItem.Img(...)</code> added to complement exitsing <code>ITypedItem.Picture(...)</code> #3324</li>
+<li>Dnn improve Roslyn build performance in many cases from ca. 2.5 seconds to 0.5 seconds #3322</li>
+<li>Query: Improve <code>$select</code> OData parameter</li>
+<li>REST API - add <code>$select</code> OData Parameter #3319</li>
+<li>Razor / Typed Code: add a <code>Customize</code> helper ojbect #3316</li>
+<li>Admin UI - Data Scopes now show count</li>
+<li>Add Razor compile code help for more common problem such as accessing typed-items dynamically</li>
+<li>Improve razor compile help - show errors before warnings</li>
+<li><strong>Picker</strong> - auto extract additional fields to retrieve based on placeholders in Label / Help texts etc.</li>
+</ol>
+<h4 id="generate-data-models-improvements">Generate Data Models Improvements</h4>
+<ol>
+<li>Include Scope name</li>
+<li>Include content-types in <code>Configuration</code> scope</li>
+<li><code>CustomItem</code> - implement <code>==</code> and <code>!=</code> operators to use wrapper equality</li>
+<li>Lots of docs for <a href="https://docs.2sxc.org/net-code/strongly-typed-code/index.html">custom data</a></li>
+<li><code>app.json</code> editions configuration, add <code>isDefault</code></li>
+</ol>
+<h4 id="bugfixes">Bugfixes</h4>
+<ol>
+<li>UI Date Picker - fix but with UTC offset #3321</li>
+<li>UI Page Picker - fix, was broken in 17.03.00 #3320</li>
+<li>Calling Query using JS missed the <code>Id</code> property #3325</li>
+<li>Admin: state of the DateTime Show-Time toggle didn't properly get persisted #3318</li>
+</ol>
+<h3 id="2sxc-v1705-2024-03-25">2sxc v17.05 (2024-03-25)</h3>
+<blockquote>
+<p>We believe this is stable, but ask the community to do in-depth testing so we can release an LTS</p>
+</blockquote>
+<h4 id="highlights">Highlights</h4>
+<ol>
+<li>Improved Code-Generator to be in a standalone DLL <code>ToSic.Sxc.Code.Generate</code></li>
+<li>Improved Code-Generator to generate Razor, Code and WebApi base classes</li>
+</ol>
+<h4 id="enhancements">Enhancements</h4>
+<ol>
+<li>Impove image-resize tooltip #3329</li>
+<li>$2sxc JS used in modules which are rendered into Dnn themes #3333</li>
+<li>Improve logging of parameters of DataSources (eg. Value-Filter DS)</li>
+<li>Prepare for Oqtane 5 SSR</li>
+<li>Improve architecture for generating App-objects in the background</li>
+</ol>
+<h4 id="bugs-fixed">Bugs fixed</h4>
+<ol>
+<li>various admin and replace-operations on inner-content #3299</li>
+<li>fix quickE when selecting content-blocks #3317</li>
+<li>Token templates - fix some toolbars #3328</li>
+<li>Fix issue with Oqtane urls</li>
+<li>Fix issue with Oqtane WebApis which affected Blog RSS feed</li>
+</ol>
+<h3 id="2sxc-v1706-lts-2024-03-28">2sxc v17.06 LTS (2024-03-28)</h3>
+<p>The first LTS (Long-Term-Stable) Release of 2sxc 17.</p>
+<h4 id="easter-lts-release">Easter LTS Release</h4>
+<ol>
+<li>✅ Prepare for Oqtane SSR (Server-Side Rendering)</li>
+<li>✅ Provide Code Generator for Content Types, Razor and Services</li>
+<li>✅ Improve discoverability of REST APIs</li>
+<li>✅ Document new <del>Pro</del> Typed mode</li>
+<li>✅ Document new strong-typed mode</li>
+<li>✅ Auto-Install more apps from catalog - even after some have already been installed - ca. 1d
+<ol>
+<li>✅ Feature to tell new auto-installer what apps are already installed</li>
+<li>✅ App-Auto-Installer UI to add-install apps later on</li>
+</ol>
+</li>
+<li>✅ LTS</li>
+</ol>
+<h4 id="bugfixes">Bugfixes</h4>
+<ul>
+<li>When accessing an App through another app (eg first going to Apps-Management) it show the data of the original app</li>
+<li>Opening features in Apps-Management didn't work reliably</li>
+<li>Edit-UI Picker / Dropdown code was cleaned up</li>
+<li>Copilot Razor Generator ready to use</li>
+<li>Copilot Service generator ready to use</li>
+<li>Copilot WebApi generator ready to use</li>
+<li>Copilot previously failed if the <code>AppCode</code> folder was missing</li>
+<li>Fix to a data-caching issue in 17.05 (this was important)</li>
+</ul>
+<h3 id="2sxc-v1707-2024-05-04">2sxc v17.07 (2024-05-04)</h3>
+<p>published/blogged:</p>
+<ol>
+<li>✅/✅ 2sxc 17.07</li>
+<li>✅/✅ 2shine 5.3 (May 4th)</li>
+<li>✅/✅ Content App 17.07 (May 6th)</li>
+<li>✅/✅ Mobius Form Builder 06.00 for 2sxc 17.07 (May 7th)</li>
+<li>✅/✅ Release all apps as typed (May 8th)</li>
+</ol>
+<h3 id="2sxc-v1708-2024-05-16">2sxc v17.08 (2024-05-16)</h3>
+<ol>
+<li>✅ WebApi in AppCode</li>
+<li>✅ DataSources in AppCode</li>
+<li>✅ <code>ITemplateService</code></li>
+<li>✅ Add <code>CmsContext.Block</code> and <code>CmsContext.Module.Block</code> as well as <code>Block.Guid</code></li>
+<li>✅ Cache Service internal</li>
+<li>✅ Switch Edition UI</li>
+<li>✅ Switch Edition Permissions for non-super users</li>
+<li>✅ Update Image Resizer</li>
+<li>✅ Re-Release another LTS ca. 17.09</li>
+</ol>
+<h2 id="planned-removals-for-2sxc-v17">Planned Removals for 2sxc v17</h2>
+<h2 id="planned-removals-for-2sxc-v17">Planned Removals for 2sxc v17</h2>
+<p>For 2sxc 17 we plan to remove some very old APIs.
+The process is as follows:</p>
+<ol>
+<li>Mark the API as deprecated in the code</li>
+<li>Add internal code which warns the admin that the App is using deprecated code</li>
+<li>Provide guidance here how to resolve</li>
+<li>Make sure the warnings have been around for at least 6 months</li>
+<li>Remove the code on the next major release</li>
+</ol>
+<p>For v17 we plan to remove some very old APIs, which we believe are probably not even used any more.
+This is the list:</p>
+<ul>
+<li>The old namespace <code>ToSic.SexyContent.Interfaces.IApp</code> and all related code<br>
+We believe this is probably not used at all, since it's probably only ever used to access <code>App.Configuration</code> which is <code>dynamic</code> when using this interface,
+but a normal object with typed properties when using the normal <code>ToSic.Sxc.Apps.IApp</code> interface.</li>
+</ul>
+<h2 id="guide-to-fixing-issues">Guide to Fixing Issues</h2>
+<h3 id="fixing-sexycontentinterfacesiapp-removal">Fixing SexyContent.Interfaces.IApp removal</h3>
+<h4 id="background">Background</h4>
+<p>A long time ago 2sxc was called <strong>SexyContent</strong> and we used the namespace <code>ToSic.SexyContent.Interfaces</code> for various things.
+Ca. 2014, we decided to rename it to <strong>2sxc</strong> and use a <code>ToSic.Sxc</code> namespace instead.
+In addition to that, we created a clearer namespace structure.</p>
+<h4 id="am-i-affected">Am I Affected?</h4>
+<p>Most code does <em>not</em> explicitly use namespaces, and if your code is newer than 2016, you are probably not affected.</p>
+<p>But if you have <strong>any</strong> code which uses the namespace <code>ToSic.SexyContent</code> in your Razor or C# code you are affected.</p>
+<p>This is especially true if you have code such as:</p>
+<pre><code class="lang-c#">using SexyContent.Interfaces;
+IApp app = App;
+var version = app.Configuration.Version;
+</code></pre>
+<h4 id="how-to-fix">How to Fix</h4>
+<p>It's difficult to give you an exact guideline, because we don't know what your code does.
+But in most cases, you'll just be working with the current <code>App</code> object which is typed as <a class="xref" href="../../../../api/dot-net/ToSic.Sxc.Apps.IApp.html">IApp</a>.
+So in most cases, you don't need to specify the type at all, just use something like:</p>
+<pre><code class="lang-c#">var app = App;
+var version = App.Configuration.Get(&quot;Version&quot;);
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v17/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

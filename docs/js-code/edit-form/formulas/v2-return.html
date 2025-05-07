@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Formulas JavaScript V2 Return Values &#127381; v16 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Formulas JavaScript V2 Return Values &#127381; v16 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/edit-form/formulas/v2-return.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.EditForm.Formulas.V2Return">
+
+<img src="../../../assets/features/formulas.svg" class="feature">
+<h1 id="formulas-javascript-v2-return-values--v16">Formulas JavaScript V2 Return Values 🆕 v16</h1>
+<p>In v2, the return values of a formula are more flexible and powerful.
+This should help you understand the possible return values and how to use them.</p>
+<h2 id="return-values-on-v2">Return Values on v2</h2>
+<p>You can return the same data as you did in v1 but we now have more options:</p>
+<ol>
+<li><p>return the value which should be used, like <code>return true;</code> or <code>return data.value;</code> (same as v1)</p>
+</li>
+<li><p>return a special <code>FormulaResult</code>-object (specs below) like <code>return { value: true, stop: true };</code></p>
+</li>
+<li><p>return a promise which will resolve to one of the above</p>
+</li>
+<li><p>return a special validation object (specs below)</p>
+</li>
+</ol>
+<p>For the next part of the documentation, we'll refer to the value to be used as the <strong>Value</strong> and if a special object is returned, we'll call it the <strong>FormulaResult</strong>.</p>
+<h2 id="returning-simple-values">Returning <em>Simple</em> Values</h2>
+<p>The returned value is either a simple value returned directly using <code>return '...';</code> or the <code>value</code> property of the <strong>FormulaResult</strong> object.</p>
+<p>Each field type or property may expect a different data type. Make sure you provide that.
+So if you are updating a boolean field, you should return a boolean value.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If you return nothing, <code>undefined</code> or the wrong data type, the result will be ignored and the value/setting will not be changed.</p>
+</div>
+<p>Common Mistakes</p>
+<ul>
+<li>returning nothing with <code>return;</code> - this will be regarded as an error and be ignored.</li>
+<li>returning <code>undefined</code>.</li>
+<li>Returning a <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a> instead of a real <code>true</code> or <code>false</code> for a boolean value</li>
+<li>returning a date with the wrong timezone - see <a class="xref" href="return-date.html">returning dates</a></li>
+</ul>
+<h2 id="returning-formularesult-object">Returning FormulaResult Object</h2>
+<p>For advanced features, the formula must be able to return multiple values, which is why we have the <strong>FormulaResult</strong> object.
+It has the following properties - all of which are <em>optional</em>:</p>
+<ul>
+<li><code>value</code> - the value to be used as the result of the formula</li>
+<li><code>stop</code> - if true, the formula will stop and not execute any other formulas</li>
+<li><code>promise</code> - a promise to run - eg. in scenarios where we returned a value for now, and a promise for later</li>
+<li><code>fields</code> - an array of fields to be set, each with a <code>name</code> and <code>value</code> property</li>
+</ul>
+<p>Example</p>
+<pre><code class="lang-js">return {
+  value: 'new value',
+  stop: true,
+  fields: [
+    { name: 'Field1', value: 'new value 1' },
+    { name: 'Field2', value: 'new value 2' },
+  ]
+};
+</code></pre>
+<h2 id="returning-a-promise">Returning a Promise</h2>
+<p>This is a highlight in v2.
+Any formula can now return a promise, or a <strong>FormulaResult</strong> object with a <code>promise</code> property.</p>
+<p>The promise itself can then return a value or a <strong>FormulaResult</strong> object.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>When a promise is returned, it behaves as if <code>stop</code> was set to true.
+So returned promises deactivate the formula to not run again.</p>
+<p>If your code is more sophisticated and needs to run again,
+then the promise should also return something like <code>{ value: 'new value', stop: false }</code>.</p>
+</div>
+<h2 id="returning-validation-information">Returning Validation Information</h2>
+<p>Field Validations are errors/warnings about the contents of the field.
+The purpose is to do very special validations,
+or to show a warning for values which could be ok, but are not recommended.</p>
+<p>A validation object return looks like this:</p>
+<pre><code class="lang-js">{
+  value: {
+    severity: 'warning',
+    message: 'please use lower case only',
+  }
+}
+</code></pre>
+<p>Since the this kind of <em>return value</em> is an object, in can easily be confused with a <strong>FormulaResult</strong> object.
+So to return this object, it <em>must</em> be wrapped in a <strong>FormulaResult</strong> object like this:</p>
+<pre><code class="lang-js">return {
+  value: {
+    severity: 'warning',
+    message: 'please use lower case only',
+  }
+};
+</code></pre>
+<p>You can see an example of this in the <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/formulas-basic">tutorial</a>.</p>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Introduced in 2sxc 12.01</li>
+<li>Massively improved in v2 in 2sxc 16.00</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/edit-form/formulas/v2-return.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IConvertService16 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IConvertService16 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc/new/develop/apiSpec/new?filename=ToSic_Sxc_Services_IConvertService16.md&amp;value=---%0Auid%3A%20ToSic.Sxc.Services.IConvertService16%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.IConvertService16">
+
+
+
+  <h1 id="ToSic_Sxc_Services_IConvertService16" data-uid="ToSic.Sxc.Services.IConvertService16" class="text-break">
+Interface IConvertService16  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Sxc.html">Sxc</a>.<a class="xref" href="ToSic.Sxc.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Sxc.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Helper on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Convert"><code>Kit.Convert</code></a> for common conversions in web-code like Razor and WebAPIs.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+public interface IConvertService16</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="ToSic_Sxc_Services_IConvertService16_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>It's mainly a safe conversion from anything to a target-type.</p>
+<p>Some special things it does:</p>
+<ul>
+<li>Strings like &quot;4.2&quot; reliably get converted to int 4 which would otherwise return 0</li>
+<li>Numbers like 42 reliably converts to bool true which would otherwise return false</li>
+<li>Numbers like 42.5 reliably convert to strings &quot;42.5&quot; instead of &quot;42,5&quot; in certain cultures</li>
+</ul>
+<p>History</p>
+<ul>
+<li>New in v16.03</li>
+<li>Difference to <a class="xref" href="ToSic.Sxc.Services.IConvertService.html">IConvertService</a> is that the param <code>fallback</code> must always be named</li>
+</ul>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_Json_" data-uid="ToSic.Sxc.Services.IConvertService16.Json*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_Json" data-uid="ToSic.Sxc.Services.IConvertService16.Json">
+  Json
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sub-Service to convert JSON</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJsonService Json { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IJsonService.html">IJsonService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ForCode_" data-uid="ToSic.Sxc.Services.IConvertService16.ForCode*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ForCode_System_Object_ToSic_Lib_Coding_NoParamOrder_System_String_" data-uid="ToSic.Sxc.Services.IConvertService16.ForCode(System.Object,ToSic.Lib.Coding.NoParamOrder,System.String)">
+  ForCode(object, NoParamOrder, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to string to put into source code like HTML-attributes, inline-JavaScript or similar.
+This is usually used to ensure numbers, booleans and dates are in a format which works.
+Especially useful when giving data to a JavaScript, Json-Fragment or an Html Attribute.</p>
+<ul>
+<li>booleans will be <code>true</code> or <code>false</code> (not <code>True</code> or <code>False</code>)</li>
+<li>numbers will have a . notation and never a comma (like in de-DE cultures)</li>
+<li>dates will convert to ISO format without time zone</li>
+</ul>
+<p>Optionally also allows a <code>fallback</code> to use instead of the defaults above.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ForCode(object value, NoParamOrder noParamOrder = default, string fallback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value used if conversion fails. Defaults to <code>null</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ToBool_" data-uid="ToSic.Sxc.Services.IConvertService16.ToBool*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ToBool_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Boolean_" data-uid="ToSic.Sxc.Services.IConvertService16.ToBool(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Boolean)">
+  ToBool(object, NoParamOrder, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to bool, or if that fails, return the fallback value.</p>
+<p><em>Note that it's called ToBool, not ToBoolean, because the core type is also called bool, not boolean. This is different from <code>System.Convert.ToBoolean(...)</code></em></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ToBool(object value, NoParamOrder noParamOrder = default, bool fallback = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value used if conversion fails. Defaults to <code>false</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ToDecimal_" data-uid="ToSic.Sxc.Services.IConvertService16.ToDecimal*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ToDecimal_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Decimal_" data-uid="ToSic.Sxc.Services.IConvertService16.ToDecimal(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Decimal)">
+  ToDecimal(object, NoParamOrder, decimal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to decimal, or if that fails, return the fallback value.
+This does the same as <a class="xref" href="ToSic.Sxc.Services.IConvertService16.html#ToSic_Sxc_Services_IConvertService16_To__1_System_Object_ToSic_Lib_Coding_NoParamOrder___0_">To&lt;T&gt;(object, NoParamOrder, T)</a> but this is easier to type in Razor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">decimal ToDecimal(object value, NoParamOrder noParamOrder = default, decimal fallback = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>The value used if conversion fails. Defaults to <code>0</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ToDouble_" data-uid="ToSic.Sxc.Services.IConvertService16.ToDouble*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ToDouble_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Double_" data-uid="ToSic.Sxc.Services.IConvertService16.ToDouble(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Double)">
+  ToDouble(object, NoParamOrder, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to double, or if that fails, return the fallback value.
+This does the same as <a class="xref" href="ToSic.Sxc.Services.IConvertService16.html#ToSic_Sxc_Services_IConvertService16_To__1_System_Object_ToSic_Lib_Coding_NoParamOrder___0_">To&lt;T&gt;(object, NoParamOrder, T)</a> but this is easier to type in Razor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double ToDouble(object value, NoParamOrder noParamOrder = default, double fallback = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The value used if conversion fails. Defaults to <code>0</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ToFloat_" data-uid="ToSic.Sxc.Services.IConvertService16.ToFloat*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ToFloat_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Single_" data-uid="ToSic.Sxc.Services.IConvertService16.ToFloat(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Single)">
+  ToFloat(object, NoParamOrder, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to float, or if that fails, return the fallback value.
+This does the same as <a class="xref" href="ToSic.Sxc.Services.IConvertService16.html#ToSic_Sxc_Services_IConvertService16_To__1_System_Object_ToSic_Lib_Coding_NoParamOrder___0_">To&lt;T&gt;(object, NoParamOrder, T)</a> but this is easier to type in Razor.</p>
+<p><em>Note that it's called ToFloat, not ToSingle, because the core type is also called float, not single. This is different from <code>System.Convert.ToSingle(...)</code></em></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float ToFloat(object value, NoParamOrder noParamOrder = default, float fallback = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The value used if conversion fails. Defaults to <code>0</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ToGuid_" data-uid="ToSic.Sxc.Services.IConvertService16.ToGuid*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ToGuid_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Guid_" data-uid="ToSic.Sxc.Services.IConvertService16.ToGuid(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Guid)">
+  ToGuid(object, NoParamOrder, Guid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to standard guid, or if that fails, return the fallback value.
+This does the same as <a class="xref" href="ToSic.Sxc.Services.IConvertService16.html#ToSic_Sxc_Services_IConvertService16_To__1_System_Object_ToSic_Lib_Coding_NoParamOrder___0_">To&lt;T&gt;(object, NoParamOrder, T)</a> but this is easier to type in Razor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid ToGuid(object value, NoParamOrder noParamOrder = default, Guid fallback = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The value used if conversion fails. Defaults to <code>Guid.Empty</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ToInt_" data-uid="ToSic.Sxc.Services.IConvertService16.ToInt*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ToInt_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Int32_" data-uid="ToSic.Sxc.Services.IConvertService16.ToInt(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Int32)">
+  ToInt(object, NoParamOrder, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to standard int, or if that fails, return the fallback value.
+This does the same as <a class="xref" href="ToSic.Sxc.Services.IConvertService16.html#ToSic_Sxc_Services_IConvertService16_To__1_System_Object_ToSic_Lib_Coding_NoParamOrder___0_">To&lt;T&gt;(object, NoParamOrder, T)</a> but this is easier to type in Razor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ToInt(object value, NoParamOrder noParamOrder = default, int fallback = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The value used if conversion fails. Defaults to <code>0</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_ToString_" data-uid="ToSic.Sxc.Services.IConvertService16.ToString*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_ToString_System_Object_ToSic_Lib_Coding_NoParamOrder_System_String_System_Boolean_" data-uid="ToSic.Sxc.Services.IConvertService16.ToString(System.Object,ToSic.Lib.Coding.NoParamOrder,System.String,System.Boolean)">
+  ToString(object, NoParamOrder, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to string - or if that fails, return the fallback value.</p>
+<p>This does <strong>NOT</strong> do the same as <a class="xref" href="ToSic.Sxc.Services.IConvertService16.html#ToSic_Sxc_Services_IConvertService16_To__1_System_Object_ToSic_Lib_Coding_NoParamOrder___0_">To&lt;T&gt;(object, NoParamOrder, T)</a>.
+In the standard implementation would only give you the fallback, if conversion failed.
+But this ToString will also give you the fallback, if the result is null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ToString(object value, NoParamOrder noParamOrder = default, string fallback = null, bool fallbackOnNull = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>The value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Fallback in case conversion fails or result is null. Defaults to <code>null</code>.</p>
+</dd>
+    <dt><code>fallbackOnNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Determine that nulls should also fallback, default is <code>true</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IConvertService16_To_" data-uid="ToSic.Sxc.Services.IConvertService16.To*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IConvertService16_To__1_System_Object_ToSic_Lib_Coding_NoParamOrder___0_" data-uid="ToSic.Sxc.Services.IConvertService16.To``1(System.Object,ToSic.Lib.Coding.NoParamOrder,``0)">
+  To&lt;T&gt;(object, NoParamOrder, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert any object safely to the desired type.
+If conversion fails, it will return the <code>fallback</code> parameter as given, or <code>default(T)</code>.
+Since the fallback is typed, you can usually call this method without specifying T explicitly, so this should work:</p>
+<pre><code>var c1 = Convert.To(&quot;5&quot;, fallback: 100); // will return 5
+var c2 = Convert.To(&quot;&quot;, fallback: 100);  // will return 100
+var c1 = Convert.To(&quot;&quot;); // will return 0
+</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T To&lt;T&gt;(object value, NoParamOrder noParamOrder = default, T fallback = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">object</span></dt>
+    <dd><p>value to convert</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>fallback</code> <span class="xref">T</span></dt>
+    <dd><p>The value used if conversion fails. If not specified, will use <code>default(T)</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ConvertService/IConvertService16.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.UrlParams
+    name: UrlParams
+    fullName: UrlParams
+    children:
+      - Api.Js.SxcJs.UrlParams.get
+      - Api.Js.SxcJs.UrlParams.isDebug
+      - Api.Js.SxcJs.UrlParams.require
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Helper object to read url params.
+      Available on `$2sxc.urlParams`
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.UrlParams.get
+    name: get(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Get a param from the url, no matter if it's behind ? or #
+      If not found, will return an empty string `''`
+    syntax:
+      content: 'function get(name: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.UrlParams.isDebug
+    name: isDebug()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Checks if debug is enabled in the URL
+    syntax:
+      content: function isDebug()
+      parameters: []
+      return:
+        type:
+          - boolean
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.UrlParams.require
+    name: require(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Get a required param from the url, no matter if it's behind ? or #
+      Will throw an error if not found
+    syntax:
+      content: 'function require(name: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs

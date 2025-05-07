@@ -1,0 +1,55 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+  ],
+  "settings": {
+    "cSpell.words": [
+      "Accu",
+      "Blazor",
+      "discoverability",
+      "docfx",
+      "Elementor",
+      "ETAG",
+      "Evoq",
+      "fancyapps",
+      "Fancybox",
+      "FIPS",
+      "Gorillafied",
+      "highlightjs",
+      "Imageflow",
+      "inpage",
+      "Lightbox",
+      "lightboxed",
+      "Lightboxes",
+      "Linq",
+      "Mobius",
+      "NVARCHAR",
+      "Oqtane",
+      "Resizer",
+      "Roadmap",
+      "Shortlink",
+      "templating",
+      "VARCHAR"
+    ],
+    "dotnet.defaultSolution": "2sxc Docs Generator.sln",
+    "files.associations": {
+      "*.json": "jsonc",
+      "*.tmpl": "mustache",
+    },
+    "liveServer.settings.mount": [
+      [
+        "/",
+        "../docs"
+      ]
+    ],
+  },
+  "extensions": {
+    "recommendations": [
+      "DavidAnson.vscode-markdownlint",
+      "shd101wyy.markdown-preview-enhanced",
+      "ritwickdey.LiveServer"
+    ]
+  },
+}

@@ -1,0 +1,293 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.CommandNames
+    name: CommandNames
+    fullName: CommandNames
+    children:
+      - Api.Js.SxcJs.CommandNames.add
+      - Api.Js.SxcJs.CommandNames.addExisting
+      - Api.Js.SxcJs.CommandNames.app
+      - Api.Js.SxcJs.CommandNames.appImport
+      - Api.Js.SxcJs.CommandNames.appResources
+      - Api.Js.SxcJs.CommandNames.appSettings
+      - Api.Js.SxcJs.CommandNames.apps
+      - Api.Js.SxcJs.CommandNames.code
+      - Api.Js.SxcJs.CommandNames.copy
+      - Api.Js.SxcJs.CommandNames.data
+      - Api.Js.SxcJs.CommandNames.delete
+      - Api.Js.SxcJs.CommandNames.edit
+      - Api.Js.SxcJs.CommandNames.fields
+      - Api.Js.SxcJs.CommandNames.insights
+      - Api.Js.SxcJs.CommandNames.layout
+      - Api.Js.SxcJs.CommandNames.list
+      - Api.Js.SxcJs.CommandNames.metadata
+      - Api.Js.SxcJs.CommandNames.more
+      - Api.Js.SxcJs.CommandNames.moveDown
+      - Api.Js.SxcJs.CommandNames.moveUp
+      - Api.Js.SxcJs.CommandNames.new
+      - Api.Js.SxcJs.CommandNames.publish
+      - Api.Js.SxcJs.CommandNames.query
+      - Api.Js.SxcJs.CommandNames.remove
+      - Api.Js.SxcJs.CommandNames.replace
+      - Api.Js.SxcJs.CommandNames.system
+      - Api.Js.SxcJs.CommandNames.template
+      - Api.Js.SxcJs.CommandNames.view
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Names of commands known to 2sxc CMS - for use in toolbars and calling
+      commands directly from code
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.add
+    name: add
+    children: []
+    langs:
+      - typeScript
+    summary: "`add` adds another demo-item to a **list of items**.\nIt does not open the edit-dialog.\n<br> The new item is placed after the item the (+) was clicked on.\n<br>\U0001F4A1\nThis is different than new, which opens a dialog to add something.\n<br> \U0001FA9C Only appears on toolbars of items which are in a list.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandAddParams)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.addExisting
+    name: addExisting
+    children: []
+    langs:
+      - typeScript
+    summary: "`add-existing` opens a dialog allowing the user to select an existing item to add to a **list of items**.\n<br> The new item is placed after the item the (+) was clicked on.\n<br> \U0001FA9C Only appears on toolbars of items which are in a list.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandAddExistingParams)\n<br> \U0001F195 in v11.01"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.app
+    name: app
+    children: []
+    langs:
+      - typeScript
+    summary: "`app` opens the app-admin dialog\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.appImport
+    name: appImport
+    children: []
+    langs:
+      - typeScript
+    summary: "`app-import` opens the dialog to import an App.\n<br> \U0001F518 This is not available on the toolbar.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.appResources
+    name: appResources
+    children: []
+    langs:
+      - typeScript
+    summary: "`app-resources` opens the edit dialog for app-resources (multi-language texts, labels etc.).\n<br> \U0001F518 It's disabled on the toolbar if the app doesn't have resource-values to configure.\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.appSettings
+    name: appSettings
+    children: []
+    langs:
+      - typeScript
+    summary: "`app-settings` opens the edit dialog for the app-settings.\n<br> \U0001F518 It's disabled on the toolbar if the app doesn't have setting-values to configure\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.apps
+    name: apps
+    children: []
+    langs:
+      - typeScript
+    summary: "`apps` opens the manage all apps dialog.\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required,\n(auto-detected based on toolbar)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.code
+    name: code
+    children: []
+    langs:
+      - typeScript
+    summary: "`code` will execute custom javascript.\n<br> \U0001F518 This is mainly for toolbars, to add buttons with custom code.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandCodeParams)\n<br> _this used to be called `custom` and had a different setup_"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.copy
+    name: copy
+    children: []
+    langs:
+      - typeScript
+    summary: "`copy` opens the edit-dialog for the current item in copy-mode, so when saving it will be a new item.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandCopyParams)\n<br> \U0001F195 in v14.03"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.data
+    name: data
+    children: []
+    langs:
+      - typeScript
+    summary: "`data` opens the list to manage all items of a specific content-type.\n<br> \U0001F518 Will use the settings of the current template to open.\nIt is only shown to elevated admins.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandDataParams)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.delete
+    name: delete
+    children: []
+    langs:
+      - typeScript
+    summary: "`delete` will delete (not just remove) a content-item.\n<br> \U0001F4A1 This is similar to `remove` but really deletes the data from the DB.\n<br> \U0001F518 It only appears if the toolbar explicitly asks for it.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandDeleteParams)\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.edit
+    name: edit
+    children: []
+    langs:
+      - typeScript
+    summary: "`edit` opens an edit-dialog.\n<br>\nIn scenarios where the page is currently showing a _demo item_, this will have the same effect as `add`.\nSo instead of editing the _demo item_ it would trigger a dialog to add a new item.\n<br> \U0001F518 Only appears if `entityId` is known or item is in a list.\n<br> \U0001F4E9 Parameters either one of these:\n[Id](xref:Api.Js.SxcJs.CommandParamsEntityById),\n[In Block](xref:Api.Js.SxcJs.CommandParamsEntityInContentBlock),\n[In List](xref:Api.Js.SxcJs.CommandParamsEntityInList)\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.fields
+    name: fields
+    children: []
+    langs:
+      - typeScript
+    summary: "`fields` opens the dialog to view or modify fields of a content-type.\n<br> \U0001F518 On a toolbar it will use the content-type of the current item.\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandContentTypeParams)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.insights
+    name: insights
+    children: []
+    langs:
+      - typeScript
+    summary: "`insights` opens the insights logs page\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required."
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.layout
+    name: layout
+    children: []
+    langs:
+      - typeScript
+    summary: "`layout` opens the in-page dialog to change the layout of the current content.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.list
+    name: list
+    children: []
+    langs:
+      - typeScript
+    summary: "`instance-list` opens a dialog to manually re-order **items in a list**.\n<br> \U0001FA9C Only appears on toolbars of items which are in a list.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.metadata
+    name: metadata
+    children: []
+    langs:
+      - typeScript
+    summary: "`metadata` opens the edit-dialog for the current metadata item.\n<br> \U0001F518 It only appears if the toolbar explicitly asks for it.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandMetadataParams)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.more
+    name: more
+    children: []
+    langs:
+      - typeScript
+    summary: "`more` create a \"…\" (ellipsis) button which flips through the button groups of toolbars\n<br> \U0001F518 It only appears if the toolbar has `more`=`auto` and has multiple groups.\n<br> \U0001F4E9 No params required,\n(auto-detected based on toolbar)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.moveDown
+    name: moveDown
+    children: []
+    langs:
+      - typeScript
+    summary: "`movedown` moves a content-item down one position in a **list of items**.\n<br> \U0001FA9C Only appears on toolbars of items which are in a list.\n<br> \U0001F4E9 Parameters either one of these:\n[In Block](xref:Api.Js.SxcJs.CommandParamsEntityInContentBlock),\n[In List](xref:Api.Js.SxcJs.CommandParamsEntityInList)\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.moveUp
+    name: moveUp
+    children: []
+    langs:
+      - typeScript
+    summary: "`moveup` moves a content-item up one position in a **list of items**.\n<br> \U0001FA9C Only appears on toolbars of items which are in a list.\n<br> \U0001F4E9 Parameters either one of these:\n[In Block](xref:Api.Js.SxcJs.CommandParamsEntityInContentBlock),\n[In List](xref:Api.Js.SxcJs.CommandParamsEntityInList)\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.new
+    name: new
+    children: []
+    langs:
+      - typeScript
+    summary: "`new` opens the edit-dialog to create a new item/entity.\n<br>\nIf the previous item is in a list, it will add it to that list _after_ the previous item with the toolbar.\nOtherwise it just creates it and the visualization will differ depending on the App.\n<br> \U0001FA9C It works differently for lists - in which case it also adds it to the list.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandNewParams)\n(usually auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.publish
+    name: publish
+    children: []
+    langs:
+      - typeScript
+    summary: "`publish` tells the system to update a content-items status to published. If there was a published and a draft before, the draft will replace the previous item\n<br> \U0001F518 Appears automatically if the item is in draft mode / not published.\n<br> \U0001F4E9 Parameters either one of these:\n[Id](xref:Api.Js.SxcJs.CommandParamsEntityById),\n[In Block](xref:Api.Js.SxcJs.CommandParamsEntityInContentBlock),\n[In List](xref:Api.Js.SxcJs.CommandParamsEntityInList)\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.query
+    name: query
+    children: []
+    langs:
+      - typeScript
+    summary: "`template-query` opens the pipeline/query-designer in a new window.\n<br> \U0001F518 It's not available on the simple Content App, only on full Apps.\nIt is disabled if no query is configured.\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.remove
+    name: remove
+    children: []
+    langs:
+      - typeScript
+    summary: "`remove` removes an item from a list of items.\n<br> \U0001FA9C Only appears on toolbars of items which are in a list.\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandParamsEntityInList)\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.replace
+    name: replace
+    children: []
+    langs:
+      - typeScript
+    summary: "`replace` opens the dialog to assign a different content-item in this slot on module-assigned content items\n<br> \U0001F4E9 [Parameters](xref:Api.Js.SxcJs.CommandParamsEntityInList)\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.system
+    name: system
+    children: []
+    langs:
+      - typeScript
+    summary: "`system` opens the system dialog for this zone/site.\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.template
+    name: template
+    children: []
+    langs:
+      - typeScript
+    summary: "`template-develop` opens the template-editor dialog in a new window.\n<br> \U0001F510 Toolbar shows this automatically to elevated admins.\n<br> \U0001F4E9 No params required,\n(auto-detected from context)"
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandNames.view
+    name: view
+    children: []
+    langs:
+      - typeScript
+    summary: "`template-settings` will change settings on the template currently used\n<br> \U0001F510 Toolbar shows this automatically to elevated admins."
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs

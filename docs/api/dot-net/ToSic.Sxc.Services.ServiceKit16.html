@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Class ServiceKit16 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ServiceKit16 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc/new/develop/apiSpec/new?filename=ToSic_Sxc_Services_ServiceKit16.md&amp;value=---%0Auid%3A%20ToSic.Sxc.Services.ServiceKit16%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.ServiceKit16">
+
+
+
+  <h1 id="ToSic_Sxc_Services_ServiceKit16" data-uid="ToSic.Sxc.Services.ServiceKit16" class="text-break">
+Class ServiceKit16  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Sxc.html">Sxc</a>.<a class="xref" href="ToSic.Sxc.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Sxc.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Default ServiceKit for 2sxc v16.
+Provided in Razor and WebApi as <code>Kit</code>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+public class ServiceKit16 : ServiceKit, IHasLog, ICanDebug</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">ServiceBase</span></div>
+      <div><span class="xref">ServiceForDynamicCode</span></div>
+      <div><span class="xref">ServiceKit</span></div>
+      <div><span class="xref">ServiceKit16</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ToSic.Lib.Logging.IHasLog.html">IHasLog</a></div>
+      <div><a class="xref" href="ToSic.Lib.Logging.ICanDebug.html">ICanDebug</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+  <h2 id="ToSic_Sxc_Services_ServiceKit16_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This is the service kit you get on <code>Hybrid.RazorTyped</code>, <code>AppCode.Razor.AppRazor</code> or <code>Hybrid.ApiTyped</code>.</p>
+<p>History</p>
+<ul>
+<li>New in v16 for Typed Razor / WebApi</li>
+<li>Added Key service in v16.04</li>
+<li>Added Template service in v18.00</li>
+<li>Added Cache service in v19.00</li>
+<li>Added User service in v19.02</li>
+</ul>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Adam_" data-uid="ToSic.Sxc.Services.ServiceKit16.Adam*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Adam" data-uid="ToSic.Sxc.Services.ServiceKit16.Adam">
+  Adam
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The ADAM Service, used to retrieve files and maybe more.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAdamService Adam { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IAdamService.html">IAdamService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Cache_" data-uid="ToSic.Sxc.Services.ServiceKit16.Cache*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Cache" data-uid="ToSic.Sxc.Services.ServiceKit16.Cache">
+  Cache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cache service, used to cache data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICacheService Cache { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.ICacheService.html">ICacheService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ServiceKit16_Cache_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Used to cache data, specifically to ensure it is refreshed when certain events happen,
+such as data in the App changes.</p>
+<p>History: introduced in v19.00</p>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Convert_" data-uid="ToSic.Sxc.Services.ServiceKit16.Convert*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Convert" data-uid="ToSic.Sxc.Services.ServiceKit16.Convert">
+  Convert
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Convert Service, used to convert any kind of data type to another data type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IConvertService16 Convert { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IConvertService16.html">IConvertService16</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Css_" data-uid="ToSic.Sxc.Services.ServiceKit16.Css*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Css" data-uid="ToSic.Sxc.Services.ServiceKit16.Css">
+  Css
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Koi CSS Service, used to detect the current CSS framework and other features.
+See <a class="xref" href="https://connect-koi.net/">ICss</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICss Css { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://connect-koi.net/">ICss</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Data_" data-uid="ToSic.Sxc.Services.ServiceKit16.Data*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Data" data-uid="ToSic.Sxc.Services.ServiceKit16.Data">
+  Data
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Data service to get DataSources and similar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDataService Data { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IDataService.html">IDataService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ServiceKit16_Data_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>added in v15.06</li>
+</ul>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Edit_" data-uid="ToSic.Sxc.Services.ServiceKit16.Edit*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Edit" data-uid="ToSic.Sxc.Services.ServiceKit16.Edit">
+  Edit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Edit service, same as the main Edit service</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEditService Edit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IEditService.html">IEditService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Feature_" data-uid="ToSic.Sxc.Services.ServiceKit16.Feature*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Feature" data-uid="ToSic.Sxc.Services.ServiceKit16.Feature">
+  Feature
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Features service, used to check if features are enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFeaturesService Feature { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IFeaturesService.html">IFeaturesService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_HtmlTags_" data-uid="ToSic.Sxc.Services.ServiceKit16.HtmlTags*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_HtmlTags" data-uid="ToSic.Sxc.Services.ServiceKit16.HtmlTags">
+  HtmlTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Razor Blade 4 HtmlTags service, to fluidly create Tags.
+See <a href="xref:ToSic.Razor.Blade.IHtmlTagsService"></a>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This is <em>similar but different</em> to the <a href="https://razor-blade.net/api/ToSic.Razor.Blade.Tag.html">Razor.Blade.Tag</a>.
+The <a class="xref" href="https://razor-blade.net/api/ToSic.Razor.Blade.IHtmlTag.html">Razor Blade IHtmlTag</a> objects returned here are <em>immutable</em>.
+This means that chained commands like <code>...HtmlTags.Div().Id(...).Class(...)</code>
+all return new objects and don't modify the previous one.</p>
+<p>The older <code>Tag</code> helper created mutable objects where chaining always modified the original and returned it again.</p>
+</div>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IHtmlTagsService HtmlTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IHtmlTagsService</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ServiceKit16_HtmlTags_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Added in v15</p>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Image_" data-uid="ToSic.Sxc.Services.ServiceKit16.Image*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Image" data-uid="ToSic.Sxc.Services.ServiceKit16.Image">
+  Image
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Images service, used to create <code>img</code> and <code>picture</code> tags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IImageService Image { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IImageService.html">IImageService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Json_" data-uid="ToSic.Sxc.Services.ServiceKit16.Json*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Json" data-uid="ToSic.Sxc.Services.ServiceKit16.Json">
+  Json
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The JSON service, used to convert data to-and-from JSON</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IJsonService Json { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IJsonService.html">IJsonService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Key_" data-uid="ToSic.Sxc.Services.ServiceKit16.Key*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Key" data-uid="ToSic.Sxc.Services.ServiceKit16.Key">
+  Key
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key service.
+Rarely used, as the RazorTyped has a UniqueKey property which comes from this service.
+You only need this service, if you need to create combined keys (like with an entity)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyService Key { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IKeyService.html">IKeyService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ServiceKit16_Key_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>New in v16.04</li>
+</ul>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Link_" data-uid="ToSic.Sxc.Services.ServiceKit16.Link*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Link" data-uid="ToSic.Sxc.Services.ServiceKit16.Link">
+  Link
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Link helper object to create the correct links</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILinkService Link { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.ILinkService.html">ILinkService</a></dt>
+    <dd><p>A <a class="xref" href="ToSic.Sxc.Services.ILinkService.html">ILinkService</a> object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Mail_" data-uid="ToSic.Sxc.Services.ServiceKit16.Mail*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Mail" data-uid="ToSic.Sxc.Services.ServiceKit16.Mail">
+  Mail
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Mail service, used to send mails</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMailService Mail { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IMailService.html">IMailService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Page_" data-uid="ToSic.Sxc.Services.ServiceKit16.Page*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Page" data-uid="ToSic.Sxc.Services.ServiceKit16.Page">
+  Page
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Page service, used to set headers, activate features etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPageService Page { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IPageService.html">IPageService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Render_" data-uid="ToSic.Sxc.Services.ServiceKit16.Render*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Render" data-uid="ToSic.Sxc.Services.ServiceKit16.Render">
+  Render
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Render service, used to render one or more dynamic content within other content</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRenderService Render { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IRenderService.html">IRenderService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Scrub_" data-uid="ToSic.Sxc.Services.ServiceKit16.Scrub*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Scrub" data-uid="ToSic.Sxc.Services.ServiceKit16.Scrub">
+  Scrub
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Razor-Blade Scrub service, used to clean up HTML.
+See <a class="xref" href="https://razor-blade.net/api/ToSic.Razor.Blade.IScrub.html">Razor Blade IScrub Service</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IScrub Scrub { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://razor-blade.net/api/ToSic.Razor.Blade.IScrub.html">IScrub</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_SecureData_" data-uid="ToSic.Sxc.Services.ServiceKit16.SecureData*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_SecureData" data-uid="ToSic.Sxc.Services.ServiceKit16.SecureData">
+  SecureData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Secure Data service - mainly for reading / decrypting secrets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISecureDataService SecureData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.ISecureDataService.html">ISecureDataService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_SystemLog_" data-uid="ToSic.Sxc.Services.ServiceKit16.SystemLog*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_SystemLog" data-uid="ToSic.Sxc.Services.ServiceKit16.SystemLog">
+  SystemLog
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The System Log service, used to add log messages to the system (Dnn/Oqtane)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISystemLogService SystemLog { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.ISystemLogService.html">ISystemLogService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Template_" data-uid="ToSic.Sxc.Services.ServiceKit16.Template*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Template" data-uid="ToSic.Sxc.Services.ServiceKit16.Template">
+  Template
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Templates service, which can parse strings containing placeholders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITemplateService Template { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.ITemplateService.html">ITemplateService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ServiceKit16_Template_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>History: introduced in v18.00</p>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_Toolbar_" data-uid="ToSic.Sxc.Services.ServiceKit16.Toolbar*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_Toolbar" data-uid="ToSic.Sxc.Services.ServiceKit16.Toolbar">
+  Toolbar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The toolbar service, used to generate advanced toolbars</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IToolbarService Toolbar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IToolbarService.html">IToolbarService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ServiceKit16_User_" data-uid="ToSic.Sxc.Services.ServiceKit16.User*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ServiceKit16_User" data-uid="ToSic.Sxc.Services.ServiceKit16.User">
+  User
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The User service, used to get user and role information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IUserService User { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Services.IUserService.html">IUserService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ServiceKit16_User_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>History: released in 19.02 (started in v15.03 but was never public)</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/ServiceKits/ServiceKit16.cs/#L22" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Your Custom Platform - Scenario #1 - Read EAV Data | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Your Custom Platform - Scenario #1 - Read EAV Data | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/integration/scenario-01.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Integration.Scenario01">
+<h1 id="your-custom-platform---scenario-1---read-eav-data">Your Custom Platform - Scenario #1 - Read EAV Data</h1>
+
+<p>This is part of the <a class="xref" href="index.html">Integration Guide</a> for integrating EAV or 2sxc into your own solution.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can find this fully implemented in the <code>Integration\BasicEav01</code> project.</p>
+<p>Search for <code>#2sxcIntegration</code> in the code to find all the things that were adjusted to get it to work.</p>
+</div>
+<h2 id="scope-of-scenario-1---read-eav-data">Scope of Scenario #1 - Read EAV Data</h2>
+<p>In Scenario #1 we will setup a basic system.
+This is the foundation for more enhanced scenarios.</p>
+<p><strong>Functionality</strong></p>
+<ol>
+<li>Can read / get EAV Data from an existing Dnn or Oqtane Database</li>
+<li>Has a dummy <code>IUser</code> implementation which says the user is always a SystemAdmin</li>
+<li>Can see <a class="xref" href="../../net-code/debug/insights.html">Insights</a> to see what's happening internally and to verify everything is ok</li>
+</ol>
+<h2 id="integration-overview-for-basic-read-from-existing-db-scenarios">Integration Overview for Basic Read-From-Existing-DB Scenarios</h2>
+<p>To Integrate EAV and 2sxc into your system, these are the core things you must do:</p>
+<ol>
+<li>Add necessary DLLs</li>
+<li>Copy all relevant files core files like <code>App_Data</code></li>
+<li>Integrate into your Dependency Injection</li>
+<li>Do StartUp configuration as needed</li>
+<li>Test / Verify you can Read Data</li>
+</ol>
+<hr>
+<h2 id="1-add-minimal-dlls">1. Add Minimal DLLs</h2>
+<p>For the first scenario, we need the main <code>ToSic.Eav.*</code> DLLs (no 2sxc DLLs needed):</p>
+<ol>
+<li>Apps</li>
+<li>Core</li>
+<li>DataSources</li>
+<li>ImportExport</li>
+<li>Persistence.Efc</li>
+<li>Repository.Efc</li>
+</ol>
+<p>You can add these manually, reference them or whatever.</p>
+<hr>
+<h2 id="2-copy-important-data-to-your-target">2. Copy Important Data to Your Target</h2>
+<p>The EAV loads important data from the file system when it starts. This data contains Content-Types and basic configuration which is necessary to work.</p>
+<p>In the basic implementation, you need the <code>App_Data</code> folder to be copied to the right location, which must be available at runtime.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <code>App_Data</code> folder does not need to be accessible from outside.</p>
+</div>
+<p>You may copy the <code>App_Data</code> manually, or automate it on build.</p>
+<p>The following script is used in the <code>BasicEav01</code> project on build (adjust it to your needs):</p>
+<pre><code>@Echo Configuration='$(Configuration)'
+@Echo StartWith ='$(Configuration.StartsWith('Debug'))'
+@Echo Platform ='$(Platform)'
+@Echo ProjectDir '$(ProjectDir)'
+@SET BuildTarget=$(ProjectDir)sys-2sxc
+@Echo BuildTarget '%BuildTarget%'
+
+@REM Copy the data folders
+robocopy /mir &quot;$(ProjectDir)..\..\Data\.data\ &quot; &quot;%BuildTarget%\.data\ &quot;
+</code></pre>
+<hr>
+<h2 id="3-integrate-into-your-dependency-injection">3. Integrate into your Dependency Injection</h2>
+<p>The EAV and 2sxc need Dependency Injection to work. As of now (2022-02) we use the .net Standard 2.1 DI.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The example below also registers the <code>IntUser</code> which is the Integration-implementation of the <code>IUser</code>.
+To see the code of that, just check out the example code in the project.</p>
+</div>
+<h3 id="31-general-principles">3.1 General Principles</h3>
+<p>The general principle is as follows:</p>
+<ol>
+<li>At StartUp you'll either
+<ol>
+<li>use the existing <code>IServiceCollection</code> like in the Oqtane examples</li>
+<li>or create a new <code>ServiceCollection()</code> like in the Dnn examples</li>
+</ol>
+</li>
+<li>You'll later have custom services for your platform only, these should be added in an own method like <code>AddSxcYourPlatform</code> in your own static class</li>
+<li>Once you need these objects, you'll get a <code>IServiceProvider</code> from the framework or create your own, sometimes creating an own scope</li>
+</ol>
+<p>This would be a minimal StartUp taken from <code>BasicEav01</code>:</p>
+<pre><code class="lang-c#">/// &lt;summary&gt;
+/// This method gets called by the runtime. Use this method to add services to the container.
+/// &lt;/summary&gt;
+public void ConfigureServices(IServiceCollection services)
+{
+  // #2sxcIntegration
+  // Register our Always-Super-User (to allow Insights to be used)
+  services.TryAddTransient&lt;IUser, IntUser&gt;();
+  // Enable all of EAV
+  services.AddEav();
+
+  // RazorPages - standard .net core MVC feature
+  services.AddRazorPages();
+}
+</code></pre>
+<h3 id="32-various-di-scenarios">3.2 Various DI Scenarios</h3>
+<p>Your project may already use DI, or it may not. Here are the common scenarios you will probably have:</p>
+<h4 id="321-di-scenario-1---no-dependency-injection">3.2.1 DI Scenario #1 - No Dependency Injection</h4>
+<p>This scenario is common in classic <em>.net Framework</em> and <em>WebForms</em> projects which are a bit older.
+We assume nobody will actually be needing this much, so we won't explain this in detail.
+Your work will basically consist of</p>
+<ol>
+<li>At Startup, create a new DI and store it somewhere (see DNN samples to see how this can be done)</li>
+<li>When you use it, make sure you get the <code>IServiceProvider</code> - probably in an own Scope per request and module</li>
+</ol>
+<h4 id="322-di-scenario-2---net-core-dependency-injection">3.2.2 DI Scenario #2 - .net Core Dependency Injection</h4>
+<p>This scenario is common in new <code>Asp.net Core</code> projects.
+It already has Dependency Injection setup, and all you need to do is use the existing one.
+For this scenario, best see how it's done in Oqtane</p>
+<hr>
+<h2 id="4-do-startup-configuration">4. Do StartUp Configuration</h2>
+<p>Some aspects of EAV &amp; 2sxc are super important that they are configured before anything starts.
+These are the required ones as of 2022-02:</p>
+<ol>
+<li>The database <strong>ConnectionString</strong> required to connect to the EAV DB</li>
+<li><strong>GlobalFolder</strong> of the distributed 2sxc files containing things like the <code>App_Data</code> subfolder - required to load initial configurations and initial data</li>
+<li>Call <code>StartUp</code> on the <code>SystemLoader</code> which you must get from DI</li>
+</ol>
+<p>This is the working code taken from <code>BasicEav01</code>:</p>
+<pre><code class="lang-c#">/// &lt;summary&gt;
+/// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+/// &lt;/summary&gt;
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+  // ----- Start EAV stuff #2sxcIntegration -----
+  var serviceProvider = app.ApplicationServices;
+  
+  // Set Connection String
+  serviceProvider.Build&lt;IDbConfiguration&gt;().ConnectionString = _connStringFromConfig;
+
+  // Set global path where it will find the .data folder
+  var globalConfig = serviceProvider.Build&lt;IGlobalConfiguration&gt;();
+  globalConfig.GlobalFolder = Path.Combine(env.ContentRootPath, &quot;sys-2sxc&quot;);
+
+  // Trigger start where the data etc. will be loaded &amp; initialized
+  serviceProvider.Build&lt;SystemLoader&gt;().StartUp();
+  // ----- End EAV stuff #2sxcIntegration -----
+
+  // ...
+}
+</code></pre>
+<hr>
+<h2 id="5-test-and-verify">5. Test and Verify</h2>
+<p>If you did everything right, you can now run your code and access data from the App Cache using code like this (see demo on the <code>ShowEavData.cshtml</code>):</p>
+<pre><code class="lang-c#">@page
+@using ToSic.Eav.Apps
+@inject IAppStates AppStates
+@{
+  ViewData[&quot;Title&quot;] = &quot;First Read Data from EAV&quot;;
+
+  // Adjust these values to your testing environment
+  var zoneId = 2;
+  var appId = 78;
+
+  var appState = AppStates.Get(new AppIdentity(zoneId, appId));
+  var firstItem = appState.List.FirstOrDefault();
+}
+</code></pre>
+<p><strong>Common Problems</strong></p>
+<ol>
+<li>If the folder to the <code>App_Data</code> isn't quite correct, you will have a long loading time and then a stack overflow</li>
+</ol>
+<hr>
+<h2 id="5-get-insights-webapi-to-work">5. Get Insights WebApi to Work</h2>
+<p>The <a class="xref" href="../../net-code/debug/insights.html">Insights</a> will help you figure out what parts you need to implement.
+It will show you what services were requested which are not implemented yet, and will show you what code was used.</p>
+<ol>
+<li>Create your minimal <code>InsightsController</code> as you see in the demo project</li>
+<li>Register the routes using whatever system you have ATM (.net core, ASP.net Framework)</li>
+<li>Test the routes to see things are coming out</li>
+</ol>
+<p><strong>Minimal <code>InsightsController</code></strong></p>
+<p>You can review the code of the InsightsController in the <code>Controllers</code> folder in the project.
+It's basically just a simple controller with one <code>Details(...)</code> action.</p>
+<p><strong>Activate it in the <code>StartUp.cs</code></strong></p>
+<pre><code class="lang-c#">public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+  // ...
+
+  app.UseEndpoints(endpoints =&gt;
+  {
+      endpoints.MapRazorPages();
+
+      // #2sxcIntegration - enable insights controllers
+      endpoints.MapControllers();
+  });
+}
+</code></pre>
+<p>Test by calling <code>https://localhost:44384/api/sxc/sys/Insights/Help</code> - replace the base path as needed.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Once the insights work, you can also see what objects were used in a <a class="xref" href="../../net-code/conventions/unknown-implementations/index.html">fallback/unknown implementation</a>.</p>
+</div>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Proof of Concept implemented with 2sxc 11 in 2021</li>
+<li>Finalized when integrating Oqtane in 2sxc 12</li>
+<li>Updated docs for basic Scenario for v13.03</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/integration/scenario-01.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

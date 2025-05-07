@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Entities (Data, Records, Items) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Entities (Data, Records, Items) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/entities/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Data.Entities.Index">
+<h1 id="entities-data-records-items">Entities (Data, Records, Items)</h1>
+
+<div class="overlay-container">
+  <div class="overlay-box" style="left: 28.5%; top: 7%; height: 45%; width: 47.5%"></div>
+  <img src="../../../pages/basics/data/assets/app-data.png" class="full-width">
+</div>
+
+<p>This explains <strong>Entities</strong> aka <strong>Data Items</strong>. For an overview check out <a class="xref" href="../index.html">Understanding Data...</a>.</p>
+<hr>
+<p>Every <em>thing</em>, <em>record</em> or <em>object</em> in 2sxc is called an <strong>Entity</strong>. So if you have a list of <code>Book</code> objects, then each <code>Book</code> is an entity.</p>
+<blockquote>
+<p>Many other systems use the term <em>Record</em>, <em>Content Item</em>, <em>Item</em> or <em>Object</em>.</p>
+</blockquote>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Before you start: Remember that you usually don't need this if you are creating Razor templates
+or WebApi - for that, you want to read <a class="xref" href="../../../net-code/dynamic-data/dynamic-entity.html">Dynamic Entity Objects</a>.</p>
+</div>
+<h2 id="data-model-eavd--entity-attribute-value--dimension">Data Model: EAV+D = Entity-Attribute-Value + Dimension</h2>
+<blockquote>
+<p>EAV stands for <strong>Entity</strong>, <strong>Attribute</strong>, <strong>Value</strong>
+The D stands for <strong>Dimension</strong>, it says what Dimension (Language) a <em>Value</em> is for</p>
+</blockquote>
+<h2 id="how-it-works">How it Works</h2>
+<p>Each <em>Entity</em> has many fields, some containing text, numbers etc. The fields an Entity can have is defined in the <a class="xref" href="../content-types/index.html">Content-Type</a>, so each Entity is like a record of that type.</p>
+<p>This basic principle is used everywhere in 2sxc. For example, all these things are Entities:</p>
+<ul>
+<li><em>Simple Content</em> items in the <em>Content-App</em> are entities containing a title, body and image</li>
+<li><a class="xref" href="../../app/views/index.html">View</a> configurations are entities containing name, thumbnail, template-name etc.</li>
+<li><em>Blog</em> posts in the <a href="https://2sxc.org/en/apps/app/dnn-blog-app-for-dnn-dotnetnuke">Blog App</a> are entities containing around 20 fields</li>
+<li><em>Tag</em> items in the <a href="https://2sxc.org/en/apps/app/dnn-blog-app-for-dnn-dotnetnuke">Blog App</a> are also entities</li>
+<li>Anything you define in your apps will result in entities</li>
+</ul>
+<h4 id="multilanguage-data">Multilanguage Data</h4>
+<p>Each value can also be <a class="xref" href="../multi-language/index.html">multilanguage</a>, so there are actually many <code>Descriptions</code> in a multi-language product Entity.</p>
+<h4 id="relationships">Relationships</h4>
+<p>Entities are much more than just records, as they can have <a class="xref" href="../relationships/index.html">relationships</a>.</p>
+<h4 id="input-forms-and-fields-like-wysiwyg">Input Forms and Fields (like WYSIWYG)</h4>
+<p>The input mask is automatically generated from the <a class="xref" href="../content-types/index.html">Content-Type</a>. Based on the specifications, it will generate the correct <a class="xref" href="../fields/index.html">Input-Field</a> like a simple text field, a multiline text field, a WYSIWYG or even a file-uploader.</p>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 1.0</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/entities/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

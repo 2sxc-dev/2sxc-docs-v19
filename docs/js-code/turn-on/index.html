@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>turnOn JavaScript API | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="turnOn JavaScript API | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/turn-on/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.TurnOn.Index">
+
+<img src="../../assets/features/turn-on.svg" class="feature">
+<h1 id="turnon-javascript-api">turnOn JavaScript API</h1>
+<h2 id="the-problem-turnon-solves">The Problem turnOn Solves</h2>
+<p>A core problem with all JavaScript is making sure that all scripts and dependencies are loaded, available and ready, and the data needed to init is available (usually in the Html itself).</p>
+<p>Even something as simple as this can fail...</p>
+<pre><code class="lang-js">$(start);
+</code></pre>
+<p>...because even this example requires jQuery to already exist.</p>
+<blockquote>
+<p><strong>turnOn</strong> solves this problem with a new architecture. Loading is now configuration based. No matter which parts load in what order, turnOn will work.</p>
+</blockquote>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>turnOn</strong> is also building an architecture which will reliably work even with very <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">strict CSP</a> enforced - which we believe will be essential in future.</p>
+</div>
+<p>👉 Check out the <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/turnon-use">turnOn Tutorials</a></p>
+<h2 id="activate-turnon">Activate turnOn</h2>
+<p>To use turnOn you must must tell the page that you need it. Here's how:</p>
+<pre><code class="lang-razor">@Kit.Page.Activate(&quot;turnOn&quot;);
+</code></pre>
+<p>👉 Read more about the <a class="xref" href="../../net-code/services/page/index.html">IPageService</a></p>
+<h2 id="the-turnon-solution">The turnOn Solution</h2>
+<p>When using turnOn, the page will request the <code>turnOn.js</code> in any way. It can also be <code>deferred</code>. Then this will be used to turn-on your code:</p>
+<pre><code class="lang-html">&lt;div turn-on='{ &quot;await&quot;: [&quot;window.$&quot;], &quot;run&quot;: &quot;window.appContent.maps.load()&quot;, &quot;data&quot;: &quot;some-google-maps-key&quot; }'&gt;
+  &lt;!-- more html --&gt;
+&lt;/div&gt;
+</code></pre>
+<p>This is what happens</p>
+<ol>
+<li>The html will just be loaded and have no effects, throw no errors and nothing</li>
+<li>Once the <code>turnOn.js</code> loads it will find this and process it - it doesn't matter if turnOn was already loaded or deferred</li>
+<li>turnOn will then wait for all this to exist:
+<ul>
+<li><code>window</code></li>
+<li><code>window.$</code></li>
+<li><code>window.appContent</code></li>
+<li><code>window.appContent.maps</code></li>
+<li><code>window.appContent.maps.load</code></li>
+</ul>
+</li>
+<li>It will then call <code>window.appContent.maps.load(data)</code> with the data provided</li>
+</ol>
+<p>Here's another example, taken from the new Content-App in 2sxc:</p>
+<pre><code class="lang-html">&lt;!-- Instruct turnOn to init this specific Map once everything is loaded --&gt;
+&lt;turnOn turn-on='{ &quot;run&quot;: &quot;window.appContent.maps.configureMap()&quot;, &quot;data&quot;: { 
+  &quot;domId&quot;: &quot;GoogleMap-@DynamicModel.mapId&quot;, 
+  &quot;marker&quot;: &quot;@Text.First(DynamicModel.markerImage, &quot;&quot;)&quot;,
+  &quot;lat&quot;: @DynamicModel.mapInfo.GpsLat.ToString(&quot;R&quot;),
+  &quot;lng&quot;: @DynamicModel.mapInfo.GpsLong.ToString(&quot;R&quot;), 
+  &quot;zoom&quot;: @Content.Presentation.Zoom, 
+  &quot;info&quot;: &quot;@DynamicModel.company&quot;,
+  &quot;warn&quot;: @(Settings.GoogleMapsShowWarning ? &quot;true&quot; : &quot;false&quot;)
+}}'&gt;&lt;/turnOn&gt;
+</code></pre>
+<p>This example will init a map with the configuration of the map incl. pin-image, coordinates and more.</p>
+<h2 id="signature-of-run-call">Signature of Run call</h2>
+<p>The <code>run</code> method - in the above example <code>...configureMap()</code> is as follows:</p>
+<pre><code class="lang-js">public void configureMap(data)
+{
+  // data is the data provided in the turnOn
+}
+</code></pre>
+<p>2sxc v14.02 includes turnOn v0.1.2, where the <code>run</code> method also has another parameter: <code>context</code>.
+The most important property is <code>context.tag</code> which is the tag which contained the configuration.
+This allows you to use <code>$2sxc(context.tag)</code> to <a class="xref" href="../2sxc-api/basics/get-sxc.html">get the Sxc of the tag</a>.</p>
+<h2 id="advantages-of-using-turnon">Advantages of Using turnOn</h2>
+<ol>
+<li>Works, no matter in what order the scripts were loaded</li>
+<li>Works even if the HTML was created before or after loading the scripts</li>
+<li>Works for lazy-loaded HTML which can introduce new turnOn configurations</li>
+</ol>
+<h2 id="responsibility-of-your-code">Responsibility of Your Code</h2>
+<p>There are a few things turnOn doesn't do, which you should be aware of:</p>
+<ol>
+<li>It doesn't load JS or CSS files (yet). As of now, you must still do this in the HTML template.</li>
+<li>The init code must still do it's work properly. If multiple inits should not be called, then your code must ensure that it detects this and skips multiple initializations.</li>
+<li>Your init-code should not auto-run when loading the script, as this could again be missing dependencies.</li>
+</ol>
+<h2 id="examples-of-the-full-challenge">Examples of the Full Challenge</h2>
+<p>Common things which may be needed before the code starts:</p>
+<ol>
+<li>The main JS code</li>
+<li>Additional JS parts</li>
+<li>Some JS Libraries</li>
+<li>CSS</li>
+<li>DOM nodes which the JS should work on</li>
+<li>Configuration data like ModuleId which should be known.</li>
+</ol>
+<p>Dynamic pages make this even harder - like when Oqtane/Blazor reloads just parts of the page multiple times. We must ensure that the JS isn't re-initialized again and again, as that can cause issues like:</p>
+<ol>
+<li>The same code running in parallel - causing all sorts of damage</li>
+<li>Memory leaks where the same library and complex object states are loaded many times</li>
+<li>Issues where some code initialized and was then replaced by new, uninitialized code</li>
+</ol>
+<p>Our goal is to simplify this, so that your solution can simply state what it needs, and then run once all that has been provided.</p>
+<ol>
+<li>a dom node with a specific id like <code>#module-57</code></li>
+<li>an object on the window like <code>window.someLibrary</code></li>
+<li>a js file which should be loaded if it's not loaded yet like <code>/js/jquery.min.js</code></li>
+<li>a css file like <code>/css/mycss.js</code></li>
+</ol>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Added v0.1.1 in 2sxc v12.04</li>
+<li>Updated to v0.1.2 in 2sxc v14.02 providing the <code>context</code> as the second parameter</li>
+</ol>
+<h2 id="future-features">Future features</h2>
+<ol>
+<li>also await certain DOM events; ATM you can do this easily after turnOn has run it's magic, but it would be nice to specify it in the config</li>
+<li>load scripts and js</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/turn-on/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

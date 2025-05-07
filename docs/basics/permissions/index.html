@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Permissions in 2sxc | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Permissions in 2sxc | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/permissions/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Permissions.Index">
+<h1 id="permissions-in-2sxc">Permissions in 2sxc</h1>
+
+<p>2sxc permissions are interlinked with the users and roles of the platform (Dnn or Oqtane).
+So if Dnn or Oqtane say a user may do something, 2sxc will follow that.</p>
+<p>But there is more to it.
+Many situations require some control which the platform doesn't offer.
+Here are some examples:</p>
+<ol>
+<li>Admins in DNN are often just content-editors, and shouldn't be able to reconfigure 2sxc</li>
+<li>Headles APIs (REST) needs permissions which you cannot set in the platfrom</li>
+<li>Custom APIs (C# Controllers) need permissions which are not platform-configurable</li>
+</ol>
+<p>This section will help you understand how permissions work and where to configure them.</p>
+<h2 id="platform-permissions">Platform Permissions</h2>
+<h3 id="system-admins-aka-super-users-systemadmin">System Admins aka Super Users (SystemAdmin)</h3>
+<p>A super-user (host-user) has full permissions on everything.
+There is no way to change this.
+This means that super users can install, configure, query, edit and delete everything.</p>
+<p>In C# you can always detect this on the <a class="xref" href="../../api/dot-net/ToSic.Sxc.Context.ICmsUser.html"><code>CmsContext.User.IsSystemAdmin</code></a></p>
+<h3 id="site-admins-siteadmin">Site Admins (SiteAdmin)</h3>
+<p>Admin users have full permissions on a specific site (Dnn: portal).
+So <em>by default</em> they can do everything which only affects the current site.</p>
+<p>If you have special Roles such as <code>2sxcAdministrators</code> then this can <a class="xref" href="role-2sxcadministrators.html">behave differently</a>.</p>
+<p>In C# you can always detect this on the <a class="xref" href="../../api/dot-net/ToSic.Sxc.Context.ICmsUser.html"><code>CmsContext.User.IsSiteAdmin</code></a></p>
+<h3 id="content-admins-contentadmin">Content Admins (ContentAdmin)</h3>
+<p>Many admins are just configured as admins to allow them to edit everything.
+So often the status <code>Administrator</code> is only given because it's the only real way
+to ensure the user can change every page, without wanting to allow the user to
+edit other users or reconfigure the site.</p>
+<p>Because of this, we have the concept of <strong>ContentAdmins</strong></p>
+<p>The platforms Dnn and Oqtane currently don't offer a pure content-admin role.
+Because of this, 2sxc allows us to do this in another way.</p>
+<p>If the site/portal has a role called <code>2sxcAdministrators</code> (previously <code>2sxc Designers</code>)
+then <em>all</em> administrators will be treated as <strong>ContentAdmins</strong> with less permissions.</p>
+<p>Any administrator which is then in this role <code>2sxcAdministrators</code> will have higher rights.
+For further details, see <a class="xref" href="role-2sxcadministrators.html">role 2sxcAdministrators</a></p>
+<p>In C# you can always detect this on the <a class="xref" href="../../api/dot-net/ToSic.Sxc.Context.ICmsUser.html"><code>CmsContext.User.IsContentAdmin</code></a></p>
+<h3 id="edit-permissions">Edit Permissions</h3>
+<p>The platform Dnn/Oqtane can give users <strong>Edit</strong> permissions.
+On both platforms this can be assigned at the page as well as the module permission.</p>
+<p>Users with edit permissions will be able to edit content or change what layout is used,
+but not be able to access advanced admin features.</p>
+<h2 id="app-permissions">App Permissions</h2>
+<p>For special use cases you may want to give users permissions in a specific App.
+For example, a <em>Classifieds</em> App or a <em>Comments</em> App could allow registered users to add their own posts and also edit them.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Be careful with such permissions, as you don't want to open up your entire App.
+Normally you will only want to assign permissions to a specific <strong>Content Type</strong>.</p>
+</div>
+<h3 id="content-type-edit-permissions">Content-Type Edit Permissions</h3>
+<p>These permissions can be configured at the <a class="xref" href="../data/content-types/index.html">Content-Type</a> level.</p>
+<p>A typical example would be</p>
+<ul>
+<li><strong>Registered Users</strong> can create a new <strong>Comment</strong></li>
+<li><strong>Registered Users</strong> can read the schema of <strong>Comment</strong> so the edit-UI can be accessed</li>
+<li><strong>Registered Users</strong> can edit <strong>Comment</strong>s which they own/created</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Just because the permissions allow editing doesn't mean the UI will automatically show toolbars.
+This is because you may have special buttons or <strong>My Comments</strong> page or something to do this.
+So don't forget to ensure the UI is available as you want it.</p>
+</div>
+<h2 id="rest-api-permissions-headless">REST API Permissions (Headless)</h2>
+<p>To use data on the REST API you must also determine what is allowed.</p>
+<p>You can configure this at the App Content-Type level.</p>
+<h2 id="webapi-controller-permissions">WebApi Controller Permissions</h2>
+<p>When you create <a class="xref" href="../../net-code/web-api/index.html">custom WebApi controllers</a>,
+you will have to use C# attributes to configure permissions.</p>
+<p>Please check the examples, ATM we don't have time to document the details.</p>
+<h2 id="polymorph-editions">Polymorph Editions</h2>
+<p>The System Admin can also review new code on the live system without affecting other users.
+This feature is called <a class="xref" href="../polymorphism/index.html">Polymorphism</a>.
+It is only available to <em>SystemAdmins</em>.</p>
+<h2 id="checking-permissions-in-formulas">Checking Permissions in Formulas</h2>
+<p><a class="xref" href="../edit/formulas/index.html">Formulas</a> allow you to check the basic permissions such as <code>isSystemAdmin</code> etc. on the <code>context.user</code> object.</p>
+<p>Please check the examples, ATM we don't have time to document the details.</p>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Basic permissions introduced in 2012 for 2sxc 1</li>
+<li>Special role <code>2sxc Designers</code> introduced ca.</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/permissions/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

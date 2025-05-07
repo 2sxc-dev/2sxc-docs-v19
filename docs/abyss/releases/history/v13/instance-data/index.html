@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Fix Breaking Change InstanceData in v13 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Fix Breaking Change InstanceData in v13 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v13/instance-data/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Releases.History.V13.InstanceData">
+<h1 id="fix-breaking-change-instancedata-in-v13">Fix Breaking Change <em>InstanceData</em> in v13</h1>
+
+<p><strong>Keywords:</strong> #Deprecated #InstanceData</p>
+<p>2sxc v13 cleans up some historic, deprecated functionality. They were not used much, but if you have code which used this, here's how to fix any code in production.</p>
+<p>Specifically, three features were removed:</p>
+<ol>
+<li>The ability to publish Module Instance Data directly</li>
+<li>The ability to configure this in the View settings</li>
+<li>The JS API which was optimized to process the resulting data in a fairly untypical way</li>
+</ol>
+<h2 id="reason-for-removal">Reason for Removal</h2>
+<p>These features were removed because they were almost never used, and newer mechanisms are much more appropriate than that old stuff.</p>
+<h2 id="history---how-it-used-to-work">History - How it Used to Work</h2>
+<p>2sxc V3 (ca. 2013) introduced a feature where a Module could <em>publish</em> the data it was also showing on a normal screen as a WebApi / JSON call.</p>
+<p>It was required that a view activates this feature to ensure that it doesn't happen by accident. The settings in the view were like this (example from the <a href="https://2sxc.org/en/apps/app/timelinejs-app-for-dnn-dotnetnuke">TimelineJs App</a>):</p>
+<img src="../../../../../pages/abyss/releases/history/v13/instance-data/view-configuration-instance-data.jpg" width="100%" class="full-width">
+<ol>
+<li>Go to the view configuration</li>
+<li>The old deprecated settings</li>
+<li>Enable data publishing (which opened the data for JS)</li>
+<li>The streams which were to be published</li>
+</ol>
+<p><em>Note that the stream <code>Default</code> is still called <code>Default</code> today, but <code>ListContent</code> is usually called <code>Header</code> today.</em></p>
+<p>Once this was setup, there was a way to get this data through a WebApi call.</p>
+<ol>
+<li>From v3 to ca. v6 there was a call which actually went through the Dnn Page (so it was slow)</li>
+<li>V6 to ca. v11 it used a call to <code>app-sys/AppContent/GetContentBlockData</code></li>
+<li>Later there was a special WebApi call to <code>app/auto/InstanceData</code> which did the same thing</li>
+</ol>
+<p>The format of the response was a bit special, specifically it looked like this (TimelineJs example):</p>
+<img src="../../../../../pages/abyss/releases/history/v13/instance-data/web-api-instance-data-output.jpg" width="100%" class="full-width">
+<ol>
+<li>The call to <code>InstanceData</code></li>
+<li>The data which was on a special <code>List</code> sub-object</li>
+</ol>
+<p>To complement this, there was a JS-API which worked as follows:</p>
+<pre><code class="lang-js">// Process each Timeline DOM-element on the page
+$(&quot;.timeline-embed&quot;).each(function() {
+    // Define our timeline element, get moduleId
+    var timeLineElement = $(this);
+    var sxc = $2sxc(this);
+
+    // Load the data from the 2SexyContent module and define a callback
+    sxc.data.on(&quot;load&quot;, function (source, data) { 
+        processDataAndCreateTimeline(source, data, sxc.id, timeLineElement) 
+    }).load();
+});
+</code></pre>
+<p>Specifically, it used a <code>data.on</code> call to kind of say: <em>on load get the data from the current module</em>.</p>
+<p>The resulting data was then used in the JS - for example like this in TimelineJS:</p>
+<pre><code class="lang-js">// what should happen on loading of the data:
+function processDataAndCreateTimeline (data, moduleId, timeLineElement) {
+    // Old code using the `in`, the `ListContent` and `.List[...]` stream
+    var content = data.in.Default.List;
+    var listContent = data.in.ListContent.List[0];
+    var timelineData = getTimelineData(moduleId, content, listContent);
+    ...
+</code></pre>
+<h2 id="upgrade-to-newer-functionality">Upgrade to Newer functionality</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Below you'll find instructions how to create the same functionality using Visual Query and newer JS APIs.</p>
+<p>But: In many cases you may actually want a different solution, because Visual Query is very powerful and may provide other ways to get you the data you need.</p>
+</div>
+<h3 id="step-1-create-query-which-gets-instance-data">Step 1: Create Query which Gets Instance Data</h3>
+<p>This creates a Query API call which gets the same data as before, but in a newer API and newer standard.</p>
+<p>Create the Query - in our example we'll call it <code>ModuleData</code>
+<br>
+<img src="../../../../../pages/abyss/releases/history/v13/instance-data/query-create.jpg" width="25%">
+<img src="../../../../../pages/abyss/releases/history/v13/instance-data/query-edit.jpg" width="25%">
+<img src="../../../../../pages/abyss/releases/history/v13/instance-data/query-run.jpg" width="25%">
+<img src="../../../../../pages/abyss/releases/history/v13/instance-data/query-results.jpg" width="25%"></p>
+<p>After doing this, you have created a query which returns the same data as before, with 2 important differences:</p>
+<ol>
+<li>The stream <code>ListContent</code> is now called <code>Header</code></li>
+<li>There are no permissions configured yet for anonymous users to access the query</li>
+</ol>
+<h3 id="step-2-update-the-js-code-to-use-the-query-instead-of-the-data">Step 2: Update the JS code to use the Query instead of the .data</h3>
+<p>We have updated the TimelineJS code to use the new <code>fetchJson</code> <a href="https://github.com/2sic/app-timelinejs/blob/master/assets/scripts.js">api - see docs</a>:</p>
+<pre><code class="lang-js">// Process each Timeline DOM-element on the page
+$(&quot;.timeline-embed&quot;).each(function() {
+  // Define our timeline element, get moduleId
+  var timeLineElement = $(this);
+  var sxc = $2sxc(this);
+
+  // New version using fetch and the default Query we just created
+  sxc.webApi.fetchJson('app/auto/query/ModuleData')
+    .then((data) =&gt; processDataAndCreateTimeline(data, sxc.id, timeLineElement));
+});
+</code></pre>
+<p>In addition, the data returned is a simpler. Specifically three things are now different:</p>
+<ol>
+<li>it doesn't have a level <code>in</code></li>
+<li>it doesn't need the use <code>.List</code></li>
+<li>in our new Query the Header is in a stream <code>Header</code> and not <code>ListContent</code></li>
+</ol>
+<p>This would be the modified code in TimelineJs:</p>
+<pre><code class="lang-js">function processDataAndCreateTimeline (data, moduleId, timeLineElement) {
+  // Re-format streams that are contained in data
+  var content = data.Default;
+  var listContent = data.Header[0];
+  var timelineData = getTimelineData(moduleId, content, listContent);
+  ...
+</code></pre>
+<h3 id="step-3-set-query-permissions">Step 3: Set Query Permissions</h3>
+<p>After doing Step 1 &amp; 2 you will have a working solution, but only super-users (host-users) can use the query because the read-permissions have not yet been configured. To configure them, use this checklist:</p>
+<iframe src="https://azing.org/2sxc/r/BE0HbDwA?embed=1" width="100%" height="400" frameborder="0" allowfullscreen style="box-shadow: 0 1px 3px rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15)"></iframe>
+<hr>
+<p>Shortlink to here: <a href="https://go.2sxc.org/brc-13-id">https://go.2sxc.org/brc-13-id</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v13/instance-data/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

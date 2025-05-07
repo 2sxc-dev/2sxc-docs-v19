@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Entity Object Structure | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Entity Object Structure | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/entities/specs/object-structure.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Data.Entities.ObjectStructure">
+<h1 id="entity-object-structure">Entity Object Structure</h1>
+
+<div class="overlay-container">
+  <div class="overlay-box" style="left: 28.5%; top: 7%; height: 45%; width: 47.5%"></div>
+  <img src="../../../../pages/basics/data/assets/app-data.png" class="full-width">
+</div>
+
+<p>This explains the <strong>C# Entity Object Structure</strong>. For an overview check out <a class="xref" href="../../index.html">Understanding Data...</a>.</p>
+<hr>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>What follows is very technical. For most use cases you don't need to know this stuff.</p>
+</div>
+<p>Entities are structured as follows:</p>
+<br>
+<img src="../../../../pages/basics/data/entities/specs/assets/entity.png" width="100%" class="full-width">
+<br>
+<h2 id="eavd--entity-attribute-value--dimension">EAV+D = Entity-Attribute-Value + Dimension</h2>
+<blockquote>
+<p>EAV stands for <strong>Entity</strong>, <strong>Attribute</strong>, <strong>Value</strong>
+The D stands for <strong>Dimension</strong>, it says what Dimension (Language) a <em>Value</em> is for</p>
+</blockquote>
+<h2 id="apis">APIs</h2>
+<ul>
+<li><a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.html">ToSic.Eav.Data</a> Namespace has almost everything you see here</li>
+<li><a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IEntity.html">IEntity</a> describes the main unit, the Entity</li>
+<li><a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IContentType.html">IContentType</a> defines what fields exist, it's the ContentType / Schema</li>
+<li><a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IAttributeBase.html">IAttributeBase</a>, <a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IAttribute.html">IAttribute</a>,
+<a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IAttribute-1.html">IAttribute&lt;T&gt;</a>, <a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IAttribute-1.html">IAttribute&lt;T&gt;</a>
+determine the internal model how an attribute is built</li>
+<li><a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IValue.html">IValue</a>, <a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IValue-1.html">IValue&lt;T&gt;</a>, <!--[](xref:ToSic.Eav.Data.Value`1)-->
+determines how values in an attribute are stored, because an attribute like <code>Description</code>
+can have many values in different languages</li>
+<li><a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.ILanguage.html">ILanguage</a>, <a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.IDimension.html">IDimension</a>, <a class="xref" href="../../../../api/dot-net/ToSic.Eav.Data.ILanguage.html">ILanguage</a>
+languages and dimensions determine how the values are used in each language</li>
+<li><a href="xref:ToSic.Eav.Metadata.ITarget"></a>, <a href="xref:ToSic.Eav.Metadata.Target"></a>
+this determines if the Entity is by itself, or if it's enriching something else -
+in which case this Entity is Metadata.</li>
+<li><a class="xref" href="../../../../api/dot-net/ToSic.Eav.Metadata.IMetadataOf.html">IMetadataOf</a>
+sometimes an Entity may itself have more metadata, which would then be stored here.</li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 1.0</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/entities/specs/object-structure.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

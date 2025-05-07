@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.ContextIdentifier
+    name: ContextIdentifier
+    fullName: ContextIdentifier
+    children:
+      - Api.Js.SxcJs.ContextIdentifier.appId
+      - Api.Js.SxcJs.ContextIdentifier.moduleId
+      - Api.Js.SxcJs.ContextIdentifier.pageId
+      - Api.Js.SxcJs.ContextIdentifier.zoneId
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      ContextIdentifier is used to initialize a Sxc object outside of the
+      default context.
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.ContextIdentifier.appId
+    name: appId
+    fullName: appId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: AppId of this Context
+    syntax:
+      content: 'appId: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.ContextIdentifier.moduleId
+    name: moduleId
+    fullName: moduleId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ModuleId of this Context (optional)
+    optional: true
+    syntax:
+      content: 'moduleId?: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.ContextIdentifier.pageId
+    name: pageId
+    fullName: pageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: PageId of this Context (optional)
+    optional: true
+    syntax:
+      content: 'pageId?: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.ContextIdentifier.zoneId
+    name: zoneId
+    fullName: zoneId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ZoneId of this Context
+    syntax:
+      content: 'zoneId: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs

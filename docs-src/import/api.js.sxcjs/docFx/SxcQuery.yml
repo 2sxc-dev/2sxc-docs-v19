@@ -1,0 +1,276 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.SxcQuery
+    name: SxcQuery
+    fullName: SxcQuery
+    children:
+      - Api.Js.SxcJs.SxcQuery.getAll
+      - Api.Js.SxcJs.SxcQuery.getAll_1
+      - Api.Js.SxcJs.SxcQuery.getAll_2
+      - Api.Js.SxcJs.SxcQuery.getStream
+      - Api.Js.SxcJs.SxcQuery.getStream_1
+      - Api.Js.SxcJs.SxcQuery.getStream_2
+      - Api.Js.SxcJs.SxcQuery.getStreams
+      - Api.Js.SxcJs.SxcQuery.getStreams_1
+      - Api.Js.SxcJs.SxcQuery.getStreams_2
+      - Api.Js.SxcJs.SxcQuery.name
+    langs:
+      - typeScript
+    type: class
+    summary: Instance Query Service
+    extends:
+      name: Api.Js.SxcJs.SxcDataServiceBase
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getAll
+    name: getAll()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getAll<T>()
+      parameters: []
+      return:
+        type:
+          - Promise<T>
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getAll_1
+    name: 'getAll(string | Record<string, unknown>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAll<T>(urlParams: string | Record<string, unknown>)'
+      parameters:
+        - id: urlParams
+          type:
+            - 'string | Record<string, unknown>'
+          description: ''
+      return:
+        type:
+          - Promise<T>
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getAll_2
+    name: 'getAll(string | Record<string, unknown>, string | Record<string, unknown>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getAll<T>(urlParams: string | Record<string, unknown>, data:
+        string | Record<string, unknown>)
+      parameters:
+        - id: urlParams
+          type:
+            - 'string | Record<string, unknown>'
+          description: ''
+        - id: data
+          type:
+            - 'string | Record<string, unknown>'
+          description: ''
+      return:
+        type:
+          - Promise<T>
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getStream
+    name: getStream(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Get just one stream, returning an array of items in that stream'
+    syntax:
+      content: 'function getStream<T>(stream: string)'
+      parameters:
+        - id: stream
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - 'Promise<T[]>'
+        description: >-
+          containing an array of items - or empty if stream not found or nothing
+          returned
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getStream_1
+    name: 'getStream(string, string | Record<string, unknown>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getStream<T>(stream: string, urlParams: string | Record<string,
+        unknown>)
+      parameters:
+        - id: stream
+          type:
+            - string
+          description: ''
+        - id: urlParams
+          type:
+            - 'string | Record<string, unknown>'
+          description: ''
+      return:
+        type:
+          - 'Promise<T[]>'
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getStream_2
+    name: >-
+      getStream(string, string | Record<string, unknown>, string |
+      Record<string, unknown>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getStream<T>(stream: string, urlParams: string | Record<string,
+        unknown>, data: string | Record<string, unknown>)
+      parameters:
+        - id: stream
+          type:
+            - string
+          description: ''
+        - id: urlParams
+          type:
+            - 'string | Record<string, unknown>'
+          description: ''
+        - id: data
+          type:
+            - 'string | Record<string, unknown>'
+          description: ''
+      return:
+        type:
+          - 'Promise<T[]>'
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getStreams
+    name: getStreams(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get a query but only the mentioned streams.
+
+      This will reduce the amount of data retrieved on queries that have many
+      streams.
+    syntax:
+      content: 'function getStreams<T>(streams: string)'
+      parameters:
+        - id: streams
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - Promise<T>
+        description: >-
+          Promise containing a object with stream-names and items in the
+          streams.
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getStreams_1
+    name: 'getStreams(string, string | Record<string, unknown>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get a query but only the mentioned streams.
+
+      This will reduce the amount of data retrieved on queries that have many
+      streams.
+    syntax:
+      content: >-
+        function getStreams<T>(streams: string, urlParams: string |
+        Record<string, unknown>)
+      parameters:
+        - id: streams
+          type:
+            - string
+          description: 'name of streams to get, comma separated'
+        - id: urlParams
+          type:
+            - 'string | Record<string, unknown>'
+          description: 'additional parameters for the URL, either as a string or as a object'
+      return:
+        type:
+          - Promise<T>
+        description: >-
+          Promise containing a object with stream-names and items in the
+          streams.
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.getStreams_2
+    name: >-
+      getStreams(string, string | Record<string, unknown>, string |
+      Record<string, unknown>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get a query but only the mentioned streams.
+
+      This will reduce the amount of data retrieved on queries that have many
+      streams.
+    syntax:
+      content: >-
+        function getStreams<T>(streams: string, urlParams: string |
+        Record<string, unknown>, data: string | Record<string, unknown>)
+      parameters:
+        - id: streams
+          type:
+            - string
+          description: 'name of streams to get, comma separated'
+        - id: urlParams
+          type:
+            - 'string | Record<string, unknown>'
+          description: 'additional parameters for the URL, either as a string or as a object'
+        - id: data
+          type:
+            - 'string | Record<string, unknown>'
+          description: >-
+            data to include in case of a POST call - if this is provided, it
+            will use a post
+      return:
+        type:
+          - Promise<T>
+        description: >-
+          Promise containing a object with stream-names and items in the
+          streams.
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.SxcQuery.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+references:
+  - uid: Api.Js.SxcJs.SxcDataServiceBase
+    name: SxcDataServiceBase
+    spec.typeScript:
+      - name: SxcDataServiceBase
+        fullName: SxcDataServiceBase
+        uid: Api.Js.SxcJs.SxcDataServiceBase

@@ -1,0 +1,234 @@
+references:
+
+# Fake References
+- uid: Menu---Separator
+  name: "<hr>"
+  href: "#"
+
+# NPM
+- uid: Npm.Dnn-Sxc-Angular
+  name: dnn-sxc-angular on Npm
+  href: https://www.npmjs.com/package/@2sic.com/dnn-sxc-angular
+
+
+# Apps
+- uid: AppsCatalog
+  name: Apps Catalog
+  href: https://2sxc.org/en/apps
+- uid: App.Accordion
+  name: Accordion App
+  href: https://2sxc.org/en/apps/app/accordion-for-collapsible-sections
+- uid: App.Blog
+  name: Blog App
+  href: https://2sxc.org/en/apps/app/blog-app-v4
+- uid: App.Blueimp
+  name: Blueimp Gallery
+  href: https://2sxc.org/en/apps/app/blueimp-gallery-slider-4-0-with-koi-bootstrap-3-and-4
+- uid: App.Counter
+  name: Counter App
+  href: https://2sxc.org/en/apps/app/counter2-hybrid-for-dnn-and-oqtane
+- uid: App.FancyBoxGallery
+  name: Fancybox Gallery App
+  href: https://2sxc.org/en/apps/app/gallery-app-fancybox-3  
+- uid: App.Faq
+  name: FAQ App
+  href: https://2sxc.org/en/apps/app/faq-app-for-2sxc-v3
+- uid: App.ImageHotspots
+  name: Image-Hotspots App
+  href: https://2sxc.org/en/apps/app/image-hotspots
+- uid: App.Mobius
+  name: Mobius Forms App
+  href: https://2sxc.org/en/apps/app/mobius-forms-4-with-mailchimp-recaptcha-polymorph-weback-and-more
+- uid: App.News
+  name: News App
+  href: https://2sxc.org/en/apps/app/news-app-v4
+- uid: App.Qr
+  name: QR Code App
+  href: https://2sxc.org/en/apps/app/qr-code-app-for-dnn-dotnetnuke
+- uid: App.Snippets
+  name: Snippet Inject App
+  href: https://2sxc.org/en/apps/app/snippet-inject-for-dnn-v2
+- uid: App.Swiper
+  name: Image Swiper App
+  href: https://2sxc.org/en/apps/app/swiper-image-slider-pro-with-parallax-3d-cubes-coverflow-and-more
+
+
+- uid: App.TimelineJs
+  name: TimelineJs App
+  href: https://2sxc.org/en/apps/app/timelinejs-app-for-dnn-dotnetnuke
+- uid: App.TutorialJsToolbars
+  name: App Tutorial JS Toolbars
+  href: https://2sxc.org/en/apps/app/tutorial-for-the-javascript-apis-and-custom-toolbars
+
+- uid: App.Disqus
+  name: Disqus Integration App
+  href: https://2sxc.org/en/apps/app/disqus-app-for-dnn-dotnetnuke
+- uid: App.AddSearch
+  name: AddSearch Integration App
+  href: https://2sxc.org/en/apps/app/addsearch-app-for-2sxc
+
+- uid: App.AngularTemplate
+  name: Angular 18 Template App
+  href: https://2sxc.org/en/apps/details/app/tutorial-and-template-app-for-angular
+- uid: App.AngularTemplate.Git
+  name: Angular 11 Template App Github Repo
+  href: https://github.com/2sic/app-template-angular
+
+
+# Patron Links
+- uid: Patrons.Info
+  name: Patrons Information
+  href: https://2sxc.org/en/blog/post/2sxc-patrons-our-heros
+- uid: Patrons.Site
+  name: 2sxc Patrons Website
+  href: https://patrons.2sxc.org/
+
+
+# Blogs
+- uid: Blog.CustomDataSource
+  name: Blog for custom data source
+  href: https://2sxc.org/en/blog/post/new-2sxc7-create-your-own-custom-datasource-for-visual-query
+- uid: Blog.DataVsContent
+  name: Differences Templating Data vs. Content
+  href: https://2sxc.org/en/blog/post/12-differences-when-templating-data-instead-of-content
+- uid: Blog.F12
+  name: Debugging with F12
+  href: https://2sxc.org/en/blog/post/debugging-javascript-errors-with-a-modern-browser-and-f12-(200)
+
+
+# Checklists
+- uid: Checklist.AdminsNoAdvFeatures
+  name: Prevent Admins from Using Advanced Features
+  href: https://azing.org/2sxc/r/t104-orQ
+
+
+# Features
+- uid: Feat.AppDataApi
+  name: App Data API
+  href: https://2sxc.org/en/Docs-Manuals/Feature/feature/3360
+- uid: Feat.AppConfig
+  name: App Configuration
+  href: https://2sxc.org/en/Docs-Manuals/Feature/feature/8182
+
+## Tutorials ##
+
+# Razor Blade Tutorials
+- uid: Tut.Razor.Home
+  name: Razor Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor
+- uid: Tut.RazorBlade.Home
+  name: RazorBlade Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/blade-intro
+- uid: Tut.RazorBlade.Text.Has
+  name: RazorBlade Text.Has(...) Tutorial
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/blade-text
+- uid: Tut.RazorBlade.Text.First
+  name: RazorBlade Text.First(...) Tutorial
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/blade-text
+
+# Image Tutorials
+- uid: Tut.Img.Formats
+  name: Image Formats Tutorial
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/img
+- uid: Tut.Img.Parameters # TODO: move into tutorial
+  name: Image Resizer URL Parameters
+  href: https://2sxc.org/learn-extensions/ImageResizer
+- uid: Tut.Img.LinkImage
+  name: Image Resizer Parameters with Link.Image
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/img-custom
+- uid: Tut.Img.Img
+  name: ImageService Img Tutorial
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/img-responsive
+- uid: Tut.Img.Picture
+  name: ImageService Picture Tutorial
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/img-picture
+- uid: Tut.Img.Guide
+  name: ImageService Guide
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/img-tips
+
+# Koi tutorials
+- uid: Tut.Koi.Home
+  name: Koi Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/koi/home
+
+# More Tutorials
+- uid: Tut.Linq.Home
+  name: LINQ Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/linq-basics
+- uid: Tut.WebApi
+  name: Web API Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/webapi-intro
+- uid: Tut.Razor.Reuse
+  name: "Tutorial: Reuse Shared Code"
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/code-reuse-intro
+- uid: Tut.DynamicDataSources
+  name: Dynamic DataSources Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/datasources-dynamic
+- uid: Tut.Formulas
+  name: Formulas Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/formulas-basic
+- uid: Tut.CustomFields
+  name: Custom Fields Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/ui-fields
+
+# Toolbar Tutorials for Razor & JS ? 
+- uid: Tut.Toolbar
+  name: Toolbar Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/ui-toolbars
+- uid: Tut.TurnOn
+  name: turnOn Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/turnon-use
+- uid: Tut.JsData
+  name: Js Data and Query Tutorials
+  href: https://2sxc.org/dnn-tutorials/en/razor/tut/js-data
+
+# Patron packages
+- uid: Patrons.AdvancedCms
+  name: Patrons Advanced CMS
+  href: https://patrons.2sxc.org/features/package/e23ef849-f50c-47a5-81dd-33fb17727305
+- uid: Patrons.Sentinel
+  name: Patrons Sentinel
+  href: https://patrons.2sxc.org/features/package/f1e00b9c-1363-4cf6-a8bc-60a215a4130a
+
+
+# External parts websites
+- uid: Ext.RazorBlade
+  name: Razor-Blade.net Website
+  href: https://razor-blade.net/
+- uid: Ext.Koi
+  name: Connect-Koi Website
+  href: https://connect-koi.net/
+
+
+# Razor Blade API
+- uid: ToSic.Razor.Blade
+  name: Razor Blade API
+  href: https://razor-blade.net/api/ToSic.Razor.Blade.html
+- uid: ToSic.Razor.Blade.IHtmlTag
+  name: Razor Blade IHtmlTag
+  href: https://razor-blade.net/api/ToSic.Razor.Blade.IHtmlTag.html
+- uid: ToSic.Razor.Blade.IHtmlTagService
+  name: Razor Blade IHtmlTagService
+  href: https://razor-blade.net/api/ToSic.Razor.Blade.IHtmlTagService.html
+- uid: ToSic.Razor.Blade.IScrub
+  name: Razor Blade IScrub Service
+  href: https://razor-blade.net/api/ToSic.Razor.Blade.IScrub.html
+- uid: ToSic.Razor.Blade.Tag
+  name: Razor Blade static Tag helper
+  uid: https://razor-blade.net/api/ToSic.Razor.Blade.Tag.html
+
+
+# KOI API
+- uid: Connect.Koi.ICss
+  href: https://connect-koi.net/
+
+# Common external tools
+- uid: Ext.Google.PageSpeed
+  name: Google PageSpeed
+  href: https://developers.google.com/speed/pagespeed/insights/
+
+
+# Dynamic APIs - which can't point to (hidden) IDynamicCode
+
+- uid: QCode.GetService
+  

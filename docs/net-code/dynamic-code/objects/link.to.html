@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Link.To(...) / ...) Method in Dynamic Code | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Link.To(...) / ...) Method in Dynamic Code | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/dynamic-code/objects/link.to.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.DynamicCode.Objects.Link.To">
+<h1 id="linkto---method-in-dynamic-code">Link.To(...) / @Link.To(...) Method in Dynamic Code</h1>
+
+<p>Basically you can always link around to other pages, websites or views using normal <code>&lt;a href=&quot;...&quot;&gt;text&lt;/a&gt;</code> html.
+And often you just want to add some parameters to the current Url like <code>?id=27</code> - but the behavior of this can be very different depending on the Dnn settings.
+The <code>Link.To</code> method on the <a class="xref" href="link.html">Link</a> object helps you handle this.</p>
+<p><em>Note:</em> Dnn often has a problem with links, because depending on what page you are on, the bbehavior is a bit different. This is especially important on the home page. Use <code>@Link.To(...)</code> to make sure everything works no matter what.</p>
+<div style="background: #0088F444; overflow: auto">
+  <img src="../../../shared/tutorials/assets/razor.png" width="200px" style="padding-right: 20px; float: left">
+  <div style="font-size: x-large;font-weight: bold; margin-bottom: 20px;">
+    Discover More in the Razor Tutorials
+  </div>
+<p>We have an rich series of <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor">Razor tutorials</a>. You should really check them out 👍.</p>
+</div>
+<br>
+<h2 id="purpose-of-linkto">Purpose of Link.To(...)</h2>
+<p>The Link.To can be used for the following scenarios</p>
+<ol>
+<li>Linking to another page in the system, of which you know only the page-id</li>
+<li>Linking to the current page but adding various parameters</li>
+<li>Linking to an API endpoint, for example an XML RSS feed</li>
+</ol>
+<h2 id="how-to-use">How to use</h2>
+<p>Here's a quick example of using the <code>Link</code> object in a Razor template:</p>
+<pre><code class="lang-razor">&lt;a href=&quot;@Link.To(parameters: &quot;id=&quot; + item.EntityId)&quot;&gt;
+    @item.Title 
+&lt;/a&gt;
+</code></pre>
+<p>This example creates a link to the current page, adding <em>either</em> <code>?id=27</code> <em>or</em> <code>/id/27</code>, depending on the Dnn configuration.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>The <code>Link</code>-object is always available in all Razor-templates. Internally it uses the Dnn and Oqtane APIs to get the correct url.</p>
+<h2 id="using--for-pages--parameters">Using @Link.To() for Pages / Parameters</h2>
+<p>Example:</p>
+<pre><code class="lang-Razor">@Link.To(parameters: &quot;id=17&quot;)
+@Link.To(parameters: &quot;id=403&amp;category=all&quot;)
+
+</code></pre>
+<h2 id="linking-to-a-target-element-with-an-assigned-id">Linking to a target element with an assigned <code>id</code></h2>
+<p>For reference, see <a href="https://www.w3schools.com/html/html_links_bookmarks.asp">HTML Link Bookmarks</a></p>
+<p>Example:</p>
+<p>Let's assume you've build a target like this</p>
+<pre><code class="lang-Razor">    &lt;div id=&quot;@(&quot;person-&quot; + person.EntityId)&quot;&gt;
+        ...
+    &lt;/div&gt;
+</code></pre>
+<p>Then to link straight there in the same page</p>
+<pre><code class="lang-Razor">    &lt;a href=&quot;@Link.To(parameters: &quot;#person-&quot; + person.EntityId)&quot;&gt;
+</code></pre>
+<p>Or on another page</p>
+<pre><code class="lang-Razor">    &lt;a href=&quot;@Link.To(pageId: 40, parameters: &quot;#person-&quot; + person.EntityId)&quot;&gt;
+</code></pre>
+<h2 id="linking-to-apis--new">Linking to APIs ✨ new!</h2>
+<p>This was introduced in 2sxc 12.02, since APIs are becoming more important. Here's an example from the Blog 5:</p>
+<pre><code>&lt;a href='@Link.To(api: &quot;api/Blog/Rss&quot;, parameters: filteredCategory == null ? &quot;&quot; : &quot;category=&quot; + filteredCategory.Key)' target=&quot;_blank&quot;&gt;
+  &lt;i class=&quot;fas fa-rss align-self-center text-white&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+</code></pre>
+<h2 id="notes-and-clarifications">Notes and Clarifications</h2>
+<p>The Link-Object is of type <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.ILinkService.html">ILinkService</a>.</p>
+<h3 id="enforced-parameter-naming">Enforced Parameter Naming</h3>
+<p>To promote long term API stability, we require all parameters to be <a class="xref" href="../../conventions/named-parameters.html">named</a> when used. This allows us to add further parameters later on, and the calls will still work.</p>
+<pre><code class="lang-razor">&lt;!-- this will work --&gt;
+@Link.To(parameters: &quot;id=17&quot;)
+@Link.To(parameters: &quot;id=403&amp;category=all&quot;)
+
+&lt;!-- new in 2sxc 9.5.1 --&gt;
+@Link.To(pageId: 40, parameters: &quot;id=403&amp;category=all&quot;)
+
+&lt;!-- this won't work --&gt;
+@Link.To(&quot;id=17&quot;)
+</code></pre>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<p>You should find some code examples in this demo App</p>
+<ul>
+<li><a class="xref" href="https://2sxc.org/en/apps/app/blog-app-v4">Blog App</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 8.4</li>
+<li>Enhanced in 2sxc 9.5.1 with parameter <code>pageId</code></li>
+<li>Added <code>api</code> parameter in v12.02 to allow linking to APIs</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/dynamic-code/objects/link.to.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

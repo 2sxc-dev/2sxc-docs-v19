@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.CommandParamsEntity
+    name: CommandParamsEntity
+    fullName: CommandParamsEntity
+    children:
+      - Api.Js.SxcJs.CommandParamsEntity.entityId
+      - Api.Js.SxcJs.CommandParamsEntity.fields
+      - Api.Js.SxcJs.CommandParamsEntity.index
+      - Api.Js.SxcJs.CommandParamsEntity.parent
+      - Api.Js.SxcJs.CommandParamsEntity.useModuleList
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Parameters used for commands which need an entity ID or a list-reference.
+      <br>
+      ⤴️ back to [All Command Names](xref:Api.Js.SxcJs.CommandNames)
+    extends:
+      name: Api.Js.SxcJs.CommandParamsEntityById
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntity.entityId
+    name: entityId
+    fullName: entityId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID of item to edit.
+    syntax:
+      content: 'entityId: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntity.fields
+    name: fields
+    fullName: fields
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Parent Entity field(s) name(s).
+      Usually just one field, like `Authors`.
+      In field-sets it could be `Author,Award` or similar.
+    syntax:
+      content: 'fields: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntity.index
+    name: index
+    fullName: index
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Determins the position of the item in the list.
+
+      index was added in v14.04 to replace the `sortOrder` which had a confusing
+      name.
+    syntax:
+      content: 'index: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntity.parent
+    name: parent
+    fullName: parent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Parent entity _GUID_ which has the field referencing this item.
+    syntax:
+      content: 'parent: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntity.useModuleList
+    name: useModuleList
+    fullName: useModuleList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Must be true, to work on the module list.'
+    syntax:
+      content: 'useModuleList: true'
+      return:
+        type:
+          - 'true'
+        description: ''
+    package: Api.Js.SxcJs
+references:
+  - uid: Api.Js.SxcJs.CommandParamsEntityById
+    name: CommandParamsEntityById
+    spec.typeScript:
+      - name: CommandParamsEntityById
+        fullName: CommandParamsEntityById
+        uid: Api.Js.SxcJs.CommandParamsEntityById

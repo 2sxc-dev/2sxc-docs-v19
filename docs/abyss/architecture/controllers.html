@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>EAV / 2sxc Controllers (System Endpoints) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="EAV / 2sxc Controllers (System Endpoints) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/architecture/controllers.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Architecture.Controllers">
+<h1 id="eav--2sxc-controllers-system-endpoints">EAV / 2sxc Controllers (System Endpoints)</h1>
+
+<p>This is a reference of all Controllers (System WebApi Endpoints) in 2sxc/eav.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This in not meant for public use, it's here so you understand how things work.
+It's also here to help people <a class="xref" href="../integration/index.html">integrating 2sxc/eav with their solution</a></p>
+</div>
+<h2 id="list-of-system-webapi-controllers">List of System WebApi Controllers</h2>
+<p>All controllers are implemented using the <a class="xref" href="../../net-code/conventions/proxy-controllers/index.html">proxy/real system</a>, except those were specifically noted.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Route</th>
+<th>In</th>
+<th>Controller</th>
+<th>Purpose &amp; Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adam</td>
+<td><code>app/[name]/data</code> <a href="#note-app-data">note1</a></td>
+<td>Sxc</td>
+<td><code>Adam</code></td>
+<td>REST for ADAM Assets</td>
+</tr>
+<tr>
+<td>Adam</td>
+<td></td>
+<td>Oqt</td>
+<td><code>AppAssets</code></td>
+<td>Oqtane only, without proxy/real concept</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>ApiExplorer</code></td>
+<td>Analyse App-Level WebApi Controllers</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>App</code></td>
+<td>Admin the App itself</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>AppFiles</code></td>
+<td>Get files for Code Editor</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Eav</td>
+<td><code>AppParts</code></td>
+<td>Export/Import of parts of the App</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>Dialog</code></td>
+<td>Get settings of dialogs</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>Entity</code></td>
+<td>Admin of Entities</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Eav</td>
+<td><code>Features</code></td>
+<td>Features to the Features-Management dialogs</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>Field</code></td>
+<td>Admin of Fields - like get all, create new etc.</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Eav</td>
+<td><code>Metadata</code></td>
+<td>Admin: Metadata - like get all for a specific target</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>Query</code></td>
+<td>Admin: Query - like create new, import/export etc.</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>Type</code></td>
+<td>Admin: Content Types</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Sxc</td>
+<td><code>View</code></td>
+<td>Admin: Views</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td></td>
+<td>Eav</td>
+<td><code>Zone</code></td>
+<td>Admin: Zone - information about the current Zone (site)</td>
+</tr>
+<tr>
+<td>App</td>
+<td></td>
+<td>Oqt</td>
+<td><code>AppAssets</code></td>
+<td>Oqtane only, without proxy/real concept</td>
+</tr>
+<tr>
+<td>App</td>
+<td><code>app/[name]/data</code> <a href="#note-app-data">note1</a></td>
+<td>Sxc</td>
+<td><code>AppData</code></td>
+<td>REST for App Data/Entities</td>
+</tr>
+<tr>
+<td>App</td>
+<td><code>app/[name]/query</code> <a href="#note-app-data">note1</a></td>
+<td>Sxc</td>
+<td><code>AppQuery</code></td>
+<td>REST for App Queries</td>
+</tr>
+<tr>
+<td>Cms</td>
+<td></td>
+<td>Sxc</td>
+<td><code>Block</code></td>
+<td>Manage Modules on a page</td>
+</tr>
+<tr>
+<td>Cms</td>
+<td></td>
+<td>Sxc</td>
+<td><code>ContentGroup</code></td>
+<td>Manage Content-Blocks on a page</td>
+</tr>
+<tr>
+<td>Cms</td>
+<td><code>cms/edit</code></td>
+<td>Sxc</td>
+<td><code>Edit</code></td>
+<td>Edit: Edit data / entities (load/save)</td>
+</tr>
+<tr>
+<td>Cms</td>
+<td><code>cms/history</code></td>
+<td>Sxc</td>
+<td><code>History</code></td>
+<td>Edit: History of an item incl. restore of a previous version</td>
+</tr>
+<tr>
+<td>Cms</td>
+<td><code>cms/list</code></td>
+<td>Sxc</td>
+<td><code>List</code></td>
+<td>In-Page editing of lists</td>
+</tr>
+<tr>
+<td>Sys</td>
+<td><code>sys/insights</code></td>
+<td>Eav</td>
+<td><code>Insights</code></td>
+<td>Insights debugging</td>
+</tr>
+<tr>
+<td>Sys</td>
+<td><code>sys/install</code></td>
+<td>Sxc</td>
+<td><code>Install</code></td>
+<td>Installation of 2sxc on the current system</td>
+</tr>
+<tr>
+<td>Sys</td>
+<td><code>sys/license</code></td>
+<td>Eav</td>
+<td><code>License</code></td>
+<td>License / extensions information</td>
+</tr>
+<tr>
+<td>Sys</td>
+<td><code>sys/log</code></td>
+<td>Eav</td>
+<td><code>Log</code></td>
+<td>Special logging settings</td>
+</tr>
+</tbody>
+</table>
+<h2 id="note-app-data">Note App Data</h2>
+<p>Some things have a virtual REST route. This includes</p>
+<ol>
+<li>Adam files</li>
+<li>Data / Entities</li>
+</ol>
+<p>The route is basically made of multiple parts</p>
+<p><code>[api-root]/app/[app-identifier]/[topic]/[optional-details]</code></p>
+<p>We'll document this more in future.</p>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Documented for v13.03 (March 2022)</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/architecture/controllers.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

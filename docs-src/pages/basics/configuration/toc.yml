@@ -1,0 +1,28 @@
+
+- name: Settings Stack
+  topicUid: Basics.Configuration.SettingsStack
+- name: System Settings
+  topicUid: Basics.Configuration.SettingsSystem
+- name: Image Resize Settings
+  topicUid: Basics.Configuration.Settings.Images.Index
+- name: Image Resize Recipes
+  topicUid: Basics.Configuration.Settings.Images.Recipes  
+
+- name: " "
+
+- name: Google Maps Settings
+  topicUid: Basics.Configuration.Settings.GoogleMaps
+- name: WebResources (JS/CSS)
+  topicUid: Basics.Configuration.Settings.WebResources
+
+- name: " "
+
+- name: Resources Stack
+  topicUid: Basics.Configuration.ResourcesStack
+- name: System Resources
+  topicUid: Basics.Configuration.ResourcesSystem
+
+- name: " "
+
+- name: Preset Override (advanced)
+  topicUid: Basics.Configuration.PresetOverride

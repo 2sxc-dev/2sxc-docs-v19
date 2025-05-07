@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Content Security Policy (CSP) Best Practices | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Content Security Policy (CSP) Best Practices | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/best-practices.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Security.Csp.BestPractices">
+
+<img src="../../../assets/features/content-security-policy.svg" class="feature">
+<h1 id="content-security-policy-csp-best-practices">Content Security Policy (CSP) Best Practices</h1>
+<p>Content Security Policy (CSP) is a security policy that helps you to protect your web application from <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting attacks</a>.</p>
+<p>There are many ways you can setup CSP, but it is easier if the entire setup is geared towards this goal.</p>
+<h2 id="javascript-csp-best-practices">JavaScript CSP Best Practices</h2>
+<h3 id="js-avoid-eval-and-other-stupid-stuff">JS: Avoid <code>eval</code> and other Stupid Stuff</h3>
+<p>This is fairly basic: don't use <code>eval</code> in your code.</p>
+<h3 id="js-avoid-any-js-in-the-page">JS: Avoid any JS in the Page</h3>
+<p>Any In-Page JS will either force you to use lax security rules or require a lot of whitelisting using nonce or hashes.</p>
+<p>We recommend that you avoid this alltogether.</p>
+<p>Place all your code in external JS files which are on the same server (rule: <code>self</code>).
+Then use <a class="xref" href="../../../js-code/turn-on/index.html">turnOn</a> to start the code.</p>
+<p>turnOn will also help you pass parameters like the current ModuleId to the script, in case you need it.</p>
+<h2 id="csp-configuration-best-practices">CSP Configuration Best Practices</h2>
+<h3 id="use-comments-to-document-your-csp">Use Comments to Document your CSP</h3>
+<p>In the Settings you can use comments with lines beginning with <code>//</code> to document your CSP.
+It will make your work easier and help others who make changes in the future.</p>
+<pre><code>// This will apply to all ...-src
+all-src: 'self' https:
+</code></pre>
+<h3 id="use-multiple-lines">Use Multiple Lines</h3>
+<p>All rules will be merged in the end, so in many cases it's better to have rules on multiple lines.</p>
+<pre><code>// This is for the image gallery
+script-src https://some-cdn.com/
+
+// This is for jQuery
+script-src https://some-other-cdn.com/
+</code></pre>
+<h3 id="use-all-src">Use <code>all-src</code></h3>
+<p>2sxc has a special <code>all-src</code> rule which you should use for <code>'self'</code> or <code>https:</code> rules.</p>
+<p>You should use these at global/site level, because it ensures that any further rules from Apps or other sources won't break your site.</p>
+<h3 id="avoid-nonce--and-sha256--policies">Avoid 'nonce-...' and 'sha256-...' Policies</h3>
+<p><code>'nonce-...'</code> and <code>'sha256-...'</code> policies are great for allowing a specific inline bit of script or CSS.</p>
+<p>But they have a huge side-effect: they automatically disable the <code>'unsafe-inline'</code> rule.</p>
+<p>Because of this, you should avoid using these policies, as most Dnn/Oqtane sites will have other scripts which are outside of your control, so you will typically need <code>unsafe-inline</code>.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If any of these policies are used, it automatically disables the <code>'unsafe-inline'</code> rule.
+This is how CSP works.</p>
+</div>
+<h3 id="be-as-local-as-possible">Be as Local as Possible</h3>
+<p>Rules which should only be used in a specific App should be on that App, not on the site.</p>
+<p>Rules which only apply to a specific razor page should ideally also be on that page only.</p>
+<h2 id="production--operations-reporting">Production / Operations Reporting</h2>
+<h3 id="use-a-reporting-server">Use a Reporting Server</h3>
+<p>Even if you think you're done, make sure to setup a reporting server.
+You can get free system from <a href="https://report-uri.com/">Report-URI</a>.
+This will allow you to monitor if your site is being compromised - or if you forgot to set some rules, which result in the site breaking.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/best-practices.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

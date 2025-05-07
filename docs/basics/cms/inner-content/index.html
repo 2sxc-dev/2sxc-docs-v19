@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Inner Content (Content Within Other Content) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Inner Content (Content Within Other Content) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/cms/inner-content/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Cms.InnerContent.Index">
+<h1 id="inner-content-content-within-other-content">Inner Content (Content Within Other Content)</h1>
+
+<p>Inner Content is the feature to place content-blocks (apps or common content-items) <em>inside</em> another content-item.</p>
+<p>There are two common scenarios for this:</p>
+<ol>
+<li>Apps with list/details views, with a <strong>feature rich details-view</strong>. For example: a blog, which lets the editor add galleries and other apps into each blog-post. This is called a <a href="https://en.wikipedia.org/wiki/Mashup_(web_application_hybrid)">mashup app</a> as it mixes apps together</li>
+<li>Apps which <strong>wrap</strong> other content/apps, for example an <a class="xref" href="https://2sxc.org/en/apps/app/accordion-for-collapsible-sections">accordion-app</a> which lets the editor add further content-blocks or apps into each collapsing segment.</li>
+</ol>
+<h2 id="basic-concept">Basic Concept</h2>
+<p><em>Inner Content</em> links other content-blocks (apps, content) to a <em>Content Item</em>, allowing the template to then show this inner content where it wants to.</p>
+<h2 id="an-item-can-have-many-sets-of-inner-content">An Item can have Many Sets of Inner-Content</h2>
+<p>A template can have multiple sets of inner content. For example:</p>
+<ol>
+<li>a real-estate app showing a details-page with 2 columns, each containing an variety of content-items, different from house-item to house-item. One house could have a gallery-app in the first column, while the other house would have a 3D walkthrough app and preferr to use the gallery in the second column</li>
+<li>a Catalog app containing many WYSIWYG text blocks (ProductDescription, ShowCase, ApplicationSuggestions) shown in multiple tabs, each WYSIWYG containing apps inline between the paragraphs.</li>
+</ol>
+<p>To achieve this flexibility, the <em>Inner Content</em> items are linked not only to a <em>Content Item</em> but to a specific <em>field</em> in that item. So each set of related items is stored in one field, and by using multiple fields you can have multiple sets of items. This allows the template to handle each set separately.</p>
+<h2 id="standalone-inner-content---like-a-dnn-pane-just-for-this-item">Standalone Inner-Content - like a Dnn Pane just for this item</h2>
+<p>A common use case is to provide the editor with an area into which he/she can add as many content-blocks/apps as they want to. This feels like a Dnn-pane - the editor just adds apps as he needs them.</p>
+<p>This mode is common for mashup-apps and is mostly used on sophisticated details-pages with a clear area containing additional functionality. It's also common in
+layout-changing apps like the <a class="xref" href="https://2sxc.org/en/apps/app/accordion-for-collapsible-sections">accordion app</a>.</p>
+<h2 id="in-wysiwyg-inner-content">In WYSIWYG Inner-Content</h2>
+<p><em>this is new in 2sxc 8.9</em></p>
+<p>Sometimes you may let the editor add inner-content blocks within a wysiwyg-field, so that normal written content can be interspersed with apps. This is common in news-style apps or blogs, where additional features are needed (galleries, code-snippets, etc.) but mixed with the main text and not in a separate area.</p>
+<p>Here is a <a href="http://2sxc.org/en/blog/post/tutorial-create-very-rich-text-inner-content-2-with-2sxc">blog tutorial on implementing Very Rich Text</a>.</p>
+<h2 id="the-parts-that-make-it-work">The Parts that Make it Work</h2>
+<p>For <em>Inner Content</em> to work, the following parts play together:</p>
+<ol>
+<li><strong>Data storage</strong>: you need fields in your content-type to link to the external content blocks. Just create entity-fields and use the type <em>Content Block Items</em>. In many cases you also want to hide the field because it's not important to the content-editor. Just go to the field-settings and set <em>Visible in Edit UI</em> to off.</li>
+<li><strong>Content-Block rendering</strong> in the templates, using the <a class="xref" href="../../../net-code/razor/blocks.html">Razor API</a> - it is prepared both for the standalone-area-mode as well as the merge-with-wysiwyg-mode.</li>
+<li><strong>In-Page Editing</strong>: to allow the editor to add / edit content-blocks in the normal view, the UI must support it. This is handeled automatically by <a class="xref" href="../../edit/edit-ux/quick-edit.html">Quick-Edit</a>.</li>
+<li>To do the in-page Editing, quickE needs to know some <strong>context information</strong> (what field to store the links in, etc.), provided in an HTML-attribute. It's either rendered in automatically when using the <a class="xref" href="../../../net-code/razor/blocks.html">Razor commands</a> or you can manually place them using [context attributes](xref:Razor.ContextAttributes].</li>
+<li>If you want the <strong>WYSIWYG-integration</strong> the wysiwyg must know which field to use to manage the linked content-blocks. This is simply done by convention: as soon as a content-block field follows right after a wysiwyg-field, they will be linked and the button will appear. This also works it the content-block field is set to invisible.</li>
+</ol>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a href="http://2sxc.org/en/blog/post/designing-articles-with-inner-content-blocks-new-in-8-4-like-modules-inside-modules">Inner Content Blocks</a> - blog about inner content-blocks V1 - the <em>Area Mode</em></li>
+</ul>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<p>You should find some code examples in this demo App</p>
+<ul>
+<li><a class="xref" href="https://2sxc.org/en/apps/app/blog-app-v4">2sxc blog</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Inner Content 1.0 in 2sxc v08.04</li>
+<li>Enhanced Razor API in v08.09</li>
+<li>WYSIWYG mode in v08.09</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/cms/inner-content/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

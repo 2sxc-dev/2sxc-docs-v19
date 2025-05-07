@@ -1,0 +1,119 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ProjectGuid>{991006CF-1F50-4A9B-A5B2-A17A1624BF38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Docs_Generator</RootNamespace>
+    <AssemblyName>Docs-Generator</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <RestoreOnBuild>true</RestoreOnBuild>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Oqtane|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Oqtane\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugOqtane|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugOqtane\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugDnn|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugDnn\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="api\.gitignore" />
+    <None Include="api\.gitignore" />
+    <None Include="api\dot-net\.gitignore" />
+    <None Include="api\dot-net\index.md" />
+    <None Include="api\index.md" />
+    <None Include="api\index.md" />
+    <None Include="articles\intro.md" />
+    <None Include="articles\intro.md" />
+    <None Include="articles\toc.md" />
+    <None Include="articles\toc.md" />
+    <None Include="concepts\**\*.*" />
+    <None Include="docfx.json" />
+    <None Include="filterConfig.yml" />
+    <None Include="how-to\**\*.*" />
+    <None Include="index.md" />
+    <None Include="namespaces\**\*.*" />
+    <None Include="shared\before-you-start-idynamicentity.md" />
+    <None Include="shared\where-to-start.md" />
+    <None Include="specs\**\*.*" />
+    <None Include="templates\2sxc\partials\head.tmpl.partial" />
+    <None Include="templates\2sxc\partials\li.tmpl.partial" />
+    <None Include="templates\2sxc\partials\toc.tmpl.partial" />
+    <None Include="toc.yml" />
+    <None Include="wiki\source-material\diagrams-and-illustrations\2sxc and DNN mockups.bmpr" />
+    <None Include="wiki\source-material\List of JavaScript Actions.xlsx" />
+    <None Include="wiki\_footer.md" />
+    <None Include="wiki\_sidebar.md" />
+    <None Include="xrefmap.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="api\dot-net\.gitignore" />
+    <Content Include="assets\**\*.*" />
+    <Content Include="templates\2sxc\api-meta.js" />
+    <Content Include="templates\2sxc\styles\main.css" />
+    <Content Include="templates\2sxc\toc.extension.js" />
+    <Content Include="wiki\assets\contribute\Edit-in-a-page.png" />
+    <Content Include="wiki\assets\contribute\edit-in-vs-code.png" />
+    <Content Include="wiki\assets\dotnet\all-data-sources.html" />
+    <Content Include="wiki\assets\dotnet\all-data-sources_files\filelist.xml" />
+    <Content Include="wiki\assets\dotnet\List of JavaScript Actions.htm" />
+    <Content Include="wiki\assets\dotnet\List of JavaScript Actions_files\filelist.xml" />
+    <Content Include="wiki\assets\javascript\List of JavaScript Actions.htm" />
+    <Content Include="wiki\assets\javascript\List of JavaScript Actions_files\filelist.xml" />
+    <Content Include="wiki\source-material\List of JavaScript Actions.htm" />
+    <Content Include="wiki\source-material\List of JavaScript Actions2.htm" />
+    <Content Include="wiki\source-material\List of JavaScript Actions2_files\filelist.xml" />
+    <Content Include="wiki\source-material\List of JavaScript Actions_files\filelist.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="how-to\datasources\" />
+    <Folder Include="Properties\" />
+    <Folder Include="wiki\later-html-stuff\" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="dotnet docfx" />
+  </Target>
+</Project>

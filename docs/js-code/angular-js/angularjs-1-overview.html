@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>AngularJs 1 Overview (obsolete) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="AngularJs 1 Overview (obsolete) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/angular-js/angularjs-1-overview.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.AngularJs.Index">
+<h1 id="angularjs-1-overview-obsolete">AngularJs 1 Overview (obsolete)</h1>
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This is old, obsolete information. AngularJS is really dead. You should use <a class="xref" href="../angular/index.html">Angular</a></p>
+<p>The files in the folder <code>/js/angularjs</code> such as <code>2sxc4ng.js</code>, <code>2sxc4ng.min.js</code> and <code>angular.min.js</code>
+were supposed to be removed in v12.0 but were somehow included again by accident.
+We discovered this and removed them again in v16.06.</p>
+<p>If for some random reason you need it, get them from this git repo: <a href="https://github.com/2sic/2sxc-js-archive/tree/main/obsolete/published/js/angularjs">2sxc-js-archive</a></p>
+</div>
+<p>2sxc contains a special helper called <em>2sxc4ng</em> which takes care of starting your app inside Dnn and providing you with toolbars and data from 2sxc.</p>
+<h2 id="how-to-use">How to use</h2>
+<p>Until we find time to document everything, here's the short version</p>
+<ol>
+<li>To use 2sxc4ng you must include a JS file in your template, and you must bootstrap your app using this (not using the standard angularjs bootstrapping)<br>
+this is to ensure that multiple Angular apps can run on the same page, and to provide your app with the necessary context so it knows what module it's working on, etc.<br>
+<a href="http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng">Here's an introduction to that</a>.</li>
+<li>To get your current sxc-controller there are two objects <em>$2sxc</em> and <em>sxc</em> which you can just include it in your function definition, like<br>
+<code>module.controller('AppCatalogCtrl', function ($2sxc, sxc, $http, ...) {</code></li>
+<li>The sxc is the one you want most, it is already set to your current instance, so you can ask it things like <code>sxc.manage</code> etc.</li>
+<li>The $2sxc is the same as the global <a class="xref" href="../2sxc-api/index.html">$2sxc</a> object you know from jquery. You could of course also do <code>$2sxc(27).manage</code> to access the manage, but that's unnecessarily complicated</li>
+<li>Additional services provided when bootstrapping with <em>2sxc4ng</em> is</li>
+<li><code>content(typename)</code> - a service which requests content-data from the current app / context, can also delete / create items etc.</li>
+<li><code>query(queryname)</code> - a service which gets data from app-queries</li>
+<li>Additional directives</li>
+<li><code>sxcToolbar</code> - a create-toolbar directive to provide in-app toolbars to edit/manage etc. for <code>&lt;sxc-toolbar toolbar=&quot;...&quot;&gt;</code> tags</li>
+</ol>
+<p>Todo: a simple full example right here</p>
+<h2 id="including-all-necessary-files">Including All Necessary Files</h2>
+<p>You need three files + your code</p>
+<ol>
+<li><code>2sxc.min.js</code> - only necessary, if you intend to work with 2sxc data items &amp; toolbars, must come before <em>2sxc4ng</em></li>
+<li>Angular - ideally from a CDN</li>
+<li><code>2sxc4ng.min.js</code> - only necessary, if you intend to work with 2sxc data items &amp; toolbars, must come after <em>angular</em></li>
+<li>Your code</li>
+</ol>
+<p>Example:</p>
+<pre><code class="lang-html">&lt;script src=&quot;/desktopmodules/tosic_sexycontent/js/2sxc.api.min.js&quot; data-enableoptimizations=&quot;100&quot;&gt;&lt;/script&gt; 
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js&quot; data-enableoptimizations=&quot;101&quot;&gt;&lt;/script&gt; 
+&lt;script src=&quot;/desktopmodules/tosic_sexycontent/js/angularjs/2sxc4ng.min.js&quot; data-enableoptimizations=&quot;110&quot;&gt;&lt;/script&gt; 
+&lt;script src=&quot;@App.Path/dist/angular-app.min.js&quot; data-enableoptimizations=&quot;120&quot;&gt;&lt;/script&gt; 
+</code></pre>
+<h2 id="toolbar-directive">Toolbar Directive</h2>
+<p>Quick example - this requires 2sxc 8.8</p>
+<pre><code class="lang-html">// a quick sxcToolbar example
+&lt;li ng-repeat=&quot;app in apps&quot;&gt;
+    &lt;sxc-toolbar toolbar='{ &quot;entityId&quot;: app.EntityId }' settings='{ &quot;hover&quot;: &quot;left&quot;, &quot;align&quot;: &quot;left&quot; }'&gt;&lt;/sxc-toolbar&gt;
+    ...
+&lt;/li&gt;
+</code></pre>
+<h2 id="content-service">Content Service</h2>
+<p>This is a quick example of the <em>content</em> service
+Todo: you can find some infos till then in the (<a href="http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng)(http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng">http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng)(http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng</a>) article</p>
+<p>Important: you can use the <code>content</code> service to</p>
+<ol>
+<li>get all of a type</li>
+<li>get one of a type</li>
+<li>create one of a type (if permissions have been configured for that type)</li>
+<li>delete one of a type (permissions...)</li>
+</ol>
+<p>quick demo of syntax</p>
+<pre><code class="lang-javascript">var cSrv = content(&quot;BlogPosts&quot;);
+var onePromise = cSrv.get(740);
+var allPromise = cSrv.get();
+var createPromise = cSrv.create({ &quot;Title&quot;: &quot;hello&quot;, &quot;Body&quot;: &quot;great article&quot;});
+var deletePromise = cSrv.delete(7740); 
+</code></pre>
+<h2 id="query-service">Query Service</h2>
+<p>This is a quick example of the <em>query</em> service</p>
+<p>Todo: you can find some infos till then in the (<a href="http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng)(http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng">http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng)(http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng</a>) article</p>
+<pre><code class="lang-JavaScript">// this example assumes you added the query service in your constructor
+// it also assumes you created a visual-query called &quot;All-blog-items&quot;
+var qAll = query(&quot;All-blog-items&quot;);
+qAll.get().then(function (result) {
+    ... // some code here
+});
+
+// this assumes you want to query the data from the current view
+// so the real items assigned to this instance
+// or processed inside the view in a PrepareData() method
+var qCurrent = query();
+qCurrent.get().then(function (result) {
+    ... // some code here
+});
+</code></pre>
+<p>When working with queries that expect parameters, you can pass them in the <code>get()</code> call</p>
+<pre><code>qAll.get({ data: { &quot;sort&quot;: &quot;EntityTitle&quot; },  }).then(...)
+</code></pre>
+<h2 id="notes-and-clarifications-on-bootstrapping">Notes and Clarifications On Bootstrapping</h2>
+<p>Just fyi: in 2sxc 6.0 till 2sxc 8.8.0 the AngularJS bootstrapping needed to know the module-id. This was done by either</p>
+<ol>
+<li>providing an attribute like <code>iid=&quot;@Dnn.Module.ModuleId&quot;</code> or for tokens <code>iid=&quot;[Module:ModuleId]&quot;</code></li>
+<li>providing the mod-id in the app name like <code>sxc-app=&quot;MyApp-@Dnn.Module.ModuleId&quot;</code></li>
+</ol>
+<p>This is because it needs if for webservice calls. In 2sxc 8.8.1 the bootstrapping will auto-detect the module id, so you don't have to provide it any more.</p>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a href="http://2sxc.org/en/Learn/Simple-AngularJS-in-DNN-with-2sxc4ng">Full explanation of bootstrapping and how/why etc.</a> - which tells you why the current code is running so you could change the data added</li>
+</ul>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<p>You should find some code examples in this demo App</p>
+<ul>
+<li><a href="http://2sxc.org/en/Apps/tag/AngularJS">Various AngularJS based apps</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc ??.??</li>
+<li>sxcToolbar released in 2sxc 8.8.0</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/angular-js/angularjs-1-overview.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

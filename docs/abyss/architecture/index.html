@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>EAV / 2sxc / Dnn Architecture | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="EAV / 2sxc / Dnn Architecture | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/architecture/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Architecture.Index">
+<h1 id="eav--2sxc--dnn-architecture">EAV / 2sxc / Dnn Architecture</h1>
+
+<p>2sxc is simple to use, but to enable that, it's pretty sophisticated on the inside. We'll give you an overview here, so you can better understand what you are using.</p>
+<h2 id="overall-architecture">Overall Architecture</h2>
+<img src="../../pages/abyss/architecture/assets/eav-2sxc-dnn.png" width="100%" class="full-width">
+<h4 id="the-storage-systems">The Storage Systems</h4>
+<p>This is fairly straight forward - data can be stored in SQL (spread across tables or using JSON) and the File System (stored as JSON). Note that assets like images are not handled here, but in the EAV-Apps layer (see below).</p>
+<h4 id="the-eav-layer">The EAV Layer</h4>
+<p>The data management system underneath everything is called the <strong>EAV</strong> - which stands for <strong>Entity</strong>, <strong>Attribute</strong>, <strong>Value</strong>.
+Anything in that namespace is about internal data models, reading/saving data etc.
+So anything inside the <a class="xref" href="../../api/dot-net/ToSic.Eav.Data.html">ToSic.Eav.Data</a> is all about the internals, which you only need in special scenarios.
+The same applies to <a class="xref" href="../../api/dot-net/ToSic.Eav.Apps.html">ToSic.Eav.Apps</a> which is the sub-system responsible for combining data into virtual bundles called <strong>Apps</strong>.
+You can usually ignore this.</p>
+<h4 id="the-sxc-layer">The SXC Layer</h4>
+<p>On top of the <em>EAV</em> layer we have the <strong>Sxc</strong> layer.
+It's responsible for <em>Content Management</em> on top of the <em>App</em> model provided by the <em>EAV</em>.
+The <em>Sxc</em> layer provides things like <a class="xref" href="../../api/dot-net/ToSic.Sxc.Data.IDynamicEntity.html">IDynamicEntity</a> to let you code like <code>@Content.Title</code>.
+This is usually more interesting for you, but still fairly generic, because 2sxc is also meant to work with other
+platforms like NopCommerce, Orchard or Oqtane, but it hasn't been implemented yet.</p>
+<h4 id="the-dnn-layer">The Dnn Layer</h4>
+<p>On top of the <em>Sxc</em> layer we have the <strong>Dnn</strong> layer. It connects 2sxc with Dnn.
+Usually when you're writing code and want to know about the API, you'll typically start here,
+and drill down to the other APIs as needed.</p>
+<h2 id="architecture-of-the-eav-layer">Architecture of the EAV Layer</h2>
+<img src="../../pages/abyss/architecture/assets/eav-internals.png" width="100%" class="full-width">
+<p>Inside the EAV you'll find a whole ecosystem of parts which make the magic happen.</p>
+<h4 id="infrastructure">Infrastructure</h4>
+<p>This is very internal stuff, to make sure everything happens. You will usually not go here. Most if it is also not public API.
+Areas of interest may be the <a class="xref" href="../../api/dot-net/ToSic.Lib.Logging.html">ToSic.Lib.Logging</a> or <a class="xref" href="../../api/dot-net/ToSic.Eav.LookUp.html">ToSic.Eav.LookUp</a>.</p>
+<h4 id="core-data-models">Core Data Models</h4>
+<p>This is more interesting and relevant to you, when you want to dive deep into the data model. Again you should note that this is advanced stuff.
+You'll find it in <a class="xref" href="../../api/dot-net/ToSic.Eav.Data.html">ToSic.Eav.Data</a> - the most common bit you may care about is <a class="xref" href="../../api/dot-net/ToSic.Eav.Data.IEntity.html">IEntity</a> and <a class="xref" href="../../api/dot-net/ToSic.Eav.Data.IContentType.html">IContentType</a>.</p>
+<h4 id="data-processing">Data Processing</h4>
+<p>This is where things get relevant for you. Check out the <a class="xref" href="../../api/dot-net/ToSic.Eav.DataSources.html">ToSic.Eav.DataSources</a> to find all the bits and pieces used to process, filter and cache data.</p>
+<h4 id="storage">Storage</h4>
+<p>This is still more an internal bit, and as of now you shouldn't use it.</p>
+<h4 id="app-system-and-assets">App System and Assets</h4>
+<p>Another part that you may want to know more about. Here is where data is clustered together into virtual containers called <strong>Apps</strong>.
+These contain all the content-types and items of an App. It also has view-definitions, Content-Blocks (the logical unit usually called a Module in Dnn) and way more.
+You'll find it in <a class="xref" href="../../api/dot-net/ToSic.Eav.Apps.html">ToSic.Eav.Apps</a>.</p>
+<p>The assets - usually using ADAM - are found in <a class="xref" href="../../api/dot-net/ToSic.Eav.Apps.html">ToSic.Eav.Apps</a>.Assets.</p>
+<h4 id="web-api">Web API</h4>
+<p>This is ATM an internal section, mainly for connecting Dnn WebAPIs to the EAV. Not documented as of now.</p>
+<h2 id="the-fine-line-between-eavapps-and-sxc">The Fine Line Between Eav.Apps and Sxc.*</h2>
+<p>To keep the architecture clean, it's important to draw a clear line between Apps and what Sxc does. Basically it's this:</p>
+<ul>
+<li>Eav.Apps are virtual containers bundling things together. This means content-types, data, queries, settings, etc.</li>
+<li>Sxc is all about (Web) Content Management. So anything related to views, templates, assets, content-blocks is in Sxc.</li>
+</ul>
+<p>Specifically, these things may not be in Apps, and must be in Sxc</p>
+<ol>
+<li>Templates</li>
+<li>Rendering Engines like Token/Razor</li>
+<li>Content-Blocks</li>
+<li>Custom WebApi (which is also kind of a dynamic rendering engine)</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/architecture/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

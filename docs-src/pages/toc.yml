@@ -1,0 +1,34 @@
+
+
+- name: Basics
+  uid: Basics.Index
+  href: ./basics/
+
+- name: Abyss
+  uid: Abyss.Index
+  href: ./abyss/
+
+- name: Guides
+  uid: Guides.Index
+  href: ./guides/
+
+- name: Web APIs
+  uid: WebApi.Index
+  href: ./web-api/
+
+- name: C# & Razor
+  uid: NetCode.Index
+  href: ./net-code/
+
+- name: .net API
+  # note: this strange path is where docfx put the yml files it generated from the code
+  uid: ToSic.Home
+  # note: must be either one of these (other combinations have side-effects)
+  # tocHref: ./api-generated/api/dot-net/toc.yml
+  # href: ./api-generated/api/dot-net/
+  href: ../api-generated/api/dot-net/
+
+- name: JS & TS API
+  uid: JsCode.Index
+  # href: ../import/
+  href: ./js-code/

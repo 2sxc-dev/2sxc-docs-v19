@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Querying Data and Data Sources with code and LINQ | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Querying Data and Data Sources with code and LINQ | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data/linq/linq-dynamic.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Data.Linq.Dynamic">
+<h1 id="querying-data-and-data-sources-with-code-and-linq">Querying Data and Data Sources with code and LINQ</h1>
+
+<p>To get started, we recommend you read the <a class="xref" href="linq-guide.html">LINQ Guide</a> and play around with the <a href="https://2sxc.org/en/apps/app/razor-tutorial">Razor Tutorial App</a></p>
+<p>These common (extension) methods can be used on lists from 2sxc data streams (they all inherit from types implementing <a href="https://msdn.microsoft.com/de-de/library/system.collections.ienumerable(v=vs.110).aspx">IEnumerable</a>):</p>
+<ul>
+<li><a href="#where">.Where()</a> - filter a list (IEnumerable) based on a specific criteria</li>
+<li><a href="#any">.Any()</a> - returns true if any of the elements matches a criteria</li>
+<li><a href="#orderby--orderbydescending">.OrderBy() / .OrderByDescending()</a> - order a list (IEnumerable) by a specific field</li>
+<li><a href="#first--last">.First() / .Last()</a> - get first or last element in the list</li>
+<li><a href="#select">.Select()</a> - transform list into a new list, selecting specific field(s)</li>
+<li><a href="#take--skip">.Take() / .Skip()</a> - paging functions</li>
+<li><a href="#count">.Count()</a> - count number of elements</li>
+<li><a href="#indexof">.IndexOf()</a> - find index of a specific element in the list</li>
+</ul>
+<p>For a full list of all <code>System.Linq</code> methods, check out the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable?view=netframework-4.7.2#methods">methods of IEnumerable</a></p>
+<div style="background: #0088F444; overflow: auto">
+  <img src="../../../shared/tutorials/assets/razor.png" width="200px" style="padding-right: 20px; float: left">
+  <div style="font-size: x-large;font-weight: bold; margin-bottom: 20px;">
+    Discover More in the Razor Tutorials
+  </div>
+<p>We have an rich series of <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor">Razor tutorials</a>. You should really check them out 👍.</p>
+</div>
+<br>
+<h2 id="using-statements">Using Statements</h2>
+<p>As explained in the <a class="xref" href="linq-guide.html">guide</a> we recommend the following using statements in Razor:</p>
+<pre><code class="lang-razor">@using System.Linq;
+@using Dynlist = System.Collections.Generic.IEnumerable&lt;dynamic&gt;;
+</code></pre>
+<h2 id="where">Where</h2>
+<p>Filter a list (IEnumerable) based on a criteria.</p>
+<p>Example: Basic filter of a list by string</p>
+<pre><code class="lang-C#">var items = AsList(Data[&quot;Default&quot;]);
+items = items.Where(p =&gt; p.Name == &quot;Chuck Norris&quot;);
+// items now contains only items which have &quot;Chuck Norris&quot; as name property
+</code></pre>
+<h2 id="any">Any</h2>
+<p>Returns true if any of the elements matches a criteria.</p>
+<pre><code class="lang-C#">var items = AsList(Data[&quot;Default&quot;]);
+var containsChuckNorris = items.Any(p =&gt; p.Name == &quot;Chuck Norris&quot;);
+// if containsChuckNorris is true, at least one element has name &quot;Chuck Norris&quot;
+</code></pre>
+<p>Here's another Any - to see if a relationship contains something. It's a bit more complex, because Razor needs to know what it's working with:</p>
+<pre><code class="lang-cs">// filter - keep only those that have this Category
+// note that the compare must run on the EntityId because of object wrapping/unwrapping
+    postsToShow = postsToShow
+        .Where(p =&gt; (p.Categories as List&lt;dynamic&gt;)
+            .Any(c =&gt; c.EntityId == ListContent.Category[0].EntityId))
+
+</code></pre>
+<h2 id="orderby--orderbydescending">OrderBy / OrderByDescending</h2>
+<p>Order a list (IEnumerable) by a specific field.</p>
+<pre><code class="lang-C#">var items = AsList(Data[&quot;Default&quot;]);
+items = items.OrderBy(p =&gt; p.Name);
+// items are now ordered by property &quot;Name&quot;
+</code></pre>
+<h2 id="first--last">First / Last</h2>
+<p>Get first or last element of the list.</p>
+<pre><code class="lang-C#">var items = AsList(Data[&quot;Default&quot;]);
+var first = items.First(); // contains the first element
+var last = items.Last(); // contains the last element
+</code></pre>
+<h2 id="select">Select</h2>
+<p>Transform list into a new list, selecting only specified field(s).</p>
+<pre><code class="lang-C#">var items = AsList(Data[&quot;Default&quot;]);
+var names = items.Select(p =&gt; p.Name); // names is a list of all names
+</code></pre>
+<h2 id="take--skip">Take / Skip</h2>
+<p>Paging functions: Take only n elements, skip m elements</p>
+<pre><code class="lang-C#">var items = AsList(Data[&quot;Default&quot;]);
+items = items.Skip(10).Take(10); // Skips the first 10 elements and select only 10
+</code></pre>
+<h2 id="count">Count</h2>
+<p>Count number of elements in a list.</p>
+<pre><code class="lang-C#">var items = AsList(Data[&quot;Default&quot;]);
+var count = items.Count(); // contains the number of elements in the list
+</code></pre>
+<h2 id="indexof">IndexOf</h2>
+<p>Find index of a specific element in the list.</p>
+<pre><code class="lang-C#">@{
+    var items = AsList(Data[&quot;Default&quot;]);
+}
+@foreach(var item in items) {
+    &lt;h1&gt;Item number @items.IndexOf(item)&lt;/h1&gt;
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data/linq/linq-dynamic.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

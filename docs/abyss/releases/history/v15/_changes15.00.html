@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title> | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v15/_changes15.00.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h3 id="2sxc-v1500-2022-12-23">2sxc v15.00 (2022-12-23)</h3>
+<ol>
+<li>✅ Improve logging
+<ol>
+<li>✅ Place it in an own library DLL for better reuse</li>
+<li>✅ Create ICodeLog for improve logging in Razor and WebApi which ensures compatibility with existing code</li>
+<li>✅ Improve automatic connecting logs with helpers so most <code>Init(Log)</code> become obsolete</li>
+</ol>
+</li>
+<li>✅ Update CsvHelper DLL to latest version</li>
+<li>✅ Improve install-file names</li>
+<li>✅ Update to Razor Blade 4</li>
+<li>✅ <del>Support Oqtane v4 with .net 7</del> - ATM Oqtane doesn't plan on going to .net 7</li>
+<li>✅ Tutorial App
+<ol>
+<li>✅ Improve internal structure</li>
+<li>✅ Change how to show code vs results - mostly use tabs</li>
+</ol>
+</li>
+<li>✅ Razor APIs and Services
+<ol>
+<li>✅ Improve <code>ImageService</code> to have an <code>imgAltFallback</code> on <code>.Img()</code>, <code>.Picture()</code> and <code>.ImgOrPic()</code></li>
+<li>✅ Improve <code>ImageService</code> to better respect multi-language crop-settings and labels</li>
+<li>✅ Improve <code>Page</code> service <code>Parameters.Set(...)</code> to also allow bool, int etc. (not just strings)</li>
+<li>✅ Create Kit.HtmlTag</li>
+<li>✅ Create <code>ITurnOnService</code> and <code>Kit.Page.TurnOn(...)</code></li>
+</ol>
+</li>
+<li>✅ Data Sources
+<ol>
+<li>✅ Improve <code>ValuFilter</code> Data Source to also allow <code>Contains</code> on numbers</li>
+</ol>
+</li>
+<li>✅ DB Clean-Up
+<ol>
+<li>✅ Remove SQL triggers which log XML data to <code>DataTimeline</code> which isn't used any more</li>
+<li>✅ Remove XML column <code>NewData</code> in <code>DataTimeline</code> which isn't used any more</li>
+</ol>
+</li>
+<li>✅ Internal APIs
+<ol>
+<li>✅ Improve Settings/Resources Stack with various unit tests</li>
+<li>✅ Improve Settings/Resources Stack to have internal quick access to deep objects using a path like <code>&quot;Images.Content.Width&quot;</code></li>
+<li>✅ Create API <code>DependenciesBase</code> to better handle log attachments to dependencies</li>
+</ol>
+</li>
+<li>✅ TinyMCE upgrade to v6</li>
+<li>✅ Drop <code>_</code> prefix requirement on cshtml files by protecting them in an another manner
+<ol>
+<li>✅ It's not needed on Oqtane, as the files are not accessible</li>
+<li>✅ Only needed ATM on DNN because each file could be called from the browser directly</li>
+<li>✅ Probably make sure all base classes refuse to render standalone</li>
+</ol>
+</li>
+<li>✅ Ability to use compressed GZIP data for DataTimeline (patrons)
+<ol>
+<li>✅ Technical features</li>
+<li>✅ Toggle to turn on/off</li>
+</ol>
+</li>
+<li>✅ Rename internal <code>.data</code> folder to <code>App_Data/system</code> and similar as this folder will contain private data in future</li>
+<li>✅ Feature to deploy a corporate license in an installation to auto-enable certain features on all sites</li>
+<li>✅ Settings: Ability to augment the preset configuration / settings with custom overrides</li>
+<li>✅ Provide Google Services API Keys (Maps, Translate) from backend to edit UI</li>
+<li>✅ Ability to set own default GPS coordinates for when not set
+<ol>
+<li>✅ Ability to configure them in settings</li>
+<li>✅ Provide Default maps coordinates from backend to Edit UI</li>
+</ol>
+</li>
+<li>✅ Ability to import apps from folder directly (patrons)
+<ol>
+<li>✅ Functionality</li>
+<li>✅ Hints / Infos to user</li>
+<li>⏳ Documentation</li>
+</ol>
+</li>
+<li>✅ Integration of Google Translate in the Edit UI
+<ol>
+<li>✅ Functionality for one field</li>
+<li>✅ For many fields</li>
+<li>✅ Configure so it only affects string fields</li>
+<li>✅ Ability to disable auto-translate on certain fields - eg. name fields</li>
+<li>✅ Ability to add custom API key</li>
+<li>✅ Clear warning when using the demo key</li>
+<li>✅ Make sure the license is respected and easy to spot</li>
+<li>⏳ Documentation for this (how the fields are selected, how to activate, etc.)</li>
+</ol>
+</li>
+<li>✅ Release v15 before XMas</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v15/_changes15.00.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

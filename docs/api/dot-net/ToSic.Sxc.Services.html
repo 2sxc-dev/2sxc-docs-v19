@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace ToSic.Sxc.Services | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace ToSic.Sxc.Services | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/api-docs/api/dot-net/ToSic.Sxc/Sxc.Services.md/#L2">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services">
+
+  <h1 id="ToSic_Sxc_Services" data-uid="ToSic.Sxc.Services" class="text-break">Namespace ToSic.Sxc.Services</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual">
+<p>The <strong>Services</strong> are the most common helpers / tools used in Razor and WebAPI C#.</p>
+<h2 id="quick-use-with-kitsomeservicename">Quick Use with <code>@Kit.SomeServiceName</code></h2>
+<p>Most services are available on the <code>Kit</code> object on your Razor or WebApi file.
+This requires the use of v14 base classes, such as <code>Razor14</code>.</p>
+<h2 id="manual-use-with-getservicet">Manual Use with <code>GetService&lt;T&gt;</code></h2>
+<p>You will usually get a service using the <code>GetService&lt;T&gt;()</code> method like this:</p>
+<pre><code class="lang-c#">@using ToSic.Sxc.Services;
+@{
+  var pageSvc = Sxc.GetService&lt;IPageService&gt;();
+}
+</code></pre>
+<p>Read more about <a class="xref" href="../../net-code/dynamic-code/get-service.html">GetService&lt;T&gt;()</a> or about <a class="xref" href="../../net-code/dynamic-code/get-service.html">GetService&lt;T&gt; in general</a>.</p>
+<p>To use GetService in a DNN Theme/Skin/Module, check out <a class="xref" href="ToSic.Sxc.Services.DnnExtensions.html#ToSic_Sxc_Services_DnnExtensions_GetScopedService_">GetScopedService&lt;T&gt;()</a>
+and read it in the <a href="https://2sxc.org/en/blog/post/deep-dnn-skin-and-module-integration-towel-day-2022">release blog</a>.</p>
+</div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="namespaces">
+Namespaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.Cache.html">ToSic.Sxc.Services.Cache</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.Template.html">ToSic.Sxc.Services.Template</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.Tweaks.html">ToSic.Sxc.Services.Tweaks</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.DnnExtensions.html">DnnExtensions</a></dt>
+      <dd><p>Provides extension methods for DNN Skins (Themes) and Modules.
+It only exists on the Dnn platform, not on Oqtane.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ServiceKit14.html">ServiceKit14</a></dt>
+      <dd><p>Default ServiceKit for 2sxc v14.
+Provided in Razor and WebApi as <code>Kit</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html">ServiceKit16</a></dt>
+      <dd><p>Default ServiceKit for 2sxc v16.
+Provided in Razor and WebApi as <code>Kit</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ServiceKitLight16.html">ServiceKitLight16</a></dt>
+      <dd><p>Lightweight ServiceKit for 2sxc v16.
+Provided in custom data sources as <code>Kit</code>.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IAdamService.html">IAdamService</a></dt>
+      <dd><p>Internal: Adam Service for ADAM operations such as retrieving a single file.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ICacheService.html">ICacheService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Cache"><code>Kit.Cache</code></a> to help your code cache data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IConvertService.html">IConvertService</a></dt>
+      <dd><p>Conversion helper for things which are very common in web-code like Razor and WebAPIs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IConvertService16.html">IConvertService16</a></dt>
+      <dd><p>Helper on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Convert"><code>Kit.Convert</code></a> for common conversions in web-code like Razor and WebAPIs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IDataService.html">IDataService</a></dt>
+      <dd><p>Services on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Data"><code>Kit.Data</code></a> to create DataSources in Razor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IDynamicCodeService.html">IDynamicCodeService</a></dt>
+      <dd><p>This is a service to give you DynamicCode outside 2sxc.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IEditService.html">IEditService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Edit"><code>Kit.Edit</code></a> with status and commands to configure the in-page editing system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IFeaturesService.html">IFeaturesService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Feature"><code>Kit.Feature</code></a> to let your code find out what system features are currently enabled/disabled in the environment.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IImageService.html">IImageService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Image"><code>Kit.Image</code></a> to help create responsive <code>img</code> and <code>picture</code> tags the best possible way.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IJsonService.html">IJsonService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Json"><code>Kit.Json</code></a> to serialize/restore JSON.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IKeyService.html">IKeyService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Key"><code>Kit.Key</code></a> to generate module/block level unique keys.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ILinkService.html">ILinkService</a></dt>
+      <dd><p>Helper on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Link"><code>Kit.Link</code></a> to create links to pages, APIs and images.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IMailService.html">IMailService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Mail"><code>Kit.Mail</code></a> to send mail messages cross-platform.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IPageService.html">IPageService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Page"><code>Kit.Page</code></a> to make changes to the page - usually from Razor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IRenderService.html">IRenderService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Render"><code>Kit.Render</code></a> to rendering blocks and delivering HTML for the output.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ISecureDataService.html">ISecureDataService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_SecureData"><code>Kit.SecureData</code></a> to work with secure / encrypted data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ISystemLogService.html">ISystemLogService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_SystemLog"><code>Kit.SystemLog</code></a> to add messages to the global (system) log in any platform Dnn/Oqtane.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.ITemplateService.html">ITemplateService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Template"><code>Kit.Template</code></a> to help parse token-based templates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IToolbarService.html">IToolbarService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Toolbar"><code>Kit.Toolbar</code></a> to generate edit toolbars in the front-end.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ToSic.Sxc.Services.IUserService.html">IUserService</a></dt>
+      <dd><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_User"><code>Kit.User</code></a> to get users and roles of the platform.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/api-docs/api/dot-net/ToSic.Sxc/Sxc.Services.md/#L2" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

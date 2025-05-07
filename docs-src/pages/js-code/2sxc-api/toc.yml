@@ -1,0 +1,86 @@
+
+- name: Get Started
+  topicUid: JsCode.2sxcApi.Index
+  items:
+    - name: "Step 1: Activate"
+      topicUid: JsCode.2sxcApi.Activate.Index
+    - name: "Step 2: Get Current Sxc"
+      topicUid: JsCode.2sxcApi.GetSxc.Index
+    - name: How it works internally
+      topicUid: JsCode.2sxcApi.HowItWorks.Index
+
+- name: "Global $2sxc Object"
+- name: $2sxc (basic)
+  uid: Api.Js.SxcJs.SxcGlobal
+  items:
+    - name: ContextIdentifier
+      uid: Api.Js.SxcJs.ContextIdentifier
+    - name: $2sxc.env
+      uid: Api.Js.SxcJs.SxcGlobalEnvironment
+      items:
+        - name: EnvironmentSpecs
+          uid: Api.Js.SxcJs.EnvironmentSpecs
+    - name: $2sxc.http
+      topicUid: Api.Js.SxcJs.SxcGlobalHttp
+    - name: $2sxc.urlParams
+      uid: Api.Js.SxcJs.UrlParams
+- name: $2sxc (with CMS)
+  uid: Api.Js.SxcJs.SxcGlobalWithCms
+  items:
+    - name: $2sxc.cms
+      uid: Api.Js.SxcJs.SxcGlobalCms
+    - name: Old v9.3 $2sxc.cms
+      topicUid: JsCode.2sxcApi.Obsolete.$2sxc.CmsV9
+
+
+- name: " "
+
+- name: "Instance Sxc Object"
+- name: Sxc Instance (About)
+  topicUid: JsCode.2sxcApi.Sxc.Index
+- name: Sxc (basic)
+  uid: Api.Js.SxcJs.Sxc
+- name: sxc.data(...)
+  uid: Api.Js.SxcJs.SxcData
+  items:
+    - name: MetadataFor
+      uid: Api.Js.SxcJs.MetadataFor
+    - name: TargetTypes
+      uid: Api.Js.SxcJs.MetadataTargetTypes
+- name: sxc.query(...)
+  uid: Api.Js.SxcJs.SxcQuery
+
+- name: sxc.webApi
+  uid: Api.Js.SxcJs.SxcWebApi
+  items:
+    - name: sxc.webApi fetch Json/Raw
+      topicUid: JsCode.2sxcApi.Sxc.WebApi.Fetch
+    - name: sxc.webApi bare metal
+      topicUid: JsCode.2sxcApi.Sxc.WebApi.BareMetal
+    - name: sxc.webApi jQuery (old)
+      topicUid: Api.Js.SxcJs.ZzzSxcWebApiDeprecated
+
+- name: sxc.cms (with CMS)
+  topicUid: Api.Js.SxcJs.SxcCms
+  items:
+    - name: Old sxc.manage
+      topicUid: JsCode.2sxcApi.Sxc.Manage
+
+
+
+
+
+- name: " "
+
+- name: 2sxc JS APIs A-Z
+  uid: Api.Js.SxcJs
+- name: Internal APIs
+  items:
+    - uid: Api.Js.SxcJs.HasLog
+      name: HasLog
+    - uid: Api.Js.SxcJs.Log
+      name: Log
+    - uid: Api.Js.SxcJs.LogEntry
+      name: LogEntry
+
+

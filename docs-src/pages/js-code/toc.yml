@@ -1,0 +1,71 @@
+- name: JavaScript & Typescript
+  href: index.md
+
+- name: Tips & Tricks
+  uid: JsCode.Tips.Index
+
+- name: NPM Types
+  uid: JsCode.NpmTypes
+
+- name: 2sxc JS API
+  uid: JsCode.2sxcApi.Index
+  href: 2sxc-api/toc.yml
+
+- name: "Commands cms.run(...)"
+  uid: JsCode.Commands.Index
+  href: commands/toc.yml
+
+- name: Toolbars API
+  uid: JsCode.Toolbars.Index
+  href: toolbars/toc.yml
+
+- name: " "
+
+- name: turnOn
+  uid: JsCode.TurnOn.Index
+  items:
+    - name: turnOn Specs
+      uid: JsCode.TurnOn.Specs
+
+# Edit / CMS
+
+
+
+
+- name: quickE (quickEdit)
+  uid: JsCode.QuickE.Index
+  href: quick-e/toc.yml
+
+# Edit UI
+- name: " "
+
+- name: Custom Inputs Fields in Edit
+  uid: JsCode.CustomFields.Index
+  items:
+    - name: Connector API
+      uid: JsCode.CustomFields.Connector
+    - name: Custom WYSIWYG fields
+      uid: JsCode.CustomFields.Wysiwyg
+
+- name: Formulas Σ in Edit
+  uid: JsCode.EditForm.Formulas.Index
+  href: edit-form/formulas/toc.yml
+
+- name: Dialog Settings (beta)
+  uid: JsCode.EditForm.DialogSettings.Index
+
+# Angular / SPA
+- name: " "
+
+- name: Angular in Dnn/2sxc
+  uid: JsCode.Angular.Index
+  href: angular/toc.yml
+
+- name: AngularJS
+  uid: JsCode.AngularJs.Index
+
+# Other
+- name: " "
+
+- name: Using jQuery in Dnn
+  uid: JsCode.Dnn.JQuery

@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.CommandMetadataParams
+    name: CommandMetadataParams
+    fullName: CommandMetadataParams
+    children:
+      - Api.Js.SxcJs.CommandMetadataParams.contentType
+      - Api.Js.SxcJs.CommandMetadataParams.entityId
+      - Api.Js.SxcJs.CommandMetadataParams.metadata
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Parameters used for the command `metadata`.
+      <br>
+      Will do either one of these:
+      - if it has an `entityId`, will just open `edit` for that Entity
+      - if it has no `entityId`, will open `new` for the current `contentType`
+      and assign to the target specified by `metadata`:
+      <br>
+      ⤴️ back to [All Command Names](xref:Api.Js.SxcJs.CommandNames)
+    extends:
+      name: Api.Js.SxcJs.CommandContentTypeParams
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandMetadataParams.contentType
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The content-type name
+    syntax:
+      content: 'contentType: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandMetadataParams.entityId
+    name: entityId
+    fullName: entityId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID of item to edit.
+    syntax:
+      content: 'entityId: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandMetadataParams.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Target to assign the metadata to.
+    syntax:
+      content: 'metadata: CommandParamsMetadata'
+      return:
+        type:
+          - Api.Js.SxcJs.CommandParamsMetadata
+        description: ''
+    package: Api.Js.SxcJs
+references:
+  - uid: Api.Js.SxcJs.CommandContentTypeParams
+    name: CommandContentTypeParams
+    spec.typeScript:
+      - name: CommandContentTypeParams
+        fullName: CommandContentTypeParams
+        uid: Api.Js.SxcJs.CommandContentTypeParams
+  - uid: Api.Js.SxcJs.CommandParamsMetadata
+    name: CommandParamsMetadata
+    spec.typeScript:
+      - name: CommandParamsMetadata
+        fullName: CommandParamsMetadata
+        uid: Api.Js.SxcJs.CommandParamsMetadata

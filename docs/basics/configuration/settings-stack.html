@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Settings Stack in 2sxc ✨ new! | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Settings Stack in 2sxc ✨ new! | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/configuration/settings-stack.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Configuration.SettingsStack">
+
+<img src="../../assets/features/settings-stack.svg" class="feature">
+<h1 id="settings-stack-in-2sxc--new">Settings Stack in 2sxc ✨ new!</h1>
+<div class="float-end context-box-summary highlight-max" width="400px">
+  <div class="fancybox-auto svg-highlight" style="width: 100%">
+<svg version="1.1" baseprofile="full" viewbox="0 0 3229 2529" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../pages/basics/stack/assets/stack-detailed.png" x="0" y="0" height="100%" width="100%"></image>
+  <!-- Data Highlights -->
+  <rect class="svg-highlight prepared data-all" x="0%" y="82%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-data" x="19%" y="82%" width="64%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-all" x="3%" y="82%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-app" x="3%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-assets-entities" x="18.5%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-configuration" x="3%" y="93%" width="17%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared data-entities" x="34%" y="82%" width="33%" height="10.5%"></rect>
+  <rect class="svg-highlight prepared data-content-types" x="34%" y="89%" width="33%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-app" x="34%" y="89%" width="17.5%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-global" x="50%" y="89%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-external" x="65.5%" y="82%" width="17%" height="10.5%"></rect>
+  <!-- ADAM -->
+  <rect class="svg-highlight prepared adam" x="18.5%" y="89%" width="17%" height="8%"></rect>
+  <!-- Server -->
+  <rect class="svg-highlight prepared server-all" x="0%" y="41%" width="84%" height="38%"></rect>
+  <!-- Prepare -->
+  <rect class="svg-highlight prepared prepare-all" x="0%" y="61%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared query" x="44.5%" y="61%" width="34%" height="18%"></rect>
+  <rect class="svg-highlight prepared query-engine" x="44.5%" y="70%" width="34%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-built-in" x="44.5%" y="62.5%" width="18%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-app" x="60.5%" y="62.5%" width="17%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-datasource" x="71%" y="70%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-params" x="65%" y="70%" width="10%" height="7%"></rect>
+  <!-- Data Source -->
+  <rect class="svg-highlight prepared datasource" x="86%" y="51%" width="13%" height="16%"></rect>
+  <rect class="svg-highlight prepared datasource-custom" x="87.5%" y="54.5%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared datasource-built-in" x="87.5%" y="59%" width="12%" height="7%"></rect>
+  <rect class="svg-highlight prepared lookup" x="86%" y="66%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared lookup-engine" x="87.5%" y="69%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared lookup-sources" x="87.5%" y="73%" width="12%" height="7%"></rect>
+  <!-- Optimzers -->
+  <rect class="svg-highlight prepared asset-optimizer" x="3%" y="49.5%" width="13.5%" height="8%"></rect>
+  <rect class="svg-highlight prepared image-resizer" x="15%" y="30%" width="17%" height="34%"></rect>
+  <!-- Process / Awesomize -->
+  <rect class="svg-highlight prepared process-all" x="0%" y="41%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-cs" x="34%" y="41%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-razor" x="34.3%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-razor-app" x="34.3%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-razor-engine" x="34.3%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-apis" x="50%" y="42%" width="34%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api" x="50%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api-app" x="50%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-web-api-engine" x="50%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-libraries" x="47%" y="47%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-headless" x="65.5%" y="49.5%" width="17%" height="7%"></rect>
+  <!-- Libraries -->
+  <rect class="svg-highlight prepared libraries" x="86%" y="38%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared libraries-app" x="87.5%" y="41%" width="12%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared libraries-built-in" x="87.5%" y="46%" width="12%" height="6%"></rect>
+  <!-- data formats -->
+  <rect class="svg-highlight prepared format-json-custom" x="50%" y="32%" width="17%" height="14%"></rect>
+  <rect class="svg-highlight prepared format-json-headless" x="65.5%" y="32%" width="17%" height="21%"></rect>
+  <rect class="svg-highlight prepared format-json-edit" x="74%" y="30%" width="19%" height="23%"></rect>
+  <!-- Browser -->
+  <rect class="svg-highlight prepared browser-all" x="0%" y="0%" width="100%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-show" x="0%" y="0%" width="50%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact-edit" x="47%" y="0%" width="37%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact" x="47%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit" x="64%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit-ui" x="81.5%" y="0%" width="18%" height="34%"></rect>
+  <!-- Frameworks -->
+  <rect class="svg-highlight prepared frameworks-browser" x="0%" y="0%" width="17.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared frameworks-CSS" x="0%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-js" x="0%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-spa" x="0%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- App show parts -->
+  <rect class="svg-highlight prepared show-html" x="15.8%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-js" x="15.8%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-spa" x="15.8%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- Interact parts -->
+  <rect class="svg-highlight prepared interact-mobile" x="48.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared interact-2sxc" x="48.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit parts -->
+  <rect class="svg-highlight prepared edit-auto" x="65.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared edit-custom" x="65.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit UI parts -->
+  <rect class="svg-highlight prepared edit-ui" x="82.5%" y="3%" width="17.5%" height="18%"></rect>
+  <rect class="svg-highlight prepared edit-ui-custom" x="82.5%" y="20%" width="17.5%" height="12%"></rect>
+  <!-- SPA parts -->
+  <rect class="svg-highlight prepared spa-all" x="0%" y="21%" width="83%" height="12%"></rect>
+  <rect class="svg-highlight prepared spa-2sxc-js" x="31.5%" y="21%" width="52%" height="12%"></rect>
+  <!-- Custom highlight boxes - can be controlled by in-page CSS -->
+  <rect class="svg-highlight highlight1"></rect>
+  <rect class="svg-highlight highlight2"></rect>
+  <rect class="svg-highlight highlight3"></rect>
+  <rect class="svg-highlight highlight4"></rect>
+  <rect class="svg-highlight highlight5"></rect>
+</svg>
+  </div>
+  <div class="overlay-description">
+<p>you are here (click to zoom) - discover the <a class="xref" href="../index.html">stack</a></p>
+  </div>
+</div>
+<style>.context-box-summary .data-configuration { visibility: visible; }</style>
+<p>Settings come in 2 distinct flavors:</p>
+<ul>
+<li><strong>Standardized Settings</strong> use a content-type called <code>SettingsSystem</code> with a predefined structure.<br>
+These settings are meant to be used across tools and apps.</li>
+<li><strong>Dynamic Settings</strong> use a custom <code>App-Settings</code> content-types which you define.<br>
+These settings can have any keys and values you want.<br>
+The effect/reach of this depends on the level where you add it (global, site, app).
+The code using these will usually come from you, as these settings are not standardized.</li>
+</ul>
+<p>Settings can be edited on many levels. The most general or fallback settings are presets in 2sxc. The most specific settings only apply to a specific view.</p>
+<p>In most cases your templates and code will simply want to get the most-relevant setting, no matter where it was configured.
+To make this possible, settings are treated as a stack.
+This is how it stacks up:</p>
+<img src="../../pages/basics/configuration/assets/settings-stack.png" width="100%" class="full-width">
+<p>The most-relevant setting is top-most setting and is the one which will be used.
+So if a <em>View</em> setting and a <em>Site</em> setting have the same key, the <em>View</em> setting will be preferred. Take a look at this illustration:</p>
+<img src="../../pages/basics/configuration/assets/settings-stack-2.png" width="100%" class="full-width">
+<p>Assume the <em>Blog App</em> has a <em>List View</em> which needs <code>Settings.Images.Content</code>.
+The first Blog will look for it in the sequence of the blue arrows.
+The second will look in the sequence of the yellow arrows.
+So each Blog could get a different Setting, depending on where it is configured or overwritten.</p>
+<h2 id="settings-sources-and-priorities">Settings Sources and Priorities</h2>
+<p>The Settings are stacked in the following priority:</p>
+<ol>
+<li><strong>ViewCustom</strong> - dynamic settings configured in the <a class="xref" href="../app/views/index.html">View</a></li>
+<li><strong>AppCustom</strong> - the dynamic <code>App-Settings</code> (see <a class="xref" href="../app/settings.html">App-Settings</a>) of an <a class="xref" href="../app/index.html">App</a></li>
+<li><strong>AppSystem</strong> - The <code>SettingsSystem</code> in the current <a class="xref" href="../app/index.html">App</a></li>
+<li><strong>AncestorCustom</strong> - Optional, only on inherited Apps - <code>App-Settings</code> on ancestor app (v13)</li>
+<li><strong>AncestorSystem</strong> - Optional, only on inherited Apps - <code>SettingsSystem</code> on ancestor app (v13)</li>
+<li><strong>SiteCustom</strong> - an optional, manually created dynamic <code>App-Settings</code> on the <em>Primary App</em> of the current site</li>
+<li><strong>SiteSystem</strong> - an optional <code>SettingsSystem</code> in the <em>Primary App</em> of the current site</li>
+<li><strong>GlobalCustom</strong> - an optional, manually created dynamic <code>App-Settings</code> on the <em>Global System App</em></li>
+<li><strong>GlobalSystem</strong> - an optional <code>SettingsSystem</code> on the <em>Global System App</em></li>
+<li><strong>PresetSystem</strong> - the <code>SettingsSystem</code> which are included in the installation of 2sxc</li>
+</ol>
+<p>There is no setting called <strong>ViewSystem</strong> or <strong>PresetCustom</strong>.</p>
+<h2 id="review-the-settings-stack">Review the Settings-Stack</h2>
+<p>In case you need to see what setting applies to what view, you can easily analyze this in the <a class="xref" href="../app/settings.html">App Administration</a>.</p>
+<img src="../../pages/basics/configuration/assets/admin-goto-review-settings.jpg" width="100%" class="full-width">
+<p>There you can see each setting and what source it came from + you can analyze all the sources which configure this setting:</p>
+<img src="../../pages/basics/configuration/assets/admin-review-settings.jpg" width="100%" class="full-width">
+<p>Next we'll explain where you can configure settings for different effects / scopes.</p>
+<h2 id="global-settings-which-affect-all-sites">Global Settings which Affect All Sites</h2>
+<p>Global Settings for all sites are configured in the <strong>Global System App</strong>. It's usually on Zone <code>1</code> and App <code>1</code>.</p>
+<ol>
+<li>go to the <strong>Global System App</strong> using <a href="https://azing.org/2sxc/r/QES7BFGU">this checklist</a>.</li>
+<li>for <strong>Global System-Settings</strong> just edit them here</li>
+<li>for <strong>Global Custom-Settings</strong> just edit the App-Settings of the global app</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This stuff is fairly new, and in rare cases new global settings don't automatically
+propagate to the sites. If you experience this, just restart the system.</p>
+<p>As of now, this only affects new fields, so once a field has been available changes will propagate as expected.</p>
+</div>
+<h2 id="site-settings-which-affect-an-entire-site">Site Settings which Affect an Entire Site</h2>
+<p>These are configured in the <strong>Primary App</strong> of the site you want to configure.</p>
+<ol>
+<li>go to the <strong>Primary App</strong> of the Site <a href="https://azing.org/2sxc/r/653OKPVz">using this checklist</a></li>
+<li>for <strong>Site System-Settings</strong> just edit them here</li>
+<li>for <strong>Site Custom-Settings</strong> just edit the App-Settings of this app</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This stuff is fairly new, and in rare cases new site settings don't automatically
+propagate to the apps. If you experience this, just restart the system.</p>
+<p>As of now, this only affects new fields, so once a field has been available changes will propagate as expected.</p>
+</div>
+<h2 id="app-settings-which-affect-an-entire-app">App Settings which Affect an Entire App</h2>
+<p>These settings override previous settings but only for a specific App.</p>
+<ol>
+<li>Go to the the <strong>App Configuration</strong> <a href="https://azing.org/2sxc/r/_a0Pg3Ku">using this checklist</a></li>
+<li>for <strong>App System-Settings</strong> just edit them here</li>
+<li>for <strong>App Custom-Settings</strong> aka App-Settings you can edit them here or configure fields etc. directly from this dialog. Thisis feature has existed long before the stack was invented.
+See <a class="xref" href="../app/settings.html">App Settings</a>.</li>
+</ol>
+<h2 id="view-settings-which-affect-a-specific-view">View Settings which Affect a specific View</h2>
+<p>As of v12.04 Views are only meant to have Custom Settings.
+It is still possible to override SystemSettings just by creating a field which has the same name, but we don't recommend it.</p>
+<p>To create Custom View Settings, create a custom content-type in the <strong>Configuration</strong> scope and use it in the view.
+See <a class="xref" href="../app/views/settings.html">View Settings (Advanced ⚠)</a>.</p>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Full Settings Stack introduced in 2sxc 12.04</li>
+<li>Dropped <code>SettingsCustom</code> as a type in v13, as not needed any more because we changed how the site-level settings work</li>
+<li>Added <code>AncestorCustom</code> and <code>AncestorSettings</code> on v13 if the app inherits from an ancestor</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/configuration/settings-stack.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

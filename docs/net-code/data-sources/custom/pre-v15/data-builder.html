@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>DataSource API: DataBuilder.Entity(...) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DataSource API: DataBuilder.Entity(...) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data-sources/custom/pre-v15/data-builder.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.DataSources.Custom.DataBuilder">
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>These documentations are for versions before 15.x.
+They don't apply to v15+ but are kept for reference.
+We highly recommend that you don't use them.</p>
+</div>
+
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Before v15, the DataBuilder was used in custom DataSources to create entities.
+In v15+ you should use the <a class="xref" href="../../../../api/dot-net/ToSic.Eav.Services.IDataSourcesService.html">IDataFactory</a> instead.</p>
+<p>The following docs are out of date and will be upgraded soon.</p>
+</div>
+<h1 id="datasource-api-databuilderentity">DataSource API: DataBuilder.Entity(...)</h1>
+<p>Many data sources generate new content items - either because they deliver some kind of information, or because they convert data from another source into standardized entities. This is where <code>DataBuilder.Entity(...)</code> helps.</p>
+<p>Just fyi: Here are the <a href="xref:ToSic.Eav.Data.IDataBuilder.Entity*">API docs</a>. There is also an <code>Entities</code> for multiple Entities.</p>
+<h2 id="how-the-databuilder-is-added">How the DataBuilder is added</h2>
+<p>The DataBuilder is a <a href="xref:ToSic.Eav.Data.IDataBuilder">IDataBuilder</a> which is automatically given as a property <code>DataBuilder</code>. The DataSource-Factory creates it.</p>
+<h2 id="how-to-use-databuilderentity">How to use DataBuilder.Entity(...)</h2>
+<p>Here's a simple example of the tutorial <a href="https://github.com/2sic/2sxc-eav-tutorial-custom-datasource/">DateTime DataSource</a>:</p>
+<pre><code class="lang-cs">const string DateFieldName = &quot;Date&quot;;
+var date = DateTime.Now;
+var values = new Dictionary&lt;string, object&gt;
+{
+    {DateFieldName, date},
+    {&quot;Weekday&quot;, date.DayOfWeek},
+    {&quot;DayOfWeek&quot;, (int) date.DayOfWeek}
+};
+
+// Construct the IEntity and return as ImmutableArray
+var entity = DataBuilder.Entity(values, titleField: DateFieldName);
+return new [] {entity}.ToImmutableArray();
+
+</code></pre>
+<p>This example shows how an entity-object is build using <code>DataBuilder.Entity(values)</code> on the <code>ToSic.Eav.Data</code> namespace.</p>
+<h2 id="concept-behind-databuilderentity">Concept Behind DataBuilder.Entity(...)</h2>
+<p>Internally it will generate a simplified <code>IEntity</code> object.
+It's also missing some advanced features like multi-language and repository identity (which would be important in edit-scenarios).</p>
+<p>The simplest way is to just use <code>DataBuilder.Entity(someDictionary)</code>, more advanced uses also tell the system which field is the title, some numeric or Guid IDs and more.</p>
+<h2 id="building-lists-of-entities">Building Lists of Entities</h2>
+<p>You can loop through your data and call <code>DataBuilder.Entity(someDictionary)</code> many times.
+You can also use the overload <code>DataBuilder.Entities(IEnumerable&lt;someDictionary&gt;)</code>. Best read the <a href="xref:ToSic.Eav.Data.IDataBuilder.Entities*">API docs</a>.</p>
+<h2 id="more-parameters-on-databuilderentity">More Parameters on DataBuilder.Entity(...)</h2>
+<p>All paramaters are optional, except the first one containing the values. Here's what each one does:</p>
+<ul>
+<li><code>string titleField</code> is the title field name, so the entity then also knows which one is the title and can support <code>.EntityTitle</code> property</li>
+<li><code>string typeName</code> is a nice name for the type, allowing for type-filtering later in other data sources</li>
+<li><code>int id</code> gives a number identity, so <code>.EntityId</code> is useful and filtering by EntityId (like when having details-pages needing this id) works</li>
+<li><code>Guid guidId</code> is a UUID identity, so <code>.EntityGuid</code> is useful</li>
+<li><code>DateTime modified</code> would allow to filter / sort by the <code>.Modified</code> property</li>
+<li><code>int appId</code> could be used to pretend it's part of another app. This only affects the AppId property, and ATM there is no important reason to do this.</li>
+</ul>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a class="xref" href="../guide/big-picture.html">DataSources Big Picture</a></li>
+<li><a class="xref" href="provide.html">DataSource API: Provide(...)</a></li>
+<li><a href="xref:ToSic.Eav.Data.IDataBuilder.Entity*"></a></li>
+</ul>
+<h2 id="demo-code-and-further-links">Demo Code and further links</h2>
+<ul>
+<li><a class="xref" href="../tutorial-basic/index.html">Tutorial DataSource</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in EAV 4.x, 2sxc 09.13</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data-sources/custom/pre-v15/data-builder.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

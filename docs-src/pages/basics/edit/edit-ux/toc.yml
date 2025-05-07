@@ -1,0 +1,15 @@
+
+- name: Toolbars
+  uid: Basics.Browser.EditUx.Toolbars.Index
+
+- name: Customize Toolbars
+  uid: Basics.Browser.EditUx.Toolbars.Customize
+
+- name: Button UI Rules
+  uid: Basics.Browser.EditUx.Toolbars.ButtonUi
+
+- name: Button Groups
+  uid: Basics.Browser.EditUx.Toolbars.ButtonGroups
+
+- name: Hide Advanced Features for Editors
+  uid: Basics.Browser.EditUx.HideAdvancedFeatures

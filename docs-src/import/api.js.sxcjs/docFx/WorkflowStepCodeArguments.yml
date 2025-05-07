@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.WorkflowStepCodeArguments
+    name: WorkflowStepCodeArguments
+    fullName: WorkflowStepCodeArguments
+    children:
+      - Api.Js.SxcJs.WorkflowStepCodeArguments.cancel
+      - Api.Js.SxcJs.WorkflowStepCodeArguments.command
+      - Api.Js.SxcJs.WorkflowStepCodeArguments.context
+      - Api.Js.SxcJs.WorkflowStepCodeArguments.phase
+      - Api.Js.SxcJs.WorkflowStepCodeArguments.result
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Arguments for [WorkflowStepCode](xref:Api.Js.SxcJs.WorkflowStepCode).
+      Will be passed to your code and should also be returned by your code.
+      This also allows cancelling further execution.
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowStepCodeArguments.cancel
+    name: cancel
+    fullName: cancel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      If the workflow should be cancelled.
+      Can be set by any workflow step.
+      If set to true, following steps / workflows will not run.
+    syntax:
+      content: 'cancel: boolean'
+      return:
+        type:
+          - boolean
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowStepCodeArguments.command
+    name: command
+    fullName: command
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name this workflow is running for
+    syntax:
+      content: 'command: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowStepCodeArguments.context
+    name: context
+    fullName: context
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Context of the current command / step being run
+    syntax:
+      content: 'context: ContextComplete'
+      return:
+        type:
+          - ContextComplete
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowStepCodeArguments.phase
+    name: phase
+    fullName: phase
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The phase it''s in (before, after, etc.)'
+    syntax:
+      content: 'phase: WorkflowPhases'
+      return:
+        type:
+          - Api.Js.SxcJs.WorkflowPhases
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowStepCodeArguments.result
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Result in after-phases of the workflow
+      BETA - never really tested this
+    syntax:
+      content: 'result: unknown'
+      return:
+        type:
+          - unknown
+        description: ''
+    package: Api.Js.SxcJs
+references:
+  - uid: Api.Js.SxcJs.WorkflowPhases
+    name: WorkflowPhases
+    spec.typeScript:
+      - name: WorkflowPhases
+        fullName: WorkflowPhases
+        uid: Api.Js.SxcJs.WorkflowPhases

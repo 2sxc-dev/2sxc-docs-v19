@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Use 2sxc Data, Services or Output in Dnn Themes/Skins and Modules | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Use 2sxc Data, Services or Output in Dnn Themes/Skins and Modules | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/platform-api/dnn/themes-modules.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.PlatformApi.Dnn.ThemesAndModules">
+
+<img src="../../../assets/features/platform-dnn.svg" width="100%">
+<h1 id="use-2sxc-data-services-or-output-in-dnn-themesskins-and-modules">Use 2sxc Data, Services or Output in Dnn Themes/Skins and Modules</h1>
+<p>Sometimes you want to render a 2sxc Block into a Theme or another Module - or just use 2sxc Data and services.</p>
+<p>In general this is a two step process:</p>
+<ol>
+<li>Get the current Service Provider (with the right Scope) from DNN or HttpContext and ask for the specific service you need</li>
+<li>Use the service</li>
+</ol>
+<h2 id="step-1-get-the-service-provider">Step 1: Get the Service Provider</h2>
+<p>The service provider is the object which knows how to create all the services.
+It will retrieve any services that have been registered before - including all public 2sxc services.</p>
+<p>It's important to know about the <strong>scope</strong> of the service provider.
+Basically there is a <strong>global scope</strong>, which is doesn't know about the current page or module.
+Then there is a <strong>current scope</strong> which is the scope of the current page or module.
+So if you ask the <em>global scope</em> for a service, that service will not know about the current user permissions or what page the code is running on.</p>
+<p>Dnn creates an own scope for each page request, and places it on the <code>HttpContext</code>.
+The &quot;real&quot; way to get it is fairly difficult, so 2sxc provides a shortcut
+using <code>this.GetScopedService&lt;T&gt;</code> (<a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.DnnExtensions.html#ToSic_Sxc_Services_DnnExtensions_GetScopedService_">docs</a>).
+Here's an example how to get it in a Theme/Skin or Module:</p>
+<pre><code class="lang-html">&lt;%@ Import Namespace=&quot;ToSic.Sxc.Services&quot; %&gt;
+&lt;script runat=&quot;server&quot;&gt;
+  protected override void OnPreRender(EventArgs e) {
+    base.OnPreRender(e);
+    var renderService = this.GetScopedService&lt;IRenderService&gt;();
+  }
+&lt;/script&gt;
+</code></pre>
+<p>Note: if you want to know the hard way, it's documented <a class="xref" href="theme-extended.html">here for themes</a>
+and <a class="xref" href="modules-extended.html">here for modules</a>.</p>
+<h2 id="step-2-do-something-with-the-service">Step 2: Do something with the Service</h2>
+<h3 id="example-1-render-a-block">Example 1: Render a Block</h3>
+<p>This is the most common use-case: you want to render a 2sxc Block into a Theme or Module.</p>
+<pre><code class="lang-html">&lt;%@ Import Namespace=&quot;ToSic.Sxc.Services&quot; %&gt;
+
+&lt;script runat=&quot;server&quot;&gt;
+  public dynamic blockHtml;
+
+  protected override void OnPreRender(EventArgs e)
+  {
+    base.OnPreRender(e);
+
+    int pageId = 42;
+    int moduleId = 242;
+    blockHtml = this.GetScopedService&lt;ToSic.Sxc.Services.IRenderService&gt;().Module(pageId, moduleId);
+  }
+&lt;/script&gt;
+
+&lt;%= blockHtml %&gt;
+</code></pre>
+<p>What's important:</p>
+<ol>
+<li>The <code>blockHtml</code> variable is a dynamic object - this just makes it easier to code. You could specify the type <code>ToSic.Sxc.Blocks.IBlock</code> but that adds complexity.</li>
+<li>Internally the <code>blockHtml</code> could do a bit more, but that's not relevant for this scenario.</li>
+<li>Retrieving the <code>blockHtml</code> it inside the <code>OnPreRender</code> event is important, because it ensures that any side-effects such as adding JS/CSS to the page work.</li>
+</ol>
+<h3 id="example-2-get-data-in-a-dnn-razor-file">Example 2: Get data in a DNN Razor File</h3>
+<p>Imagine you have a theme using DDR Menu with Razor Templates. The theme has a MegaMenu and you want to include one or more featured links that will change often and those links are easily managed in the Content App using the Links Content-Type with any of the default Views.</p>
+<p>Your C# code in your MegaMenu.cshtml file could get access to those Links like this:</p>
+<pre><code class="lang-cs">using ToSic.Sxc.Services;
+
+// the details you need to know
+// var appId = 2;       // Content App is usually 2, but thanks to DynamicCode, we don't need this
+var tabId = 234;        // this is the page with the Links View on it
+var modId = 678;        // this is the module ID of the Links View
+
+// Get the Service for generating DynamicCode
+// We must use DnnExtensions.Get... instead of this.GetScopedService because we're in an external Razor
+var dynCodeSvc = DnnExtensions.GetScopedService&lt;IDynamicCodeService&gt;();
+
+// the get the DynamicCode instance of the module
+var dynCode = dynCodeSvc.OfModule(tabId, modId);
+
+// Note: you could also do this:
+// var appId = 27;
+// var dynCode = dynCodeSvc.OfApp(appId);
+
+// if we were running &quot;inside&quot; 2sxc, we would just do this:
+// var links = AsList(Data[&quot;Default&quot;]);
+// but instead we use our magical DynamicCode instance like this
+var links = dynCode.AsList(dynCode.App.Data[&quot;Default&quot;]);
+
+&lt;ul&gt;
+foreach (var link in links)
+{
+  &lt;li&gt;
+    @link.EntityTitle, &lt;a href=&quot;@link.Link&quot;&gt;@link.LinkText&lt;/a&gt;
+  &lt;/li&gt;
+}
+&lt;/ul&gt;
+</code></pre>
+<h3 id="example-3-create-2sxc-data">Example 3: Create 2sxc Data</h3>
+<p>The following example is written in c# to make it easier to read.
+Your code could differ depending on where you place it (.cs file, .ascx file, etc.)</p>
+<pre><code class="lang-cs">using ToSic.Sxc.Services;
+var dynCodeSvc = this.GetScopedService&lt;IDynamicCodeService&gt;();
+
+// the app id
+var appId = 42;
+
+// create a simple app object to then access data
+var appSimple = dynCodeSvc.App(appId);
+
+// example getting all data of content type Tag
+var tags = appSimple.Data[&quot;Tag&quot;];
+
+// example accessing a query
+var tagsSorted = appSimple.Query[&quot;Tags sorted&quot;];
+
+// Creating an entity
+var vals = new Dictionary&lt;string, object&gt;();
+vals.Add(&quot;Tag&quot;, &quot;test-tag&quot;);
+vals.Add(&quot;Label&quot;, &quot;Test Tag&quot;);
+
+App.Data.Create(&quot;Tag&quot;, vals);
+</code></pre>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>2sxc v1 was for Dnn 4 in 2012</li>
+<li>External use API for DNN Introduced in 2sxc 08.03</li>
+<li>Old API archived for v13 - see <a href="obsolete-dnn.html">old Dnn Factory Docs</a></li>
+<li>Created new <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IDynamicCodeService.html">IDynamicCodeService</a> in v13</li>
+<li>2sxc v14 requires Dnn 9.6.1 or newer and is fully integrated in the DNN Dependency injection, so DNN can get 2sxc services and vice versa.</li>
+</ul>
+<h2 id="history-of-dependency-injection-in-2sxc">History of Dependency Injection in 2sxc</h2>
+<ol>
+<li>2sxc introduced Dependency Injection 1.1 in v9 (May 2017)</li>
+<li>Integrated with Oqtane DI in v12 (May 2021)</li>
+<li><code>GetService&lt;T&gt;</code> pattern introduced for Razor/C# in v12 (May 2021)</li>
+<li>Integrated with Oqtane DI in v12 (May. 2021)</li>
+<li>Upgraded to Dependency Injection 2.1 in v13 (Dec. 2021)</li>
+<li>Integrated with Dnn DI in v13 (Dec. 2021)</li>
+<li>Created <a class="xref" href="../../services/service-kits.html">ServiceKits</a> for v14 (June 2022)</li>
+<li>Added ServiceKitLight for custom DataSources in 2sxc 15</li>
+<li>Added ServiceKit16 for 2sxc 16</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/platform-api/dnn/themes-modules.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

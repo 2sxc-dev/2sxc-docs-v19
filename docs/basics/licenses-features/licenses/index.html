@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Licenses in 2sxc | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Licenses in 2sxc | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/licenses-features/licenses/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.LnF.Licenses.Index">
+
+<img src="../../../assets/features/2sxc-patrons.svg" class="feature">
+<h1 id="licenses-in-2sxc">Licenses in 2sxc</h1>
+<p>Licenses are special keys which will allow your system to use more advanced features.
+Some of the additional features are <strong>free</strong> while others are only for supporters (Patrons) of 2sxc.</p>
+<h2 id="system-fingerprint">System Fingerprint</h2>
+<p>To understand how the license ties to your installation, you should first know about the <strong>fingerprint</strong>.
+Every system has a digital <em>fingerprint</em> which consists of platform name (Dnn/Oqtane), platform version, 2sxc version and more.</p>
+<img src="../../../pages/basics/licenses-features/licenses/assets/fingerprint.jpg" width="100%" class="full-width">
+<ul>
+<li>Every system has a generated fingerprint.
+It will stay the same until you do a major upgrade of the platform or 2sxc, or if you migrate the system.</li>
+<li>Enterprise scenarios with many installations can also add a custom fingerprint <em>in addition</em> to the default fingerprint.
+This allows web companies to auto-enable certain licenses across all installations.
+Custom fingerprints are provided by the makers of 2sxc and stored as json files in the global <code>App_Data/system-custom</code>
+<em>new in v15</em></li>
+</ul>
+<h2 id="registration">Registration</h2>
+<p>Every system which wishes to use advanced features (free or paid) must be registered on <a href="https://patrons.2sxc.org">2sxc Patrons</a>.</p>
+<p>There are two types of users on <strong>2sxc Patrons</strong>:</p>
+<img src="../../../pages/basics/licenses-features/licenses/assets/patron-logins.jpg" width="100%" class="full-width">
+<ol>
+<li>If you have a GitHub Login you can use it to log on</li>
+<li>If you need an enterprise login or just don't have a GitHub login, you can log on using a normal DNN user in Patrons</li>
+</ol>
+<img src="../../../pages/basics/licenses-features/licenses/assets/license-manage.jpg" width="30%" class="float-end">
+<p>Registration can be automatic or manual, depending on your needs.</p>
+<ul>
+<li>The automatic registration can be triggered from inside your 2sxc installation.</li>
+<li>Manual registration requires you to copy/paste your fingerprint from your 2sxc to Patrons.</li>
+</ul>
+<h2 id="license-selection">License Selection</h2>
+<p>Once a system is registered on 2sxc Patrons, you can select what licenses you want to enabled for that system.</p>
+<ol>
+<li>If you don't support 2sxc you can activate free licenses</li>
+<li>If you are a <a href="https://github.com/sponsors/2sic">Github-Sponsors patron</a> then you can activate as many features as your contribution allows</li>
+<li>If you are an Enterprise patron then you can activate the features based on the contract with the makers of 2sxc.</li>
+</ol>
+<h2 id="advanced-licenses-for-patrons">Advanced Licenses for Patrons</h2>
+<p>To activate advanced licenses/features, you have two options:</p>
+<ol>
+<li>Become a <a href="https://github.com/sponsors/2sic">GitHub Patron</a> - this is only available for GitHub logins</li>
+<li><a href="http://2sxc.org/contact">Reach out to makers of 2sxc</a> to get a custom license and an official bill.
+This works for both GitHub logins as well as enterprise logins.</li>
+</ol>
+<p>You can now activate additional licenses based on your contribution and/or enterprise agreement.</p>
+<h2 id="license-activation">License Activation</h2>
+<p>The license file is a JSON file containing the activated licenses, the fingerprint and a digital signature.
+This file must be transferred to your system to work.
+The transfer can happen automatically or manually, depending on your needs.</p>
+<p>Note that all licenses will be stored as <code>*.license.json</code> in this folder: <code>[website-root]/DesktopModules/ToSIC_SexyContent/App_Data/system-custom/configurations/</code></p>
+<h3 id="automatic-activation">Automatic Activation</h3>
+<p>When you activate the license automatically you just have to click this button:</p>
+<img src="../../../pages/basics/licenses-features/licenses/assets/license-retrieve-auto.jpg" width="100%" class="full-width">
+<p>For this to work, the web server must be able to access the internet.
+The license will be downloaded and stored in <code>[license-folder]/default.license.json</code>.</p>
+<h3 id="manual-activation">Manual Activation</h3>
+<p>Manual activation is useful when the web server is not able to connect to the internet.
+In that scenario, you can download the license file directly from Patrons and upload it using <strong>Upload License</strong> button.</p>
+<img src="../../../pages/basics/licenses-features/licenses/assets/license-upload.jpg" width="100%" class="full-width">
+<p>Note that the manual license download has a different name than the default one.
+This is by design, because 2sxc can use multiple licenses files.
+Just remember that a future auto-download will not replace the manual file.</p>
+<h3 id="multiple-licenses">Multiple Licenses</h3>
+<p>The licensing system allows multiple licenses to be activated.
+This is useful in scenarios where you have an enterprise license on all systems to activate some features (maybe <strong>Patron Infrastructure</strong>)
+and a system-specific license to add more features (like <strong>Patron Sentinel</strong>).</p>
+<p>For this, all the licenses must be located in the license folder.</p>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Licenses introduced iv v13.02</li>
+<li>UIs massively enhanced in v15</li>
+<li>Ability to have 1-day trial licenses per feature added in 2sxc 15.02</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/licenses-features/licenses/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Platform Differences | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Platform Differences | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/platforms/differences.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Platforms.Differences">
+<h1 id="platform-differences">Platform Differences</h1>
+
+<p>This is a temporary documentation.
+We'll try to collect differences in behavior and APIs of all the supported platforms and how to work around limitations of each.</p>
+<h2 id="app--file-management">App / File Management</h2>
+<p>👉🏻 See <a class="xref" href="folders.html">Platform Folders</a> for a list of all folders.</p>
+<h2 id="razor-api">Razor API</h2>
+<p>Dnn uses ASP.net Framework MVC v.3 which is much older than Oqtane, but 95% is compatible.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Dnn</th>
+<th style="text-align: center;">Oqtane</th>
+<th>Compatibility</th>
+<th>Notes / Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@helper</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>.net 4</td>
+<td>create a separate file for each helper and use <code>Html.Partial(...)</code></td>
+</tr>
+<tr>
+<td><code>Dnn</code> object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>Dnn only</td>
+<td>Use <code>CmsContext</code>/<code>MyContext</code>, a bit more limited. For Oqtane features use Dependency Injection.</td>
+</tr>
+<tr>
+<td><code>Html.Raw(...)</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>all .net</td>
+<td></td>
+</tr>
+<tr>
+<td><code>RenderPage(...)</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>.net 4</td>
+<td>Use <code>Html.Partial(...)</code> instead</td>
+</tr>
+<tr>
+<td><code>Html.Partial(...)</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>.net core</td>
+<td>Polyfill added to Dnn in 2sxc 12</td>
+</tr>
+<tr>
+<td><code>Request</code> object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>.net 4</td>
+<td>.net core uses a much longer name <br> <code>ViewContext.HttpContext.Request</code></td>
+</tr>
+<tr>
+<td><code>Request.QueryString</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>.net 4</td>
+<td>.net core uses a much longer name <br> <code>ViewContext.HttpContext.Request.Query</code></td>
+</tr>
+<tr>
+<td><code>CmsContext.Page.Parameters</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 12</td>
+<td>Use this for cross-platform QueryString params</td>
+</tr>
+<tr>
+<td><code>MyPage.Parameters</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 1y</td>
+<td>requires <code>RazorTyped</code> base class</td>
+</tr>
+</tbody>
+</table>
+<h2 id="razor-2sxc-api">Razor 2sxc API</h2>
+<p>These are 2sxc APIs which are often used in Razor.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Dnn</th>
+<th style="text-align: center;">Oqtane</th>
+<th>Compatibility</th>
+<th>Notes / Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Link.To(...)</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 6</td>
+<td>works cross-platform</td>
+</tr>
+<tr>
+<td><code>CreateInstance(.cs)</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 10</td>
+<td>works cross-platform</td>
+</tr>
+<tr>
+<td><code>CreateInstance(.cshtml)</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>Dnn only</td>
+<td>Doesn't make sense on .net core, use <code>.cs</code></td>
+</tr>
+<tr>
+<td><code>Code.Something()</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>2sxc 11</td>
+<td>Doesn't make sense on .net core, use <code>.cs</code></td>
+</tr>
+<tr>
+<td><code>GetCode(*.cs)</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 16</td>
+<td>works cross-platform, req. <code>RazorTyped</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sub-view-data">Sub-View Data</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Dnn</th>
+<th style="text-align: center;">Oqtane</th>
+<th>Compatibility</th>
+<th>Notes / Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Model</code> object</td>
+<td style="text-align: center;">⛔</td>
+<td style="text-align: center;">✅</td>
+<td>.net core</td>
+<td>Use <code>DynamicModel</code></td>
+</tr>
+<tr>
+<td><code>PageData</code> object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>.net 4.5</td>
+<td>Use <code>DynamicModel</code></td>
+</tr>
+<tr>
+<td><code>DynamicModel</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 12</td>
+<td>Works in old &amp; new</td>
+</tr>
+<tr>
+<td><code>MyModel</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 16</td>
+<td>Works in old &amp; new - req. <code>RazorTyped</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="razorblade-extension">RazorBlade Extension</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Dnn</th>
+<th style="text-align: center;">Oqtane</th>
+<th>Compatibility</th>
+<th>Notes / Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tag</code> object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Tags</code> object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Text</code> object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>HtmlPage</code> object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>-</td>
+<td>Use <a class="xref" href="../../net-code/services/page/index.html">IPageService</a></td>
+</tr>
+<tr>
+<td><code>IPageService</code></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>2sxc 12.02</td>
+<td>see <a class="xref" href="../../net-code/services/page/index.html">IPageService</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="koi-extension">Koi Extension</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Dnn</th>
+<th style="text-align: center;">Oqtane</th>
+<th>Compatibility</th>
+<th>Notes / Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Koi</code> static object</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⛔</td>
+<td>Not supported</td>
+<td>Use Dependency Injection version of Koi 2</td>
+</tr>
+<tr>
+<td><code>Koi</code> <code>ICss</code> Service</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td>v12.01</td>
+<td>New Koi 2. See <a class="xref" href="../../net-code/services/koi/index.html">ICss</a></td>
+</tr>
+</tbody>
+</table>
+<p>Koi 2 supports the CSS Information API, but not the class-generating API. We probably won't implement it, as it was too complicated.</p>
+<h3 id="not-yet-implemented-features-in-oqtane">Not yet Implemented features in Oqtane</h3>
+<ol>
+<li>CustomizeData / CustomizeSearch are not implemented yet, we're not yet sure how we want to implement this</li>
+</ol>
+<h2 id="webapis">WebAPIs</h2>
+<ol>
+<li>We should probably create a list of viable base classes and explain the differences</li>
+</ol>
+<h2 id="rest-apis">REST APIs</h2>
+<p>No relevant differences, except that the root paths to the APIs are different.
+This is automatically handled if you use 2sxc, and for external code you can get the exact endpoints in the admin UI.</p>
+<h2 id="javascript-differences">JavaScript Differences</h2>
+<p>No relevant differences, except that Oqtane doesn't include jQuery by default.
+If you need jQuery, activate it using the <a class="xref" href="../../net-code/services/page/index.html">IPageService</a>.</p>
+<h2 id="css-frameworks--html-differences">CSS-Frameworks / HTML Differences</h2>
+<p>No relevant differences.
+Note that Oqtane by default uses Bootstrap5 so the output may look a bit different.</p>
+<h2 id="image-resizing">Image Resizing</h2>
+<p>In Oqtane, only ADAM files and App-files can use the ImageResizer.
+Files from the normal file management cannot use it.</p>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Last update 2021-10-25 with regards to 2sxc 12.06 LTS</li>
+<li>RazorBlade feature to change page title or set headers etc. - work in v16.05</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/platforms/differences.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

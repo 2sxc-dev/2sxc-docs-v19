@@ -1,0 +1,75 @@
+- name: Introduction
+  uid: Abyss.Contribute.Docs.Introduction
+
+- name: Start with VS-Code
+  uid: Abyss.Contribute.Docs.Setup.Index
+- name: Preview the Docs Locally
+  uid: Abyss.Contribute.Docs.Setup.Preview
+
+- name: Docs-Project Structure
+  uid: Abyss.Contribute.Docs.Project.Structure
+
+- name: Conventions
+  uid: Abyss.Contribute.Docs.Conventions
+
+- name: Build
+  uid: Abyss.Contribute.Docs.Build.Index
+  items:
+  - name: Build Overview
+    uid: Abyss.Contribute.Docs.Build.Index
+  - name: Build Docs Only
+    uid: Abyss.Contribute.Docs.Build.DocsOnly
+  - name: Build Docs and Code
+    uid: Abyss.Contribute.Docs.Build.DocsAndCode
+
+- name: Edit the Docs
+  items:
+  - name: Preview while Typing
+    uid: Abyss.Contribute.Docs.Edit.PreviewMarkdown
+
+  - name: Table of Contents
+    uid: Abyss.Contribute.Docs.Edit.Toc
+
+  - name: Markdown Basics
+    uid: Abyss.Contribute.Docs.Edit.Markdown.Index
+  - name: Markdown Code Snippets
+    uid: Abyss.Contribute.Docs.Edit.MarkdownCode
+  - name: Extract Code from Source
+    uid: Abyss.Contribute.Docs.Edit.ShowCode
+
+  - name: Images and Lightboxes
+    uid: Abyss.Contribute.Docs.Edit.Images
+  - name: Image Galleries
+    uid: Abyss.Contribute.Docs.Edit.Galleries
+  - name: Mermaid Diagrams
+    uid: Abyss.Contribute.Docs.Edit.Mermaid
+  - name: Authors Attribution
+    uid: Abyss.Contribute.Docs.Edit.Attribution
+
+- name: Document Source Code
+  items:
+  - name: C# Code
+    uid: Abyss.Contribute.Docs.SourceCode.Index
+  - name: Document Namespaces
+    uid: Abyss.Contribute.Docs.SourceCode.Namespaces
+
+- name: Deploy to GitHub
+  uid: Abyss.Contribute.Docs.Deploy.Index
+
+- name: Technical Implementation
+  uid: Abyss.Contribute.Docs.Implementation.Index
+  items:
+  - name: DocFX Configuration
+    uid: Abyss.Contribute.Docs.Implementation.Configuration
+  - name: C# Docs Generation
+    uid: Abyss.Contribute.Docs.Implementation.CSharpCode
+  - name: JavaScript Docs Generation
+    uid: Abyss.Contribute.Docs.Implementation.JsCode
+  - name: DocFX Templates
+    uid: Abyss.Contribute.Docs.Implementation.DocfxTemplates
+  - name: JS / CSS / WebPack
+    uid: Abyss.Contribute.Docs.Implementation.TsCssWebpack
+  - name: TOC Customizations
+    uid: Abyss.Contribute.Docs.Implementation.TocCustomizations
+  - name: Find and Redirect Permalink
+    uid: Abyss.Contribute.Docs.Implementation.Permalink

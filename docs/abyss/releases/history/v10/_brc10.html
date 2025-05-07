@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title> | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v10/_brc10.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="breaking-changes-in-eav-and-2sxc">Breaking Changes in EAV and 2sxc</h2>
+<p>We try to minimize breaking changes, and most breaking changes won't affect your work, because it's internal API.
+We're documenting it here to ensure you know what happened, in case you still run into this.</p>
+<h3 id="summary">Summary</h3>
+<blockquote>
+<p>Version 10 has a lot of small breaking changes because
+we restructured the internal API so it's consistent when we publish it.
+All these things shouldn't affect you, because they were internal APIs,
+but in case it does - here's what we did.</p>
+</blockquote>
+<h3 id="version-1022-and-1023">Version 10.22 and 10.23</h3>
+<ol>
+<li>Renamed the <code>RootDataSource</code> and the Interface to <code>IAppRoot</code></li>
+<li>Split SOC of the <code>AppRoot</code> DataSource so that caching, Root-Metadata and ListCache is fully separate</li>
+<li>Since the Logging system now auto-picks up the code lines and names of the methods, we simplified the commands and dropped some parameters.</li>
+<li>Moved quite a bit of the DataSource objects into sub-objects, again for SOC.</li>
+</ol>
+<h3 id="version-1020-04-ca-2019-12-03">Version 10.20-04 (ca. 2019-12-03)</h3>
+<ol>
+<li>Renamed <code>DataTableDataSource</code> to <code>DataTable</code>, old name still works.</li>
+<li>Renamed <code>ExternalDataDataSource</code> to <code>ExternalData</code>, old name still works.</li>
+<li>Renamed <code>ToSic.SexyContent.DataSources.ModuleDataSource</code> to <code>ToSic.Sxc.DataSources.CmsBlock</code>, old name still works.</li>
+<li>Renamed <code>ToSic.Eav.DataSources.VisualQuery.VisualQueryAttribute</code> to <code>ToSic.Eav.DataSources.Queries.VisualQueryAttribute</code>, old name still works.</li>
+<li>Renamed <code>ToSic.SexyContent.Environment.Dnn7.Factory</code> to <code>ToSic.Sxc.Dnn.Factory</code>, old name still works.</li>
+<li>Renamed <code>ToSic.Eav.DataSources.BaseDataSource</code> to <code>ToSic.Eav.DataSources.DataSourceBase</code> for consistency, old name still works.</li>
+<li>Moved the LookUp namespaces into the Core DLL</li>
+</ol>
+<h3 id="version-1020-02-ca-2019-11-22">Version 10.20-02 (ca. 2019-11-22)</h3>
+<p>More internal changes which shouldn't affect anybody, but make the API ready for public docs...</p>
+<ol>
+<li>Moved/renamed the internal <code>Eav.AppDataPackage</code> to <code>Eav.Apps.AppState</code></li>
+<li>Moved/renamed some internal interfaces like <code>Entity...</code></li>
+<li>Did a major change for how <code>Attribute&lt;T&gt;</code> for relationships work.<br>
+Before they were <code>Attribute&lt;EntityRelationship&gt;</code> and now they are <code>Attribute&lt;IEnumerable&lt;IEntity&gt;&gt;</code>.<br>
+This also affects <code>Value&lt;EntityRelationship&gt;</code> which is now <code>Value&lt;IEnumerable&lt;IEntity&gt;&gt;</code></li>
+<li>Moved <code>Tenant&lt;T&gt;</code> and <code>Container&lt;T&gt;</code> including matching interfaces to <code>Eav.Environment</code></li>
+<li>Renamed <code>IAppIdentity</code> to <code>IInAppAndZone</code> and <code>IZoneIdentity</code> to <code>IInZone</code></li>
+<li>Renamed <code>ICacheKeyProvider</code> to <code>ICacheKey</code></li>
+<li>Renamed <code>CacheChainedIEnumerable&lt;T&gt;</code> to <code>SynchronizedList&lt;T&gt;</code></li>
+<li>Moved/Renamed <code>MetadataFor</code> to <code>Eav.Metadata.Target</code>. Left old name compatible.</li>
+<li>Moved some extension methods for IEntity from <code>ToSic.Eav.Data.Query</code> to <code>ToSic.Eav.Data</code></li>
+<li>Changed <code>Permissions</code> to be strong-typed EntityBased objects</li>
+</ol>
+<h3 id="version-102001-2019-11-12">Version 10.20.01 (2019-11-12)</h3>
+<ol>
+<li>Internal code now uses the term <code>Header</code> instead of <code>ListContent</code>. External code provides both for backward-compatibility</li>
+<li>moved internal interfaces for engines (Razor/Token) to final namespaces <code>ToSic.Sxc.Engines</code>
+<ol>
+<li><code>IEngine</code></li>
+<li><code>EngineBase</code></li>
+<li><code>ITokenEngine</code></li>
+<li><code>IRazorEngine</code></li>
+</ol>
+</li>
+<li>corrected architecture - some template-management code had slipped into <code>Eav.Apps</code>, was moved back to <code>Sxc.Apps</code></li>
+<li>The <code>Template</code> object was moved from <code>Eav.Apps</code> to <code>Sxc.Views</code> and we added an interface <code>IView</code>.
+We also renamed the internal properti <code>ViewNameInUrl</code> to <code>UrlIdentifier</code>.</li>
+<li>To correct the API a CmsManager was created extending the AppManager, which is in charge of Views</li>
+<li>Moving internal stuff related to content blocks
+<ol>
+<li><code>IContentBlock</code> from <code>SexyContent.Interfaces</code> to <code>Sxc.Blocks</code></li>
+<li>from <code>ToSic.SexyContent.ISxcInstance</code> to <code>ToSic.Sxc.Blocks.IBlockContext</code></li>
+<li>actually moved a lot of things there incl. <code>ContentBlock</code> now <code>BlockConfiguration</code> and more - all internal stuff</li>
+</ol>
+</li>
+<li>Moving the <code>ToSic.SexyContent.App</code> to <code>ToSic.Sxc.Apps.App</code></li>
+<li>In a razor page, we added the preferred <code>Purpose</code>. The old <code>InstancePurpose</code> will still work</li>
+<li>Placed some things we just moved in 10.20 to a final place - since it's a very recent change, we updated the docs in the 10.20.00 section</li>
+</ol>
+<h4 id="changed-but-completely-internal">Changed, but completely internal</h4>
+<ol>
+<li>Some namespaces on <code>SexyContent.ContentBlocks</code> were moved to <code>Sxc.Blocks</code></li>
+</ol>
+<h3 id="version-102000-2019-11-05">Version 10.20.00 (2019-11-05)</h3>
+<ol>
+<li>the internal interface <code>IInPageEditingHelpers</code> was moved from <code>ToSic.SexyContent.Interfaces</code> to the namespace <code>ToSic.Sxc.Web</code></li>
+<li>the internal interface <code>ILinkHelper</code> was moved to <code>ToSic.Sxc.Web</code></li>
+<li>the internal interface <code>IHtmlHelper</code> was moved to <code>ToSic.Sxc.Dnn</code></li>
+<li>the property <code>Configuration</code> on dynamic entities was deprecated in 2sxc 4 and removed in 2sxc 10 - we don't think it was ever used</li>
+<li>moved internal Metadata interfaces (ca. 5) into final namespace <a class="xref" href="../../../../api/dot-net/ToSic.Eav.Metadata.html">ToSic.Eav.Metadata</a></li>
+<li>Moved a bunch of internal interfaces which we believe were never used externally from <code>ToSic.Eav.Interfaces</code> to <code>ToSic.Eav.Data</code>
+<ol>
+<li><code>ToSic.Eav.Data.IAttribute</code></li>
+<li><code>ToSic.Eav.IAttribute&lt;T&gt;</code></li>
+<li><code>IAttributeBase</code></li>
+<li><code>IAttributeDefinition</code></li>
+<li><code>IChildEntities</code></li>
+<li><code>IContentType</code></li>
+<li><code>IDimension</code></li>
+<li><code>IEntityLight</code></li>
+<li><code>ILanguage</code></li>
+<li><code>IRelationshipManager</code></li>
+<li><code>IValue</code></li>
+<li><code>IValue&lt;T&gt;</code></li>
+<li><code>IValueOfDimension&lt;T&gt;</code></li>
+</ol>
+</li>
+<li>Moved a bunch of internal interfaces which we believe were never used externally from <code>ToSic.Eav.Apps.Interfaces</code> to <code>ToSic.Eav.Apps</code>
+<ol>
+<li><code>IApp</code></li>
+<li><code>IAppData</code></li>
+<li><code>IAppDataConfiguration</code></li>
+<li><code>IAppEnvironment</code></li>
+<li><code>IEnvironmentFactory</code></li>
+<li><code>IInstanceInfo</code></li>
+<li><code>IItemListAction</code></li>
+<li><code>IPagePublishing</code></li>
+<li><code>ITenant</code></li>
+<li><code>IZoneMapper</code></li>
+</ol>
+</li>
+<li>the internal namespace <code>ToSic.Eav.ValueProvider</code> was changed to <code>ToSic.Eav.LookUp</code> and inside it<br>
+we renamed a bunch of internal interfaces and objects which we believe were never used externally</li>
+</ol>
+<h4 id="deprecatedchanged-but-not-broken">Deprecated/Changed, but not broken</h4>
+<ol>
+<li>the internal interface <code>ToSic.SexyContent.IAppAndDataHelpers</code> was renamed to <code>ToSic.Sxc.IDynamicCode</code> but the old interface still exists, so it shouldn't break<br>
+<em>it was used by Mobius Forms</em></li>
+<li>moved <code>ToSic.Eav.Interfaces.IEntity</code> to <code>ToSic.Eav.Data.IEntity</code> - but preserved the old interface for compatibility
+<em>it was used everywhere</em></li>
+</ol>
+<h4 id="clean-up-but-not-broken">Clean-Up, but not broken</h4>
+<ol>
+<li>We're transitioning to the term <code>Header</code> instead of <code>ListContent</code> in templates.<br>
+The Razor pages and WebApi have this starting now, while old terms still work.
+Note that we're <em>not</em> creating a <code>HeaderPresentation</code>, because you should use <code>Header.Presentation</code></li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v10/_brc10.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

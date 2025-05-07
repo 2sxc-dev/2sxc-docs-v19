@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>API of Connector Object in Custom Input Fields | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="API of Connector Object in Custom Input Fields | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/custom-fields/connector.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.CustomFields.Connector">
+<h1 id="api-of-connector-object-in-custom-input-fields">API of Connector Object in Custom Input Fields</h1>
+
+<div class="float-end context-box-summary highlight-max" width="400px">
+  <div class="fancybox-auto svg-highlight" style="width: 100%">
+<svg version="1.1" baseprofile="full" viewbox="0 0 3229 2529" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../pages/basics/stack/assets/stack-detailed.png" x="0" y="0" height="100%" width="100%"></image>
+  <!-- Data Highlights -->
+  <rect class="svg-highlight prepared data-all" x="0%" y="82%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-data" x="19%" y="82%" width="64%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-all" x="3%" y="82%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-app" x="3%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-assets-entities" x="18.5%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-configuration" x="3%" y="93%" width="17%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared data-entities" x="34%" y="82%" width="33%" height="10.5%"></rect>
+  <rect class="svg-highlight prepared data-content-types" x="34%" y="89%" width="33%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-app" x="34%" y="89%" width="17.5%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-global" x="50%" y="89%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-external" x="65.5%" y="82%" width="17%" height="10.5%"></rect>
+  <!-- ADAM -->
+  <rect class="svg-highlight prepared adam" x="18.5%" y="89%" width="17%" height="8%"></rect>
+  <!-- Server -->
+  <rect class="svg-highlight prepared server-all" x="0%" y="41%" width="84%" height="38%"></rect>
+  <!-- Prepare -->
+  <rect class="svg-highlight prepared prepare-all" x="0%" y="61%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared query" x="44.5%" y="61%" width="34%" height="18%"></rect>
+  <rect class="svg-highlight prepared query-engine" x="44.5%" y="70%" width="34%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-built-in" x="44.5%" y="62.5%" width="18%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-app" x="60.5%" y="62.5%" width="17%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-datasource" x="71%" y="70%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-params" x="65%" y="70%" width="10%" height="7%"></rect>
+  <!-- Data Source -->
+  <rect class="svg-highlight prepared datasource" x="86%" y="51%" width="13%" height="16%"></rect>
+  <rect class="svg-highlight prepared datasource-custom" x="87.5%" y="54.5%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared datasource-built-in" x="87.5%" y="59%" width="12%" height="7%"></rect>
+  <rect class="svg-highlight prepared lookup" x="86%" y="66%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared lookup-engine" x="87.5%" y="69%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared lookup-sources" x="87.5%" y="73%" width="12%" height="7%"></rect>
+  <!-- Optimzers -->
+  <rect class="svg-highlight prepared asset-optimizer" x="3%" y="49.5%" width="13.5%" height="8%"></rect>
+  <rect class="svg-highlight prepared image-resizer" x="15%" y="30%" width="17%" height="34%"></rect>
+  <!-- Process / Awesomize -->
+  <rect class="svg-highlight prepared process-all" x="0%" y="41%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-cs" x="34%" y="41%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-razor" x="34.3%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-razor-app" x="34.3%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-razor-engine" x="34.3%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-apis" x="50%" y="42%" width="34%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api" x="50%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api-app" x="50%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-web-api-engine" x="50%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-libraries" x="47%" y="47%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-headless" x="65.5%" y="49.5%" width="17%" height="7%"></rect>
+  <!-- Libraries -->
+  <rect class="svg-highlight prepared libraries" x="86%" y="38%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared libraries-app" x="87.5%" y="41%" width="12%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared libraries-built-in" x="87.5%" y="46%" width="12%" height="6%"></rect>
+  <!-- data formats -->
+  <rect class="svg-highlight prepared format-json-custom" x="50%" y="32%" width="17%" height="14%"></rect>
+  <rect class="svg-highlight prepared format-json-headless" x="65.5%" y="32%" width="17%" height="21%"></rect>
+  <rect class="svg-highlight prepared format-json-edit" x="74%" y="30%" width="19%" height="23%"></rect>
+  <!-- Browser -->
+  <rect class="svg-highlight prepared browser-all" x="0%" y="0%" width="100%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-show" x="0%" y="0%" width="50%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact-edit" x="47%" y="0%" width="37%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact" x="47%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit" x="64%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit-ui" x="81.5%" y="0%" width="18%" height="34%"></rect>
+  <!-- Frameworks -->
+  <rect class="svg-highlight prepared frameworks-browser" x="0%" y="0%" width="17.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared frameworks-CSS" x="0%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-js" x="0%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-spa" x="0%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- App show parts -->
+  <rect class="svg-highlight prepared show-html" x="15.8%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-js" x="15.8%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-spa" x="15.8%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- Interact parts -->
+  <rect class="svg-highlight prepared interact-mobile" x="48.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared interact-2sxc" x="48.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit parts -->
+  <rect class="svg-highlight prepared edit-auto" x="65.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared edit-custom" x="65.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit UI parts -->
+  <rect class="svg-highlight prepared edit-ui" x="82.5%" y="3%" width="17.5%" height="18%"></rect>
+  <rect class="svg-highlight prepared edit-ui-custom" x="82.5%" y="20%" width="17.5%" height="12%"></rect>
+  <!-- SPA parts -->
+  <rect class="svg-highlight prepared spa-all" x="0%" y="21%" width="83%" height="12%"></rect>
+  <rect class="svg-highlight prepared spa-2sxc-js" x="31.5%" y="21%" width="52%" height="12%"></rect>
+  <!-- Custom highlight boxes - can be controlled by in-page CSS -->
+  <rect class="svg-highlight highlight1"></rect>
+  <rect class="svg-highlight highlight2"></rect>
+  <rect class="svg-highlight highlight3"></rect>
+  <rect class="svg-highlight highlight4"></rect>
+  <rect class="svg-highlight highlight5"></rect>
+</svg>
+  </div>
+  <div class="overlay-description">
+<p>you are here (click to zoom) - discover the <a class="xref" href="../../basics/index.html">stack</a></p>
+  </div>
+</div>
+<style>.context-box-summary .edit-ui-custom { visibility: visible; } </style>
+<p>The <code>connector</code> object provides values to your WebComponent and let's you communicate with the form. Here's the API you need:</p>
+<h2 id="background">Background</h2>
+<p>The <code>connector</code> object is attached by the form to your custom WebComponent before the <code>connectedCallback()</code> is triggered. So you can access it using <code>this.connector</code>.</p>
+<h2 id="connector-api"><code>connector</code> API</h2>
+<ul>
+<li><code>data</code> - a <code>ConnectorData&lt;T&gt;</code> object which has various properties you need to read/write values</li>
+<li><code>dialog</code> - a <code>ConnectorDialog&lt;T&gt;</code> object which lets you open/close details-dialogs in your component</li>
+<li><code>field</code> - contains a <code>FieldConfig</code> object telling you about the field, it's configuration etc.</li>
+<li><code>field$</code> - an observable with the field configuration, will emit a new <code>FieldConfig</code> whenever it changes</li>
+<li><code>loadScript(...)</code> - a helper method to load additional javascript files</li>
+<li><code>_experimental</code> - internal API for things which do not have a stable API yet</li>
+</ul>
+<h2 id="connectordata-object"><code>connector.data</code> Object</h2>
+<p>The data object is of type <code>ConnectorData&lt;T&gt;</code>. It has these members:</p>
+<pre><code class="lang-ts">export interface ConnectorData&lt;T&gt; {
+
+  /** Current value of the field */
+  value: T;
+
+  /**
+   * Client updates value in the host
+   * @param newValue - New value of the field from the client
+   */
+  update(newValue: T): void;
+
+  /**
+   * Client adds callback functions to be executed every time value changes in the host.
+   * So call it to register your function which should run on change.
+   *
+   * Use this if you are not familier with observables.
+   * @param callback - Function to be executed every time value changes in the host
+   */
+  onValueChange(callback: (newValue: T) =&gt; void): void;
+
+  /**
+   * Observable on field value
+   * Use this if you are familiar with observables.
+   */
+  value$: Observable&lt;T&gt;;
+
+  /**
+   * Fired before form is saved.
+   * It tells your control that the form is about to save, and that this is the last moment you can update the value.
+   * Used in case your input doesn't always push changed values, like in WYSIWYG and other complex input fields which may buffer changes.
+   */
+  forceConnectorSave$: Observable&lt;T&gt;;
+}
+</code></pre>
+<h2 id="connectordialog-object"><code>connector.dialog</code> Object</h2>
+<p>This is the API to open a new dialog or close it again.</p>
+<pre><code class="lang-ts">/**
+ * Responsible for opening/closing dialogs in a control.
+ */
+export interface ConnectorDialog&lt;T&gt; {
+  /**
+   * Opens a dialog and shows a WebComponent inside it.
+   *
+   * @param {string} [componentTag] name of the WebComponent which will be loaded inside the dialog
+   */
+  open(componentTag?: string): void;
+
+  /**
+   * Closes the dialog
+   */
+  close(): void;
+}
+</code></pre>
+<h2 id="connectorfield-fieldconfig-object"><code>connector.field</code> FieldConfig Object</h2>
+<p>This gives you information about the field. For simplity in maintaining the docs, here's a copy of the type file:</p>
+<pre><code class="lang-ts">export interface FieldConfig {
+
+  /** Static name of the field */
+  name: string;
+
+  /** Ordering index of the field inside the form */
+  index: number;
+
+  /** Field label */
+  label: string; // updated on language change
+
+  /** Field placeholder text */
+  placeholder: string; // never updated atm. Probably will be
+
+  /** Input type of the field. e.g. string-default, string-dropdown, etc. */
+  inputType: string;
+
+  /** Data type of the field. e.g. String, Hyperlink, Entity, etc. */
+  type: string;
+
+  /** Tells whether the field is required */
+  required: boolean; // updated on language change
+
+  /** Tells whether the field is disabled. This is the initial value that was set in settings for this field */
+  disabled: boolean;
+
+  settings: FieldSettings;
+}
+</code></pre>
+<h2 id="connectorfield-and-connectorfield-fieldconfig-object"><code>connector.field</code> and <code>connector.field$</code> FieldConfig Object</h2>
+<p>The <code>connector.field</code> object tells you how the field is configured. Note that if you use this object directly, you won't be notified of changes. For that you should use the <code>connector.field$</code> stream.</p>
+<pre><code class="lang-ts">export interface FieldConfig {
+
+  /** Static name of the field */
+  name: string;
+
+  /** Ordering index of the field inside the form */
+  index: number;
+
+  /** Field label */
+  label: string; // updated on language change
+
+  /** Field placeholder text */
+  placeholder: string; // never updated atm. Probably will be
+
+  /** Input type of the field. e.g. string-default, string-dropdown, etc. */
+  inputType: string;
+
+  /** Data type of the field. e.g. String, Hyperlink, Entity, etc. */
+  type: string;
+
+  /** Tells whether the field is required */
+  required: boolean; // updated on language change
+
+  /** Tells whether the field is disabled. This is the initial value that was set in settings for this field */
+  disabled: boolean;
+
+  /** 
+   * Settings of the field, as configured in the UI 
+   * This is just a normal dictionary-object with keys having the same names as the fields in the configuration dialog. 
+   * Note that most keys are PascalCase, not camelCase.
+   */
+  settings: FieldSettings;
+}
+</code></pre>
+<h2 id="connectorloadscript-method"><code>connector.loadScript()</code> Method</h2>
+<pre><code class="lang-ts">  /**
+   * Load a script into the browser - but only once. 
+   * Makes sure that script with the same source is loaded only once and executes callback.
+   *
+   * @param {string} globalObject - name on window.xxx which is checked if the js is already loaded
+   * @param {string} src - path to the script
+   * @param {(...args: any[]) =&gt; any} callback - your callback function
+   * @memberof Connector
+   */
+  loadScript(globalObject: string, src: string, callback: (...args: any[]) =&gt; any): void;
+</code></pre>
+<h2 id="read-also">Read Also</h2>
+<ul>
+<li><a class="xref" href="index.html">How To Create Custom Input Fields</a></li>
+<li><a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/ui-fields">Tutorials for Custom Input Fields</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 11.02</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/custom-fields/connector.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

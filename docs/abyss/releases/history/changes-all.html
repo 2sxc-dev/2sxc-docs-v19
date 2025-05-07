@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Changes Overview for 2sxc/EAV | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Changes Overview for 2sxc/EAV | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/changes-all.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Releases.History.AllChanges">
+<h1 id="changes-overview-for-2sxceav">Changes Overview for 2sxc/EAV</h1>
+
+<p>This page collects all the changes of all versions into one place, making it easier to search for certain keywords.</p>
+<p>👉 if you only care about breaking, please check <a class="xref" href="changes-breaking.html">Breaking Changes Overview for 2sxc/EAV</a></p>
+<hr>
+<h2 id="version-19">Version 19</h2>
+<h3 id="2sxc-v1900-2024-12-21">2sxc v19.00 (2024-12-21)</h3>
+<ol>
+<li>🅰️ Update UI to Angular 19 and Angular Material 19</li>
+<li>✅ Finalize Pickers main features
+<ol>
+<li>Radio</li>
+<li>Checkboxes</li>
+<li>Preview Material Icon</li>
+<li>Preview SVG</li>
+<li>Preview Image (jpg/png)</li>
+<li>Configurations: <code>AppAssets</code>, <code>CSS</code>, <code>Entity</code>, <code>Query</code>, <code>CustomList</code>, <code>CSV</code></li>
+<li>Preview features</li>
+<li><code>Info</code> <code>Link</code> <code>Tooltip</code></li>
+</ol>
+</li>
+<li>✅ New AppAssets DataSource and <code>System.AppAssets</code> query to get assets for pickers such as all SVGs in a folder.</li>
+<li>✅ Double-Encrypt sensitive data on HTTP-Transport</li>
+<li>✅ Ability to switch UI languages (not just content-languages)</li>
+<li>✅ GPS Picker enhancements with <strong>my current location</strong> and searching for addresses which were not in the data</li>
+<li>✅ Ability to delete a field (column) which had entity-relationships in it (previously SQL stopped you)</li>
+<li>✅ New <code>Toolbar.Audience(...)</code> API to show it when needed</li>
+<li>✅ Improve UI for creating fields for content-types, better dropdowns, longer etc.</li>
+</ol>
+<p>Breaking Changes</p>
+<ol>
+<li>An interface called <code>ToSic.Sxc.DataSources.IBlockInstance</code> was removed since it was identical to <code>ToSic.Eav.DataSource.IDataSource</code> and should not be used anywhere.</li>
+</ol>
+<p>Bugfixes</p>
+<ol>
+<li>🐞 Fix: various issues around the Pickers</li>
+<li>🐞 Fix: Public forms called a backend endpoint which was protected, and got errors (though it wasn't necessary)</li>
+</ol>
+<p>Internal</p>
+<ol>
+<li>✅ Refactor toolbar and image/picture objects to use <code>record</code>s instead of <code>class</code>es in C#</li>
+</ol>
+<h3 id="2sxc-v1901-2025-01-16">2sxc v19.01 (2025-01-16)</h3>
+<p>Note: the version was incorrectly released as 19.00.01.</p>
+<ol>
+<li>✅ Implemented system to use the <code>As&lt;...&gt;</code> API with interfaces, which will automatically find the right class to instantiate</li>
+<li>✅ Created new <code>DataModel</code> system in the <code>Models</code> and <code>Data.Model</code> namespace #3543</li>
+<li>✅ Created data model for <code>IFileModel</code> and <code>IFolderModel</code> which matches the entities returned by the <code>AppAssets</code> DataSource</li>
+<li>✅ Created data model for <code>IUserModel</code> and <code>IUserRoleModel</code> which matches entities returned by the <code>Users</code> and <code>UserRoles</code> DataSource</li>
+<li>✅ Renamed <code>Roles</code> DataSource to <code>UserRoles</code> (could be breaking change for very few users)</li>
+<li>✅ Created data model <code>ISiteModel</code> which matches data returned by the <code>Sites</code> DataSource</li>
+<li>✅ created data model <code>IPageModel</code> which matches data returned by <code>Pages</code> DataSource</li>
+<li>✅ Finished the <code>ICacheService</code> on <code>Kit.Cache</code> #3536</li>
+<li>✅ Finished the <code>AppAssets</code> Datasource and documented it #3541</li>
+<li>✅ New <code>ToSic.Sxc.Data.Models</code> with <code>ModelWithEntity</code> and <code>ModelWithItem</code> base classes</li>
+<li>✅ Changed <code>System.Text.Json</code> to use .net 9 #3547</li>
+<li>✅ Upgraded to Oqtane 6+ so it's only compatible with Oqtane 6.0.1+ now #3548</li>
+<li>🅰️ Update Date/Time picker to use Angular Material Time Picker</li>
+<li>🩸 Oqtane: Set minimum version to 06.00.01 and minimum .net to 9 because of security warnings</li>
+</ol>
+<h3 id="minor">Minor</h3>
+<ol>
+<li>🅰️ Fix some inconsistencies in the GPS UI</li>
+<li>🅰️ Minor update Google Maps API to latest (was using old API before)</li>
+<li>✅ Improved Custom DataSource so you can access the <code>List</code> and <code>GetStream(...)</code> #3540</li>
+</ol>
+<h3 id="bugfixes">Bugfixes</h3>
+<ol>
+<li>🐞 Bug: Fix access to global and site settings</li>
+<li>🐞🩸 Oqtane bugs with JavaScripts due to changes in Oqtane 6.0 and 6.0.1 - affected <code>Interactive</code> mode #3533</li>
+<li>🪲 Minor bugfixes in new <code>AppAssets</code> DataSource</li>
+</ol>
+<h3 id="internal-stuff">Internal Stuff</h3>
+<ol>
+<li>✅ Refactor internal <code>Entity</code>, <code>Attribute</code> <code>Values</code>, <code>ContentType</code> to use <code>record</code></li>
+<li>✅ Refactor internal SaveOptions to use <code>record</code></li>
+<li>✅ Refactor internal <code>Entity</code> to be init-only (where were a few set properties left for legacy reasons)</li>
+<li>🏃🏼‍➡️ Start architecture for a Task-system to run things #3545</li>
+<li>⚠️ Enhancement in the <code>Pages</code> DataSource - property renames <code>Visible</code> to <code>IsNavigation</code> and <code>Clickable</code> to <code>IsClickable</code></li>
+<li>⚠️ Enhancement to the <code>Roles</code> DataSource - renamed to <code>UserRoles</code> - breaking change!</li>
+</ol>
+<h3 id="2sxc-v1902-2025-01-21">2sxc v19.02 (2025-01-21)</h3>
+<ol>
+<li>✅ <code>IUserService</code> on <code>Kit.User</code> #3552 which can get one/all users and all roles of Dnn/Oqtane in the same signature as the <code>Users</code> DataSource</li>
+<li>✅ better structure for models in <code>Cms.Users</code>, <code>Cms.Pages</code> etc.</li>
+<li>⚠️ Renamed the system query <code>System.Roles</code> to <code>System.UserRoles</code> - breaking change!</li>
+</ol>
+<p>Minor</p>
+<ol>
+<li>✅ Ensure that <code>As&lt;...&gt;</code> API allows the new model interfaces just like <code>AsList&lt;...&gt;</code> #3551</li>
+<li>🐞 Bug: previous release a few days ago had an issue exporting Apps - files in the root folder were missing</li>
+<li>🐞 Bug: previous release a few days ago had issues saving hidden items - they were visible</li>
+<li>🐞 Bug: App name and version did not show in App Admin UI</li>
+<li>💪🏼 Cleanup internal APIs on an internal interface <code>IEntityLight</code> which is not public. Properties: <code>Title</code>, <code>Attributes</code> and <code>this[...]</code></li>
+</ol>
+<h3 id="2sxc-v1903-2025-01-22">2sxc v19.03 (2025-01-22)</h3>
+<ol>
+<li>✅ introduced <code>Custom.Data.CustomModel</code></li>
+<li>✅ Finalizing model base classes in <code>ToSic.Sxc.Data.Models</code> and attributes</li>
+<li>🐞 Bugfix editing global and site custom settings</li>
+</ol>
+<hr>
+<h2 id="version-18">Version 18</h2>
+<h3 id="2sxc-v1800-2024-07-12">2sxc v18.00 (2024-07-12)</h3>
+<ol>
+<li>✅ <code>ITemplateService</code> with <code>MergeSources(...)</code></li>
+<li>✅ Oqtane 5.1 or 5.2 SSR Release</li>
+</ol>
+<p>There's a lot more! I don't have time to describe it yet, but here's the short list</p>
+<p><a href="https://github.com/2sic/2sxc/releases/tag/v18.00.00">https://github.com/2sic/2sxc/releases/tag/v18.00.00</a></p>
+<p>...and more.</p>
+<h3 id="2sxc-v1801-2024-09-23">2sxc v18.01 (2024-09-23)</h3>
+<ol>
+<li>🔢 Pickers
+<ol>
+<li>✅ Improve Picker-UIs</li>
+<li>✅ Picker with Radio-Buttons (for patrons 🦹🏾‍♂️)</li>
+<li>✅ Picker with Checkboxes  (for patrons 🦹🏾‍♂️)</li>
+<li>✅ Pickers with tooltips, more help, etc.  (for patrons 🦹🏾‍♂️)</li>
+</ol>
+</li>
+<li>🧪 Formulas
+<ol>
+<li>✅🔁 Major refactor of internal code structure</li>
+<li>✅👨🏾‍💻 Improve visibility of formulas in the UI for dev-users (always show for developes 👨🏾‍💻)</li>
+</ol>
+</li>
+<li>🔁 Refactoring / internal
+<ol>
+<li>✅🔁 Edit-UI Drop NgRx</li>
+<li>✅🔁 Edit-UI Switch most code to Signals</li>
+<li>✅🔁 Edit-UI feature to store user settings in the local storage and session</li>
+<li>✅👨🏾‍💻 Create debugging system to log changes in production (developers 👨🏾‍💻)</li>
+</ol>
+</li>
+<li>Internal content types
+<ol>
+<li>✅ Use newer picker features for Wysiwyg and other UIs</li>
+<li>✅ String-Default (basic field) enable different Text-Wrappings</li>
+</ol>
+</li>
+<li>☢️ DNN Enhancements
+<ol>
+<li>✅☢️ Improve startup speed</li>
+</ol>
+</li>
+<li>🩸 Oqtane Enhancements
+<ol>
+<li>✅🩸 Improve DLL clean-up on startup</li>
+<li>✅🩸 Fix compile of AppCode DLLs in inner-content</li>
+<li>✅🩸 Interactive Server bugs closing signalr connections</li>
+</ol>
+</li>
+<li>🦹🏾‍♂️ Patron Features
+<ol>
+<li>✅⚡ Optimize data loading for better performance</li>
+<li>✅🔢 Many new picker features for patrons</li>
+</ol>
+</li>
+</ol>
+<h3 id="2sxc-v1802-2024-10-09">2sxc v18.02 (2024-10-09)</h3>
+<p><a href="https://github.com/2sic/2sxc/releases/tag/v18.02.00">Release notes</a></p>
+<ol>
+<li>✅ Shared Field Configurations / Content-Type Composition</li>
+<li>✅ Pickers stable
+<ol>
+<li>✅ Picker Source CSV</li>
+<li>✅ Picker Source Custom List</li>
+<li>✅ Picker Source Entity</li>
+<li>✅ Picker Source Query</li>
+<li>⌛ Picker Source CSS (BETA)</li>
+</ol>
+</li>
+<li>✅ Picker Data Type: Number now supported as well</li>
+<li>✅ Picker Outputs
+<ol>
+<li>✅ Radio buttons</li>
+<li>✅ Checkboxes</li>
+<li>✅ Auto-Inline (which will take radio/checkboxes depending on your settings)</li>
+</ol>
+</li>
+<li>✅ Picker Previews
+<ol>
+<li>✅ Font-Icon preview</li>
+<li>✅ SVG-Icon preview</li>
+<li>⌛ Image preview (BETA)</li>
+</ol>
+</li>
+<li>✅ Finalize Content-Type Composition</li>
+<li>✅ Ctrl + S (upper case) now works too</li>
+<li>✅ Ctrl + Alt + s now saves and closes</li>
+<li>✅ Host user now always sees the developer tool bar, but can unpin it for a while</li>
+<li>✅ Edit UI: Update Angular 18, Material 3, and other JS dependencies, refactor to use signals.</li>
+<li>✅ Edit UI: Massively improve pickers - ca. 90%, also with Number and CSS / SVG / Image icons</li>
+<li>✅ HotBuild: Enhance to use SHA fingerprint for cache-busting</li>
+</ol>
+<h3 id="2sxc-v1803-2024-11-05">2sxc v18.03 (2024-11-05)</h3>
+<ol>
+<li>✅ Clean up data model, remove unused table <code>ToSIC_EAV_AttributeGroups</code> (may be breaking)</li>
+<li>✅ Pickers - Stabilize most features so final</li>
+<li>✅ Tweak API for Image Service Settings, Img, Picture</li>
+<li>✅ Tweak API for Typed Items <code>.Img(..., tweak: t =&gt; t.Alt(...)...)</code> and <code>.Picture(...)</code></li>
+<li>✅ Ongoing Angular refactoring (switching to signals, deduplicate code, ...)</li>
+</ol>
+<h3 id="2sxc-v1804-2024-11-24">2sxc v18.04 (2024-11-24)</h3>
+<ol>
+<li>🐞 Bug with image generator when image was external (http) <a href="https://github.com/2sic/2sxc/issues/3500">#3500</a></li>
+<li>🐞 Bug with LightSpeed <a href="https://github.com/2sic/2sxc/issues/3502">#3502</a></li>
+<li>☢️ Search indexing bug <a href="https://github.com/2sic/2sxc/issues/3489">#3498</a></li>
+<li>🩸 Minor bugfix to ensure it works on Oqtane 6 <a href="https://github.com/2sic/2sxc/issues/3501">#3501</a></li>
+</ol>
+<h3 id="2sxc-v1805-2024-12-06">2sxc v18.05 (2024-12-06)</h3>
+<ol>
+<li>🩸 Oqtane / AppCode problems with empty AppCode.dll <a href="https://github.com/2sic/2sxc/issues/3505">#3505</a></li>
+<li>📖 Add contributing.md to all repos #3484</li>
+<li>📖 Major docs update regarding contributing to docs</li>
+<li>✅ Support Ctrl+Click in Admin-UI to open dialogs in new windows/tabs <a href="https://github.com/2sic/2sxc/issues/3496">#3496</a></li>
+<li>🐞 Bug with Visual Query Editor #3513</li>
+</ol>
+<h3 id="2sxc-v1806-2024-12-06">2sxc v18.06 (2024-12-06)</h3>
+<p>Stabilization release with one big feature:</p>
+<ol>
+<li>🚀 <a href="https://docs.2sxc.org/abyss/security/encrypt-body/index.html">Double-Encrypt Forms posted to server, to prevent CDN snooping</a> 🛡️ #3518</li>
+</ol>
+<p>Features</p>
+<ol>
+<li>✅ <code>Ctrl + Click</code> and <code>Shift + Click</code> now works in almost all Admin UIs / Lists #3496</li>
+<li>✅ Automatically sort URL parameters provided by <code>MyPage.Parameters</code> #3520</li>
+<li>✅ Ability to prioritize url parameters as needed with <code>.Prioritize(...)</code> #3521</li>
+<li>✅ Ability to flush url parameters and still preserve settings with <code>.Flush()</code></li>
+<li>Minor: add contributing.md everywhere #3484</li>
+</ol>
+<p>Bugfixes</p>
+<ol>
+<li>🩸 Oqtane issues with AppCode compiling when AppCode is empty #3505</li>
+<li>🐞 Bug toolbar opens query-editor sometimes fails #3513</li>
+<li>Minor: show better indication when item in Entity-Picker doesn't exist #3504</li>
+</ol>
+<hr>
+<h2 id="version-17">Version 17</h2>
+<h3 id="2sxc-v1700-2023-12-23">2sxc v17.00 (2023-12-23)</h3>
+<ol>
+<li>✅ DNN: Require CodeDome C# 7.3 to be installed</li>
+<li>✅ Docs infrastructure can now be multi-versioned</li>
+<li>✅ Show app icon in admin UI</li>
+<li>✅ Ctrl+Click on toolbar buttons to open in new tab</li>
+<li>✅ Completely refactor internal APIs to do advanced work and save data</li>
+<li>✅ Change UI to use Angular 17 (from Angular 14)</li>
+<li>✅ Get intellisense to work in VS Code
+<ol>
+<li>✅ Work out best way to do this in VS Code</li>
+<li>✅ Work out best way to hide non-public APIs</li>
+<li>✅ Work out best way to include docs (xml files, nuget, etc.)</li>
+</ol>
+</li>
+<li>✅ Support C# 7.3 in DNN with warning if not installed</li>
+<li>✅ System Capabilities Framework for tagging apps which need certain technologies/features</li>
+<li>✅ Crazy new compiled typed <em>shared</em> code <code>/ThisApp/Code</code> - see <a class="xref" href="../../../guides/hot-build/index.html">Hot App Code</a></li>
+<li>✅ New APIs on Typed Code
+<ol>
+<li><code>IsPublished</code></li>
+<li><code>Publishing</code></li>
+</ol>
+<ul>
+<li><code>Publishing.HasPublished</code>, <code>Publishing.HasUnpublished</code>, <code>Publishing.HasBoth</code></li>
+<li><code>Publishing.GetPublished()</code>, <code>Publishing.GetUnpublished()</code>, <code>Publishing.GetOpposite()</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="2sxc-v1701-2024-01-18">2sxc v17.01 (2024-01-18)</h3>
+<ol>
+<li>Moved almost all internal APIs in the ToSic.Sxc namespace to hidden locations #3189</li>
+<li>Marked a lot of internal APIs so that they won't appear in IntelliSense</li>
+<li>♨️ HotBuild: Improved errors in Razor so the user can better find them #3246</li>
+<li>♨️ HotBuild: Improved errors when compiling ThisApp #3247</li>
+<li>♨️ HotBuild: Support Editions such as <code>live</code> and <code>staging</code> with auto-fallback #3248</li>
+<li>♨️ Roslyn: Improve error if <code>@inherits</code> ends in semicolon #3245</li>
+<li>♨️ HotBuild: Show all compiled types in insights</li>
+<li>♨️ HotBuild: Minimize exact pre-included namespaces</li>
+<li>♨️ HotBuild: Performance Improvements</li>
+<li>🟣 Toolbars: Show hover on <code>layout</code> button after a delay with module-infos #3251</li>
+</ol>
+<p>New Features / Important Improvements</p>
+<ol>
+<li><code>Kit.PageParameters</code> now has new commands <code>Toggle(...)</code>, <code>Remove(...)</code> and <code>Filter(...)</code> see docs #3241 #3242 #3243</li>
+<li>🟣 Toolbars: Tweak Notes can now <code>delay</code> and <code>linger</code> #3250 docs</li>
+<li>Create-New File now shows templates for <code>RazorTyped</code>, <code>CodeTyped</code> and ApiTyped</li>
+<li>✏️ App-Management UI now uses a left-menu (experimental)</li>
+<li>✏️ Edit-UI: Boolean fields can now be toggled by clicking on the label</li>
+<li>🖼️ Resizer: Improve handling of images in virtual-application folders</li>
+</ol>
+<p>Bugfixes</p>
+<ol>
+<li><code>ITypedItem.Equals</code> now works #3213</li>
+<li>Old Render APIs were broken, which affected News App 4.1.1 and others #3252</li>
+<li>Fix bug with <code>UniqueKey</code> which affected HotSpots App</li>
+<li>Various minor UI bugfixes related to the entity-picker and dropdowns</li>
+</ol>
+<h3 id="2sxc-v170104">2sxc v17.01.04</h3>
+<p>Minor enhancements and bugfixes</p>
+<ol>
+<li>Image toolbar now shows resize specs 🌟 #3270</li>
+<li>Toolbar notes now support a <code>format</code> = <code>html</code> #3271</li>
+<li>Edit inner-content in accordions for non-website-admins #3234</li>
+<li>Old Razor base class - <code>PageData</code> didn't always work #3260</li>
+<li>HotBuild now respects additional assemblies from web.config #3272</li>
+</ol>
+<h3 id="2sxc-v170105">2sxc v17.01.05</h3>
+<p>minor bugfixes l enhancements including</p>
+<ol>
+<li>dropdown pills fixed #3269</li>
+<li>REST Query API fails when used from &quot;outside&quot; #3274</li>
+<li>page picker in UI is broken in 17.01.04 #3276</li>
+<li>auto-serialized <code>ITypedItem</code> and <code>IEnumerable&lt;ITypedItem&gt;</code> #3277</li>
+<li>refactor an internal old API to init app-objects #3275</li>
+<li>HotBuild Performance Improvements (locking / caching)</li>
+<li>HotBuild improve detection when CS files inherit from ThisApp base 1. classes</li>
+<li>Internal Lookup System Performance Improvements</li>
+<li>internal work for the new Picker-UI system</li>
+</ol>
+<h3 id="2sxc-v170106">2sxc v17.01.06</h3>
+<ol>
+<li>Upgrade System.Data.SqlClient #3209</li>
+<li>TweakButton on dynamic code #3279</li>
+<li>Edit menu in Dnn fix #3280</li>
+<li>Bug with dropdowns #3281</li>
+<li>Export/Import App now includes hidden entities #3282</li>
+<li>Export/Import App now includes Attribute SysSettings #3283</li>
+</ol>
+<h3 id="2sxc-v170107">2sxc v17.01.07</h3>
+<ol>
+<li>ajax reload on details-pages eg. blog-post #3287</li>
+<li>SQL DataSource can't connect #sql #3285</li>
+</ol>
+<h3 id="2sxc-v1702-2024-02-22">2sxc v17.02 (2024-02-22)</h3>
+<ol>
+<li>✅ Improve infos about layout in toolbar</li>
+<li>✅ Improve infos about image resizer in toolbar</li>
+<li>✅ Improve Create New App Experience
+<ol>
+<li>✅ Create new app template</li>
+<li>✅ Improve the new app wizard - allow selecting template</li>
+<li>✅ Improve create-app code to use the new template</li>
+</ol>
+</li>
+<li>✅ Update Monaco to latest version</li>
+<li>✅ Ability to change input config types/metadata - eg. skip <code>@String</code> when never needed</li>
+<li>✅ Improve HotBuild
+<ol>
+<li>✅ Improve initial list of included assemblies and namespaces @STV</li>
+<li>✅ Improve caching of information how to build/compile to improve speed</li>
+<li>✅ Add support for sub-folders</li>
+<li>✅ Support Editions</li>
+<li>✅ Improve error messages on building the ThisCode folder</li>
+<li>✅ Improve error messages when building Razor and C# using Roslyn</li>
+<li>✅ Improve detection so that build is locking (prevent multiple builds on high-load)</li>
+<li>✅ Create system to generate models</li>
+<li>✅ Provide special UI to build the code and debug <strong>Copilot</strong></li>
+<li>✅ Switch to <code>AppCode</code> <del>ThisApp</del></li>
+<li>✅ Provide final place for base type
+<ol>
+<li>✅ <code>Custom.Data.CustomItem</code> base class</li>
+<li>✅ GPS data</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>✅ fix/improve date picker</li>
+<li>✅ Ability to share field configurations
+<ol>
+<li>✅ Custom config inherit from multiple sources for keeping the Label</li>
+<li>✅ Preserve config on export/import</li>
+</ol>
+</li>
+</ol>
+<p><a href="https://github.com/2sic/2sxc/releases/tag/v17.02.00">https://github.com/2sic/2sxc/releases/tag/v17.02.00</a></p>
+<h3 id="2sxc-v1703-2024-03-04">2sxc v17.03 (2024-03-04)</h3>
+<ol>
+<li>✅ New Pickers released with a lot of features, incl. Sources, custom labels, help, tooltips, multi-select and much more!</li>
+<li>✅ Ability to install recommended apps in a later step!</li>
+<li>✅ New typed razor <code>RazorTyped&lt;TModel&gt;</code></li>
+<li>✅ New typed App using <code>IAppTyped&lt;TSettings, TResources&gt;</code></li>
+<li>✅ Publish <code>As&lt;Type&gt;</code> and <code>AsList&lt;Type&gt;</code> API</li>
+<li>✅ Publish <code>App.Data.GetAll&lt;TModel&gt;()</code> and <code>App.Data.GetOne&lt;TModel&gt;(id)</code> APIs</li>
+<li>✅ New <code>Custom.Data.CustomItem</code> base class with GPS data, <code>As&lt;Type&gt;</code> and <code>AsList&lt;Type&gt;</code> API</li>
+<li>✅ improve <code>App_Data/app.json</code> schema to include <code>editions</code> for Copilot</li>
+<li>✅ Add template app <code>Basic</code> and <code>Empty</code></li>
+<li>✅ Intellisense: Find way to link to the official docs from inside the help</li>
+</ol>
+<h3 id="2sxc-v1704-2024-03-11">2sxc v17.04 (2024-03-11)</h3>
+<h4 id="improvements">Improvements</h4>
+<ol>
+<li><code>MyView.Resources</code> added to complement existing <code>MyView.Settings</code> #3315</li>
+<li><code>ITypedItem.Img(...)</code> added to complement exitsing <code>ITypedItem.Picture(...)</code> #3324</li>
+<li>Dnn improve Roslyn build performance in many cases from ca. 2.5 seconds to 0.5 seconds #3322</li>
+<li>Query: Improve <code>$select</code> OData parameter</li>
+<li>REST API - add <code>$select</code> OData Parameter #3319</li>
+<li>Razor / Typed Code: add a <code>Customize</code> helper ojbect #3316</li>
+<li>Admin UI - Data Scopes now show count</li>
+<li>Add Razor compile code help for more common problem such as accessing typed-items dynamically</li>
+<li>Improve razor compile help - show errors before warnings</li>
+<li><strong>Picker</strong> - auto extract additional fields to retrieve based on placeholders in Label / Help texts etc.</li>
+</ol>
+<h4 id="generate-data-models-improvements">Generate Data Models Improvements</h4>
+<ol>
+<li>Include Scope name</li>
+<li>Include content-types in <code>Configuration</code> scope</li>
+<li><code>CustomItem</code> - implement <code>==</code> and <code>!=</code> operators to use wrapper equality</li>
+<li>Lots of docs for <a href="https://docs.2sxc.org/net-code/strongly-typed-code/index.html">custom data</a></li>
+<li><code>app.json</code> editions configuration, add <code>isDefault</code></li>
+</ol>
+<h4 id="bugfixes">Bugfixes</h4>
+<ol>
+<li>UI Date Picker - fix but with UTC offset #3321</li>
+<li>UI Page Picker - fix, was broken in 17.03.00 #3320</li>
+<li>Calling Query using JS missed the <code>Id</code> property #3325</li>
+<li>Admin: state of the DateTime Show-Time toggle didn't properly get persisted #3318</li>
+</ol>
+<h3 id="2sxc-v1705-2024-03-25">2sxc v17.05 (2024-03-25)</h3>
+<blockquote>
+<p>We believe this is stable, but ask the community to do in-depth testing so we can release an LTS</p>
+</blockquote>
+<h4 id="highlights">Highlights</h4>
+<ol>
+<li>Improved Code-Generator to be in a standalone DLL <code>ToSic.Sxc.Code.Generate</code></li>
+<li>Improved Code-Generator to generate Razor, Code and WebApi base classes</li>
+</ol>
+<h4 id="enhancements">Enhancements</h4>
+<ol>
+<li>Impove image-resize tooltip #3329</li>
+<li>$2sxc JS used in modules which are rendered into Dnn themes #3333</li>
+<li>Improve logging of parameters of DataSources (eg. Value-Filter DS)</li>
+<li>Prepare for Oqtane 5 SSR</li>
+<li>Improve architecture for generating App-objects in the background</li>
+</ol>
+<h4 id="bugs-fixed">Bugs fixed</h4>
+<ol>
+<li>various admin and replace-operations on inner-content #3299</li>
+<li>fix quickE when selecting content-blocks #3317</li>
+<li>Token templates - fix some toolbars #3328</li>
+<li>Fix issue with Oqtane urls</li>
+<li>Fix issue with Oqtane WebApis which affected Blog RSS feed</li>
+</ol>
+<h3 id="2sxc-v1706-lts-2024-03-28">2sxc v17.06 LTS (2024-03-28)</h3>
+<p>The first LTS (Long-Term-Stable) Release of 2sxc 17.</p>
+<h4 id="easter-lts-release">Easter LTS Release</h4>
+<ol>
+<li>✅ Prepare for Oqtane SSR (Server-Side Rendering)</li>
+<li>✅ Provide Code Generator for Content Types, Razor and Services</li>
+<li>✅ Improve discoverability of REST APIs</li>
+<li>✅ Document new <del>Pro</del> Typed mode</li>
+<li>✅ Document new strong-typed mode</li>
+<li>✅ Auto-Install more apps from catalog - even after some have already been installed - ca. 1d
+<ol>
+<li>✅ Feature to tell new auto-installer what apps are already installed</li>
+<li>✅ App-Auto-Installer UI to add-install apps later on</li>
+</ol>
+</li>
+<li>✅ LTS</li>
+</ol>
+<h4 id="bugfixes">Bugfixes</h4>
+<ul>
+<li>When accessing an App through another app (eg first going to Apps-Management) it show the data of the original app</li>
+<li>Opening features in Apps-Management didn't work reliably</li>
+<li>Edit-UI Picker / Dropdown code was cleaned up</li>
+<li>Copilot Razor Generator ready to use</li>
+<li>Copilot Service generator ready to use</li>
+<li>Copilot WebApi generator ready to use</li>
+<li>Copilot previously failed if the <code>AppCode</code> folder was missing</li>
+<li>Fix to a data-caching issue in 17.05 (this was important)</li>
+</ul>
+<h3 id="2sxc-v1707-2024-05-04">2sxc v17.07 (2024-05-04)</h3>
+<p>published/blogged:</p>
+<ol>
+<li>✅/✅ 2sxc 17.07</li>
+<li>✅/✅ 2shine 5.3 (May 4th)</li>
+<li>✅/✅ Content App 17.07 (May 6th)</li>
+<li>✅/✅ Mobius Form Builder 06.00 for 2sxc 17.07 (May 7th)</li>
+<li>✅/✅ Release all apps as typed (May 8th)</li>
+</ol>
+<h3 id="2sxc-v1708-2024-05-16">2sxc v17.08 (2024-05-16)</h3>
+<ol>
+<li>✅ WebApi in AppCode</li>
+<li>✅ DataSources in AppCode</li>
+<li>✅ <code>ITemplateService</code></li>
+<li>✅ Add <code>CmsContext.Block</code> and <code>CmsContext.Module.Block</code> as well as <code>Block.Guid</code></li>
+<li>✅ Cache Service internal</li>
+<li>✅ Switch Edition UI</li>
+<li>✅ Switch Edition Permissions for non-super users</li>
+<li>✅ Update Image Resizer</li>
+<li>✅ Re-Release another LTS ca. 17.09</li>
+</ol>
+<hr>
+<h2 id="version-16">Version 16</h2>
+<h3 id="2sxc-v1600-lts-2023-05-04">2sxc v16.00 LTS (2023-05-04)</h3>
+<p>No relevant changes, just minor bugfixes + our convention to upgrade the main version every 6 months.
+We mainly finished the docs for various features, so this is what is now done.</p>
+<ol>
+<li>✅ improve IConfiguration API - lighten the <code>IDataService</code> API</li>
+<li>✅ Document new data sources API</li>
+<li>✅ finish Dynamic DataSources</li>
+<li>✅ Document CDN / Asset management</li>
+<li>✅ Document Formula improvements</li>
+<li>✅ IDataService completed</li>
+<li>✅...and documented</li>
+<li>✅ New WYSIWYG mode completed (and documented)</li>
+<li>✅ Toolbars Service Improvements:  transport <code>data</code> for use in notes etc. ca. 0.5d 2dm</li>
+<li>✅ Data-conversion of entities to json in attribute... - documented</li>
+</ol>
+<h3 id="2sxc-v1601-lts-2023-05-23">2sxc v16.01 LTS (2023-05-23)</h3>
+<p>Various bugfixes + some enhancements.</p>
+<ol>
+<li>✅ New <a class="xref" href="../../../basics/data/fields/string-wysiwyg/rich.html">rich WYSIWYG experience</a></li>
+<li>✅ Edit-UI can now be opened to only show a few specified fields (feature API not yet public, but used in the new WYSIWYG feature) #3080</li>
+<li>✅ New ITypedItem and AsTyped(...) API</li>
+<li>✅ New Data.Content and Data.Header objects</li>
+<li>✅ IDynamicEntity now has methods like <code>String(...)</code>, <code>Int(...)</code>, <code>Bool(...)</code>, <code>Date(...)</code>, <code>Decimal(...)</code>, <code>Double(...)</code>, <code>Long(...)</code>, <code>DateTime(...)</code>, <code>Float(...)</code> to convert values to the desired type. #3089</li>
+<li>✅ Sort-Items UI was enhanced with remove, add, add-existing #3077</li>
+<li>✅ DynamicDataSource now supports relationships #3078</li>
+<li>✅ DynamicDataSource now shows better errors in Razor on compile issues #3084</li>
+<li>✅ Razor now automatically suggests the <code>insights</code> button on the toolbar if there are errors #3085</li>
+<li>✅ Enhancement: Serializing Entities to JSON now skips <code>empty</code> fields such as messages or ephemeral fields</li>
+<li>✅ Clean up Formulas code into better SoC @SDV</li>
+<li>✅ Clean up ancient documentation which is probably invalid, but still seen by many :(</li>
+</ol>
+<p>Dnn / Evoq</p>
+<ol>
+<li>✅ Evoq: Better support for list management together with page workflow #3087</li>
+<li>✅ Dnn Skin: Adding module to skin using IRenderService now allows editing entities #3092</li>
+</ol>
+<p>Oqtane</p>
+<ol>
+<li>✅ Enabled full WASM support for Oqtane #3083 (previously only server-rendering worked)</li>
+<li>🪲 Improvement on how AJAX reloads work, resolves some reload-errors #3081</li>
+</ol>
+<p>Minor Bugfixes</p>
+<ol>
+<li>🪲 Two bugfixes related to Formulas v1 - returning date #3088</li>
+<li>🪲 XML-Data-Export now works with IsContentAdmin permissions (before it required IsSiteAdmin) #3075</li>
+<li>🪲 View list of data now works with IsContentAdmin permissions (before it required IsSiteAdmin)</li>
+<li>🪲 Fixed issue with <code>GetService&lt;ILogService&gt;()</code> because <code>ILogService</code> had been renamed to <code>ISystemLogService</code> #3082</li>
+</ol>
+<h3 id="2sxc-v1602-2023-07-07">2sxc v16.02 (2023-07-07)</h3>
+<p>Major Enhancements</p>
+<ol>
+<li>✅ ImageFlow upgraded to version 0.10.0 - thereby making sure it works with FIPS enabled <a href="https://github.com/2sic/2sxc/issues/3121">#3121</a></li>
+<li>✅ Brand new typed code <strong>Pro</strong> mode
+<ul>
+<li><code>ITypedItem</code> and <code>ITyped</code> interfaces with properties such as <code>Id</code>, <code>Guid</code> and methods such as <code>.String(name)</code>, ...</li>
+<li><code>RazorPro</code>, <code>ApiPro</code>, <code>CodePro</code> base classes with completely reworked API such as <code>AsStack(...)</code>, <code>MyPage</code> or <code>AllSettings</code></li>
+<li><code>ApiPro</code> now serializes JSON using new defaults which are more common in WebApis (lower-case properties, auto-serialize entities, etc.)</li>
+</ul>
+</li>
+</ol>
+<p>Documentation</p>
+<ol>
+<li>✅ Upgraded DocFX from 2.48.1 to 2.67.3 with major improvements to the generated docs</li>
+<li>✅ Improved Documentation of all Razor and WebApi base classes!</li>
+</ol>
+<p>Support for Developers</p>
+<ol>
+<li>✅ Dramatically improved insights with more details and filtering options</li>
+<li>✅ Created system to automatically detect and warn about deprecated code - using buttons in the toolbar</li>
+<li>✅ Created <strong>CodeHelp</strong> system to guide developers when common coding mistakes were made</li>
+<li>✅ New <strong>Obsolete</strong> system collects issues per App and shows them even if the current Razor is not affected</li>
+<li>✅ Show <strong>CodeHelp</strong> warnings if a RazorPage doesn't have <code>@inherits</code></li>
+</ol>
+<p>Various bugfixes + some enhancements.</p>
+<ol>
+<li>✅ Refactored Razor and WebApi base classes to use Composition over Inheritance</li>
+<li>✅ RazorBlade upgrade from v4.2.0 to 4.4.0 (also for .net 7 compatibility)</li>
+<li>✅ Feature to <em>not</em> show edit-toolbar buttons on HTML coming from Resources</li>
+<li>✅ Improve <em>not</em> showing a metadata-toolbar on images which are coming from demo-items</li>
+</ol>
+<p>Dnn / Evoq</p>
+<ol>
+<li>✅ Downgrade SQL to still work with SQL Server 2012 as people had trouble upgrading <a href="https://github.com/2sic/2sxc/issues/3120">#3120</a></li>
+<li>✅ Since ImageFlow was upgraded, the following DLLs were also upgraded
+<ul>
+<li>Imageflow, 0.7.24 -&gt; 0.10.0</li>
+<li>Imageflow.Net, 0.7.24 -&gt; 0.10.0</li>
+<li>Imazen.Common, 0.7.7 -&gt; 0.8.1</li>
+<li>Imazen.HybridCache, 0.7.7 -&gt; 0.8.1</li>
+<li>Newtonsoft.Json, Version=10.0.0.0 -&gt; 13.0.0.0</li>
+</ul>
+</li>
+<li>✅ As part of the upgrade we also had to upgrade some MS DLLs
+<ul>
+<li>Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0 -&gt; 7.0.0.0</li>
+<li>System.Collections.Immutable, Version=6.0.0.0 -&gt; 7.0.0.0</li>
+<li>System.Text.Encodings.Web, Version=6.0.0.0 -&gt; 7.0.0.0</li>
+<li>System.Text.Json, Version=6.0.0.0 -&gt; 7.0.0.2</li>
+<li>System.Memory, Version=4.0.1.1 -&gt; 4.0.1.2</li>
+</ul>
+</li>
+</ol>
+<p>Oqtane</p>
+<ol>
+<li>✅ Oqtane 4.0 Support (with .net 7) <a href="https://github.com/2sic/2sxc/issues/3123">#3123</a></li>
+<li>✅ Reworked API Middleware to avoid conflicts with OAuth 2</li>
+</ol>
+<p>Minor Bugfixes</p>
+<ol>
+<li>🪲 Fixed issue with Swiper not being able to add slides <a href="https://github.com/2sic/2sxc/issues/3108">#3108</a> <a href="https://github.com/2sic/2sxc/issues/3112">#3112</a></li>
+<li>🪲 Fixed issue with DatePicker in Edge and also added more cultures <a href="https://github.com/2sic/2sxc/issues/3113">#3113</a></li>
+<li>✅ Changed internal APIs to return RazorBlade <code>IHtmlTag</code> objects instead of previously <code>IHybridHtmlString</code> <a href="https://github.com/2sic/2sxc/issues/3098">#3098</a></li>
+</ol>
+<h3 id="2sxc-v1603-2023-08-21">2sxc v16.03 (2023-08-21)</h3>
+<p>Enhancements around Typed Code</p>
+<ol>
+<li>✅ Typed: rename <code>RazorPro</code> to <code>RazorTyped</code> etc. #3147</li>
+<li>✅ Make all typed objects very strict when checking if fields exist</li>
+<li>✅ Add much more helpful info / error when fields not found</li>
+<li>✅ Typed: Massively enhanced with strict checks and reduced the possibility of writing code which doesn't do anything</li>
+<li>✅ Typed: <code>ITypedItem</code> now has a new .Picture(...) method making the code nicer #3135</li>
+<li>✅ Typed: <code>ITypedItem</code>s can now be mocked #3141 to create alternate data in code when no data exists</li>
+<li>✅ Typed: New methods <code>ContainsKey(...)</code>, <code>Keys(...)</code> #3142</li>
+<li>✅ Typed: New methods <code>IsEmpty(...)</code> and <code>IsNotEmpty(...)</code> #3144</li>
+<li>✅ Typed: method <code>.String(..., scrubHtml)</code> now also accepts a string containing tags to remove #3146</li>
+<li>✅ Typed: If an error occurs, much more information is provided as to how to fix #3143 #3145</li>
+<li>✅ Typed Json: now also supports paths, so you can use <code>Kit.Json.ToTyped(jsonString).Int(&quot;Root.Child.Id&quot;)</code></li>
+<li>✅ Typed Json: now also strict using propsRequired by default</li>
+<li>✅ Typed: the property <code>.Dyn</code> now only exists on <code>ITypedItem</code> (entity-based) and not on other wrappers</li>
+</ol>
+<p>Other Enhancements</p>
+<ol>
+<li>✅ Image Resizer: New <code>Square</code> resize settings #3134</li>
+<li>✅ Image Resizer: <code>ImageService</code> can now also handle <code>IFile</code> objects and get the metadata automatically #3140</li>
+<li>✅ Web Farm Cache: Updated for v16.02+ (enterprise customers only)</li>
+<li>✅ Page Parameters: now support ITyped so you can use MyPage.Parameters.Int(&quot;id&quot;) and similar</li>
+</ol>
+<p>Support for Developers</p>
+<ol>
+<li>✅ Errors now highlight the <code>.cshtml</code> line which caused the error</li>
+<li>✅ Errors on mistyped property names now gives very detailed information about it</li>
+</ol>
+<p>DNN / Evoq</p>
+<ol>
+<li>✅ Image Resizer: Upgrade to dnn-imageflow 1.2.1 #3130</li>
+<li>✅ Newtonsoft internal version in DNN Manifest now matches 13.0.3</li>
+</ol>
+<p>Oqtane</p>
+<ol>
+<li>✅ Oqtane: Better error when Oqtane in installed without sufficient DB permissions #3128 / #3131</li>
+<li>✅ Internal: Code cleanup with warnings new EF-Core #3132</li>
+<li>✅ Internal: EF Core QuerySplittingBehavior #3133</li>
+</ol>
+<p>Minor Bugfixes</p>
+<ol>
+<li>🪲 turnOn failed on AJAX reloads during editing #3127</li>
+<li>🪲 Oqtane: Bugfix importing App Assets #3129</li>
+<li>🪲 Web Farm Cache: Fix issue which occured on license uploads</li>
+<li>🪲 Licenses: fix issue with multiple licenses / names resulting in an <code>unlicensed</code> message</li>
+</ol>
+<h3 id="2sxc-v1604-2023-09-05">2sxc v16.04 (2023-09-05)</h3>
+<p>Highlight: <strong>UniqueKey</strong></p>
+<ul>
+<li>✅ Razor: New <code>UniqueKey</code> property (in Typed mode) #3151</li>
+<li>✅ Razor: New <code>Kit.Keys.UniqueKeyWith(...)</code> for unique IDs and working with JS #3152</li>
+</ul>
+<p>Images</p>
+<ul>
+<li>✅ Images: Images in rich wysiwyg mode now are shown nicely after import into other site</li>
+<li>✅ Images: Dialog-Options to set empty title and not use fallback #3150</li>
+<li>✅ Images: Enable crop/title dialog for public files, with delayed toolbar and warning-hint #3057</li>
+<li>✅ Images: Fix Safari bug with small images #2</li>
+<li>✅ Images: Ability to specify alternate toolbar #3157</li>
+<li>✅ Images: Ability to specify no toolbar #3158</li>
+<li>✅ Images: Ability to use Toolbar outside of main picture/img tag using img.Toolbar() #3156</li>
+<li>✅ Images: Metadata now also has a DescriptionExtended</li>
+</ul>
+<p>Razor in <strong>Typed</strong> Mode</p>
+<ul>
+<li>✅ MyModel: Improve handling fallback / required #3149</li>
+<li>✅ App.Folder.Url to replace App.Path for clearer APIs</li>
+<li>✅ App.GetQuery(...) to replace App.Query[name]</li>
+<li>✅ All ITyped objects now behave strict by default</li>
+<li>✅ Complete various scenarios for ITyped with unit tests, especially conversion of anonymous and json-based ITyped</li>
+<li>✅ All ITyped now have APIs for ContainsKey, IsEmpty and IsNotEmpty</li>
+<li>✅ Razor: Errors now highlight the .cshtml file with a 🎯 emoji</li>
+<li><del>GetDraft / GetPublished</del> (decided not to implement yet)</li>
+<li>✅ Override Equality operations - using ITyped.Equals</li>
+</ul>
+<p>Oqtane</p>
+<ul>
+<li>🩸 Improve indexing in Google #3154</li>
+<li>🩸 Improve pre-render adding JS/CSS</li>
+<li>🩸 Improve page header changes (title, metadata) using latest Oqtane 4 APIs</li>
+</ul>
+<p>Patrons</p>
+<ul>
+<li>🦸🏽 New feature to better control language fallback sequence (beta) #3159</li>
+<li>🦸🏽 Improve showing expired features - important when testing a feature for 24h</li>
+</ul>
+<p>Bugfixes</p>
+<ul>
+<li>🪲 Languages: Bug in UI: Some labels and dropdown-labels didn't show in current language #3153</li>
+<li>🪲 lots of minor bugfixes</li>
+</ul>
+<h3 id="2sxc-v1606-2023-09-20">2sxc v16.06 (2023-09-20)</h3>
+<ol>
+<li>✅ Tutorials for new Pro mode / Quick-Ref</li>
+<li>✅ Optimize build of 2sxc to use local config-files so it's easier for others to contribute @STV</li>
+<li>✅ Improve JS build to make it easier for others to contribute</li>
+<li>✅ Improve headers handling in Oqtane 4</li>
+</ol>
+<h3 id="2sxc-v1607-lts-2023-09-22">2sxc v16.07 LTS (2023-09-22)</h3>
+<ol>
+<li>✅ new <code>TypeItem.Parent(...)</code> - especially. <code>.Parent(current: true)</code> api #3173</li>
+<li>✅ new parameters to the <code>.Picture(...)</code> incl. <code>picClass</code>, <code>imgAttributes</code> and <code>picAttributes</code></li>
+<li>✅ fix bug where presentation data was generated even if not used #3185</li>
+</ol>
+<p>Major: Release 16.07 LTS 🚀</p>
+<h3 id="2sxc-v1609-2023-11-22">2sxc v16.09 (2023-11-22)</h3>
+<ol>
+<li>✅ <code>TypedItem.Picture(&quot;Child.Property&quot;)</code> path notation</li>
+<li>✅ fix js minification of <code>inpage.min.js</code></li>
+<li>✅ Release all apps in the new typed mode</li>
+<li>✅ Blazor .net 8 / Oqtane 5 support</li>
+<li>✅ Improve file-upload to prevent files with &quot;..&quot; in the name</li>
+<li>✅ Improve DataSource Caching and cache-flushing</li>
+<li>✅ Add new (beta ⌛) feature for copyright management (Patron AdvancedCMS) to add copyright info to each image</li>
+<li>✅ Extend SQL Database to store <code>SysSettings</code> and <code>Guid</code> on Attributes for future features</li>
+<li>🐞 Fix minor issue with old <code>.Code</code> for older Razor base classes</li>
+<li>🐞 Fix minor issue with edit-dialog in scenarios with multiple portal aliases</li>
+<li>🐞 Fix minor issue with <code>IMetadata.Children(...)</code> / <code>...Child(...)</code> #3217</li>
+<li>🐞 Fix DataSource <code>LanguageModeler</code> #3219</li>
+<li>🐞 Fix DataSource <code>TreeMapper</code></li>
+<li>🩸 Oqtane: Adam backend didn't always serialize all properties #3206</li>
+</ol>
+<hr>
+<h2 id="version-15">Version 15</h2>
+<h3 id="2sxc-v1500-2022-12-23">2sxc v15.00 (2022-12-23)</h3>
+<ol>
+<li>✅ Improve logging
+<ol>
+<li>✅ Place it in an own library DLL for better reuse</li>
+<li>✅ Create ICodeLog for improve logging in Razor and WebApi which ensures compatibility with existing code</li>
+<li>✅ Improve automatic connecting logs with helpers so most <code>Init(Log)</code> become obsolete</li>
+</ol>
+</li>
+<li>✅ Update CsvHelper DLL to latest version</li>
+<li>✅ Improve install-file names</li>
+<li>✅ Update to Razor Blade 4</li>
+<li>✅ <del>Support Oqtane v4 with .net 7</del> - ATM Oqtane doesn't plan on going to .net 7</li>
+<li>✅ Tutorial App
+<ol>
+<li>✅ Improve internal structure</li>
+<li>✅ Change how to show code vs results - mostly use tabs</li>
+</ol>
+</li>
+<li>✅ Razor APIs and Services
+<ol>
+<li>✅ Improve <code>ImageService</code> to have an <code>imgAltFallback</code> on <code>.Img()</code>, <code>.Picture()</code> and <code>.ImgOrPic()</code></li>
+<li>✅ Improve <code>ImageService</code> to better respect multi-language crop-settings and labels</li>
+<li>✅ Improve <code>Page</code> service <code>Parameters.Set(...)</code> to also allow bool, int etc. (not just strings)</li>
+<li>✅ Create Kit.HtmlTag</li>
+<li>✅ Create <code>ITurnOnService</code> and <code>Kit.Page.TurnOn(...)</code></li>
+</ol>
+</li>
+<li>✅ Data Sources
+<ol>
+<li>✅ Improve <code>ValuFilter</code> Data Source to also allow <code>Contains</code> on numbers</li>
+</ol>
+</li>
+<li>✅ DB Clean-Up
+<ol>
+<li>✅ Remove SQL triggers which log XML data to <code>DataTimeline</code> which isn't used any more</li>
+<li>✅ Remove XML column <code>NewData</code> in <code>DataTimeline</code> which isn't used any more</li>
+</ol>
+</li>
+<li>✅ Internal APIs
+<ol>
+<li>✅ Improve Settings/Resources Stack with various unit tests</li>
+<li>✅ Improve Settings/Resources Stack to have internal quick access to deep objects using a path like <code>&quot;Images.Content.Width&quot;</code></li>
+<li>✅ Create API <code>DependenciesBase</code> to better handle log attachments to dependencies</li>
+</ol>
+</li>
+<li>✅ TinyMCE upgrade to v6</li>
+<li>✅ Drop <code>_</code> prefix requirement on cshtml files by protecting them in an another manner
+<ol>
+<li>✅ It's not needed on Oqtane, as the files are not accessible</li>
+<li>✅ Only needed ATM on DNN because each file could be called from the browser directly</li>
+<li>✅ Probably make sure all base classes refuse to render standalone</li>
+</ol>
+</li>
+<li>✅ Ability to use compressed GZIP data for DataTimeline (patrons)
+<ol>
+<li>✅ Technical features</li>
+<li>✅ Toggle to turn on/off</li>
+</ol>
+</li>
+<li>✅ Rename internal <code>.data</code> folder to <code>App_Data/system</code> and similar as this folder will contain private data in future</li>
+<li>✅ Feature to deploy a corporate license in an installation to auto-enable certain features on all sites</li>
+<li>✅ Settings: Ability to augment the preset configuration / settings with custom overrides</li>
+<li>✅ Provide Google Services API Keys (Maps, Translate) from backend to edit UI</li>
+<li>✅ Ability to set own default GPS coordinates for when not set
+<ol>
+<li>✅ Ability to configure them in settings</li>
+<li>✅ Provide Default maps coordinates from backend to Edit UI</li>
+</ol>
+</li>
+<li>✅ Ability to import apps from folder directly (patrons)
+<ol>
+<li>✅ Functionality</li>
+<li>✅ Hints / Infos to user</li>
+<li>⏳ Documentation</li>
+</ol>
+</li>
+<li>✅ Integration of Google Translate in the Edit UI
+<ol>
+<li>✅ Functionality for one field</li>
+<li>✅ For many fields</li>
+<li>✅ Configure so it only affects string fields</li>
+<li>✅ Ability to disable auto-translate on certain fields - eg. name fields</li>
+<li>✅ Ability to add custom API key</li>
+<li>✅ Clear warning when using the demo key</li>
+<li>✅ Make sure the license is respected and easy to spot</li>
+<li>⏳ Documentation for this (how the fields are selected, how to activate, etc.)</li>
+</ol>
+</li>
+<li>✅ Release v15 before XMas</li>
+</ol>
+<h3 id="breaking-changes-in-2sxc-1500">Breaking Changes in 2sxc 15.00</h3>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In summary we've made a lot of internal breaking changes.
+But for all normal users it will have no effect at all.</p>
+</div>
+<p>We believe it will only affect you in these scenarios:</p>
+<ol>
+<li>If you have a <strong>custom DataSource</strong>, you will need to make some minor changes and recompile them</li>
+<li>If you used special, non-public Logging APIs you would need to update your work</li>
+<li>If you used any undocumented APIs, you will need to check if everything still works</li>
+</ol>
+<h4 id="api-changes-that-may-affect-you">API Changes that may affect you</h4>
+<ol>
+<li>DataSource base class was completely refactored<br>
+<a class="xref" href="v15/datasource/index.html">see instructions</a></li>
+<li>Old static <code>ToSic.Eav.DataSource</code> was removed (<a class="xref" href="v13/datasource/index.html">deprecated since v13</a>)</li>
+<li>Internal logging API <code>ILog</code> was completely refactored<br>
+<a class="xref" href="v15/logging/index.html">see instructions</a></li>
+<li>Internal object wrappers were completely refactored<br>
+<a class="xref" href="v15/unwrappedcontents/index.html">see instructions</a></li>
+<li><a class="xref" href="v15/tinymce-upgrade/index.html">TinyMCE Upgrade to v6</a></li>
+<li><a class="xref" href="v15/database/index.html">Database changes</a></li>
+<li><a class="xref" href="v15/minor/index.html">Minor API changes</a></li>
+</ol>
+<h4 id="breaking-updates-which-probably-dont-affect-anybody">Breaking Updates which probably don't affect anybody</h4>
+<ol>
+<li>SQL changes - minor updates to the Database</li>
+<li>Internal APIs which were removed
+<ol>
+<li>Static <code>ToSic.Eav.Data.Builder.AttribBuilder.AddValue(...)</code></li>
+</ol>
+</li>
+</ol>
+<h3 id="2sxc-v1501-2023-01-31">2sxc v15.01 (2023-01-31)</h3>
+<ol>
+<li>✅ Export / Import
+<ol>
+<li>✅ Create export bundle configuration to mark content-types and entities for export together</li>
+<li>✅ Create json bundle export system</li>
+<li>✅ Create json bundle import system</li>
+<li>✅ Extend the file-based data loader to also load bundles</li>
+<li>✅ Change all pre-loaded data items to be in bundles</li>
+</ol>
+</li>
+<li>✅ New Auto-Installer with search, list-view etc.</li>
+<li>✅ Remaining docs for Features released in v15.00
+<ol>
+<li>✅ Finish API and docs for Logging v15.01</li>
+<li>✅ Ability to import apps from folder directly (patrons)</li>
+<li>✅ Documentation for google translate (how the fields are selected, how to activate, etc.)</li>
+</ol>
+</li>
+<li>✅ Indicate premium/patron features in UI and explain what it is and how to get it
+<ol>
+<li>✅ Visual indicators on buttons</li>
+<li>✅ Visual messages in certain places</li>
+<li>✅ Details dialog to know more about the feature</li>
+<li>✅ Public DB of the feature explaining it in more details, how to activate etc. on <a href="https://patrons.2sxc.org/features">https://patrons.2sxc.org/features</a></li>
+</ol>
+</li>
+<li>✅ Licenses / Features
+<ol>
+<li>✅ Ability to license a specific feature only (for enterprise customers)</li>
+<li>✅ Feature to generate enterprise license fingerprints for enterprise distribution</li>
+<li>✅ Allow parts of the license to expire earlier (for evaluation purpose)</li>
+</ol>
+</li>
+<li>✅ Internal / Data Management
+<ol>
+<li>✅ Ability to retrieve Entities for App, parent-App, global-App etc. for certain settings-pickers</li>
+<li>✅ System query to retrieve such entities (need for Wysiwyg-functionality)</li>
+</ol>
+</li>
+<li>✅ Oqtane: fix compatibility so it works in Oqtane 3.3+</li>
+<li>✅ FIPS Compliance<br>
+Note that the image resizer is not yet FIPS compliant, and it may take a while for it to become compliant
+<ol>
+<li>✅ Change Secure Data Service to be FIPS compliant</li>
+<li>✅ Change System fingerprint to use FIPS compliant SHA256</li>
+</ol>
+</li>
+<li>✅ Internal - re-org ApiKeys for UI to be in a better place</li>
+<li>✅ Enhance Page DataSource with community requests</li>
+</ol>
+<h3 id="2sxc-v1502-2023-02">2sxc v15.02 (2023-02)</h3>
+<p>This was a quick release, no changes to report ATM, they will be reported in v15.03</p>
+<p>also done:</p>
+<ol>
+<li>✅ Upgrade Blazor-CMS.org to use 2sxc 15.01 for real-life testing</li>
+<li>✅ Create blog on Blazor-CMS.org</li>
+<li>✅ Publish Tutorial in Blazor-CMS.org</li>
+<li>✅ CSP Training at DNN Summit</li>
+<li>✅ Image Perfectionist Training at DNN Summit</li>
+</ol>
+<h3 id="2sxc-v1503-2023-02-21">2sxc v15.03 (2023-02-21)</h3>
+<ol>
+<li>✅ APIs
+<ol>
+<li>✅ EntityId now has a OwnerId property</li>
+<li>✅ <code>Kit.Page.Activate(condition: bool, features: &quot;...&quot;)</code></li>
+</ol>
+</li>
+<li>✅ move to .net 6 (and drop .net standard 2.0) - almost done, last tests</li>
+<li>✅ Bugs
+<ol>
+<li>✅ RazorBlade json serialization <a href="https://github.com/2sic/2sxc/issues/2998">https://github.com/2sic/2sxc/issues/2998</a></li>
+<li>✅ Support for use on DNN 404 pages</li>
+<li>✅ Date was off in date-picker</li>
+</ol>
+</li>
+<li>✅ FIPS compliance on encryption APIs</li>
+<li>✅ DataSources
+<ol>
+<li>✅ Pages DataSource
+<ol>
+<li>✅ Improve Pages DataSource with <code>LinkTarget</code></li>
+<li>✅ Improve Pages DataSource with internal ability to configure what to get</li>
+<li>✅ Improve Pages DataSource to have a UI to configure what to get - @2dm</li>
+</ol>
+</li>
+<li>✅ Users DataSource Massively improved - with Roles and configurable</li>
+<li>✅ Roles DataSource improved</li>
+</ol>
+</li>
+<li>✅ Internal - Rework Getting-Started Server to be latest and greatest @2ro
+... and more see <a href="https://github.com/2sic/2sxc/releases">https://github.com/2sic/2sxc/releases</a></li>
+</ol>
+<h3 id="breaking-changes-in-2sxc-1503">Breaking Changes in 2sxc 15.03</h3>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In summary we've made a lot of internal breaking changes.
+But for all normal users it will have no effect at all.</p>
+</div>
+<p>We believe it will only affect you in these scenarios:</p>
+<ol>
+<li>TODO</li>
+</ol>
+<h4 id="api-changes-that-may-affect-you">API Changes that may affect you</h4>
+<ol>
+<li>An internal user property <code>IUser.IsDesigner</code> was renamed to <code>IUser.IsSiteDeveloper</code></li>
+<li>An internal, deprecated user property <code>IUser.IsAdmin</code> was removed</li>
+<li>An internal, deprecated user property <code>IUser.IsSuperUser</code> was removed</li>
+<li>An internal property <code>IUser.Guid</code> was changed from <code>Guid?</code> to <code>Guid</code></li>
+<li>The <code>Users</code> DataSource had a property called <code>IncludeSystemAdmins</code> which was changed from <code>bool</code> to <code>string</code> to allow for more options</li>
+<li>The <code>Users</code> DataSource had a property called <code>RoleIds</code> which returned a non-standard string-array. It has been removed, and the new <code>Roles</code> returns standard related entities.</li>
+<li>Removed static <code>ToSic.Eav.Data.Build.Entity(...)</code> method which was deprecated in v12</li>
+</ol>
+<h4 id="api-changes-which-should-really-not-affect-you">API Changes which should really not affect you</h4>
+<p>These are internal APIs which we changed to make everything more immutable.
+They should never have been in use outside of the internal code.</p>
+<ol>
+<li>Changed <code>IValue.Languages</code> from <code>IList</code> to <code>IEnumerable</code> and made it immutable</li>
+<li>Change <code>IEntity.Attributes</code> from <code>Dictionary&lt;string, IAttribute&gt;</code> to <code>IImmutableDictionary&lt;string, IAttribute&gt;</code> as a step to later make it immutable</li>
+<li>Removed some old, probably never used APIs on <code>IAttribute&lt;T&gt;</code> such as
+<ul>
+<li><code>IAttribute&lt;T&gt;[int[] languageIDs]</code></li>
+<li><code>IAttribute&lt;T&gt;[string]</code></li>
+<li><code>IAttribute&lt;T&gt;[string[]]</code></li>
+<li><code>IAttribute[string[] languageKeys]</code> - was always marked as private</li>
+</ul>
+</li>
+<li>Changed the type of <code>Attribute.Type</code> from string to <code>ValueTypes</code> to make it more strong-typed</li>
+<li>Removed the property <code>Attribute.ControlledType</code> which previously contained the ValueType</li>
+</ol>
+<h3 id="2sxc-v1504-2023-03-22">2sxc v15.04 (2023-03-22)</h3>
+<ol>
+<li>✅ Oqtane: Compatibility with Oqtane 15.04</li>
+<li>✅ Formula improvements
+<ol>
+<li>✅ Get App or global settings for formulas</li>
+<li>✅ Better support for promises</li>
+<li>✅ Ability to set the value of another field</li>
+<li>✅ Intellisense on Formulas</li>
+</ol>
+</li>
+<li>✅ Cdn remapping to other cdn like cdn.2sxc.org or custom CDN
+<ol>
+<li>✅ Ability to remap all cdn urls to a different url</li>
+<li>✅ New template CDN on <a href="https://cdn.2sxc.org">https://cdn.2sxc.org</a></li>
+<li>✅ New template repo for anybody that wants to create their own CDN or host on their path <a href="https://github.com/2sxc/cdn.2sxc.org">https://github.com/2sxc/cdn.2sxc.org</a></li>
+</ol>
+</li>
+<li>New APIs for Data Sources finalized
+<ol>
+<li>✅ Public <code>IDataFactory</code> API</li>
+<li>✅ Public <code>IDataSourceFactory</code> API</li>
+<li>✅ Enhanced <code>IDataSource</code> API</li>
+<li>✅ Prototype of live DataSources</li>
+</ol>
+</li>
+<li>✅ Make everything internal immutable</li>
+<li>✅ Improve WYSIWYG
+<ol>
+<li>✅ Ability to select which &quot;mode&quot; the editor is in, affecting toolbars</li>
+<li>✅ Allow selected mode to affect other things (like deny image-drop if in text-mode)</li>
+<li>✅ Sections to better align images</li>
+<li>✅ Use classes to determine size instead of styles</li>
+<li>✅ WYSIWYG Images which auto-resize on the server based on size (eg 1/2 of the screen)</li>
+</ol>
+</li>
+<li>✅ New Data Sources and System Queries
+<ol>
+<li>✅ New Data Source <code>Scopes</code></li>
+<li>✅ New Query <code>Scopes</code></li>
+<li>✅ New Data Source <code>MetadataTargetTypes</code></li>
+<li>✅ New Query <code>MetadataTargetTypes</code></li>
+<li>✅ New DataSource <code>Licenses</code> - with state</li>
+<li>✅ New Query <code>Licenses</code></li>
+<li>✅ New DataSource <code>Features</code> - with state</li>
+<li>✅ New Query <code>Features</code></li>
+<li>✅ New DataSource <code>Sites</code></li>
+<li>✅ New Query <code>Sites</code></li>
+<li>✅ Improve data sources for <code>Pages</code></li>
+</ol>
+</li>
+<li>✅ Query Improvements
+<ol>
+<li>✅ Allow edit/new to be done in a query-selector</li>
+<li>✅ Get query to know if entity can be edited (based on AppId)</li>
+<li>✅ We've renamed the system queries to have a much simpler name such as <code>System.Sites</code> which we'll make available to public use soon.</li>
+<li>✅ New LookUp for Settings- and Resources-Stack - to use <code>Settings</code> and <code>Resources</code></li>
+<li>✅ Change internal key for <code>Settings</code> to <code>MyConfiguration</code> to avoid naming conflicts (breaking but probably no impact)</li>
+</ol>
+</li>
+<li>✅ <a class="xref" href="v15/datasource/index.html">Custom DataSources - breaking</a>
+<ol>
+<li>✅ New <code>IDataFactory</code> API</li>
+<li>✅ New <code>RawEntity</code> and <code>IRawEntity</code> API</li>
+<li>✅ New API for data sources to make data generation easier</li>
+<li>✅ Improved custom DataSources API</li>
+<li>✅ New base class <code>CustomDataSourceLight</code></li>
+<li>✅ New base class <code>CustomDataSourceAdvanced</code></li>
+<li>✅ Error handling is now simpler / more standardized</li>
+</ol>
+</li>
+<li>✅ Jewels
+<ol>
+<li>✅ <code>CmsContext.View</code> now has a <code>Path</code>, <code>PathShared</code>, <code>PhysicalPath</code> and <code>PhysicalPathShared</code> property</li>
+<li>✅ <code>Page.Activate(...)</code> now has a <code>condition: true</code> parameter which lets you only activate a feature if a condition is met</li>
+<li>✅ <code>Page.Parameters</code> has new <code>Get(name)</code> and <code>Get&lt;type&gt;(name)</code> and <code>Get(name, fallback: 7)</code> APIs to make it easier to work with url parameters</li>
+</ol>
+</li>
+<li>✅ The Toolbar now has a new <code>Info</code> button which is used to show an info-bubble to the user or provide a help-link to somewhere. You'll soon see this in our standard apps to inform users about special cases such as &quot;why the toolbar isn't available on demo-data&quot;</li>
+<li>✅ Bugs fixes
+<ol>
+<li>✅ 2sxc in DNN Skins on 404 pages <a href="https://github.com/2sic/2sxc/issues/2986">https://github.com/2sic/2sxc/issues/2986</a></li>
+<li>✅ Issue with Mobius Forms in v15.03</li>
+</ol>
+</li>
+</ol>
+<h3 id="breaking-changes-in-2sxc-1506">Breaking Changes in 2sxc 15.06</h3>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In summary we've made a lot of internal breaking changes.
+But for all normal users it will have no effect at all.</p>
+</div>
+<p>We believe it will only affect you in these scenarios:</p>
+<ol>
+<li>TODO</li>
+</ol>
+<h4 id="api-changes-that-may-affect-you-on-ientity">API Changes that may affect you on IEntity</h4>
+<p>These were internal APIs which were not publicly documented, but may have been used by some developers.</p>
+<ol>
+<li><code>IEntity.GetDraft()</code> was removed to ensure the entity is immutable</li>
+<li><code>IEntity.GetPublished()</code> was removed to ensure the entity is immutable</li>
+</ol>
+<p>Note: <code>GetDraft()</code> and <code>GetPublished()</code> are still available on DynamicEntity in Razor and WebApi.
+They were only removed on <code>IEntity</code>.</p>
+<h4 id="renamed-datasources">Renamed DataSources</h4>
+<p>These data sources had uncommon names, and were renamed to be more consistent.
+We believe that they were only used in VisualQuery and not in code, so it should not affect you.</p>
+<ol>
+<li><code>CsvDataSource</code> is now <code>Csv</code></li>
+<li><code>SerializationConfiguration</code> is now <code>Serialization</code></li>
+</ol>
+<hr>
+<h2 id="breaking-changes-in-eav-and-2sxc-v14">Breaking Changes in EAV and 2sxc v14</h2>
+<p>We try to minimize breaking changes, and most breaking changes won't affect your work, because it's internal API.
+We're documenting it here to ensure you know what happened, in case you still run into this.</p>
+<h3 id="summary">Summary</h3>
+<p>V14 did some clean-up of internal APIs, but otherwise there are no known breaking changes.</p>
+<p>Note that these changes could be seen as a breaking change for certain users:</p>
+<ol>
+<li><a class="xref" href="v14/change-in-app-zip-package.html">Change in App Zip Package in v14.08</a> <em>v14.08</em></li>
+<li><a class="xref" href="v14/change-in-app-data-folder.html">Change in App Data Folder in v14.08</a> <em>v14.08</em></li>
+</ol>
+<h2 id="all-changes-v14">All Changes V14</h2>
+<h3 id="1400---140705-2022-q2--2022-q3">14.00 - 14.07.05 (2022-Q2 &amp; 2022-Q3)</h3>
+<p>Q2</p>
+<ol>
+<li>✅ Image-Service/Picture</li>
+<li>✅ Image primary area / corner selector</li>
+<li>✅ Patron features with licensing &amp; payment system</li>
+<li>✅ LightSpeed cache</li>
+<li>✅ v14 Release</li>
+<li>✅ DNN 9.6.1 only</li>
+<li>✅ Formula Boost with many new features #1</li>
+<li>✅ DNN DI integration</li>
+<li>✅ Update turnOn to 0.1.2</li>
+<li>✅ CSP for the site (DNN only ATM)</li>
+<li>✅ Formula Boost #2 (more context info, features-infos, etc.)</li>
+<li>✅ NPM Types updated to latest release</li>
+<li>✅ Enterprise Features which will be availabe for bigger sponsors</li>
+<li>✅ Patron-System, where sponsors of 2sxc get some extra features</li>
+<li>✅ Standardize how to integrate into other systems (non-Dnn/Oqtane)</li>
+<li>✅ Service Kits</li>
+<li>✅ Deprecation System</li>
+<li>✅ Toolbar Services v1</li>
+<li>✅ JS Docs updated to the latest version and auto-generated</li>
+<li>✅ Tutorials Formulas</li>
+<li>✅ Update all Apps to the lastest/greatest conventions</li>
+<li>✅ v14 LTS</li>
+</ol>
+<p>Q3</p>
+<ol>
+<li>✅ Toolbars Service Improvements
+<ol>
+<li>✅ icon-metadata</li>
+<li>✅ group C# API - ToolbarBuilder now has <code>Group</code> command</li>
+<li>✅ SVG icons - Toolbar Buttons can now use SVGs for icons (usually base64 encoded)</li>
+<li>✅ base64</li>
+<li>✅ ui multiple params</li>
+<li>✅ bugfixes</li>
+<li>✅ params multiple params</li>
+<li>✅ array params</li>
+</ol>
+</li>
+<li>✅ Debug-logging on Oqtane client side code, bugfixing ca. 0.5d</li>
+<li>✅ Change storage of <code>app.xml</code> to <code>App_Data</code>, change how import works and enable import-from-folder/git</li>
+<li>✅ Clean up JS code, latest webpack, packages etc. ca. 1d</li>
+<li>✅ Infrastructure for automated testing of JS - ca. 5d</li>
+<li>Apps / App Maintenance
+<ol>
+<li>✅ Update most apps which used ephemeral variables for formulas to just use parameters (new in v14) ca. 0.5d</li>
+<li>✅ new Timeline Apps</li>
+<li>✅ new Files App</li>
+<li>✅ new Jobs</li>
+<li>✅ Make many Apps backwards compatible with Bootstrap 3 for a big customer</li>
+<li>✅ Have the core apps tested &amp; optimized for WCAG for a government customer</li>
+</ol>
+</li>
+<li>✅ Re-release sxc-angular</li>
+<li>✅ Remove dependency on SharpZipLib</li>
+</ol>
+<!-- ### 14.07.05
+
+* ToolbarBuilder now has `Group` command
+* Toolbar Buttons can now use SVGs for icons (usually base64 encoded)
+* ... -->
+<h2 id="1409---1412-2022-10">14.09 - 14.12 (2022-10)</h2>
+<ol>
+<li>✅ Improve UI/Flow of system registration (ATM still confusing)</li>
+<li>✅ Make sure edit-ui doesn't need material fonts from CDN for icons</li>
+<li>✅ Create a new <code>app.json</code> configuration file for 2sxc apps to tune how export/import works</li>
+<li>✅ Remove Newtonsoft JSON and migrate to System.Text.Json</li>
+<li>✅ Improve handling of app-metadata (resources, settings)</li>
+<li>✅ Enable init and import completely new app directly from folder/git copy 1d SDV</li>
+<li>✅ Ability to sync Apps through git including the Assets and ADAM</li>
+<li>✅ Improve handing feature details to edit-ui</li>
+<li>Data Sources
+<ol>
+<li>New data source <code>Users</code></li>
+<li>New data source <code>Roles</code></li>
+</ol>
+</li>
+<li>✅ Update Imageflow to latest version</li>
+<li>✅ Remove dependency on Newtonsoft - only use System.Text.Json</li>
+<li>✅ Create <a href="https://schemas.2sxc.org">https://schemas.2sxc.org</a> for json schemas</li>
+<li>✅ Create JSON Schemas for image recipe and app.json</li>
+<li>✅ More formula tutorials how to call a WebAPI</li>
+<li>✅ Security update System.Data.SqlClient</li>
+<li>✅ Oqtane 2shine Theme release</li>
+<li>✅ cre8magic v0.0.1 released</li>
+</ol>
+<h3 id="141200---141203-lts-november-2022">14.12.00 - 14.12.03 LTS (November 2022)</h3>
+<ol>
+<li>✅ Publish <a href="https://blazor-cms.org/">blazor-cms.org</a>
+<ol>
+<li>✅ get a great page speed - 95%+</li>
+<li>✅ Get blazor-cms.org to index really well in google</li>
+</ol>
+</li>
+<li>✅ v14 LTS #2 ca. v14.12 🚀</li>
+</ol>
+<h2 id="important-changes">Important Changes</h2>
+<ol>
+<li><a class="xref" href="v14/issue-assembly-binding.html">Assembly Binding Issue on Installs from 2sxc 13.04 to 14.02</a></li>
+<li><a class="xref" href="v14/change-in-app-zip-package.html">Change in App Zip Package in v14.08</a> <em>v14.08</em></li>
+<li><a class="xref" href="v14/change-in-app-data-folder.html">Change in App Data Folder in v14.08</a> <em>v14.08</em></li>
+<li><a class="xref" href="v14/export-exclude-in-app-json.html">New app.json with Export Exclude</a> <em>v14.09</em></li>
+</ol>
+<hr>
+<h2 id="version-13">Version 13</h2>
+<p>TODO</p>
+<ol>
+<li>New WebApi route <code>app/auto/data</code> to replace <code>/app/auto/content</code> - the old one will still work, but we won't document it any more, because it was a confusing name</li>
+<li>Lots of metadata stuff... TODO:</li>
+<li>New <code>sxc.data</code> and <code>sxc.query</code></li>
+</ol>
+<h3 id="breaking-changes-in-2sxc-1300">Breaking Changes in 2sxc 13.00</h3>
+<h4 id="api-changes-that-may-affect-you">API Changes that may affect you</h4>
+<ol>
+<li><p>An old, non-DI feature for Inner Content is being deprecated and will be removed in v14<br>
+<a class="xref" href="v13/sxc-static-render/index.html">see instructions</a></p>
+</li>
+<li><p>An old feature for publishing module <em>InstanceData</em> as JSON is removed<br>
+<a class="xref" href="v13/instance-data/index.html">see instructions</a></p>
+</li>
+<li><p>An old feature to create <em>DataSources</em> is removed<br>
+<a class="xref" href="v13/datasource/index.html">see instructions</a></p>
+</li>
+<li><p>Two old data-conversion features <em>DataToDictionary</em> and <em>EntitiesToDictionary</em> were removed<br>
+<a class="xref" href="v13/conversion/index.html">see instructions</a></p>
+</li>
+<li><p>Some internal functionality which enabled <code>IEntity</code> objects to convert links containing <code>file:...</code> and <code>page:...</code> has been removed. This only affects special deep code calls on <code>IEntity</code> and does _not affect <code>DynamicEntity</code> objects in Razor
+<a class="xref" href="v13/ientity-links/index.html">see instructions</a></p>
+</li>
+<li><p>The old feature <code>Eav.Factory.Resolve&lt;T&gt;()</code> was deprecated and will be removed in v14<br>
+<a class="xref" href="v13/eav-factory/index.html">see instructions</a></p>
+</li>
+<li><p>The old feature <code>BlockDataSource.Cache.GetContentType(...)</code> was removed
+<a class="xref" href="v13/datasource.cache/index.html">see instructions</a></p>
+</li>
+<li><p>The Dnn Static <code>ToSic.Sxc.Dnn.Factory</code> is being deprecated and will be removed in v14
+<a class="xref" href="v13/dnn-factory/index.html">see instructions</a></p>
+</li>
+</ol>
+<h4 id="major-updates-with-may-affect-you">Major Updates with may affect you</h4>
+<ol>
+<li>The Image Resizer is being replaced with <a href="https://www.imageflow.io/">ImageFlow</a></li>
+<li>The App containing Site-wide settings is changed to <code>Primary</code> - previously it used the <code>Content</code> app for this. We believe this won't affect many users, as the settings-stack is still very new in v12</li>
+</ol>
+<p>Things which probably don't affect anybody</p>
+<ol>
+<li>SQL changes - minor updates to the Database</li>
+<li>.net Framework and Dll Updated to Match Dnn 9 Requirements - but still works in Dnn 7.4.2
+<ol>
+<li>.net Framework 4.7.2 now required (previously .net Framework 4.5.1)</li>
+<li>.net Standard 2.0.3 required (previously .net Standard 1.6)<br>
+<strong>Important</strong>: This will be referenced in the <code>web.config</code> upon installation</li>
+<li>Dependency Injection updated to .net core 2.1.1 (previously 1.1)</li>
+<li>Newtonsoft.Json updated to v10.0.3</li>
+</ol>
+</li>
+<li>Entity Framework updated to 2.1.1 (previously 1.1) - Oqtane is unmodified and uses 3.1.4</li>
+<li>Dnn DLLs renamed
+<ol>
+<li><code>ToSic.Sxc.Dnn.dll</code> became <code>ToSic.Sxc.Dnn.Core.dll</code> for consistency</li>
+<li><code>ToSic.SexyContent.WebApi.dll</code> became <code>ToSic.Sxc.Dnn.WebApi.dll</code></li>
+<li><code>ToSic.SexyContent.Razor.dll</code> became <code>ToSic.Sxc.Dnn.Razor.dll</code></li>
+</ol>
+</li>
+<li>An internal object <code>ToSic.Eav.Apps.State</code> was removed</li>
+</ol>
+<p>Internal APIs which were removed</p>
+<ol>
+<li>Static <code>ToSic.Eav.Data.Builder.AttribBuilder.AddValue(...)</code></li>
+</ol>
+<h3 id="1301">13.01</h3>
+<ul>
+<li>JSON fields</li>
+<li>Link.Image with srcSet Parameter ?</li>
+<li>ToSic.Sxc.Services.IFeaturesService</li>
+</ul>
+<h3 id="1302">13.02</h3>
+<ul>
+<li>JS</li>
+<li>Global Apps</li>
+</ul>
+<h3 id="1303-todo">13.03 TODO</h3>
+<h3 id="1304-todo">13.04 TODO</h3>
+<h3 id="1305">13.05</h3>
+<ul>
+<li>Moved the <code>Web.IInPageEditingHelper</code> to <code>Services.IEditService</code> - this is non breaking and shouldn't matter, as people won't be using the direct inteface</li>
+<li>Moved the <code>Web.ILinkHelper</code> to <code>Services.ILinkService</code> - this is non breaking and shouldn't matter, as people won't be using the direct inteface</li>
+</ul>
+<h3 id="13x-2022-q1">13.x 2022-Q1</h3>
+<ol>
+<li>✅ Improve Tutorials massively</li>
+<li>✅ View Metadata</li>
+<li>✅ Oqtane Website Mode which can be indexed in Google</li>
+<li>✅ Improve Feature-Management</li>
+<li>✅ IFeaturesService</li>
+<li>✅ Shared Apps across Sites (Patrons only feature)</li>
+<li>✅ Enable editing of Shared Templates / files</li>
+<li>✅ Enable shared APIs</li>
+<li>✅ Disable translation of specific content-types</li>
+<li>✅ Dnn Factory replacement to render module or get DynamicCode outside of 2sxc</li>
+<li>✅ Fully integrate with Dnn Dependency Injection</li>
+<li>✅ Improve DI Scopes to Module-Level</li>
+<li>✅ IImageService</li>
+</ol>
+<h3 id="13x-lts-2022-q2">13.x LTS 2022-Q2</h3>
+<ol>
+<li>✅ v13 LTS</li>
+</ol>
+<hr>
+<h2 id="version-12">Version 12</h2>
+<h3 id="changes-version-1210">Changes Version 12.10</h3>
+<ol>
+<li>New <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.Children.html">Children</a> DataSource</li>
+<li>New <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.Parents.html">Parents</a> DataSource</li>
+<li>New <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.Metadata.html">Metadata</a> DataSource</li>
+<li>New <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.MetadataTargets.html">MetadataTargets</a> DataSource</li>
+<li>The <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.StreamMerge.html">StreamMerge</a> DataSource got three new out-streams <code>Distinct</code>, <code>And</code> and <code>Xor</code></li>
+<li>Moved <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IPageService.html">IPageService</a> from previously <a class="xref" href="ToSic.html">ToSic.Sxc.Web</a> to <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.html">ToSic.Sxc.Services</a> but preserving compatibility with old code</li>
+<li>Moved <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IRenderService.html">IPageService</a> from previously <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Blocks.html">ToSic.Sxc.Web</a> to <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.html">ToSic.Sxc.Services</a> but preserving compatibility with old code</li>
+</ol>
+<h3 id="breaking-change-version-1210">Breaking Change Version 12.10</h3>
+<ol>
+<li>Jquery is completely removed. This shouldn't affect your code, since all old code usually runs in DNN where jQuery is included by default.</li>
+</ol>
+<h3 id="changes-version-1206-lts">Changes Version 12.06 LTS</h3>
+<p>No relevant changes</p>
+<h3 id="changes-version-1205">Changes Version 12.05</h3>
+<ol>
+<li>Introduced <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IJsonService.html">IJsonService</a> for json serialize/deserialize</li>
+<li>Introduced <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IConvertService.html">IConvertService</a> for simple data-type conversion, also available on the <code>Convert</code> property of Razor12 and Api12</li>
+<li>Introduced <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.ISystemLogService.html">ToSic.Sxc.Services.ILogService</a> to log messages to the system (Dnn/Oqtane)</li>
+<li>Introduced <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IMailService.html">IMailService</a> to easily send mails cross-platform</li>
+<li>Introduced <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.ISecureDataService.html">ISecureDataService</a> to use encrypted settings</li>
+<li>Introduced <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Services.IRenderService.html">IRenderService</a> for inner-content rendering (Oqtane code must use this)</li>
+<li>Published <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataFormats.EavLight.html">ToSic.Eav.DataFormats.EavLight</a> to better document simple eav data</li>
+<li>Published <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.html">IConvertToEavLight</a> as the new standard way to prepare entities for WebAPI serialization.
+This is meant to replace previous code using objects such as <code>EntitiesToDictionary</code> or <code>DataToDictionary</code> which are now marked as obsolete.</li>
+<li>New Razor12, Api12 and Code12 Classes now don't support old, obsolete APIs anymore</li>
+<li>Link.Image now also accepts <code>parameters</code> as a parameter</li>
+<li>Link.Image and Link.To always create safe urls now (spaces are encoded etc.)</li>
+<li>Link.To and Link.Image now have a parameter <code>type</code> which can be <code>&quot;full&quot;</code> to ensure domains are always added to links (for use in APIs generating RSS etc.)</li>
+<li>Update to RazorBlade v3.7</li>
+<li>Edit.Toolbar now supports <code>condition</code> so that toolbars may or may not be created based on a true/false value</li>
+<li>Link.Image now also accepts a <code>factor</code> or <code>aspectRatio</code> which is a string like <code>1:2</code> or <code>3/4</code></li>
+<li><code>AsDynamic(...)</code> now also wraps anonymous objects in quite an amazing way</li>
+<li>Bugfix: lots of small ones</li>
+</ol>
+<h3 id="breaking-change-version-1205">Breaking Change Version 12.05</h3>
+<p>V12 adds new properties to Razor and WebAPI which could result in some surprises: <code>Path</code>, <code>Convert</code>, <code>Settings</code>, <code>Resources</code> and <code>DevTools</code>.
+Especially the new <code>Path</code> and <code>Convert</code> could clash with existing code which had <code>@using System</code> or <code>@using System.IO</code> so the code would just read <code>Path.GetFileName(...)</code> or something.
+Because of this, we only give the latest classes <code>Custom.Dnn.Razor12</code>, <code>Custom.Dnn.Code12</code>, <code>Custom.Hybrid.Razor12</code>, <code>Custom.Hybrid.Api12</code> etc. these properties.</p>
+<p>This means that previous base classes do not have these by design, and we encourage you to move to these latest base classes.</p>
+<blockquote>
+<p>Important: 2sxc 12.00 - 12.04 also had some of these properties on <code>ToSic.Sxc.Dnn.RazorComponent</code> as well as <code>ToSic.Sxc.Dnn.ApiController</code>.
+So if you were eager to use these properties but didn't change the base class, you were able to use it.
+To protect thousands of upgrade-scenarios we had to take them away from the old base classes. Sorry!</p>
+</blockquote>
+<p><strong>Possible Breaking Changes</strong></p>
+<ol>
+<li>We believe nothing broke, but it could be that some commands on <code>EntitiesToDictionary</code> or <code>DataToDictionary</code> were accidentally changed. Pls report so we can fix that.</li>
+<li>The <code>Link.To(...)</code> now returns safe URLs. This should not be an issue, but in rare cases post-processing of the string returned may expect spaces or something, which are now <code>%20</code></li>
+<li>We disabled old obsolete APIs on the new Razor12, Api12 and Code12 base classes. In case you were using this (not likely) you'll get an error telling you about this.</li>
+</ol>
+<h3 id="changes-version-1204-incl-1203-which-was-not-officially-released">Changes Version 12.04 incl 12.03 which was not officially released</h3>
+<ol>
+<li>Settings Stack and Resources Stack added, and the <code>Settings</code> / <code>Resources</code> object now have this</li>
+<li>Global <code>Settings.Images.xxx</code> settings defined for Content, Screen, Lightbox and Section</li>
+<li>Global <code>Settings.Resources.xxx</code> defined for fancybox3, fancybox4, bootstrap4, bootstrap5</li>
+<li>Link.Image API created to support predefined sizes/resize modes etc.</li>
+<li>Created feature where DynamicEntities can browse to sub-items using their identifier (used for <code>Settings.Images.Content</code> where <code>Content</code> is actually the title of a sub-entity)</li>
+<li>Added debug-feature for DynamicEntity get</li>
+<li>String-Dropdown inputs now have a value-key presets option (instead of the key-value which was flaky) and added support for escaping special characters</li>
+<li>#Oqtane 2.2 support added</li>
+<li>Introduced Monaco (VS-Code online) editor for beta-testing source-editing</li>
+</ol>
+<h3 id="breaking-change-version-1204">Breaking Change Version 12.04</h3>
+<ol>
+<li>DynamicEntity now has a property Count because it's a list as well, this could cause issues if a content-type has a property <code>Count</code></li>
+<li>DynamicEntity is now always a list. Because of this we removed the <code>DynamicEntityWithList</code> object. We believe the type is never referenced in user code, but if it is, this would be a breaking change.</li>
+<li>Many parts that prepare Entities returned a <code>Dictionary&lt;string, object&gt;</code> and now return an <code>IDictionary&lt;string, object&gt;</code>.<br>
+We believe this shouldn't hurt much, since the result would usually be in a <code>var</code> or returend directly to the API for streaming, but in case someone had used explicitly typed code, this will require a minor change</li>
+</ol>
+<h3 id="changes-version-1202">Changes Version 12.02</h3>
+<ol>
+<li>Formulas feature finalized</li>
+<li>DynamicEntityStack object created</li>
+<li>Hybrid <code>IPageService</code> created with <code>Activate</code> and similar features</li>
+<li><code>CmsContext</code> was enhanced with <code>View</code> information</li>
+<li>Content-Type icons can now be stored in the app with an <code>[App:Path]/image.jpg</code> style reference</li>
+<li>Enabled view-configuration to configure search behavior incl. not-to-index or what streams should be indexed</li>
+<li><code>turnOn</code> created / deployed</li>
+<li>#Oqtane 2.1 support added in 2sxc 12.02.01</li>
+</ol>
+<h3 id="changes-version-1200-todo">Changes Version 12.00 Todo</h3>
+<hr>
+<h2 id="version-11">Version 11</h2>
+<h3 id="changes-version-1100">Changes Version 11.00</h3>
+<h4 id="breaking-changes">Breaking Changes</h4>
+<p>The following changes are all super-low-profile, but we want to document them just to be through:</p>
+<ol>
+<li><code>DataStream</code> and <code>IDataStream</code> loses a very old property called <code>.LightList</code> - we're pretty sure it's not in use anywhere, if you have it, just use <code>.List</code> instead.</li>
+</ol>
+<h4 id="enhancements">Enhancements</h4>
+<ol>
+<li>Brand new Admin UI based on Angular 9 and Ivy with new Code-Editor, new <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> and much more</li>
+<li>Razor CodeBehind</li>
+<li>Automatic Polymorphism</li>
+<li>Updated Razor Blades to 3.02 with the new <code>Tags.SafeUrl(...)</code> command</li>
+<li>Field: Boolean-Tristate which saves true/false/null</li>
+<li><code>App.Data.Create(...)</code> now returns entities it just created</li>
+</ol>
+<h3 id="changes-version-1101">Changes Version 11.01</h3>
+<h4 id="enhancements-1">Enhancements</h4>
+<ol>
+<li>In-Page Toolbar now recognises sub-item lists and provides sorting and editing buttons #2009</li>
+<li>Item-lists now have a button to add existing items to them #1278</li>
+<li>New system to create extensions in an app, in the system folder</li>
+<li>Ability to create custom Input Fields just by placing them in the system folder #2070</li>
+</ol>
+<h4 id="minor">Minor</h4>
+<ol>
+<li>Improve Equality Check for DynamicEntities and EntitiesInList #2075</li>
+<li>Data-table in admin UI now shows <code>Title</code> field no matter if there is another field which is the title #1639</li>
+<li>Button to flush app-cache in admin-ui #2073</li>
+<li>2sxc Insights now available from the super-user toolbar #2069</li>
+<li>PT translations are added again #2064</li>
+<li>Loads of enhancements and minor issues in the UI</li>
+</ol>
+<h3 id="changes-version-1102">Changes Version 11.02</h3>
+<h4 id="enhancements-2">Enhancements</h4>
+<ol>
+<li>App-Extensions system in the folder <code>system</code></li>
+<li>Custom WebComponent based input fields #2082</li>
+<li>API to reconfigure the wysiwyg input control #2090</li>
+<li>Show view use with links to pages and more #2077</li>
+<li>UI - fields can now be set to not-translate #2086</li>
+<li>UI - boolean can now show different labels based on the value it has #2085</li>
+</ol>
+<h4 id="minor-1">Minor</h4>
+<ol>
+<li>Add HR language pack for editor #2087</li>
+<li>show app-name in admin ui</li>
+<li>show app-icon in apps-management #2078</li>
+</ol>
+<h3 id="changes-version-1103---todo">Changes Version 11.03 - todo</h3>
+<h3 id="changes-version-1104---todo">Changes Version 11.04 - todo</h3>
+<h3 id="changes-version-1105">Changes Version 11.05</h3>
+<ol>
+<li>Old Edit UI be removed</li>
+<li>Old Admin-UI be removed</li>
+<li>APIs which only the old UIs used be removed</li>
+<li>Old helper JS for AngularJS apps (located in <code>/js/angularjs</code>) will be removed from the distribution.
+They had not been updated for over 3 years and we believe they were not widely used.
+Anybody upgrading will still preserve the files that are there.
+If you really need them, download an old release of 2sxc and get them manually.</li>
+</ol>
+<h3 id="changes-version-1106---1111---todo">Changes Version 11.06 - 11.11 - todo</h3>
+<p>👉 See the <a href="https://github.com/2sic/2sxc/projects/23">Project Issues</a></p>
+<h3 id="changes-version-1113">Changes Version 11.13</h3>
+<ol>
+<li><a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> 3 with a lot of new features
+<ol>
+<li>Click on a stream <a class="xref" href="../../../basics/query/debug/index.html">shows what's in that stream</a></li>
+<li>Much <a class="xref" href="../../../basics/query/debug/index.html">better error handling</a> to avoid queries from crashing if a stream has an error</li>
+<li>All internal DataSources were updated to use this new Error-Handling</li>
+<li>Output of Query is now tabbed which is much nicer to use</li>
+<li>Visual-Query only returns top 25 results by default to help with creating queries with large amounts of data</li>
+<li>UI was enhanced to show more user-friendly names/infos</li>
+<li><code>DynamicIn</code> was introduced so DataSources can indicate that they expect a lot of In-streams</li>
+<li>UI enhanced with better/larger buttons/icons</li>
+<li><code>In</code> Streams are now managed better so they can connect before it's known if the source <code>Out</code> actually has that stream</li>
+</ol>
+</li>
+<li>New DataSource Error to provoke an error in a Query for testing</li>
+<li>New DataSource <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.Serialization.html">SerializationConfiguration</a> lets you determine how things are serialized</li>
+<li>DataSource <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.AttributeFilter.html">AttributeFilter</a> enhanced to have keep-all or remove-all and multi-line configuration (easier)</li>
+<li>New <a class="xref" href="../../../net-code/data-sources/custom/tutorial-basic/index.html">DataSource Tutorial with updated sample code</a></li>
+<li>Insights-Logging was enhanced to log Exceptions (used in the <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> Error handling)</li>
+</ol>
+<p><strong>Bugfixes</strong></p>
+<ol>
+<li>Toolbar had issue when color code was numbers only</li>
+</ol>
+<h3 id="changes-version-1114---1122-lts-todo">Changes Version 11.14 - 11.22 LTS TODO</h3>
+<h2 id="breaking-changes-in-eav-and-2sxc-v11">Breaking Changes in EAV and 2sxc v11</h2>
+<p>We try to minimize breaking changes, and most breaking changes won't affect your work, because it's internal API.
+We're documenting it here to ensure you know what happened, in case you still run into this.</p>
+<h3 id="summary">Summary</h3>
+<p>There were small breaking changes in 11.00 to 11.11 but they were internal so shouldn't affect normal developers.</p>
+<h3 id="breaking-changes-version-1107---drop-the-old-edit-ui">Breaking Changes Version 11.07 - Drop the old edit UI</h3>
+<ol>
+<li>In 11.07 the old edit UI was removed, so customizations for that UI would not be in effect any more.</li>
+</ol>
+<h3 id="breaking-changes-version-1110---mainly-dependency-injection">Breaking Changes Version 11.10 - Mainly Dependency Injection</h3>
+<ol>
+<li>In v11.10 we used much more dependency injection than ever before and stopped using static values which were still in the API in many places. Because of this, certain helper objects to create entities or lookup values were changed and their constructors were changed. We invested a lot of time to try to ensure that old APIs still work, but in case you're hit by one of these, make sure you check the DI and switch to resolving the objects using DI.</li>
+</ol>
+<h3 id="breaking-changes-version-1111---language-detection">Breaking Changes Version 11.11 - Language Detection</h3>
+<ol>
+<li>Previously the language detection used the Thread culture. Turns out this wasn't reliable because Dnn does some funny stuff (probably historical) which means that API-calls ended up using the language stored in some cookie instead of the one specified by the URL. We changed this, which should be more reliable. But if you were relying on this strange effect, then it may be a breaking change.</li>
+<li>Internally our tokens were also using the thread culture. When we changed this, we also had to change how tokens pick up the language. In rare cases this may affect you.</li>
+<li>We changed all tokens to always resolve boolean values to <code>true</code>/<code>false</code> (previously they would have been changed to the current language, like <code>wahr</code> for german). We believe this change is only an improvement, and should ensure that internal resolves in Queries etc. result in reliable output.</li>
+</ol>
+<h3 id="breaking-changes-version-1111---datasources-datasourceconfiguration">Breaking Changes Version 11.11 - DataSources: DataSourceConfiguration</h3>
+<p>Note that we also improved the <code>DataSourceConfiguration</code> to an interface <code>IDataSourceConfiguration</code> and documented this.
+As a side effect the API stays the same, but you will have to recompile your data sources for them to work again - sorry.</p>
+<h3 id="breaking-changes-version-111103---ientity-values">Breaking Changes Version 11.11.03 - IEntity Values</h3>
+<ol>
+<li><code>IEntity</code> had a command called <code>Value(fieldName)</code> which was probably never used. The idea used to be that it does language lookup internally, but we refactored this out since it could never be fully reliable because the full language list wasn't known to the <code>IEntity</code>. So we re-purposed the method (assuming it's not used) to just lookup the first occurance of the value. This way it`s useful for configurations and similar which are not multi-language.</li>
+<li><code>IEntity</code> also had a <code>Value(fieldname, lookup)</code> method. We are deprecating it, and making the lookup not happen from now on. We believe it was never used.</li>
+<li><code>IEntity</code> had a command called <code>PrimaryValue(fieldName)</code> which was probably never ever used, so we're deprecating it. Use <code>Value(fieldName)</code> instead.</li>
+</ol>
+<h3 id="breaking-changes-version-111103---other">Breaking Changes Version 11.11.03 - Other</h3>
+<ol>
+<li>UI Toolbar dropped the button and command for <code>item-history</code>, as the history is now part of the edit dialog</li>
+</ol>
+<hr>
+<h2 id="version-10">Version 10</h2>
+<h3 id="changes-version-1001---1009-lts">Changes Version 10.01 - 10.09 LTS</h3>
+<ul>
+<li>Develop and fine-tuning of the new Edit-UI based on Angular 8</li>
+</ul>
+<h3 id="changes-version-1020-00-to-1020-05">Changes Version 10.20-00 to 10.20-05</h3>
+<ul>
+<li>Enhanced ListCache so it will prevent parallel buildup - important for long-loading DataSources like SharePoint DataSources</li>
+<li>Updating to RazorBlade 3.1 which doesn't need extension methods</li>
+</ul>
+<h3 id="changes-version-1020-06">Changes Version 10.20-06</h3>
+<ul>
+<li>Created <code>AsDynamic(string)</code></li>
+<li>Created <code>AsDynamic(DataSource)</code> to enable <code>AsDynamic(Data)</code> instead of <code>AsDynamic(Data[&quot;Default&quot;])</code></li>
+</ul>
+<h3 id="changes-version-1021">Changes Version 10.21</h3>
+<ul>
+<li>New <code>AsList()</code> for better code</li>
+<li>New <code>AsDynamic(string)</code> to work with json</li>
+<li><code>/dist/</code> is now cleaned up on every update, to better distribute changing JS file structures</li>
+</ul>
+<h3 id="changes-version-1022">Changes Version 10.22</h3>
+<ul>
+<li>Query Params added for VisualQuery</li>
+<li>Created QueryRun DataSource</li>
+<li>Insights now includes the code file and line numbers</li>
+<li>Insights now also measures time needed to execute some code</li>
+<li>Various performance enhancements</li>
+<li>Improved SoC for AppsCache and AppRoot DataSource</li>
+</ul>
+<h3 id="changes-version-1023">Changes Version 10.23</h3>
+<ul>
+<li>Lots of logging enhancements</li>
+</ul>
+<h3 id="changes-version-1024-lts">Changes Version 10.24 LTS</h3>
+<ul>
+<li>New stable LTS</li>
+<li>Improved/fixed QueryRun DataSource</li>
+<li>Improved Insights</li>
+<li>Enhancements to use 2sxc with Redis Cache</li>
+<li>WYSIWYG enhancements for better H1-Hx, P and Blockquote</li>
+<li>Performance enhancements</li>
+<li>Intenal refactoring for APIs</li>
+<li>Introduced an internal Compatibility-Level to disable very old features when using new RazorComponents</li>
+</ul>
+<h3 id="changes-version-1025-lts">Changes Version 10.25 LTS</h3>
+<ul>
+<li>Changed how the $2sxc client JavaScripts are loaded for much better performance and better Google PageSpeed</li>
+<li>Enabled various features for the Content area which previously were hidden, like Resources and Settings</li>
+<li>Released brand new Content-Templates App with best-practices for 10.25</li>
+<li>Fixed bugs with Evoq Page Publishing</li>
+<li>Enhanced the ValueFilter DataSource to handle dates which were null</li>
+</ul>
+<h3 id="changes-version-1026">Changes Version 10.26</h3>
+<ul>
+<li>TinyMCE Updated to 5.1</li>
+<li>Enhanced <code>CreateInstance</code> API to also work when compiling Razor files from a WebApi</li>
+<li>New DataSource <code>StreamPick</code></li>
+<li>New automatic Param called <code>[Params:ShowDrafts]</code> to be used in <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> - returns <code>True</code> or <code>False</code></li>
+<li>New tokens <code>[App:AppId]</code> and <code>[App:ZoneId]</code> to use in <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> calles (dropdown from query)</li>
+<li>Changed List-Caching bbehavior to create more reliable cache-keys for complex queries (previously it only went through <code>Default</code> streams to generate the cache-key)</li>
+</ul>
+<h3 id="changes-version-1027">Changes Version 10.27</h3>
+<h4 id="possibly-breaking-changes">Possibly breaking changes</h4>
+<ol>
+<li>Because the dynamic entity list now has a type which is dynamic, it cannot be cast to <code>List&lt;dynamic&gt;</code> any more. <code>IList&lt;dynamic&gt;</code> works, but in case you have any code casting it to <code>List&lt;dynamic&gt;</code> you'll need to change that to either <code>IList&lt;dynamic&gt;</code> or <code>IEnumerable&lt;dynamic&gt;</code>.</li>
+</ol>
+<h4 id="new-features--major-improvements">New Features / Major Improvements</h4>
+<ul>
+<li>Changed DynamicEntity so that accessing a property which contains many other entities it will return a <code>DynamicEntityWithList</code>. This allows Razor files to access the properties like <code>.EntityId</code> or <code>.FirstName</code> of the main entity in a sub-list easily without requiring <code>AsList(...)</code> <a href="https://github.com/2sic/2sxc/issues/1993">#1993</a></li>
+<li>Updated Quick-Dialog to use Angular 9, Ivy and the latest Dnn-Sxc-Angular <a href="https://github.com/2sic/2sxc/issues/1992">#1992</a></li>
+<li>New DataSource <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.AttributeRename.html">AttributeRename</a> <a href="https://github.com/2sic/2sxc/issues/2004">#2004</a></li>
+<li>Completely refactored internal list management API <a href="(https://github.com/2sic/2sxc/issues/1995)">#1995</a></li>
+<li>Complete refactoring of the inpage code to make it typesafe (no more <code>any</code> types)</li>
+<li>Created brand-new, <a class="xref" href="../../../js-code/toolbars/simple.html">simpler way to create custom Toolbars</a> and <a class="xref" href="../../../basics/edit/edit-ux/toolbars/customize.html">specs</a></li>
+<li>Introduces <a class="xref" href="../../../net-code/debug/index.html">JS/API 2sxc-Insights</a> for debugging In-Page code</li>
+</ul>
+<h4 id="enhancements">Enhancements</h4>
+<ul>
+<li>Performance-Enhance App DataSource to delay building objects until needed <a href="https://github.com/2sic/2sxc/issues/1991">#1991</a></li>
+<li>Performance-Enhance internal Token Lookup <a href="https://github.com/2sic/2sxc/issues/1998">#1998</a></li>
+<li>Enhanced Dnn Search Index logging <a href="https://github.com/2sic/2sxc/issues/1997">#1997</a></li>
+<li>Corrected help-links on all data sources <a href="https://github.com/2sic/2sxc/issues/1994">#1994</a></li>
+</ul>
+<h4 id="bugfixes">Bugfixes</h4>
+<ul>
+<li>Cache-All-Streams only used the Default-Streams for Cache-Key identification <a href="https://github.com/2sic/2sxc/issues/1988">#1988</a></li>
+<li>QueryRun DataSource doesn't show statitics on all streams <a href="https://github.com/2sic/2sxc/issues/1989">#1989</a></li>
+<li>Modified date and Owner information were missing on json stored entities <a href="https://github.com/2sic/2sxc/issues/2005">#2005</a> / <a href="https://github.com/2sic/2sxc/issues/2006">#2006</a></li>
+<li>Fixed bug in JS API for non-2sxc endpoint resolution <a href="https://github.com/2sic/2sxc/issues/2000">#2000</a></li>
+<li>Queries didn't resolve Dnn tokens when accessed in the Search Index <a href="https://github.com/2sic/2sxc/issues/1999">#1999</a></li>
+</ul>
+<h2 id="breaking-changes-in-eav-and-2sxc">Breaking Changes in EAV and 2sxc</h2>
+<p>We try to minimize breaking changes, and most breaking changes won't affect your work, because it's internal API.
+We're documenting it here to ensure you know what happened, in case you still run into this.</p>
+<h3 id="summary">Summary</h3>
+<blockquote>
+<p>Version 10 has a lot of small breaking changes because
+we restructured the internal API so it's consistent when we publish it.
+All these things shouldn't affect you, because they were internal APIs,
+but in case it does - here's what we did.</p>
+</blockquote>
+<h3 id="version-1022-and-1023">Version 10.22 and 10.23</h3>
+<ol>
+<li>Renamed the <code>RootDataSource</code> and the Interface to <code>IAppRoot</code></li>
+<li>Split SOC of the <code>AppRoot</code> DataSource so that caching, Root-Metadata and ListCache is fully separate</li>
+<li>Since the Logging system now auto-picks up the code lines and names of the methods, we simplified the commands and dropped some parameters.</li>
+<li>Moved quite a bit of the DataSource objects into sub-objects, again for SOC.</li>
+</ol>
+<h3 id="version-1020-04-ca-2019-12-03">Version 10.20-04 (ca. 2019-12-03)</h3>
+<ol>
+<li>Renamed <code>DataTableDataSource</code> to <code>DataTable</code>, old name still works.</li>
+<li>Renamed <code>ExternalDataDataSource</code> to <code>ExternalData</code>, old name still works.</li>
+<li>Renamed <code>ToSic.SexyContent.DataSources.ModuleDataSource</code> to <code>ToSic.Sxc.DataSources.CmsBlock</code>, old name still works.</li>
+<li>Renamed <code>ToSic.Eav.DataSources.VisualQuery.VisualQueryAttribute</code> to <code>ToSic.Eav.DataSources.Queries.VisualQueryAttribute</code>, old name still works.</li>
+<li>Renamed <code>ToSic.SexyContent.Environment.Dnn7.Factory</code> to <code>ToSic.Sxc.Dnn.Factory</code>, old name still works.</li>
+<li>Renamed <code>ToSic.Eav.DataSources.BaseDataSource</code> to <code>ToSic.Eav.DataSources.DataSourceBase</code> for consistency, old name still works.</li>
+<li>Moved the LookUp namespaces into the Core DLL</li>
+</ol>
+<h3 id="version-1020-02-ca-2019-11-22">Version 10.20-02 (ca. 2019-11-22)</h3>
+<p>More internal changes which shouldn't affect anybody, but make the API ready for public docs...</p>
+<ol>
+<li>Moved/renamed the internal <code>Eav.AppDataPackage</code> to <code>Eav.Apps.AppState</code></li>
+<li>Moved/renamed some internal interfaces like <code>Entity...</code></li>
+<li>Did a major change for how <code>Attribute&lt;T&gt;</code> for relationships work.<br>
+Before they were <code>Attribute&lt;EntityRelationship&gt;</code> and now they are <code>Attribute&lt;IEnumerable&lt;IEntity&gt;&gt;</code>.<br>
+This also affects <code>Value&lt;EntityRelationship&gt;</code> which is now <code>Value&lt;IEnumerable&lt;IEntity&gt;&gt;</code></li>
+<li>Moved <code>Tenant&lt;T&gt;</code> and <code>Container&lt;T&gt;</code> including matching interfaces to <code>Eav.Environment</code></li>
+<li>Renamed <code>IAppIdentity</code> to <code>IInAppAndZone</code> and <code>IZoneIdentity</code> to <code>IInZone</code></li>
+<li>Renamed <code>ICacheKeyProvider</code> to <code>ICacheKey</code></li>
+<li>Renamed <code>CacheChainedIEnumerable&lt;T&gt;</code> to <code>SynchronizedList&lt;T&gt;</code></li>
+<li>Moved/Renamed <code>MetadataFor</code> to <code>Eav.Metadata.Target</code>. Left old name compatible.</li>
+<li>Moved some extension methods for IEntity from <code>ToSic.Eav.Data.Query</code> to <code>ToSic.Eav.Data</code></li>
+<li>Changed <code>Permissions</code> to be strong-typed EntityBased objects</li>
+</ol>
+<h3 id="version-102001-2019-11-12">Version 10.20.01 (2019-11-12)</h3>
+<ol>
+<li>Internal code now uses the term <code>Header</code> instead of <code>ListContent</code>. External code provides both for backward-compatibility</li>
+<li>moved internal interfaces for engines (Razor/Token) to final namespaces <code>ToSic.Sxc.Engines</code>
+<ol>
+<li><code>IEngine</code></li>
+<li><code>EngineBase</code></li>
+<li><code>ITokenEngine</code></li>
+<li><code>IRazorEngine</code></li>
+</ol>
+</li>
+<li>corrected architecture - some template-management code had slipped into <code>Eav.Apps</code>, was moved back to <code>Sxc.Apps</code></li>
+<li>The <code>Template</code> object was moved from <code>Eav.Apps</code> to <code>Sxc.Views</code> and we added an interface <code>IView</code>.
+We also renamed the internal properti <code>ViewNameInUrl</code> to <code>UrlIdentifier</code>.</li>
+<li>To correct the API a CmsManager was created extending the AppManager, which is in charge of Views</li>
+<li>Moving internal stuff related to content blocks
+<ol>
+<li><code>IContentBlock</code> from <code>SexyContent.Interfaces</code> to <code>Sxc.Blocks</code></li>
+<li>from <code>ToSic.SexyContent.ISxcInstance</code> to <code>ToSic.Sxc.Blocks.IBlockContext</code></li>
+<li>actually moved a lot of things there incl. <code>ContentBlock</code> now <code>BlockConfiguration</code> and more - all internal stuff</li>
+</ol>
+</li>
+<li>Moving the <code>ToSic.SexyContent.App</code> to <code>ToSic.Sxc.Apps.App</code></li>
+<li>In a razor page, we added the preferred <code>Purpose</code>. The old <code>InstancePurpose</code> will still work</li>
+<li>Placed some things we just moved in 10.20 to a final place - since it's a very recent change, we updated the docs in the 10.20.00 section</li>
+</ol>
+<h4 id="changed-but-completely-internal">Changed, but completely internal</h4>
+<ol>
+<li>Some namespaces on <code>SexyContent.ContentBlocks</code> were moved to <code>Sxc.Blocks</code></li>
+</ol>
+<h3 id="version-102000-2019-11-05">Version 10.20.00 (2019-11-05)</h3>
+<ol>
+<li>the internal interface <code>IInPageEditingHelpers</code> was moved from <code>ToSic.SexyContent.Interfaces</code> to the namespace <code>ToSic.Sxc.Web</code></li>
+<li>the internal interface <code>ILinkHelper</code> was moved to <code>ToSic.Sxc.Web</code></li>
+<li>the internal interface <code>IHtmlHelper</code> was moved to <code>ToSic.Sxc.Dnn</code></li>
+<li>the property <code>Configuration</code> on dynamic entities was deprecated in 2sxc 4 and removed in 2sxc 10 - we don't think it was ever used</li>
+<li>moved internal Metadata interfaces (ca. 5) into final namespace <a class="xref" href="../../../api/dot-net/ToSic.Eav.Metadata.html">ToSic.Eav.Metadata</a></li>
+<li>Moved a bunch of internal interfaces which we believe were never used externally from <code>ToSic.Eav.Interfaces</code> to <code>ToSic.Eav.Data</code>
+<ol>
+<li><code>ToSic.Eav.Data.IAttribute</code></li>
+<li><code>ToSic.Eav.IAttribute&lt;T&gt;</code></li>
+<li><code>IAttributeBase</code></li>
+<li><code>IAttributeDefinition</code></li>
+<li><code>IChildEntities</code></li>
+<li><code>IContentType</code></li>
+<li><code>IDimension</code></li>
+<li><code>IEntityLight</code></li>
+<li><code>ILanguage</code></li>
+<li><code>IRelationshipManager</code></li>
+<li><code>IValue</code></li>
+<li><code>IValue&lt;T&gt;</code></li>
+<li><code>IValueOfDimension&lt;T&gt;</code></li>
+</ol>
+</li>
+<li>Moved a bunch of internal interfaces which we believe were never used externally from <code>ToSic.Eav.Apps.Interfaces</code> to <code>ToSic.Eav.Apps</code>
+<ol>
+<li><code>IApp</code></li>
+<li><code>IAppData</code></li>
+<li><code>IAppDataConfiguration</code></li>
+<li><code>IAppEnvironment</code></li>
+<li><code>IEnvironmentFactory</code></li>
+<li><code>IInstanceInfo</code></li>
+<li><code>IItemListAction</code></li>
+<li><code>IPagePublishing</code></li>
+<li><code>ITenant</code></li>
+<li><code>IZoneMapper</code></li>
+</ol>
+</li>
+<li>the internal namespace <code>ToSic.Eav.ValueProvider</code> was changed to <code>ToSic.Eav.LookUp</code> and inside it<br>
+we renamed a bunch of internal interfaces and objects which we believe were never used externally</li>
+</ol>
+<h4 id="deprecatedchanged-but-not-broken">Deprecated/Changed, but not broken</h4>
+<ol>
+<li>the internal interface <code>ToSic.SexyContent.IAppAndDataHelpers</code> was renamed to <code>ToSic.Sxc.IDynamicCode</code> but the old interface still exists, so it shouldn't break<br>
+<em>it was used by Mobius Forms</em></li>
+<li>moved <code>ToSic.Eav.Interfaces.IEntity</code> to <code>ToSic.Eav.Data.IEntity</code> - but preserved the old interface for compatibility
+<em>it was used everywhere</em></li>
+</ol>
+<h4 id="clean-up-but-not-broken">Clean-Up, but not broken</h4>
+<ol>
+<li>We're transitioning to the term <code>Header</code> instead of <code>ListContent</code> in templates.<br>
+The Razor pages and WebApi have this starting now, while old terms still work.
+Note that we're <em>not</em> creating a <code>HeaderPresentation</code>, because you should use <code>Header.Presentation</code></li>
+</ol>
+<hr>
+<h2 id="version-9">Version 9</h2>
+<h3 id="changes-version-90">Changes Version 9.0</h3>
+<ul>
+<li>[x] Change data access to Entity Framework Core 1.1</li>
+<li>[x] Change IoC Layer to use .net Core mechanisms</li>
+<li>[x] Replace Quick-Dialogs with Angular4 implementation</li>
+</ul>
+<h3 id="changes-version-91">Changes Version 9.1</h3>
+<ul>
+<li>[x] Move primary quick-dialog GUI to bottom of page</li>
+</ul>
+<h3 id="changes-version-93">Changes Version 9.3</h3>
+<ul>
+<li>[x] Item-Level versioning, history and rollback</li>
+</ul>
+<h3 id="changes-version-94">Changes Version 9.4</h3>
+<ul>
+<li>[x] Drop all dependencies to Telerik - file browser using ADAM</li>
+</ul>
+<h3 id="changes-version-95">Changes Version 9.5</h3>
+<ul>
+<li>[x] <a class="xref" href="../../../basics/cms/page-publishing/index.html">Support for Dnn/Evoq Page Publishing</a></li>
+</ul>
+<h3 id="changes-version-96">Changes Version 9.6</h3>
+<ul>
+<li>[x] <a href="https://2sxc.org/en/blog/post/releasing-2sxc-9-6-with-extensive-logging">Extensive logging system to watch all internals</a></li>
+</ul>
+<h3 id="changes-version-97---the-json-content-types--entities-upgrade">Changes Version 9.7 - the JSON-Content-Types &amp; Entities Upgrade</h3>
+<ul>
+<li>[x] New features in entity json serialization
+<ul>
+<li>[x] Support for schema-free (very dynamic) entities</li>
+</ul>
+</li>
+<li>[x] new features in content-type json serialization
+<ul>
+<li>[x] defined json format for content-types</li>
+<li>[x] full serialization and deserialization of json-based content types</li>
+</ul>
+</li>
+<li>[x] SQL IRepository storage enhancements
+<ul>
+<li>[x] extended SQL table Entities to also store AppId and ContentType (name) to ensure that json-entities can be stored</li>
+<li>[x] Support to persist entities as JSON in repository (DB)</li>
+</ul>
+</li>
+<li>[x] file-storage implementation of IRepository loader, to created a standard-based app-content-types provider
+<ul>
+<li>[x] Ability to provide file-based json content-types at a system level, which is probably the better solution for most scenarios (more flexible, easier to spot changes, etc.)</li>
+</ul>
+</li>
+<li>[x] global content-types system
+<ul>
+<li>[x] Support for code-provided content-types, which allows faster feature-evolution</li>
+<li>[x] <del>Support for JSON based i18n on code-provided content-types, to allow better translation</del> removed again, as not needed</li>
+</ul>
+</li>
+<li>[x] Ensure export/import of data of these new content-types (req. extensive refactoring)</li>
+<li>[x] extensive automated testing of these new features</li>
+</ul>
+<h3 id="changes-version-98---the-visualquery-upgrade">Changes Version 9.8 - the VisualQuery Upgrade</h3>
+<ul>
+<li>[x] SqlDataSource in <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> Designer</li>
+<li>[x] Show DataSources which have Fallback-In-Streams in <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> Designer</li>
+<li>[x] UI Updates on <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> Designer, to better fit current needs</li>
+<li>[x] More help documentation for various data sources in <a class="xref" href="../../../basics/query/visual-query/index.html">VisualQuery</a> Designer</li>
+<li>[x] Shuffle DataSource now configurable in VisualQuery</li>
+<li>[x] Support for Schema-Free Content (dynamic, without existing content-type)</li>
+</ul>
+<h3 id="changes-version-99---another-visualquery-upgrade">Changes Version 9.9 - another VisualQuery Upgrade</h3>
+<ul>
+<li>[x] Enhance relationship filter to enable filtering on other fields of related items</li>
+<li>[x] Enhance other data sources with features which so far were not available in the visual designer</li>
+</ul>
+<h3 id="changes-version-910---combobox-and-more-datasources-wip">Changes Version 9.10 - Combobox and more DataSources (WIP)</h3>
+<ul>
+<li>[x] Combobox input type allowing a <a class="xref" href="../../../basics/data/fields/string-dropdown.html">dropdown with values</a>, but also allowing manual typing (to select pre-defined values, but also use Tokens)</li>
+<li>[x] <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.StreamMerge.html">StreamMerge DataSource</a></li>
+<li>[x] <a class="xref" href="../../../api/dot-net/ToSic.Eav.DataSources.ItemFilterDuplicates.html">ItemFilterDuplicates DataSource</a></li>
+<li>[x] feature to export Json ContentTypes</li>
+<li>[x] multiple file-repos which deliver Content-Types, allows for any module to provide additional contenttypes</li>
+</ul>
+<h3 id="changes-version-911---query-picker--more-datasources">Changes Version 9.11 - Query-Picker &amp; more DataSources</h3>
+<ul>
+<li>[x] Entity-Picker delivering items from a query, instead of a type</li>
+<li>[x] string-dropdown-query to pick string-items from a query instead of pre-filled</li>
+<li>[x] query export / import</li>
+<li>[x] multi-select items in a string-query-picker</li>
+</ul>
+<h3 id="changes-version-912">Changes Version 9.12</h3>
+<ul>
+<li>[x] Json-based global query definitions</li>
+<li>[x] Method to add parameters to a called query (like when using an entity-pickers which uses a query)</li>
+<li>[x] pre-build queries for things like zones, apps, content-types, fields, query-info etc.</li>
+<li>[x] data sources for Zones, Apps, Queries, Attributes, etc.</li>
+<li>[x] limit streams returned by a query</li>
+</ul>
+<h3 id="changes-version-913">Changes Version 9.13</h3>
+<ul>
+<li>[x] Enhanced API to create custom DataSources + ca. 10 blog posts for that</li>
+<li>[x] Standalone FnL / UDT DataSource (removed it from core distribution)</li>
+</ul>
+<h3 id="changes-version-914-lts">Changes Version 9.14 LTS</h3>
+<ul>
+<li>[x] New LTS Concept - see <a href="https://2sxc.org/en/blog/post/special-edition-2sxc-9-14-lts-long-term-support">blog post about LTS 9.14</a></li>
+</ul>
+<h3 id="changes-version-915-942-lts">Changes Version 9.15-9.42 LTS</h3>
+<p>Didn't have time to document this yet, sorry. If you need to know, best check the git-history.</p>
+<h2 id="breaking-changes-in-eav-and-2sxc-version-9">Breaking Changes in EAV and 2sxc Version 9</h2>
+<p>We try to minimize breaking changes, and most breaking changes won't affect your work, because it's internal API.
+We're documenting it here to ensure you know what happened, in case you still run into this.</p>
+<h3 id="version-92000-2018-03-04">Version 9.20.00 (2018-03-04)</h3>
+<ol>
+<li>Minor breaking change in ADAM properties, like <code>Id</code> instead of <code>FolderID</code> which was a leftover of Dnn naming.<br>
+see full <a href="https://2sxc.org/en/blog/post/working-with-the-breaking-change-adam-objects-2sxc-9-20">blog post</a></li>
+</ol>
+<h3 id="version-090800-2017-11-28">Version 09.08.00 (2017-11-28)</h3>
+<ol>
+<li>Minor breaking change <code>List&lt;IEntity&gt;</code> instead of <code>Dictionary&lt;int, IEntity&gt;</code> on the <code>IDataSource</code><br>
+see full <a href="https://2sxc.org/en/blog/post/fixing-the-breaking-change-in-2sxc-9-8-list-instead-of-dictionary">blog post</a></li>
+</ol>
+<h3 id="version-090300-2017-10-08">Version 09.03.00 (2017-10-08)</h3>
+<ol>
+<li>Breaking change on inconsistent naming <code>ToSic.Eav.IEntity</code> instead of <code>ToSic.Eav.Interfaces.IEntity</code>.<br>
+see full <a href="https://2sxc.org/en/blog/post/fixing-the-breaking-change-on-tosic-eav-ientity-in-2sxc-9-3">blog post</a></li>
+</ol>
+<hr>
+<h2 id="changes-version-8">Changes Version 8</h2>
+<h3 id="changes-version-800---88">Changes Version 8.00 - 8.8</h3>
+<p>Didn't find time to document this :)</p>
+<h3 id="changes-version-809">Changes Version 8.09</h3>
+<ul>
+<li>[x] Very Rich Content (Inner Content 2.0)</li>
+<li>[x] Item-Delete directly from in-page toolbar</li>
+</ul>
+<h3 id="changes-version-810">Changes Version 8.10</h3>
+<ul>
+<li>[x] Shuffle data sources (to randomize items)</li>
+<li>[x] Public (anonyomous) REST API for query and read/write content-items</li>
+</ul>
+<h3 id="changes-version-811-812">Changes Version 8.11-8.12</h3>
+<p>Mostly smaller bugfixes</p>
+<hr>
+<h2 id="version-1-7-2012-2016">Version 1-7 (2012-2016)</h2>
+<p>Didn't find time to document this :)</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/changes-all.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

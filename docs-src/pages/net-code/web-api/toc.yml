@@ -1,0 +1,29 @@
+
+- name: Introduction
+  topicUid: NetCode.WebApi.Index
+- name: File Structure
+  topicUid: NetCode.WebApi.Files
+- name: Controller Base Class
+  topicUid: NetCode.WebApi.BaseClass
+- name: C# APIs
+  topicUid: NetCode.WebApi.DotNet.Api
+- name: SaveInAdam(...)
+  topicUid: NetCode.WebApi.DotNet.SaveInAdam
+- name: C# Web API Security
+  topicUid: NetCode.WebApi.Security
+
+- name: " "
+- name: Json Format & camelCase
+  topicUid: NetCode.WebApi.JsonFormat
+- name: Convert Entities for JSON
+  topicUid: NetCode.WebApi.AutoConvertEntities
+
+- name: " "
+- name: Common Issues
+  items:
+    - name: HttpResponseMessage
+      topicUid: NetCode.WebApi.Issues.HttpResponseMessage
+
+- name: " "
+- name: "Hybrid Dnn & Oqtane WebApi"
+  topicUid: NetCode.WebApi.Hybrid.Index

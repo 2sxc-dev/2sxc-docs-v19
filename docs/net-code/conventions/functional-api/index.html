@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Convention: Functional API (Immutable) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Convention: Functional API (Immutable) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/conventions/functional-api/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Conventions.Functional">
+<h1 id="convention-functional-api-immutable">Convention: Functional API (Immutable)</h1>
+
+<p>There are many programming paradigms.
+One that's become very important to us is <strong>functional</strong> programming.</p>
+<p>This means that code (usually functions) will have inputs and outputs, but no side effects.
+This also means that an object which must be modified will be copied into a new object, with the modifications applied.
+The original object is never modified.
+In most cases it will be discarded.
+This is strongly related to <a class="xref" href="../immutable/index.html">immutability</a></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This was not always our approach, so some of the code is still not functional.
+But you must assume that anything you find which is not functional, will be so in the future.</p>
+</div>
+<h2 id="example">Example</h2>
+<p>This assumes code inside a Razor page, as it uses <code>Kit.Toolbar</code></p>
+<pre><code class="lang-c#">// Create a toolbar with a single edit button
+var toolbar = Kit.Toolbar.Empty().Edit();
+
+// Add a button to the toolbar
+var toolbarWithLayout = toolbar.Layout();
+
+// Note that as of now, the original toolbar still only has the Edit button.
+
+</code></pre>
+<p>This goes even further.
+In v15.07 the toolbar API was extended with features to make UI settings more robust:</p>
+<pre><code class="lang-c#">
+// Give an inner tweak function to set more properties
+var toolbar = Kit.Toolbar.Edit(tweak: b =&gt; b.Color(&quot;red&quot;).Tooltip(&quot;Edit here&quot;));
+
+</code></pre>
+<h2 id="why-functional">Why Functional?</h2>
+<p>Functional programming has many advantages, but the most important one is that it's easier to test and debug.
+It's also easier to understand, because you can see the inputs and outputs of a function, without having to look at the code.
+In the end, the quality and robustness of our application is much better.</p>
+<h2 id="coverage---parts-of-2sxc-which-are-functional">Coverage - Parts of 2sxc which are Functional</h2>
+<ol>
+<li>The Toolbar API on <code>Kit.Toolbar</code> is 100% functional (new v14)</li>
+<li>The Razor HTML Tags API on <code>Kit.HtmlTags</code> is 100% functional (new ca. v13)</li>
+<li>Page Parameters <code>CmsContext.Page.Parameters</code> are 100% functional (new ca. v12)</li>
+<li>Linking data sources using the <code>Link</code> property is 100% functional (new in v15)</li>
+</ol>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Introduced gradually starting with 2sxc 12</li>
+<li>RazorBlade started doing this in v3 also in 2sxc 13</li>
+</ul>
+<p>Shortlink: <a href="https://go.2sxc.org/functional">https://go.2sxc.org/functional</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/conventions/functional-api/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

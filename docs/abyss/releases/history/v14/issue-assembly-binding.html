@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Assembly Binding Issue on Installs from 2sxc 13.04 to 14.02 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Assembly Binding Issue on Installs from 2sxc 13.04 to 14.02 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v14/issue-assembly-binding.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Releases.History.V14.IssueAssemblyBinding">
+<h1 id="assembly-binding-issue-on-installs-from-2sxc-1304-to-1402">Assembly Binding Issue on Installs from 2sxc 13.04 to 14.02</h1>
+
+<p>2sxc 13.04 up until v14.02 had a bug where the assembly bindings in web.config wasn't done correctly.
+The result is, that many bindings were added repeatedly.
+Issue is fixed in v14.03.</p>
+<p>The problems:</p>
+<ol>
+<li>the <code>web.config</code> grows to be very large</li>
+<li>future upgrades of 2sxc which need to modify the bindings could end up modifying a binding, but other unmodified bindings could take precedence</li>
+<li>third party modules which also modify assembly bindings could modify the wrong bindings</li>
+</ol>
+<p>The following bindings were added repeatedly:</p>
+<pre><code class="lang-xml">&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Configuration.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Configuration.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Logging.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Logging.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Primitives&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Primitives.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;System.Memory&quot; publicKeyToken=&quot;cc7b13ffcd2ddd51&quot; /&gt;
+  &lt;codeBase version=&quot;4.0.1.1&quot; href=&quot;bin\Imageflow\System.Memory.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;System.Numerics.Vectors&quot; publicKeyToken=&quot;b03f5f7f11d50a3a&quot; /&gt;
+  &lt;codeBase version=&quot;4.1.4.0&quot; href=&quot;bin\Imageflow\System.Numerics.Vectors.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;System.Runtime.CompilerServices.Unsafe&quot; publicKeyToken=&quot;b03f5f7f11d50a3a&quot; /&gt;
+  &lt;codeBase version=&quot;4.0.4.1&quot; href=&quot;bin\Imageflow\System.Runtime.CompilerServices.Unsafe.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.DependencyInjection.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.DependencyInjection.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.DependencyInjection&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.DependencyInjection.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.FileProviders.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.FileProviders.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Hosting.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Hosting.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.IO.RecyclableMemoryStream&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; /&gt;
+  &lt;codeBase version=&quot;1.2.2.0&quot; href=&quot;bin\Imageflow\Microsoft.IO.RecyclableMemoryStream.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+</code></pre>
+<p>This assemblyBinding fragment can be repeated many times, depending on the amount of times you upgraded 2sxc (since v13.04 till v14.02), what DNN version you're using and what 3rd party modules you have.</p>
+<p>While testing this issue, we did not noticed anything that is breaking dnn and 2sxc because .NET Framework will follow only first occurrence of assembly binding for specified assembly in web.config. From functional point of view, second and any other assembly binding for the same specified assembly will be ignored by .NET Framework. Still it is not nice to have unnecessary assembly binding copies in web.config.</p>
+<p>For v13.04-v14.02. recommendation is that you manually remove unnecessary bindings in web.config to keep it clean.</p>
+<p>Upgrade to v14.03 (or latter version) will auto-fix this.</p>
+<h2 id="am-i-affected">Am I affected?</h2>
+<p>You are affected, if you see multiple copies of following XML fragments in your web.config, eg:</p>
+<pre><code class="lang-xml">...
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.IO.RecyclableMemoryStream&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; /&gt;
+  &lt;codeBase version=&quot;1.2.2.0&quot; href=&quot;bin\Imageflow\Microsoft.IO.RecyclableMemoryStream.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+...
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.IO.RecyclableMemoryStream&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; /&gt;
+  &lt;codeBase version=&quot;1.2.2.0&quot; href=&quot;bin\Imageflow\Microsoft.IO.RecyclableMemoryStream.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+...
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.IO.RecyclableMemoryStream&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; /&gt;
+  &lt;codeBase version=&quot;1.2.2.0&quot; href=&quot;bin\Imageflow\Microsoft.IO.RecyclableMemoryStream.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+</code></pre>
+<h2 id="how-to-clean">How to Clean</h2>
+<p>Do the following:</p>
+<ol>
+<li><p>Backup web.config.</p>
+</li>
+<li><p>Search for first occurrence of...</p>
+<pre><code class="lang-xml">&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.IO.RecyclableMemoryStream&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; /&gt;
+  &lt;codeBase version=&quot;1.2.2.0&quot; href=&quot;bin\Imageflow\Microsoft.IO.RecyclableMemoryStream.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+</code></pre>
+<p>...that is followed by list of unnecessary duplicate assembly bindings, started with duplicate...</p>
+<pre><code class="lang-xml">&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Configuration.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Configuration.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+</code></pre>
+<p>...ending with duplicate...</p>
+<pre><code class="lang-xml">&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.IO.RecyclableMemoryStream&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; /&gt;
+  &lt;codeBase version=&quot;1.2.2.0&quot; href=&quot;bin\Imageflow\Microsoft.IO.RecyclableMemoryStream.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+</code></pre>
+</li>
+<li><p>Select and remove all duplicate assembly bindings fragments.
+Second (and any other) copy of this fragment is unnecessary.</p>
+<pre><code class="lang-xml">&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Configuration.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Configuration.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Logging.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Logging.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Primitives&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Primitives.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;System.Memory&quot; publicKeyToken=&quot;cc7b13ffcd2ddd51&quot; /&gt;
+  &lt;codeBase version=&quot;4.0.1.1&quot; href=&quot;bin\Imageflow\System.Memory.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;System.Numerics.Vectors&quot; publicKeyToken=&quot;b03f5f7f11d50a3a&quot; /&gt;
+  &lt;codeBase version=&quot;4.1.4.0&quot; href=&quot;bin\Imageflow\System.Numerics.Vectors.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;System.Runtime.CompilerServices.Unsafe&quot; publicKeyToken=&quot;b03f5f7f11d50a3a&quot; /&gt;
+  &lt;codeBase version=&quot;4.0.4.1&quot; href=&quot;bin\Imageflow\System.Runtime.CompilerServices.Unsafe.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.DependencyInjection.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.DependencyInjection.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.DependencyInjection&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.DependencyInjection.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.FileProviders.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.FileProviders.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.Extensions.Hosting.Abstractions&quot; publicKeyToken=&quot;adb9793829ddae60&quot; /&gt;
+  &lt;codeBase version=&quot;2.2.0.0&quot; href=&quot;bin\Imageflow\Microsoft.Extensions.Hosting.Abstractions.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+&lt;dependentAssembly xmlns=&quot;urn:schemas-microsoft-com:asm.v1&quot;&gt;
+  &lt;assemblyIdentity name=&quot;Microsoft.IO.RecyclableMemoryStream&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; /&gt;
+  &lt;codeBase version=&quot;1.2.2.0&quot; href=&quot;bin\Imageflow\Microsoft.IO.RecyclableMemoryStream.dll&quot; /&gt;
+&lt;/dependentAssembly&gt;
+</code></pre>
+<p>YouTube video: How to manually remove duplicate assembly bindings?
+<a href="https://www.youtube.com/watch?v=eTL-VTjxF9k"><img src="https://img.youtube.com/vi/eTL-VTjxF9k/0.jpg" alt="How to manually remove duplicate assembly bindings?"></a></p>
+<p>Ensure that you have only one list of this bindings in web.config.</p>
+</li>
+<li><p>Save web.config and test dnn that is working.</p>
+</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v14/issue-assembly-binding.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

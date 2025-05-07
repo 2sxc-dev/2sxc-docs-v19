@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>AsAdam(...) Command | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="AsAdam(...) Command | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/dynamic-code/as-adam.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.DynamicCode.AsAdam">
+<h1 id="asadam-command">AsAdam(...) Command</h1>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>ADAM is the Automatic Digital Asset Manager. It manages files (Assets) for content in 2sxc.</p>
+<p>The files are managed so that they really belong to the item they are used in.<br>
+<a class="xref" href="../../basics/cms/adam/index.html">Read more about ADAM</a></p>
+</div>
+
+<p>When a content-item has a <code>Library</code> field (see <a class="xref" href="../../basics/data/fields/hyperlink-library.html">Field Input-Type hyperlink-library</a>) your code needs to get a list of all the files and folders of that field. For example to show galleries.
+This is where <code>AsAdam(...)</code> comes in. It gives you the ADAM parts of this field.</p>
+<p>⚡ The <a class="xref" href="../../api/dot-net/Custom.Hybrid.Razor12.html#Custom_Hybrid_Razor12_AsAdam_">official API docs</a>.</p>
+<p>Basically all you need for <code>AsAdam(...)</code> is</p>
+<ol>
+<li>The Content Item (Entity or DynamicEntity)</li>
+<li>The field name of which you want the Adam objects</li>
+</ol>
+<p>As a result you'll get an <a class="xref" href="../../api/dot-net/ToSic.Sxc.Adam.IFolder.html">IFolder</a> object with which you can get all files in the folder or subfolders.</p>
+<div style="background: #0088F444; overflow: auto">
+  <img src="../../shared/tutorials/assets/razor.png" width="200px" style="padding-right: 20px; float: left">
+  <div style="font-size: x-large;font-weight: bold; margin-bottom: 20px;">
+    Discover More in the Razor Tutorials
+  </div>
+<p>We have an rich series of <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor">Razor tutorials</a>. You should really check them out 👍.</p>
+</div>
+<br>
+<h2 id="example">Example</h2>
+<p>This example is taken from the <a class="xref" href="https://2sxc.org/en/apps/app/gallery-app-fancybox-3">Fancybox Gallery App</a></p>
+<pre><code class="lang-razor">@inherits Custom.Hybrid.Razor12
+@using ToSic.Razor.Blade;
+@using Dynlist = System.Collections.Generic.IEnumerable&lt;dynamic&gt;;
+
+&lt;div class=&quot;ga-wrapper&quot;&gt;
+  &lt;div class=&quot;ga-albums row&quot;&gt;
+    @foreach (var album in AsList(Data)) {
+      var images = AsAdam(album, &quot;Images&quot;).Files as Dynlist;
+      var albumThumbUrl = Text.Has(album.AlbumThumbnail)
+        ? album.AlbumThumbnail
+        : images.First().Url;
+
+      &lt;div class=&quot;ga-album col-12 col-sm-6 col-md-6 col-lg-4&quot; @Edit.TagToolbar(album)&gt;
+        &lt;a href='@Tags.SafeUrl(Link.To(parameters: &quot;mid/&quot; + Dnn.Module.ModuleID + &quot;&amp;album=&quot; + album.Path))'&gt;
+          &lt;div class=&quot;ga-img&quot;&gt;
+            &lt;div class=&quot;overlay&quot;&gt;
+              &lt;div class=&quot;ga-album-title&quot;&gt;&lt;h5 class=&quot;ga-title&quot;&gt;@album.Title&lt;/h5&gt;&lt;/div&gt;
+              &lt;div class=&quot;ga-files-count&quot;&gt;&lt;span class=&quot;badge badge-pill badge-dark float-end&quot;&gt;@images.Count()&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;img class=&quot;img-fluid&quot; src='@Tags.SafeUrl(albumThumbUrl + &quot;?w=720&amp;h=500&amp;mode=crop&amp;scale=both&amp;quality=80&quot;)' alt=&quot;@album.Title&quot; /&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    }
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>We suggest you check out some apps which use ADAM to see how they work.</p>
+<h2 id="also-read">Also Read</h2>
+<ul>
+<li><a class="xref" href="../../basics/cms/adam/index.html">ADAM - Automatic Digital Asset Management</a></li>
+<li><a class="xref" href="../../api/dot-net/ToSic.Sxc.Adam.html">ToSic.Sxc.Adam</a></li>
+<li>check out <code>AsAdam(...)</code> in the <a class="xref" href="../../api/dot-net/ToSic.Sxc.Dnn.RazorComponent.html">RazorComponent</a> and <a class="xref" href="../../api/dot-net/ToSic.Sxc.Dnn.ApiController.html">ApiController</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>General Tokens introduced in 2sxc 8.0</li>
+<li>Added extra security switch in 2sxc 9.32</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/dynamic-code/as-adam.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

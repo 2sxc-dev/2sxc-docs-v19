@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IConvertToEavLight | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IConvertToEavLight | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/eav-server/new/develop/apiSpec/new?filename=ToSic_Eav_DataFormats_EavLight_IConvertToEavLight.md&amp;value=---%0Auid%3A%20ToSic.Eav.DataFormats.EavLight.IConvertToEavLight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight">
+
+
+
+  <h1 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight" class="text-break">
+Interface IConvertToEavLight  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Eav.html">Eav</a>.<a class="xref" href="ToSic.Eav.DataFormats.html">DataFormats</a>.<a class="xref" href="ToSic.Eav.DataFormats.EavLight.html">EavLight</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Eav.WebApi.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Helper / Service to prepare Entities, Streams and DataSources to <a class="xref" href="ToSic.Eav.DataFormats.EavLight.html">ToSic.Eav.DataFormats.EavLight</a> for automatic serialization in WebApis.</p>
+<p>It can prepare single items like <a class="xref" href="ToSic.Eav.Data.IEntity.html">IEntity</a> and <span class="xref">ToSic.Eav.Data.IEntityWrapper</span> like DynamicEntities.
+It can also prepare IEnumerable/List of these types, as well as <strong>DataStream</strong> and <strong>DataSource</strong> objects.</p>
+<p>In Custom Code / Razor / WebApi you can get this service with Dependency Injection like <br>
+<code>var converter = GetService&lt;IConvertToEavLight&gt;();</code></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+public interface IConvertToEavLight : IConvertEntity&lt;EavLightEntity&gt;, IConvert&lt;IEntity, EavLightEntity&gt;, IConvert&lt;IEntityWrapper, EavLightEntity&gt;, IConvert&lt;object, EavLightEntity&gt;, IHasLog</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="ToSic.Eav.Data.IConvertEntity-1.html#ToSic_Eav_Data_IConvertEntity_1_Languages">IConvertEntity&lt;EavLightEntity&gt;.Languages</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.Data.IConvert-2.html#ToSic_Eav_Data_IConvert_2_Convert_System_Collections_Generic_IEnumerable__0__">IConvert&lt;IEntity, EavLightEntity&gt;.Convert(IEnumerable&lt;IEntity&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.Data.IConvert-2.html#ToSic_Eav_Data_IConvert_2_Convert__0_">IConvert&lt;IEntity, EavLightEntity&gt;.Convert(IEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.Data.IConvert-2.html#ToSic_Eav_Data_IConvert_2_Convert_System_Collections_Generic_IEnumerable__0__">IConvert&lt;IEntityWrapper, EavLightEntity&gt;.Convert(IEnumerable&lt;IEntityWrapper&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.Data.IConvert-2.html#ToSic_Eav_Data_IConvert_2_Convert__0_">IConvert&lt;IEntityWrapper, EavLightEntity&gt;.Convert(IEntityWrapper)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.Data.IConvert-2.html#ToSic_Eav_Data_IConvert_2_Convert_System_Collections_Generic_IEnumerable__0__">IConvert&lt;object, EavLightEntity&gt;.Convert(IEnumerable&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Eav.Data.IConvert-2.html#ToSic_Eav_Data_IConvert_2_Convert__0_">IConvert&lt;object, EavLightEntity&gt;.Convert(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="ToSic.Lib.Logging.IHasLog.html#ToSic_Lib_Logging_IHasLog_Log">IHasLog.Log</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>We're standardizing how conversions are done using the <a class="xref" href="ToSic.Eav.Data.IConvert-2.html">IConvert&lt;TFrom, TTo&gt;</a> interface.
+This is why you don't see any methods on this interface in the docs.
+In most cases you'll just do <code>var prepared = converter.Convert(someEntityObjectOrList);</code></p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_System_Collections_Generic_IEnumerable_System_Object__" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(System.Collections.Generic.IEnumerable{System.Object})">
+  Convert(IEnumerable&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;EavLightEntity&gt; Convert(IEnumerable&lt;object&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">dynamic</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_System_Collections_Generic_IEnumerable_ToSic_Eav_Data_IEntityWrapper__" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(System.Collections.Generic.IEnumerable{ToSic.Eav.Data.IEntityWrapper})">
+  Convert(IEnumerable&lt;IEntityWrapper&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;EavLightEntity&gt; Convert(IEnumerable&lt;IEntityWrapper&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">IEntityWrapper</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_System_Collections_Generic_IEnumerable_ToSic_Eav_Data_IEntity__" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(System.Collections.Generic.IEnumerable{ToSic.Eav.Data.IEntity})">
+  Convert(IEnumerable&lt;IEntity&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;EavLightEntity&gt; Convert(IEnumerable&lt;IEntity&gt; entities)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entities</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Eav.Data.IEntity.html">IEntity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_System_Object_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(System.Object)">
+  Convert(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EavLightEntity Convert(object item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">object</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_ToSic_Eav_Data_IEntity_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(ToSic.Eav.Data.IEntity)">
+  Convert(IEntity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EavLightEntity Convert(IEntity entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ToSic.Eav.Data.IEntity.html">IEntity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_ToSic_Eav_Data_IEntityWrapper_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(ToSic.Eav.Data.IEntityWrapper)">
+  Convert(IEntityWrapper)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EavLightEntity Convert(IEntityWrapper item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">IEntityWrapper</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_ToSic_Eav_DataSource_IDataSource_System_Collections_Generic_IEnumerable_System_String__" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(ToSic.Eav.DataSource.IDataSource,System.Collections.Generic.IEnumerable{System.String})">
+  Convert(IDataSource, IEnumerable&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDictionary&lt;string, IEnumerable&lt;EavLightEntity&gt;&gt; Convert(IDataSource source, IEnumerable&lt;string&gt; streams = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="ToSic.Eav.DataSource.IDataSource.html">IDataSource</a></dt>
+    <dd></dd>
+    <dt><code>streams</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_ToSic_Eav_DataSource_IDataSource_System_Collections_Generic_IEnumerable_System_String__System_String___" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(ToSic.Eav.DataSource.IDataSource,System.Collections.Generic.IEnumerable{System.String},System.String[])">
+  Convert(IDataSource, IEnumerable&lt;string&gt;, string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDictionary&lt;string, IEnumerable&lt;EavLightEntity&gt;&gt; Convert(IDataSource source, IEnumerable&lt;string&gt; streams, string[] filterGuids)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="ToSic.Eav.DataSource.IDataSource.html">IDataSource</a></dt>
+    <dd></dd>
+    <dt><code>streams</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>filterGuids</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert*"></a>
+
+  <h3 id="ToSic_Eav_DataFormats_EavLight_IConvertToEavLight_Convert_ToSic_Eav_DataSource_IDataSource_System_String_" data-uid="ToSic.Eav.DataFormats.EavLight.IConvertToEavLight.Convert(ToSic.Eav.DataSource.IDataSource,System.String)">
+  Convert(IDataSource, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDictionary&lt;string, IEnumerable&lt;EavLightEntity&gt;&gt; Convert(IDataSource source, string streams)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="ToSic.Eav.DataSource.IDataSource.html">IDataSource</a></dt>
+    <dd></dd>
+    <dt><code>streams</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Eav.DataFormats.EavLight.EavLightEntity.html">EavLightEntity</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/eav-server/blob/develop/ToSic.Eav.WebApi/ToSic.Eav.DataFormats.EavLight/IConvertToEavLight.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Dnn /  Object in Dynamic Code ☢️ (Dnn only) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Dnn /  Object in Dynamic Code ☢️ (Dnn only) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/dynamic-code/object-dnn.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.DynamicCode.Dnn">
+<h1 id="dnn---object-in-dynamic-code--dnn-only">Dnn / @Dnn Object in Dynamic Code ☢️ (Dnn only)</h1>
+
+<p>The <code>Dnn</code> is a helper object which contains properties to access information about the current tab, portal, user, module etc.</p>
+<div style="background: #0088F444; overflow: auto">
+  <img src="../../shared/tutorials/assets/razor.png" width="200px" style="padding-right: 20px; float: left">
+  <div style="font-size: x-large;font-weight: bold; margin-bottom: 20px;">
+    Discover More in the Razor Tutorials
+  </div>
+<p>We have an rich series of <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor">Razor tutorials</a>. You should really check them out 👍.</p>
+</div>
+<br>
+<h2 id="how-to-use">How to use</h2>
+<p>Here's a quick example of using the <code>Dnn</code> object in a Razor template:</p>
+<pre><code class="lang-razor">&lt;!-- show the current users nice name --&gt;
+@Dnn.User.DisplayName
+</code></pre>
+<h2 id="how-it-works">How it works</h2>
+<p>There's not much to explain here, we're just providing the standard Dnn objects to the template.</p>
+<h2 id="the-main-properties-of-the--object">The Main Properties of the @Dnn Object</h2>
+<p>These are the main properties:</p>
+<ol>
+<li>Module</li>
+<li>Portal</li>
+<li>Tab</li>
+<li>User</li>
+</ol>
+<h2 id="the--properties">The @Dnn.Module Properties</h2>
+<p>The <code>@Dnn.Module</code> is of the type <a href="https://www.dnndocs.com/api/DotNetNuke.Entities.Modules.ModuleInfo.html">ModuleInfo</a>. It has the following properties:</p>
+<ol>
+<li>Dnn.Module.AllModules</li>
+<li>Dnn.Module.AllTabs</li>
+<li>Dnn.Module.Border</li>
+<li>Dnn.Module.Cacheability</li>
+<li>Dnn.Module.CacheMethod</li>
+<li>Dnn.Module.CacheTime</li>
+<li>Dnn.Module.ContainerPath</li>
+<li>Dnn.Module.ContainerSrc</li>
+<li>Dnn.Module.DefaultCacheTime</li>
+<li>Dnn.Module.DesktopModule</li>
+<li>Dnn.Module.DesktopModuleId</li>
+<li>Dnn.Module.DisplayTitle</li>
+<li>Dnn.Module.EndDate - for show/hide</li>
+<li>Dnn.Module.Footer</li>
+<li>Dnn.Module.Header</li>
+<li>Dnn.Module.ModuleControl</li>
+<li>Dnn.Module.ModuleControlId</li>
+<li>Dnn.Module.ModuleDefID -  note: large D</li>
+<li>Dnn.Module.ModuleDefinition</li>
+<li>Dnn.Module.ModuleID - probably the most used value, note the large ID</li>
+<li>Dnn.Module.ModuleName</li>
+<li>Dnn.Module.ModuleOrder</li>
+<li>Dnn.Module.ModulePermissions</li>
+<li>Dnn.Module.ModuleSettings</li>
+<li>Dnn.Module.ModuleTitle</li>
+<li>Dnn.Module.PaneModuleCount</li>
+<li>Dnn.Module.PaneModuleIndex</li>
+<li>Dnn.Module.PaneName</li>
+<li>Dnn.Module.ParentTab - a TabInfo, same as Dnn.Tab</li>
+<li>Dnn.Module.PortalID - note large D</li>
+<li>Dnn.Module.StartDate - for show/hide rules</li>
+<li>Dnn.Module.TabID - note large D</li>
+<li>Dnn.Module.TabModuleID - note large D</li>
+<li>Dnn.Module.TabModuleSettings</li>
+<li>Dnn.Module.UniqueId</li>
+<li>Dnn.Module.Visibility</li>
+</ol>
+<h2 id="the--properties-1">The @Dnn.Portal Properties</h2>
+<p>The <code>@Dnn.Portal</code> is of the type <a href="https://www.dnndocs.com/api/DotNetNuke.Entities.Portals.PortalInfo.html">PortalSettings</a>. It has the following properties:</p>
+<ol>
+<li>Dnn.Portal.ActiveTab</li>
+<li>Dnn.Portal.AdministratorId</li>
+<li>Dnn.Portal.AdministratorRoleId</li>
+<li>Dnn.Portal.AdministratoRoleName</li>
+<li>Dnn.Portal.AdminTabId</li>
+<li>Dnn.Portal.CultureCode</li>
+<li>Dnn.Portal.Currency</li>
+<li>Dnn.Portal.Current - static method returning the current portal portal-settings</li>
+<li>Dnn.Portal.Default... (AdminContainer, AdminSkin, ControlPanelMode, etc.)</li>
+<li>Dnn.Portal.DefaultLanguage</li>
+<li>Dnn.Portal.DefaultModuleId</li>
+<li>Dnn.Portal.DefaultPortalContainer</li>
+<li>Dnn.Portal.DefaultTabId</li>
+<li>Dnn.Portal.Description</li>
+<li>Dnn.Portal.Email</li>
+<li>Dnn.Portal.EnableBrowserLanguage</li>
+<li>Dnn.Portal.EnableUrlLanguage</li>
+<li>Dnn.Portal.ExpiryDate</li>
+<li>Dnn.Portal.FooterText</li>
+<li>Dnn.Portal.GetProperty(string, string, cultureInfo, UserInfo, scope, boolean) - ?</li>
+<li>Dnn.Portal.GUID - notice all large letters</li>
+<li>Dnn.Portal.HomeDirectory</li>
+<li>Dnn.Portal.HomeDirectoryMapPath</li>
+<li>Dnn.Portal.HomeTabId - the root page</li>
+<li>Dnn.Portal.KeyWords</li>
+<li>Dnn.Portal.LoginTabId - where the normal login usually goes to</li>
+<li>Dnn.Portal.LogoFile</li>
+<li>Dnn.Portal.Pages</li>
+<li>Dnn.Portal.PortalAlias</li>
+<li>Dnn.Portal.PortalId - very important - notice the small d</li>
+<li>Dnn.Portal.PortalName</li>
+<li>Dnn.Portal.PortalSkin</li>
+<li>Dnn.Portal.RegisteredRoleId</li>
+<li>Dnn.Portal.RegisteredRoleName</li>
+<li>Dnn.Portal.RegisterTabId</li>
+<li>Dnn.Portal.Search... (various values like IncludeCommon, IncludeTagInfoFilter etc.)</li>
+<li>Dnn.Portal.SearchTabId</li>
+<li>Dnn.Portal.SiteLogHistory</li>
+<li>Dnn.Portal.SplashTabId</li>
+<li>Dnn.Portal.SSLEnabled</li>
+<li>Dnn.Portal.SSLEnforced</li>
+<li>Dnn.Portal.SSLURL - all caps</li>
+<li>Dnn.Portal.STDURL - all caps</li>
+<li>Dnn.Portal.SuperTabId</li>
+<li>Dnn.Portal.TimeZoneOffset</li>
+<li>Dnn.Portal.UserId</li>
+<li>Dnn.Portal.UserInfo</li>
+<li>Dnn.Portal.UserMode</li>
+<li>Dnn.Portal.UserQuota</li>
+<li>Dnn.Portal.UserRegistration</li>
+<li>Dnn.Portal.Users</li>
+<li>Dnn.Portal.UserTabId</li>
+</ol>
+<h2 id="the--properties-2">The @Dnn.Tab Properties</h2>
+<p>The <code>@Dnn.Tab</code> is of the type <a href="https://www.dnndocs.com/api/DotNetNuke.Entities.Tabs.TabInfo.html">TabInfo</a>. It has the following properties:</p>
+<ol>
+<li>Dnn.Tab.ChildModules</li>
+<li>Dnn.Tab.ContainerPath</li>
+<li>Dnn.Tab.ContainerSrc</li>
+<li>Dnn.Tab.CultureCode</li>
+<li>Dnn.Tab.DefaultLanguageGuid</li>
+<li>Dnn.Tab.DefaultLanguageTab</li>
+<li>Dnn.Tab.Description</li>
+<li>Dnn.Tab.EndDate - for show/hide of this tab</li>
+<li>Dnn.Tab.FullUrl</li>
+<li>Dnn.Tab.HasChildren</li>
+<li>Dnn.Tab.IsDefaultLanguage</li>
+<li>Dnn.Tab.IsDeleted</li>
+<li>Dnn.Tab.IsNeutralCulture</li>
+<li>Dnn.Tab.IsSecure</li>
+<li>Dnn.Tab.IsTranslated</li>
+<li>Dnn.Tab.IsVisible</li>
+<li>Dnn.Tab.KeyWords</li>
+<li>Dnn.Tab.Level</li>
+<li>Dnn.Tab.LocalizedTabName</li>
+<li>Dnn.Tab.LocalizedTabs</li>
+<li>Dnn.Tab.Modules</li>
+<li>Dnn.Tab.PageHeadtext</li>
+<li>Dnn.Tab.Panes</li>
+<li>Dnn.Tab.ParentId</li>
+<li>Dnn.Tab.PermanentRedirect</li>
+<li>Dnn.Tab.PortalID - notice the large D</li>
+<li>Dnn.Tab.RefreshInterval</li>
+<li>Dnn.Tab.SiteMapPriority</li>
+<li>Dnn.Tab.SkinDoctype</li>
+<li>Dnn.Tab.SkinPath</li>
+<li>Dnn.Tab.SkinSrc</li>
+<li>Dnn.Tab.StartDate - for show/hide</li>
+<li>Dnn.Tab.TabID - the current Tab-number - notice the large D</li>
+<li>Dnn.Tab.TabName</li>
+<li>Dnn.Tab.TabOrder</li>
+<li>Dnn.Tab.TabPath</li>
+<li>Dnn.Tab.TabPermissions</li>
+<li>Dnn.Tab.TabSettings</li>
+<li>Dnn.Tab.TabType</li>
+<li>Dnn.Tab.Title</li>
+<li>Dnn.Tab.UniqueId - small &quot;d&quot;</li>
+<li>Dnn.Tab.Url</li>
+</ol>
+<h2 id="the--properties-3">The @Dnn.User Properties</h2>
+<p>The <code>@Dnn.User</code> is of the type <a href="https://www.dnndocs.com/api/DotNetNuke.Entities.Users.UserInfo.html">UserInfo</a>. It has the following properties:</p>
+<ol>
+<li>Dnn.User.DisplayName</li>
+<li>Dnn.User.Email</li>
+<li>Dnn.User.FirstName</li>
+<li>Dnn.User.FullName</li>
+<li>Dnn.User.IsDeleted</li>
+<li>Dnn.User.IsInRole(string RoleName)</li>
+<li>Dnn.User.IsSuperUser</li>
+<li>Dnn.User.LastName</li>
+<li>Dnn.User.Membership - these are asp.net memberships, you probably don't need them</li>
+<li>Dnn.User.PortalId</li>
+<li>Dnn.User.Roles - these are Dnn roles</li>
+<li>Dnn.User.UserID - note the large D</li>
+<li>Dnn.User.Username</li>
+</ol>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 1.0</li>
+<li></li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/dynamic-code/object-dnn.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

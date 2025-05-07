@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Content Security Policy (CSP) Whitelist Guide | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Content Security Policy (CSP) Whitelist Guide | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/whitelist.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Security.Csp.Whitelist">
+
+<img src="../../../assets/features/content-security-policy.svg" class="feature">
+<h1 id="content-security-policy-csp-whitelist-guide">Content Security Policy (CSP) Whitelist Guide</h1>
+<p>Most of your CSP policies will allow something to work.
+This is called <em>whitelisting</em>.</p>
+<h2 id="default-fallback">Default fallback</h2>
+<p>First, we set the <code>all-src</code> directive with the value <code>'self'</code> and <code>https:</code>.
+This will force the browser to only accept sources originating from the host URL.
+<code>all-src</code> is a custom directive from 2sxc, which all source directives inherit from.</p>
+<pre><code class="lang-text">all-src 'self' https:
+</code></pre>
+<p>To improve documentation / clarity, you can also use multiple lines and comments:</p>
+<pre><code class="lang-text">// Always allow things from the own server
+all-src: 'self'
+
+// No matter where it comes from, it must use HTTPS
+all-src: https:
+</code></pre>
+<h2 id="script-sources">Script sources</h2>
+<p>For JavaScript code, we use the <code>scipt-src</code> directive.
+It is important for this directive to have <code>'self'</code> specified as origin, but because we have set the <code>all-src</code> directive it gets inherited automatically.
+For the trusted scripts to work properly we will also add <code>'unsafe-eval'</code>, which will allow script execution methods.</p>
+<pre><code class="lang-text">script-src 'unsafe-eval'
+</code></pre>
+<h2 id="style-sources">Style Sources</h2>
+<p>Because we sometimes use inline styles, we need to add the directive <code>style-src</code> with the value <code>'unsafe-inline'</code>.</p>
+<pre><code class="lang-text">style-src 'unsafe-inline'
+</code></pre>
+<h2 id="font-sources">Font Sources</h2>
+<p>Some of our fonts are hosted on the same origin and some are external.</p>
+<h3 id="inline-fonts">Inline Fonts</h3>
+<p>For example, we may allow fonts from inline data.
+You would do this by adding a <code>font-src</code> with the value <code>data:</code>.</p>
+<pre><code class="lang-text">font-src data:
+</code></pre>
+<h3 id="google-fonts">Google Fonts</h3>
+<p>Because fonts are often included in the skin, we can't whitelist them using 2sxc and must specify them in the config.
+For fonts included from google you typically need to add the url <code>fonts.googleapis.com</code> as trusted <code>style-src</code> origin and <code>fonts.gstatic.com</code> as trusted <code>font-src</code> origin.</p>
+<pre><code class="lang-text">style-src https://fonts.googleapis.com
+font-src https://fonts.gstatic.com
+</code></pre>
+<h2 id="image-sources">Image sources</h2>
+<p>We will only allow images from secure sources.
+If you have the all-src specified above, we don't need to add this again.
+But we may wish to add <code>data:</code> for inline images.</p>
+<pre><code class="lang-text">img-src data:
+</code></pre>
+<h2 id="media-sources">Media sources</h2>
+<p>For the usage of video/audio tags we will only allow media from secure sources as well.
+The &quot;media-src&quot; directive with the value &quot;'self' https:&quot; will be automatically assumed, if you have the <code>all-src</code> set above.</p>
+<h2 id="form-actions">Form actions</h2>
+<p>Form actions can be a sensitive topic while handling data.
+Simply by adding the <code>form-action</code> directive with the value &quot;'self'&quot;, we can prevent data-leaks.
+When dealing with other websites you should add the external domain specifically, like for example &quot;'self' <a href="https://externaldomain.com">https://externaldomain.com</a>&quot;.</p>
+<pre><code class="lang-text">form-action 'self'
+form-action https://externaldomain.com
+</code></pre>
+<h2 id="insecure-http-resources">Insecure (http) Resources</h2>
+<p>For most resources we have specified to only allow secure https connections as origin.
+Because it would be hard to migrate every HTTP resource to HTTPS, we can use the &quot;upgrade-insecure-requests&quot; directive.
+Using this directive, the browser will request every resource (even if originating from HTTP) using HTTPS.</p>
+<p>Note that we don't recommend doing this!</p>
+<h2 id="include-external-resources">Include External Resources</h2>
+<p>When including external resources in apps, you should use the AssetAttributes method from the IPageService.</p>
+<pre><code class="lang-razor">@inherits Custom.Hybrid.Razor14
+&lt;script src=&quot;@App.Path/dist/scripts.min.js&quot; @Kit.Page.AssetAttributes() &gt;&lt;/script&gt;
+</code></pre>
+<p>For cases, which are outside of the scope of 2sxc Apps you can whitelist them by specifying the directive <code>script-src</code> with the origin URL.</p>
+<h2 id="trusted-pre-registered-web-resources">Trusted, Pre-Registered Web Resources</h2>
+<p>For pre-registered resources, you can also just activate them.</p>
+<pre><code class="lang-razor">@inherits Custom.Hybrid.Razor14
+@{
+  Kit.Page.Activate(&quot;turnOn&quot;, &quot;2sxc.JsCore&quot;, &quot;fancybox4&quot;);
+}
+</code></pre>
+<h3 id="fontawesome-icon-libraries">Fontawesome Icon Libraries</h3>
+<p>As our default icon library, fontawesome gets set as trusted source automatically by 2sxc.
+This will only work if added using <code>Kit.Page.Activate(&quot;Fontawesome5&quot;)</code>.
+Otherwise you will have to specify it in the configuration.</p>
+<pre><code class="lang-razor">@inherits Custom.Hybrid.Razor14
+@{
+  Kit.Page.Activate(&quot;fontawesome5&quot;);
+}
+</code></pre>
+<h3 id="fancybox">FancyBox</h3>
+<p>Within 2sxc the FancyBox library is also a pre-registered resource.
+Because 2sxc hosts the JavaScript file internally, we only need to trust the origin of its stylesheet file.
+We do this by adding a &quot;style-src&quot; directive and setting the &quot;cdn.jsdelivr.net/npm/@fancyapps/&quot; origin as value.
+But this will also happen automatically when we activate the resource.</p>
+<pre><code class="lang-razor">@inherits Custom.Hybrid.Razor14
+@{
+  Kit.Page.Activate(&quot;fancybox3&quot;);
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/security/csp/whitelist.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

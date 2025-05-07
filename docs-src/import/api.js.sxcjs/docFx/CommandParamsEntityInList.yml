@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.CommandParamsEntityInList
+    name: CommandParamsEntityInList
+    fullName: CommandParamsEntityInList
+    children:
+      - Api.Js.SxcJs.CommandParamsEntityInList.fields
+      - Api.Js.SxcJs.CommandParamsEntityInList.index
+      - Api.Js.SxcJs.CommandParamsEntityInList.parent
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Parameters used for command which expect an item in a list (field) of a
+      parent.
+
+      <br>
+
+      ⤴️ back to [All Command Names](xref:Api.Js.SxcJs.CommandNames)
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntityInList.fields
+    name: fields
+    fullName: fields
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Parent Entity field(s) name(s).
+      Usually just one field, like `Authors`.
+      In field-sets it could be `Author,Award` or similar.
+    syntax:
+      content: 'fields: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntityInList.index
+    name: index
+    fullName: index
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Determins the position of the item in the list of that entity-field.
+    syntax:
+      content: 'index: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandParamsEntityInList.parent
+    name: parent
+    fullName: parent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Parent entity _GUID_ which has the field referencing this item.
+    syntax:
+      content: 'parent: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs

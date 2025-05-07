@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>JavaScript Code Docs Generation | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="JavaScript Code Docs Generation | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/contribute/docs/implementation/javascript-code.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Contribute.Docs.Implementation.JsCode">
+
+<div class="TIP">
+<h5>Tip</h5>
+<p>The docs as explained here are used in multiple projects, but documented only once for better maintenance.
+When applying this to other projects, remember that some things such as the name, repository, or paths are a bit different.</p>
+<ul>
+<li>🌴 2sxc: <a href="https://github.com/2sic/2sxc-docs">Docs Repo</a>, <a href="https://docs.2sxc.org">Docs Live</a></li>
+<li>🩸 Oqtane: <a href="https://github.com/oqtane/oqtane.docs/">Docs Repo</a>, <a href="https://docs.oqtane.org">Docs Live</a></li>
+<li>♾️ cre8magic: <a href="https://github.com/2sic/cre8magic">Docs Repo</a>, <a href="https://cre8magic.blazor-cms.org/">Docs Live</a></li>
+</ul>
+</div>
+<h1 id="javascript-code-docs-generation">JavaScript Code Docs Generation</h1>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This is a technical documentation about how the documentation system works.
+It helps the core team understand how to maintain and enhance the documentation system.</p>
+<p>It's not meant for most contributors, as it's too technical.</p>
+</div>
+<p>2sxc has some JavaScript APIs such as:</p>
+<ol>
+<li><p><code>$2sxc</code> on the page for doing things such as data access or opening dialogs</p>
+</li>
+<li><p><code>formula</code> APIs for working with formulas in the edit UI</p>
+</li>
+</ol>
+<p>These are published in the docs under <a class="xref" href="../../../../js-code/index.html">JS &amp; TS API</a>.</p>
+<p>This is one of the most challenging parts of the system.
+Reason is that DocFx doesn't really have a good way to merge JavaScript code with the documentation.</p>
+<h2 id="overall-process">Overall Process</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>We haven't done this in a while, so the following steps / docs are
+possibly outdated. Please check with the core team before proceeding.</p>
+</div>
+<ol>
+<li><p>In each JS project, there are some special commands to run from the <code>package.json</code> which will generate the necessary files. This usually happens in 2-3 steps such as:</p>
+<ol>
+<li>Generate standalone type files (like <code>2sxc.d.ts</code>) which contain only the documentation</li>
+<li>Generate YAML files into the docs-folder which contain the actual documentation.
+This usually goes to <code>/import/api.js.sxcjs/docfx</code> or similar.</li>
+</ol>
+</li>
+<li><p>When DocFx builds, these folders are also included...</p>
+</li>
+<li><p>...and merged with ??? (not sure, check with core team) when building the documentation.</p>
+</li>
+</ol>
+<h1 id="import-2sxc-javascript-types-and-docs">Import $2sxc JavaScript Types and Docs</h1>
+<p>The npm task <strong>import</strong> is an optional step,
+used only when there is a need to prepare JavaScript-related files for inclusion in the documentation.</p>
+<p>To execute this task, navigate to the <code>2sxc Docs Generator</code> directory and run the <strong>import</strong> task with npm. Here are the necessary commands:</p>
+<pre><code class="lang-cmd">cd &quot;C:\Projects\2sxc\2sxc-docs\2sxc Docs Generator&quot;
+npm run import
+</code></pre>
+<p>This command will execute the <strong>import</strong> task defined in your <strong>package.json</strong> file, preparing your 2sxc JavaScript related files for documentation generation.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/contribute/docs/implementation/javascript-code.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+- name: App Design / Theming
+  topicUid: Guides.AppTheme.Index
+  items:
+  - name: App Styling v2024
+    topicUid: Guides.AppTheme.Styling2024
+
+- name: App Development
+  href: app-development/toc.yml
+  # items:
+  # - name: Data Sources Guides
+  #   topicUid: Guides.DataSources.Index
+  # - name: Visual Studio Code Guide
+  #   topicUid: Guides.VsCode.Index
+  # - name: WYSIWYG Guide
+  #   topicUid: Guides.Wysiwyg.Index
+  # - name: Common Problems
+  #   topicUid: Guides.CommonProblems.Index
+  #   tocHref: ./app-development/common-problems/toc.yml
+  
+- name: Guides in Progress
+  items:
+  - name: HotBuild - ThisApp Code Guide
+    topicUid: Guides.HotBuild.Index

@@ -1,0 +1,122 @@
+- name: C# & Razor Overview
+  href: index.md
+
+- name: Data
+  uid: NetCode.Data.Index
+  href: data/toc.yml
+
+- name: " "
+
+- name: API Differences
+  uid: NetCode.TypedCode.CompareApis.Index
+  href: api-compare/toc.yml
+
+- name: 🍕 Dynamic APIs
+  uid: NetCode.ApiDynamic.Index
+  href: api-dynamic/toc.yml
+
+- name: 🔬 Typed APIs v16+
+  uid: NetCode.TypedCode.Index
+  href: api-typed/toc.yml
+
+- name: 💪🏽 Strong Typed AppCode v17+
+  uid: NetCode.StrongTypedCode.Index
+  href: api-typed-strong/toc.yml
+
+- name: " "
+- name: Services and Helpers
+  uid: NetCode.Services.Index
+  href: services/toc.yml
+
+
+
+# Data stuff
+- name: " "
+
+- name: DataSources
+  uid: NetCode.DataSources.Index
+  href: data-sources/toc.yml
+
+- name: Use DataSources
+  uid: NetCode.DataSources.Use.Guide
+  href: data-sources/use/toc.yml
+
+- name: Custom DataSources
+  uid: NetCode.DataSources.Custom.Index
+  href: data-sources/custom/toc.yml
+
+- name: " "
+- name: Copilot Dev Tools
+  uid: NetCode.Copilot.Index
+  href: copilot/toc.yml
+
+- name: " "
+- name: "Dnn Platform API ☢️"
+  items:
+    - name: Dnn API and Integration
+      uid: NetCode.PlatformApi.Dnn.Index
+    - name: Dnn Dependency Injection
+      uid: NetCode.PlatformApi.Dnn.DependencyInjection
+    - name: Use in Themes & Modules
+      uid: NetCode.PlatformApi.Dnn.ThemesAndModules
+    - name: Create own Services in DNN
+      uid: NetCode.PlatformApi.Dnn.RegisterService
+    - name: Dnn Search Integration
+      uid: NetCode.Search.Index
+
+- name: "Oqtane Platform API 🩸"
+  items:
+    - name: Oqtane Dependency Injection
+      uid: NetCode.PlatformApi.Oqtane.DependencyInjection
+
+- name: Dependency Injection
+  uid: NetCode.DependencyInjection.Index
+  href: dependency-injection/toc.yml
+
+
+# Other APIs
+- name: " "
+- name: Responsive Image APIs
+  uid: NetCode.Images.Index
+  items: 
+    - name: SrcSet Configuration
+      uid: NetCode.Images.SrcSet
+
+# Custom WebAPIs
+- name: " "
+- name: Custom C# Web API
+  uid: NetCode.WebApi.Index
+  href: web-api/toc.yml
+
+# Other APIs     
+- name: " "
+
+- name: "Use in DLLs #todoc"
+  items:
+    - name: "Access data"
+    - name: "Create typed Entity-objects"
+    - name: "Create DataSources"
+
+## - name: "Use in non Dnn Systems #todoc"
+
+# Other
+- name: " "
+
+- name: Conventions
+  href: conventions/toc.yml
+  uid: NetCode.Conventions.Index
+- name: Lib (ToSic.Lib)
+  uid: NetCode.Lib.Index
+  href: lib/toc.yml
+
+- name: Common Errors
+  href: errors/toc.yml
+  uid: NetCode.Errors.Intro
+
+
+# Debugging
+- name: " "
+
+- name: 2sxc Insights Debugging
+  uid: NetCode.Debug.Index
+  href: debug/toc.yml

@@ -1,0 +1,349 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.MetadataTargetTypes
+    name: MetadataTargetTypes
+    fullName: MetadataTargetTypes
+    children:
+      - Api.Js.SxcJs.MetadataTargetTypes.Undefined
+      - Api.Js.SxcJs.MetadataTargetTypes.None
+      - Api.Js.SxcJs.MetadataTargetTypes.Attribute
+      - Api.Js.SxcJs.MetadataTargetTypes.App
+      - Api.Js.SxcJs.MetadataTargetTypes.Entity
+      - Api.Js.SxcJs.MetadataTargetTypes.ContentType
+      - Api.Js.SxcJs.MetadataTargetTypes.Zone
+      - Api.Js.SxcJs.MetadataTargetTypes.CmsItem
+      - Api.Js.SxcJs.MetadataTargetTypes.System
+      - Api.Js.SxcJs.MetadataTargetTypes.Site
+      - Api.Js.SxcJs.MetadataTargetTypes.SiteVariant
+      - Api.Js.SxcJs.MetadataTargetTypes.Page
+      - Api.Js.SxcJs.MetadataTargetTypes.PageVariant
+      - Api.Js.SxcJs.MetadataTargetTypes.Module
+      - Api.Js.SxcJs.MetadataTargetTypes.ModuleVariant
+      - Api.Js.SxcJs.MetadataTargetTypes.User
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom1
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom2
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom3
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom4
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom5
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom6
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom7
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom8
+      - Api.Js.SxcJs.MetadataTargetTypes.Custom9
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Metadata Target Types
+
+      These are constants to determine what something is assigned to (e.g. it
+      describes an Entity, a file, etc.)
+
+
+      Use it for the @see MetadataFor objects
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Undefined
+    name: Undefined
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Undefined Type (0) - included for completeness.
+      Not usually used, actually None (1) is the default
+    type: field
+    numericValue: 0
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Things that are not used as Metadata (1). This is the default for most
+      Entities.
+    type: field
+    numericValue: 1
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Attribute
+    name: Attribute
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Metadata of attributes / fields (2). This is used to store configuration
+      like the field label, amount-of-rows, etc.
+
+      Remarks =
+
+      The key is always a number (int) pointing to the Attribute ID in the DB.
+    type: field
+    numericValue: 2
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.App
+    name: App
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      App metadata (3). Used to give Apps additional properties.
+      Remarks =
+      The key should always be an int ID of the App.
+    type: field
+    numericValue: 3
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Entity
+    name: Entity
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Metadata of entities / data-items (4).
+      This lets us enhance entities with additional information.
+      Remarks =
+      The Key should always be a GUID
+    type: field
+    numericValue: 4
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.ContentType
+    name: ContentType
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Metadata of a content-type / data-schema (5). Used to give it a
+      description etc.
+    type: field
+    numericValue: 5
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Zone
+    name: Zone
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Zone metadata (6) - used to give a Zone additional information.
+      Only used in very special cases, best not use.
+    type: field
+    numericValue: 6
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.CmsItem
+    name: CmsItem
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Item / Object of the Platform, like a File or Folder etc. (10)
+
+      Remarks =
+
+      * The key is usually a string to further specify what it's describing,
+      like "file:72"
+
+      * The text equivalent is CmsObject
+    type: field
+    numericValue: 10
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.System
+    name: System
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The entire system / platform - so Metadata for the current Dnn/Oqtane
+      installation (11).
+
+      Remarks =
+
+      This is not in use as of now, just added for completeness sakes.
+
+      New in v13
+    type: field
+    numericValue: 11
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Site
+    name: Site
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      A Site - like the current site (12)
+      Remarks = New in v13</remarks>
+    type: field
+    numericValue: 12
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.SiteVariant
+    name: SiteVariant
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      A Site - like the current site (13)
+      Remarks = New in v13 / beta</remarks>
+    type: field
+    numericValue: 13
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Page
+    name: Page
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      A Page - like the current page (14)
+      Remarks = New in v13</remarks>
+    type: field
+    numericValue: 14
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.PageVariant
+    name: PageVariant
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      A Page - like the current page (15)
+      Remarks = New in v13 / beta</remarks>
+    type: field
+    numericValue: 15
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Module
+    name: Module
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      A Module - like a module containing some content (16)
+      Remarks = New in v13</remarks>
+    type: field
+    numericValue: 16
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.ModuleVariant
+    name: ModuleVariant
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      A Module - like a module containing some content (17)
+      Remarks = New in v13 / beta</remarks>
+    type: field
+    numericValue: 17
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.User
+    name: User
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      A User - like the admin-user (18)
+      Remarks = New in v13</remarks>
+    type: field
+    numericValue: 18
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom
+    name: Custom
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (90). This is what you should use for basic apps which have
+      a custom target that's none of the other defaults.
+    type: field
+    numericValue: 90
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom1
+    name: Custom1
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (91). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 91
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom2
+    name: Custom2
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (92). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 92
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom3
+    name: Custom3
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (93). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 93
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom4
+    name: Custom4
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (94). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 94
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom5
+    name: Custom5
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (95). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 95
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom6
+    name: Custom6
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (96). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 96
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom7
+    name: Custom7
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (97). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 97
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom8
+    name: Custom8
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (98). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 98
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.MetadataTargetTypes.Custom9
+    name: Custom9
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Custom target (99). Use this for basic apps which need multiple different
+      custom targets (advanced, rare use case)
+    type: field
+    numericValue: 99
+    package: Api.Js.SxcJs

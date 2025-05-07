@@ -1,0 +1,28 @@
+- name: Contribute to Code
+  uid: Abyss.Contribute.Code
+  items:
+  - name: Build 2sxc and Parts
+    uid: Abyss.Contribute.Build
+  
+
+- name: Code Unit Testing
+  uid: Abyss.Contribute.Tests.Index
+  items:
+  - name: Test Accessors
+    uid: Abyss.Contribute.Tests.TestAccessors
+  - name: Theory - run lists of tests
+    uid: Abyss.Contribute.Tests.Theory
+  - name: Dependency Injection
+    uid: Abyss.Contribute.Tests.DependencyInjection
+  - name: Tests with Data Files
+    uid: Abyss.Contribute.Tests.TestsWithFiles
+  - name: System Tests with Testing DB
+    uid: Abyss.Contribute.Tests.SystemDb
+
+- name: Dev Environment Changes
+  items:
+  - name: For v19.01
+    href: ./dev-env-changes/19.01.md
+
+- name: Contribute Translations
+  uid: Abyss.Contribute.Translations.Index

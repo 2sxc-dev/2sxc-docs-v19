@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Custom.Hybrid Namespace Dnn ☢️ &amp; Oqtane &#129656; | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Custom.Hybrid Namespace Dnn ☢️ &amp; Oqtane &#129656; | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/api-docs/api/dot-net/Custom/Hybrid/_Hybrid.md/#L2">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Custom.Hybrid">
+
+  <h1 id="Custom_Hybrid" data-uid="Custom.Hybrid" class="text-break">Namespace Custom.Hybrid</h1>
+  <div class="markdown level0 summary"><p>Recommended Base Classes for all your Razor and C# files which work on Dnn ☢️ &amp; Oqtane 🩸.</p>
+</div>
+  <div class="markdown level0 conceptual">
+<p>This contains all the <em>hybrid</em> base classes for your own solutions.
+They are meant to work across platforms (Dnn ☢️, Oqtane 🩸, NopCommerce 🔵 etc.)</p>
+<h2 id="versioned-base-classes">Versioned Base Classes</h2>
+<p>All the base classes in this have a version number, so it will become easier to document differences between versions and also to give guidance how to upgrade in case of future breaking changes or security issues.</p>
+<h3 id="classes">Classes</h3>
+<h4 id="api12"><a class="xref" href="Custom.Hybrid.Api12.html">Api12</a></h4>
+<p>The base class for hybrid APIs. They internally inherit either from from <a href="https://dnndocs.com/api/DotNetNuke.Web.Api.DnnApiController.html">DnnApiController</a> or from <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controller">Microsoft.AspNetCore.Mvc.Controller</a> and in addition to all the <a class="xref" href="../../net-code/dynamic-code/index.html">DynamicCode</a> properties also have all the features of that base class - but you should be careful using base-class properties, as they will probably not be hybrid any more.</p>
+<h4 id="code12"><a class="xref" href="Custom.Hybrid.Code12.html">Code12</a></h4>
+<p>The base class for custom hybrid code. If you inherit from this class, you'll automatically have all the properties from <a class="xref" href="../../net-code/dynamic-code/index.html">DynamicCode</a>.</p>
+<h4 id="razor12"><a class="xref" href="Custom.Hybrid.Razor12.html">Razor12</a></h4>
+<p>The base class for custom Razor. If you inherit from this class, you'll automatically have all the properties from <a class="xref" href="../../net-code/dynamic-code/index.html">DynamicCode</a>.</p>
+</div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.Api12.html">Api12</a></dt>
+      <dd><p>This is the base class for all custom API Controllers. <br>
+With this, your code receives the full context  incl. the current App, DNN, Data, etc.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.Api14.html">Api14</a></dt>
+      <dd><p>Base class for v14 Dynamic WebAPI files.
+Will provide the <a class="xref" href="ToSic.Sxc.Services.ServiceKit14.html">ServiceKit14</a> on property <code>Kit</code>.
+This contains all the popular services used in v14, so that your code can be lighter.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.ApiTyped.html">ApiTyped</a></dt>
+      <dd><p>Base class for v16 <a class="xref" href="../../net-code/api-typed/index.html">Typed</a> WebAPI files.
+Use it to create custom WebAPI endpoints in your App.</p>
+<p>It provides the <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html">ServiceKit16</a> on property <code>Kit</code> which contains all the popular services to create amazing stuff.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.Code12.html">Code12</a></dt>
+      <dd><p>This is the base class for custom code (.cs) files in your Apps.
+By inheriting from this base class, you will automatically have the context like the App object etc. available.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This is an old base class and works, but you should use a newer one such as <a class="xref" href="Custom.Hybrid.CodeTyped.html">CodeTyped</a></p>
+</div>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.Code14.html">Code14</a></dt>
+      <dd><p>Base class for v14 Dynamic Code files.</p>
+<p>Will provide the <a class="xref" href="ToSic.Sxc.Services.ServiceKit14.html">ServiceKit14</a> on property <code>Kit</code>.
+This contains all the popular services used in v14, so that your code can be lighter.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.CodeTyped.html">CodeTyped</a></dt>
+      <dd><p>Base class for v16 <a class="xref" href="../../net-code/api-typed/index.html">Typed</a> CSharp files.
+Use it to create custom CS code in your App.</p>
+<p>It provides the <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html">ServiceKit16</a> on property <code>Kit</code> which contains all the popular services to create amazing stuff.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.Razor12.html">Razor12</a></dt>
+      <dd><p>The base class for Hybrid Razor-Components in 2sxc 12 <br>
+Provides context objects like CmsContext, helpers like Edit and much more. <br></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.Razor14.html">Razor14</a></dt>
+      <dd><p>Base class for v14 Dynamic Razor files.
+Will provide the <a class="xref" href="ToSic.Sxc.Services.ServiceKit14.html">ServiceKit14</a> on property <code>Kit</code>.
+This contains all the popular services used in v14, so that your code can be lighter.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.RazorTyped.html">RazorTyped</a></dt>
+      <dd><p>Base class for v16 <a class="xref" href="../../net-code/api-typed/index.html">Typed</a> Razor files.
+Use it to create custom CS code in your App.</p>
+<p>It provides the <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html">ServiceKit16</a> on property <code>Kit</code> which contains all the popular services to create amazing stuff.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Custom.Hybrid.RazorTyped-1.html">RazorTyped&lt;TModel&gt;</a></dt>
+      <dd><p>New base class with custom model.
+The rest of this is identical to <a class="xref" href="Custom.Hybrid.RazorTyped.html">RazorTyped</a>.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/api-docs/api/dot-net/Custom/Hybrid/_Hybrid.md/#L2" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

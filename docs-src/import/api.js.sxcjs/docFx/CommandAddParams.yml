@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.CommandAddParams
+    name: CommandAddParams
+    fullName: CommandAddParams
+    children:
+      - Api.Js.SxcJs.CommandAddParams.contentType
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Parameters used for the command `add`.
+
+      <br>
+
+      The `contentType` determines what items will be created, the `index`
+      where.
+
+      Depending on your use case, you will need to use the
+
+      [](xref:Api.Js.SxcJs.CommandParamsEntityInList) or
+      [](xref:Api.Js.SxcJs.CommandParamsEntityInContentBlock) parameters as
+      well.
+
+      <br>
+
+      ⤴️ back to [All Command Names](xref:Api.Js.SxcJs.CommandNames)
+    extends:
+      name: Api.Js.SxcJs.CommandContentTypeParams
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.CommandAddParams.contentType
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The content-type name
+    syntax:
+      content: 'contentType: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: Api.Js.SxcJs
+references:
+  - uid: Api.Js.SxcJs.CommandContentTypeParams
+    name: CommandContentTypeParams
+    spec.typeScript:
+      - name: CommandContentTypeParams
+        fullName: CommandContentTypeParams
+        uid: Api.Js.SxcJs.CommandContentTypeParams

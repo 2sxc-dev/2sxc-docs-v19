@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Your Custom Platform - Scenario #2 - Edit Data + ADAM | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Your Custom Platform - Scenario #2 - Edit Data + ADAM | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/integration/scenario-02.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Integration.Scenario02">
+<h1 id="your-custom-platform---scenario-2---edit-data--adam">Your Custom Platform - Scenario #2 - Edit Data + ADAM</h1>
+
+<p>This is part of the <a class="xref" href="index.html">Integration Guide</a> for integrating EAV or 2sxc into your own solution.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can find this fully implemented in the <code>Integration\SxcEdit01</code> project</p>
+<p>Search for <code>#2sxcIntegration</code> in the code to find all the things that were adjusted to get it to work.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>These docs are still WIP.</p>
+</div>
+<h2 id="scope-of-scenario-2---edit-eav-data">Scope of Scenario #2 - Edit EAV Data</h2>
+<p><strong>Functionality</strong></p>
+<ol>
+<li>A link on a page can open the edit dialog</li>
+<li>Users can edit texts</li>
+<li>Users can save the result</li>
+<li>Users can see the history of an item and restore it to a previous state</li>
+<li>ADAM
+<ol>
+<li>Users can upload assets in the edit-dialog - which is stored in this new web (not in the original Dnn/Oqtane)</li>
+<li>Users can see previously uploaded assets</li>
+<li>Users can delete and rename assets in the edit-dialog</li>
+<li>Assets are referenced using their path, not an ID (which would be the default in Dnn/Oqtane)</li>
+</ol>
+</li>
+<li>Adam files of an entity can be shown on a page</li>
+<li>All API Controllers log what they do</li>
+</ol>
+<p>Not implemented</p>
+<ol>
+<li>Security checks are fake, it always returns that edit etc. is allowed</li>
+</ol>
+<h2 id="integration-overview-for-basic-edit--adam">Integration Overview for Basic Edit + ADAM</h2>
+<p>To Integrate EAV and 2sxc into your system, these are the core things you must do:</p>
+<ol>
+<li>Add <em>more</em> necessary DLLs</li>
+<li>Copy <em>additional</em> relevant files - specifically the js/css files to be used in the dialogs</li>
+<li>Implement core objects which are different in your system</li>
+<li>Implement APIs for edit, probably also for delivering files etc.</li>
+<li>Test / Verify you can edit data</li>
+</ol>
+<hr>
+<h2 id="1-add-minimal-dlls">1. Add Minimal DLLs</h2>
+<p>For this scenario you need to add just about all of the DLLs except for Razor helpers.</p>
+<p>You can add these manually, reference them or whatever.</p>
+<hr>
+<h2 id="2-2sxc-web-files-js-css">2. 2sxc Web Files (JS, CSS)</h2>
+<h3 id="21-copy-important-web-files-to-your-target">2.1 Copy Important Web Files to Your Target</h3>
+<p>All the dialogs are JS based, so you must get these JS files in a place where they can be loaded.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <code>dist</code>, <code>js</code> folders etc. <strong>must</strong> be accessible from outside.</p>
+</div>
+<p>For reference, check out the build script on the <code>SxcEdit01</code> project.</p>
+<h3 id="22-make-sure-in-page-2sxc-jss-are-loaded">2.2 Make sure in page 2sxc JSs are loaded</h3>
+<p>For the page to be able to trigger edit dialogs, it needs at least these two files to be loaded on the page when a user should be able to edit:</p>
+<ol>
+<li><code>[2sxc public files root]/js/2sxc.api.min.js</code> -  note that the location could change in a future version</li>
+<li><code>[2sxc public files root]/dist/inpage/inpage.min.js</code> -  note that the location could change in a future version</li>
+<li>Optional: Load the CSS <code>[2sxc public files root]/dist/inpage/inpage.min.css</code> for Toolbars to work</li>
+</ol>
+<p>2sxc does this automatically in a full implementation like in Dnn and Oqtane.
+The logic to do that and ensure it's part of the final output is sophisticated.
+So for this minimal implementation, best do it yourself, and choose yourself if you give it to all users or just admins.</p>
+<h3 id="23-give-the-js-environment-variables">2.3 Give the JS Environment Variables</h3>
+<p>The JS needs to know a few global things for it to work.
+At the minimum it's the location of the WebAPI root as well as the location of the UI files.
+For this you either need a <code>_jsApi</code> meta header or add this to the page after the $2sxc-js has been loaded:</p>
+<pre><code class="lang-js">$2sxc.env.load({
+  // optional pageId: 0,
+  rvt: '@IntegrationConstants.EnvRvt',
+  api: '@IntegrationConstants.EnvApiRoot',
+  uiRoot: `@IntegrationConstants.EnvUiRoot`, 
+});
+</code></pre>
+<p>The previous code was taken from the <code>_Layout.cshtml</code> in the example.</p>
+<hr>
+<h2 id="3-implement-core-objects-which-are-necessary">3. Implement Core Objects which are Necessary</h2>
+<p>Specifically</p>
+<ol>
+<li>Implement
+<ol>
+<li><code>Context\ISite</code> is needed to have information about the <code>ContentPath</code></li>
+<li><code>Context\IUser</code> is needed to pretend it's a super-user and allow editing</li>
+<li><code>Adam\IAdamPaths</code> - our test-case assumes it's in wwwroot, for which there is already a prepared <code>AdamPathsWwwroot</code> object</li>
+</ol>
+</li>
+<li>Register these replacements in the StartUp - in the demo project it's in the <code>StartupEavAndSxc.AddImplementations(...)</code></li>
+</ol>
+<h2 id="4-implement-and-activate-webapis">4. Implement and Activate WebApis</h2>
+<ol>
+<li>Implement a base class to assist in various aspects
+<ol>
+<li>Add the request to the insights logs</li>
+<li>Ensure timing of the request to better spot issues</li>
+<li>Make sure your controllers <a class="xref" href="../../net-code/conventions/proxy-controllers/index.html">are just proxies calling the <code>Real</code> controller</a></li>
+<li>Make some minor corrections to HTTP responses, so empty ones really return an HTTP 204</li>
+</ol>
+</li>
+<li>Implement WebApis to answer on the appropriate endpoints (see examples)
+<ol>
+<li><code>DialogController</code> is required to get general information for dialogs to work</li>
+<li><code>EditController</code> is reponsible for loading and saving data from the dialog</li>
+<li><code>AdamController</code> helps with file uploads etc.</li>
+</ol>
+</li>
+<li>Register / activate
+<ol>
+<li>Depending on the framework, <strong>registration</strong> is different. For .net core, check out the example <code>AddControllersAndConfigureJson(...)</code> or the Oqtane registration examples.</li>
+<li>Remember that it must also be <strong>configured</strong> - see the <code>UseEndpoints(...)</code> or the <code>Startup.cs</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="5-provide-index-rawhtml-on-the--new-v14">5. Provide <code>index-raw.html</code> On the <code>/</code> <em>new v14</em></h2>
+<p>The 2sxc dialogs (quick-dialog and eav-edit) both create an <code>index-raw.html</code>.
+These are incomplete - they need some placeholders to be replaced at runtime based on the page they are opened from.</p>
+<p>Linking to these UIs happens through these targets:</p>
+<ul>
+<li><code>[2sxc public files root]/dist/quickDialog/?pageId=123&amp;sxcver=14...</code></li>
+<li><code>[2sxc public files root]/dist/ng-edit/?pageId=123&amp;sxcver=14...</code></li>
+</ul>
+<p>You must ensure that these URLs deliver the corresponding <code>index-raw.html</code> with the placeholders fixed.</p>
+<p>For this, either create a real page (like a <code>default.aspx</code> in DNN) which responds to the request and renders the <code>index-raw.html</code> with the placeholders replaced.
+Or you can create a route/endpoint (like in Oqtane) which does the same thing.
+Best check the code how it's done in Dnn/Oqtane.</p>
+<p>The placeholders which are currently set are:</p>
+<ol>
+<li><code>@base</code> - for the base-tag containing the page-id so that refreshes preserve this</li>
+<li><code>@jsapi</code> - the meta-header containing context information</li>
+<li><code>@sxcver</code> - for the version of 2sxc extended with the server-start timestamp, mainly for cache-break purposes</li>
+<li><code>&lt;!--@customheaders--&gt;</code> - custom headers - ATM not used but you may need it</li>
+<li><code>&lt;!--@custombody--&gt;</code> - custom body - ATM used by Oqtane to provide the Request Verification Token</li>
+</ol>
+<p>These are replaced automatically for you when you use the <code>ToSic.Sxc.Web.HmlDialog</code> helpers.</p>
+<hr>
+<h2 id="6-expand-startup-configuration">6. Expand StartUp Configuration</h2>
+<p>Do the same as TODO:</p>
+<p>Some aspects of EAV &amp; 2sxc are super important that they are configured before anything starts.
+These are the required ones as of 2022-02:</p>
+<ol>
+<li>The database <strong>ConnectionString</strong> required to connect to the EAV DB</li>
+<li><strong>GlobalFolder</strong> of the distributed 2sxc files containing things like the <code>App_Data</code> subfolder - required to load initial configurations and initial data</li>
+<li>Call <code>StartUp</code> on the <code>SystemLoader</code> which you must get from DI</li>
+</ol>
+<p>This is the working code taken from <code>BasicEav01</code>:</p>
+<pre><code class="lang-c#">/// &lt;summary&gt;
+/// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+/// &lt;/summary&gt;
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+  // ----- Start EAV stuff #2sxcIntegration -----
+  var serviceProvider = app.ApplicationServices;
+  
+  // Set Connection String
+  serviceProvider.Build&lt;IDbConfiguration&gt;().ConnectionString = _connStringFromConfig;
+
+  // Set global path where it will find the App_Data folder
+  var globalConfig = serviceProvider.Build&lt;IGlobalConfiguration&gt;();
+  globalConfig.GlobalFolder = Path.Combine(env.ContentRootPath, &quot;sys-2sxc&quot;);
+
+  // Trigger start where the data etc. will be loaded &amp; initialized
+  serviceProvider.Build&lt;SystemLoader&gt;().StartUp();
+  // ----- End EAV stuff #2sxcIntegration -----
+
+  // ...
+}
+</code></pre>
+<hr>
+<h2 id="5-test-and-verify">5. Test and Verify</h2>
+<p>If you did everything right, you can now run your code and access data from the App Cache using code like this (see demo on the <code>ShowEavData.cshtml</code>):</p>
+<pre><code class="lang-c#">@page
+@using ToSic.Eav.Apps
+@inject IAppStates AppStates
+@{
+  ViewData[&quot;Title&quot;] = &quot;First Read Data from EAV&quot;;
+
+  // Adjust these values to your testing environment
+  var zoneId = 2;
+  var appId = 78;
+
+  var appState = AppStates.Get(new AppIdentity(zoneId, appId));
+  var firstItem = appState.List.FirstOrDefault();
+}
+</code></pre>
+<p><strong>Common Problems</strong></p>
+<ol>
+<li>If the folder to the <code>App_Data</code> isn't quite correct, you will have a long loading time and then a stack overflow</li>
+</ol>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Proof of Concept implemented with 2sxc 11 in 2021</li>
+<li>Finalized when integrating Oqtane in 2sxc 12</li>
+<li>Updated docs for basic Scenario for v13.03</li>
+<li>Updated for dialog-integration with index-raw in v14.02</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/integration/scenario-02.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "2sxc-docs",
+  "version": "19.03.05",
+  "description": "",
+  "templateName": "2sxc",
+  "enableDebug": false,
+  "scripts": {
+    "webpack-build": "webpack --mode production -c ./templates/shared-global/webpack.config.js",
+    "webpack-dev": "webpack --watch --mode development -c ./templates/shared-global/webpack.config.js",
+    "// import": "Note: This is not yet working",
+    "import": "npm run import-js && npm run import-jsng",
+    "// import-js": "This is the import that already works. It will get the docs from the sxc-typings project and generate YAML for DocFx",
+    "import-js": "npm run import-js1-pre-clean && npm run import-js2-typedoc && npm run import-js3-docfx",
+    "import-js1-pre-clean": "cd import && delete.cmd \".\\api.js.sxcjs\"",
+    "import-js2-typedoc": "cd \"../../2sxc-ui/projects/sxc-typings/\" && typedoc --tsconfig ./tsconfig.typedoc.json --json \"../../../2sxc-docs/2sxc Docs Generator/import/api.js.sxcjs/typedoc.json\"",
+    "import-js3-docfx": "type2docfx ./import/api.js.sxcjs/typedoc.json ./import/api.js.sxcjs/docFx",
+    "import-jsng": "npm run import-jsng1-pre-clean && npm run import-jsng2-typedoc && npm run import-jsng3-docfx",
+    "import-jsng1-pre-clean": "cd import && delete.cmd \".\\api.js.sxc-angular\"",
+    "import-jsng2-typedoc": "cd \"../../2sxc-ui/projects/dnn-sxc-angular\" && typedoc --tsconfig ./tsconfig.typedoc.json --json \"../../../2sxc-docs/2sxc Docs Generator/import/api.js.sxc-angular/typedoc.json\"",
+    "import-jsng3-docfx": "type2docfx ./import/api.js.sxc-angular/typedoc.json ./import/api.js.sxc-angular/docFx"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@2sic.com/2sxc-typings": "^11.0.0",
+    "@types/jquery": "^2.0.33",
+    "@types/node": "^20.10.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.82.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "type2docfx": "^0.10.5",
+    "typedoc": "^0.27.3",
+    "typescript": "^5.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.33",
+    "highlightjs-cshtml-razor": "^2.1.1",
+    "js-yaml": "^4.1.0"
+  }
+}

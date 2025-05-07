@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>All Changes in EAV and 2sxc v16 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="All Changes in EAV and 2sxc v16 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v16/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Releases.History.V16">
+<h1 id="all-changes-in-eav-and-2sxc-v16">All Changes in EAV and 2sxc v16</h1>
+
+<h2 id="version-16">Version 16</h2>
+<h3 id="2sxc-v1600-lts-2023-05-04">2sxc v16.00 LTS (2023-05-04)</h3>
+<p>No relevant changes, just minor bugfixes + our convention to upgrade the main version every 6 months.
+We mainly finished the docs for various features, so this is what is now done.</p>
+<ol>
+<li>✅ improve IConfiguration API - lighten the <code>IDataService</code> API</li>
+<li>✅ Document new data sources API</li>
+<li>✅ finish Dynamic DataSources</li>
+<li>✅ Document CDN / Asset management</li>
+<li>✅ Document Formula improvements</li>
+<li>✅ IDataService completed</li>
+<li>✅...and documented</li>
+<li>✅ New WYSIWYG mode completed (and documented)</li>
+<li>✅ Toolbars Service Improvements:  transport <code>data</code> for use in notes etc. ca. 0.5d 2dm</li>
+<li>✅ Data-conversion of entities to json in attribute... - documented</li>
+</ol>
+<h3 id="2sxc-v1601-lts-2023-05-23">2sxc v16.01 LTS (2023-05-23)</h3>
+<p>Various bugfixes + some enhancements.</p>
+<ol>
+<li>✅ New <a class="xref" href="../../../../basics/data/fields/string-wysiwyg/rich.html">rich WYSIWYG experience</a></li>
+<li>✅ Edit-UI can now be opened to only show a few specified fields (feature API not yet public, but used in the new WYSIWYG feature) #3080</li>
+<li>✅ New ITypedItem and AsTyped(...) API</li>
+<li>✅ New Data.Content and Data.Header objects</li>
+<li>✅ IDynamicEntity now has methods like <code>String(...)</code>, <code>Int(...)</code>, <code>Bool(...)</code>, <code>Date(...)</code>, <code>Decimal(...)</code>, <code>Double(...)</code>, <code>Long(...)</code>, <code>DateTime(...)</code>, <code>Float(...)</code> to convert values to the desired type. #3089</li>
+<li>✅ Sort-Items UI was enhanced with remove, add, add-existing #3077</li>
+<li>✅ DynamicDataSource now supports relationships #3078</li>
+<li>✅ DynamicDataSource now shows better errors in Razor on compile issues #3084</li>
+<li>✅ Razor now automatically suggests the <code>insights</code> button on the toolbar if there are errors #3085</li>
+<li>✅ Enhancement: Serializing Entities to JSON now skips <code>empty</code> fields such as messages or ephemeral fields</li>
+<li>✅ Clean up Formulas code into better SoC @SDV</li>
+<li>✅ Clean up ancient documentation which is probably invalid, but still seen by many :(</li>
+</ol>
+<p>Dnn / Evoq</p>
+<ol>
+<li>✅ Evoq: Better support for list management together with page workflow #3087</li>
+<li>✅ Dnn Skin: Adding module to skin using IRenderService now allows editing entities #3092</li>
+</ol>
+<p>Oqtane</p>
+<ol>
+<li>✅ Enabled full WASM support for Oqtane #3083 (previously only server-rendering worked)</li>
+<li>🪲 Improvement on how AJAX reloads work, resolves some reload-errors #3081</li>
+</ol>
+<p>Minor Bugfixes</p>
+<ol>
+<li>🪲 Two bugfixes related to Formulas v1 - returning date #3088</li>
+<li>🪲 XML-Data-Export now works with IsContentAdmin permissions (before it required IsSiteAdmin) #3075</li>
+<li>🪲 View list of data now works with IsContentAdmin permissions (before it required IsSiteAdmin)</li>
+<li>🪲 Fixed issue with <code>GetService&lt;ILogService&gt;()</code> because <code>ILogService</code> had been renamed to <code>ISystemLogService</code> #3082</li>
+</ol>
+<h3 id="2sxc-v1602-2023-07-07">2sxc v16.02 (2023-07-07)</h3>
+<p>Major Enhancements</p>
+<ol>
+<li>✅ ImageFlow upgraded to version 0.10.0 - thereby making sure it works with FIPS enabled <a href="https://github.com/2sic/2sxc/issues/3121">#3121</a></li>
+<li>✅ Brand new typed code <strong>Pro</strong> mode
+<ul>
+<li><code>ITypedItem</code> and <code>ITyped</code> interfaces with properties such as <code>Id</code>, <code>Guid</code> and methods such as <code>.String(name)</code>, ...</li>
+<li><code>RazorPro</code>, <code>ApiPro</code>, <code>CodePro</code> base classes with completely reworked API such as <code>AsStack(...)</code>, <code>MyPage</code> or <code>AllSettings</code></li>
+<li><code>ApiPro</code> now serializes JSON using new defaults which are more common in WebApis (lower-case properties, auto-serialize entities, etc.)</li>
+</ul>
+</li>
+</ol>
+<p>Documentation</p>
+<ol>
+<li>✅ Upgraded DocFX from 2.48.1 to 2.67.3 with major improvements to the generated docs</li>
+<li>✅ Improved Documentation of all Razor and WebApi base classes!</li>
+</ol>
+<p>Support for Developers</p>
+<ol>
+<li>✅ Dramatically improved insights with more details and filtering options</li>
+<li>✅ Created system to automatically detect and warn about deprecated code - using buttons in the toolbar</li>
+<li>✅ Created <strong>CodeHelp</strong> system to guide developers when common coding mistakes were made</li>
+<li>✅ New <strong>Obsolete</strong> system collects issues per App and shows them even if the current Razor is not affected</li>
+<li>✅ Show <strong>CodeHelp</strong> warnings if a RazorPage doesn't have <code>@inherits</code></li>
+</ol>
+<p>Various bugfixes + some enhancements.</p>
+<ol>
+<li>✅ Refactored Razor and WebApi base classes to use Composition over Inheritance</li>
+<li>✅ RazorBlade upgrade from v4.2.0 to 4.4.0 (also for .net 7 compatibility)</li>
+<li>✅ Feature to <em>not</em> show edit-toolbar buttons on HTML coming from Resources</li>
+<li>✅ Improve <em>not</em> showing a metadata-toolbar on images which are coming from demo-items</li>
+</ol>
+<p>Dnn / Evoq</p>
+<ol>
+<li>✅ Downgrade SQL to still work with SQL Server 2012 as people had trouble upgrading <a href="https://github.com/2sic/2sxc/issues/3120">#3120</a></li>
+<li>✅ Since ImageFlow was upgraded, the following DLLs were also upgraded
+<ul>
+<li>Imageflow, 0.7.24 -&gt; 0.10.0</li>
+<li>Imageflow.Net, 0.7.24 -&gt; 0.10.0</li>
+<li>Imazen.Common, 0.7.7 -&gt; 0.8.1</li>
+<li>Imazen.HybridCache, 0.7.7 -&gt; 0.8.1</li>
+<li>Newtonsoft.Json, Version=10.0.0.0 -&gt; 13.0.0.0</li>
+</ul>
+</li>
+<li>✅ As part of the upgrade we also had to upgrade some MS DLLs
+<ul>
+<li>Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0 -&gt; 7.0.0.0</li>
+<li>System.Collections.Immutable, Version=6.0.0.0 -&gt; 7.0.0.0</li>
+<li>System.Text.Encodings.Web, Version=6.0.0.0 -&gt; 7.0.0.0</li>
+<li>System.Text.Json, Version=6.0.0.0 -&gt; 7.0.0.2</li>
+<li>System.Memory, Version=4.0.1.1 -&gt; 4.0.1.2</li>
+</ul>
+</li>
+</ol>
+<p>Oqtane</p>
+<ol>
+<li>✅ Oqtane 4.0 Support (with .net 7) <a href="https://github.com/2sic/2sxc/issues/3123">#3123</a></li>
+<li>✅ Reworked API Middleware to avoid conflicts with OAuth 2</li>
+</ol>
+<p>Minor Bugfixes</p>
+<ol>
+<li>🪲 Fixed issue with Swiper not being able to add slides <a href="https://github.com/2sic/2sxc/issues/3108">#3108</a> <a href="https://github.com/2sic/2sxc/issues/3112">#3112</a></li>
+<li>🪲 Fixed issue with DatePicker in Edge and also added more cultures <a href="https://github.com/2sic/2sxc/issues/3113">#3113</a></li>
+<li>✅ Changed internal APIs to return RazorBlade <code>IHtmlTag</code> objects instead of previously <code>IHybridHtmlString</code> <a href="https://github.com/2sic/2sxc/issues/3098">#3098</a></li>
+</ol>
+<h3 id="2sxc-v1603-2023-08-21">2sxc v16.03 (2023-08-21)</h3>
+<p>Enhancements around Typed Code</p>
+<ol>
+<li>✅ Typed: rename <code>RazorPro</code> to <code>RazorTyped</code> etc. #3147</li>
+<li>✅ Make all typed objects very strict when checking if fields exist</li>
+<li>✅ Add much more helpful info / error when fields not found</li>
+<li>✅ Typed: Massively enhanced with strict checks and reduced the possibility of writing code which doesn't do anything</li>
+<li>✅ Typed: <code>ITypedItem</code> now has a new .Picture(...) method making the code nicer #3135</li>
+<li>✅ Typed: <code>ITypedItem</code>s can now be mocked #3141 to create alternate data in code when no data exists</li>
+<li>✅ Typed: New methods <code>ContainsKey(...)</code>, <code>Keys(...)</code> #3142</li>
+<li>✅ Typed: New methods <code>IsEmpty(...)</code> and <code>IsNotEmpty(...)</code> #3144</li>
+<li>✅ Typed: method <code>.String(..., scrubHtml)</code> now also accepts a string containing tags to remove #3146</li>
+<li>✅ Typed: If an error occurs, much more information is provided as to how to fix #3143 #3145</li>
+<li>✅ Typed Json: now also supports paths, so you can use <code>Kit.Json.ToTyped(jsonString).Int(&quot;Root.Child.Id&quot;)</code></li>
+<li>✅ Typed Json: now also strict using propsRequired by default</li>
+<li>✅ Typed: the property <code>.Dyn</code> now only exists on <code>ITypedItem</code> (entity-based) and not on other wrappers</li>
+</ol>
+<p>Other Enhancements</p>
+<ol>
+<li>✅ Image Resizer: New <code>Square</code> resize settings #3134</li>
+<li>✅ Image Resizer: <code>ImageService</code> can now also handle <code>IFile</code> objects and get the metadata automatically #3140</li>
+<li>✅ Web Farm Cache: Updated for v16.02+ (enterprise customers only)</li>
+<li>✅ Page Parameters: now support ITyped so you can use MyPage.Parameters.Int(&quot;id&quot;) and similar</li>
+</ol>
+<p>Support for Developers</p>
+<ol>
+<li>✅ Errors now highlight the <code>.cshtml</code> line which caused the error</li>
+<li>✅ Errors on mistyped property names now gives very detailed information about it</li>
+</ol>
+<p>DNN / Evoq</p>
+<ol>
+<li>✅ Image Resizer: Upgrade to dnn-imageflow 1.2.1 #3130</li>
+<li>✅ Newtonsoft internal version in DNN Manifest now matches 13.0.3</li>
+</ol>
+<p>Oqtane</p>
+<ol>
+<li>✅ Oqtane: Better error when Oqtane in installed without sufficient DB permissions #3128 / #3131</li>
+<li>✅ Internal: Code cleanup with warnings new EF-Core #3132</li>
+<li>✅ Internal: EF Core QuerySplittingBehavior #3133</li>
+</ol>
+<p>Minor Bugfixes</p>
+<ol>
+<li>🪲 turnOn failed on AJAX reloads during editing #3127</li>
+<li>🪲 Oqtane: Bugfix importing App Assets #3129</li>
+<li>🪲 Web Farm Cache: Fix issue which occured on license uploads</li>
+<li>🪲 Licenses: fix issue with multiple licenses / names resulting in an <code>unlicensed</code> message</li>
+</ol>
+<h3 id="2sxc-v1604-2023-09-05">2sxc v16.04 (2023-09-05)</h3>
+<p>Highlight: <strong>UniqueKey</strong></p>
+<ul>
+<li>✅ Razor: New <code>UniqueKey</code> property (in Typed mode) #3151</li>
+<li>✅ Razor: New <code>Kit.Keys.UniqueKeyWith(...)</code> for unique IDs and working with JS #3152</li>
+</ul>
+<p>Images</p>
+<ul>
+<li>✅ Images: Images in rich wysiwyg mode now are shown nicely after import into other site</li>
+<li>✅ Images: Dialog-Options to set empty title and not use fallback #3150</li>
+<li>✅ Images: Enable crop/title dialog for public files, with delayed toolbar and warning-hint #3057</li>
+<li>✅ Images: Fix Safari bug with small images #2</li>
+<li>✅ Images: Ability to specify alternate toolbar #3157</li>
+<li>✅ Images: Ability to specify no toolbar #3158</li>
+<li>✅ Images: Ability to use Toolbar outside of main picture/img tag using img.Toolbar() #3156</li>
+<li>✅ Images: Metadata now also has a DescriptionExtended</li>
+</ul>
+<p>Razor in <strong>Typed</strong> Mode</p>
+<ul>
+<li>✅ MyModel: Improve handling fallback / required #3149</li>
+<li>✅ App.Folder.Url to replace App.Path for clearer APIs</li>
+<li>✅ App.GetQuery(...) to replace App.Query[name]</li>
+<li>✅ All ITyped objects now behave strict by default</li>
+<li>✅ Complete various scenarios for ITyped with unit tests, especially conversion of anonymous and json-based ITyped</li>
+<li>✅ All ITyped now have APIs for ContainsKey, IsEmpty and IsNotEmpty</li>
+<li>✅ Razor: Errors now highlight the .cshtml file with a 🎯 emoji</li>
+<li><del>GetDraft / GetPublished</del> (decided not to implement yet)</li>
+<li>✅ Override Equality operations - using ITyped.Equals</li>
+</ul>
+<p>Oqtane</p>
+<ul>
+<li>🩸 Improve indexing in Google #3154</li>
+<li>🩸 Improve pre-render adding JS/CSS</li>
+<li>🩸 Improve page header changes (title, metadata) using latest Oqtane 4 APIs</li>
+</ul>
+<p>Patrons</p>
+<ul>
+<li>🦸🏽 New feature to better control language fallback sequence (beta) #3159</li>
+<li>🦸🏽 Improve showing expired features - important when testing a feature for 24h</li>
+</ul>
+<p>Bugfixes</p>
+<ul>
+<li>🪲 Languages: Bug in UI: Some labels and dropdown-labels didn't show in current language #3153</li>
+<li>🪲 lots of minor bugfixes</li>
+</ul>
+<h3 id="2sxc-v1606-2023-09-20">2sxc v16.06 (2023-09-20)</h3>
+<ol>
+<li>✅ Tutorials for new Pro mode / Quick-Ref</li>
+<li>✅ Optimize build of 2sxc to use local config-files so it's easier for others to contribute @STV</li>
+<li>✅ Improve JS build to make it easier for others to contribute</li>
+<li>✅ Improve headers handling in Oqtane 4</li>
+</ol>
+<h3 id="2sxc-v1607-lts-2023-09-22">2sxc v16.07 LTS (2023-09-22)</h3>
+<ol>
+<li>✅ new <code>TypeItem.Parent(...)</code> - especially. <code>.Parent(current: true)</code> api #3173</li>
+<li>✅ new parameters to the <code>.Picture(...)</code> incl. <code>picClass</code>, <code>imgAttributes</code> and <code>picAttributes</code></li>
+<li>✅ fix bug where presentation data was generated even if not used #3185</li>
+</ol>
+<p>Major: Release 16.07 LTS 🚀</p>
+<h3 id="2sxc-v1609-2023-11-22">2sxc v16.09 (2023-11-22)</h3>
+<ol>
+<li>✅ <code>TypedItem.Picture(&quot;Child.Property&quot;)</code> path notation</li>
+<li>✅ fix js minification of <code>inpage.min.js</code></li>
+<li>✅ Release all apps in the new typed mode</li>
+<li>✅ Blazor .net 8 / Oqtane 5 support</li>
+<li>✅ Improve file-upload to prevent files with &quot;..&quot; in the name</li>
+<li>✅ Improve DataSource Caching and cache-flushing</li>
+<li>✅ Add new (beta ⌛) feature for copyright management (Patron AdvancedCMS) to add copyright info to each image</li>
+<li>✅ Extend SQL Database to store <code>SysSettings</code> and <code>Guid</code> on Attributes for future features</li>
+<li>🐞 Fix minor issue with old <code>.Code</code> for older Razor base classes</li>
+<li>🐞 Fix minor issue with edit-dialog in scenarios with multiple portal aliases</li>
+<li>🐞 Fix minor issue with <code>IMetadata.Children(...)</code> / <code>...Child(...)</code> #3217</li>
+<li>🐞 Fix DataSource <code>LanguageModeler</code> #3219</li>
+<li>🐞 Fix DataSource <code>TreeMapper</code></li>
+<li>🩸 Oqtane: Adam backend didn't always serialize all properties #3206</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v16/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

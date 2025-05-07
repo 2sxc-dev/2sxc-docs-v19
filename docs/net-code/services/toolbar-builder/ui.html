@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Toolbar Builder Guide – UI | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Toolbar Builder Guide – UI | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/services/toolbar-builder/ui.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.ToolbarBuilder.Ui">
+
+<img src="../../../assets/features/toolbar.svg" class="feature">
+<h1 id="toolbar-builder-guide--ui">Toolbar Builder Guide – UI</h1>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The examples below explain how to use the <code>ui:</code> parameter.
+Starting in v15.07+ we recommend using the <a class="xref" href="tweak-buttons.html">Tweak API</a> instead.</p>
+</div>
+<p>The <strong>UI</strong> determines how buttons are shown.</p>
+<p>It is given to the commands using the <code>ui</code> parameter
+which is an optional parameter and <a class="xref" href="../../conventions/named-parameters.html">must be named</a>.</p>
+<h2 id="ui-settings-for-the-entire-toolbar">UI Settings for the Entire Toolbar</h2>
+<p>UI settings can be set globally for the toolbar, or specific for each button.</p>
+<p>To set it globally, you have these options:</p>
+<ol>
+<li>On the first creation of the object - eg. <code>Kit.Toolbar.Default(item, ui: &quot;color=red,white&quot;)</code></li>
+<li>When setting global parameters eg. <code>Kit.Toolbar.Default().Parameters(ui: &quot;color=red,white&quot;)</code></li>
+</ol>
+<p>If your code does more than one of these, the last value will be the one used.</p>
+<h2 id="ui-settings-for-one-specific-button">UI Settings for One Specific Button</h2>
+<p>Many methods accept an optional <code>ui</code>.
+Is that case the button would have their own UI settings.</p>
+<p>So you could do something like this</p>
+<pre><code class="lang-c#">// Normal toolbar for Content, but also has an edit-button for the header
+var tlb = Kit.Toolbar.Default(Content).New(ui: &quot;color=blue,white&quot;);
+</code></pre>
+<h2 id="ui-as-string-object-or-combinations-thereof">UI as String, Object or Combinations Thereof</h2>
+<p>There are two ways you can specify <code>ui</code>.
+Either as a string - like this:</p>
+<pre><code class="lang-c#">ui: &quot;color=red&amp;classes=extra-glow&quot;
+</code></pre>
+<p>Or as an object (since v14.04) - like this:</p>
+<pre><code class="lang-c#">ui: new { color = &quot;red&quot;, classes = &quot;extra-glow&quot; }
+</code></pre>
+<p>Or as a combination of strings and objects (v14.07.05+):</p>
+<pre><code class="lang-c#">ui: new object[] { &quot;color=red&quot;, new { classes = &quot;extra-glow&quot; } }
+</code></pre>
+<h2 id="complex-strings-will-be-made-safe-with-base64-v140705">Complex Strings will be Made Safe with Base64 (v14.07.05+)</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This feature is mainly used for the <code>icon</code> property, which could contain an SVG string.</p>
+</div>
+<p>If you use an object which has complex string (which wouldn't survive a URL) then it will be made safe.
+So you can do this:</p>
+<pre><code class="lang-c#">  // https://fonts.google.com/icons?icon.query=sticky+note
+  var iconNote = &quot;&lt;svg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; height=\&quot;48\&quot; width=\&quot;48\&quot;&gt;&lt;path d=\&quot;M9 39h20V29h10V9H9v30Zm0 3q-1.25 0-2.125-.875T6 39V9q0-1.25.875-2.125T9 6h30q1.25 0 2.125.875T42 9v21L30 42Zm6-15v-3h8.5v3Zm0-8v-3h18v3ZM9 39V9v30Z\&quot;/&gt;&lt;/svg&gt;&quot;;
+  var tlb = Kit.Toolbar.Default().Edit(ui: new { Icon = iconNote })
+</code></pre>
+<p>Note that this auto-conversion only happens on <strong>objects</strong> handed to the <code>ui</code> property and not to <strong>strings</strong>.</p>
+<hr>
+<p>See also</p>
+<ul>
+<li>the JS <a class="xref" href="../../../js-code/toolbars/simple.html">toolbar docs</a></li>
+<li>list of all <a class="xref" href="../../../basics/edit/edit-ux/toolbars/button-ui.html">common UI parameters can be found here</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/services/toolbar-builder/ui.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

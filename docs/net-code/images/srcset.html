@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Specify SrtSet on Responsive Images API | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Specify SrtSet on Responsive Images API | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/images/srcset.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Images.SrcSet">
+<h1 id="specify-srtset-on-responsive-images-api">Specify <code>SrtSet</code> on Responsive Images API</h1>
+
+<p>Both <code>&lt;img&gt;</code> as well as <code>&lt;source&gt;</code> tags can have a <code>srcset</code> attribute.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you are new to responsive images, we suggest you read the
+<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">MDN Guide</a>
+to get familiar with this</p>
+</div>
+<p>The Responsive Images API generates these automatically for you.
+In many cases, the configuration for this comes from the settings - like from <a class="xref" href="../../basics/configuration/settings-system.html">Settings.Images.Content</a>.</p>
+<p>But often you may want to configure it yourself  - either by reconfiguring the Settings in the Admin-UI, or by supplying in in the code.</p>
+<h2 id="concept">Concept</h2>
+<p>The way the generator works is that you give it the rules you want based on 4 options:</p>
+<ol>
+<li>An exact width in pixels (usually with the <code>w</code> parameter in <code>srcset</code>s)</li>
+<li>A multiple based on the device pixel density (usually with the <code>x</code> parameter)</li>
+<li>A smaller size based an a multiple (like half the original if it's half the size)</li>
+<li>The fallback / default picture</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<ul>
+<li><code>1000w, 800w, 600w, 400w</code><br>
+Generate these four widths as exact pixel sizes</li>
+<li><code>1x, 1.5x, 2x</code><br>
+Generate these three sizes for screen pixel densities</li>
+<li><code>1*, 0.75*, 0.5*, 0.25*</code><br>
+Generate exact pixel sizes based on the initial size, so if the initial image was 1200px, it is the same as <code>1200w, 800w, 600w, 400w</code></li>
+<li><code>d</code>
+Generate a default line (without any <code>w</code> or <code>x</code> specifier)</li>
+</ul>
+<p>A lot is auto-detected, so if you want to, you can leave away the <code>w</code> and <code>x</code> and <code>*</code> in almost all cases.
+So this is valid too (see below for auto-detection rules):</p>
+<ul>
+<li><code>1000, 800, 600, 400</code></li>
+<li><code>1, 1.5, 2</code></li>
+<li><code>1*, 0.75, 0.5, 0.25</code></li>
+<li><code>1/1, 1/2, 1/3, 1/4</code></li>
+<li><code> </code> (empty string) - defaults to <code>d</code></li>
+</ul>
+<p>In addition to the standard factor you can also set what size should be used exactly - otherwise it's auto-calculated:</p>
+<ul>
+<li><code>1x=1200, 1.5x=1800, 2x=2400, 2.5x=2400, 3x=2400</code></li>
+<li><code>1000=1000, 1600=1200</code></li>
+<li><code>1x=1200:600, 1.5x=1800:600, 2x=2400:600</code> - height can also be set</li>
+</ul>
+<h2 id="srcset-parameter-specs">SrcSet Parameter Specs</h2>
+<ol>
+<li>It is always one or more values, separated by a comma <code>,</code></li>
+<li>Each value has a number like <code>1</code>, <code>1.5</code>, <code>1200</code> or a fraction like <code>1/2</code> or <code>1:2</code> - or empty for <code>d</code> (default)</li>
+<li>Each value can have a specifier like <code>w</code>, <code>x</code>, <code>*</code> or <code>d</code> - or it's auto detected</li>
+<li>It can be followed by an <code>=</code> to specify exact resizing rules
+<ol>
+<li>After the <code>=</code> it can have a width</li>
+<li>After that it can have a <code>:</code> followed by the resize height</li>
+</ol>
+</li>
+</ol>
+<h2 id="auto-detected-types-w-x--and-d">Auto Detected Types <code>w</code>, <code>x</code>, <code>*</code> and <code>d</code></h2>
+<p>These are the rules if the type is not specified:</p>
+<ul>
+<li>If the number is smaller than <code>1</code> it must be a multiplier of the original size, so <code>*</code> is assumed</li>
+<li>If the number is written as a fraction like <code>2/3</code> or <code>4:3</code> it is assumed to be a multiplier <code>*</code></li>
+<li>If the number is greater than <code>1</code> and less than <code>10</code> a pixel density is assumed <code>x</code></li>
+<li>If the number is <code>10</code> or greater than width is assumed <code>w</code></li>
+<li>If nothing (not even a number) is specified, default <code>d</code> is assumed</li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 13.01</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/images/srcset.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

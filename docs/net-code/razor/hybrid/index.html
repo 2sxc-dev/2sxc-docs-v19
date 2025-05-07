@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Hybrid Razor running on Dnn ☢️ and Oqtane &#129656; | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Hybrid Razor running on Dnn ☢️ and Oqtane &#129656; | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/hybrid/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Razor.Hybrid.Index">
+<h1 id="hybrid-razor-running-on-dnn--and-oqtane-">Hybrid Razor running on Dnn ☢️ and Oqtane 🩸</h1>
+
+<p>Dnn and Oqtane have a few differences because of these important factors:</p>
+<ol>
+<li>Different underlying C# and .net frameworks and Razor-Engines</li>
+<li>Different platforms (Dnn is different from Oqtane)</li>
+</ol>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This is very advanced stuff and only relevant if you want to create Apps which run on <em>both</em> Dnn and Oqtane.</p>
+<p>For most of your apps this is not relevant</p>
+</div>
+<h2 id="2sxc-philosophy---stay-out-of-the-way">2sxc Philosophy - Stay out of the Way</h2>
+<p>Our philosophy is to <em>not reinvent the wheel</em> so it's important that we let you use the .net APIs as they are designed. Se we don't plan on creating another API which to hide the differences, but let you understand them and easily handle everything as needed.</p>
+<h2 id="core-strategies-for-hybrid-razor-templates">Core Strategies for Hybrid Razor Templates</h2>
+<p>If you follow these three rules you should be good to go:</p>
+<ol>
+<li>Inherit from <code>Custom.Hybrid.Razor12</code></li>
+<li>Use very common C# features and syntaxes which existed since C# 7.2 (so anything that runs in Dnn will also run in Oqtane)</li>
+<li>Use .net standard 2.0 APIs and avoid using <code>System.Web</code></li>
+<li>Where necessary, use preprocessor directives as explained below</li>
+</ol>
+<h2 id="avoid-old-razor-features">Avoid old Razor Features</h2>
+<p>The old razor had a few features which won't work in .net Core 5 / Oqtane:</p>
+<ol>
+<li><code>@helper</code> directive</li>
+</ol>
+<h2 id="switch-between-code-variations-in-razor">Switch between Code variations in Razor</h2>
+<p>In Oqtane 2 we recommended using <code>#if NETCOREAPP</code> switches in your Razor code.</p>
+<p>In Oqtane 3, this only works in <code>.cs</code> files.
+So the only way to switch between code variations in the latest Razor is to use normal <code>@if(...)</code> statements and place your platform specific code in sub-files.</p>
+<pre><code class="lang-razor">@if(CmsContext.Platform.Name == &quot;Oqtane) {
+  // OqtaneStuff which doesn't trigger compile errors can be inline
+  someVar = &quot;Oqtane&quot;;
+  // Code which would trigger compile errors must be in a separate file
+  @Html.Partial(&quot;OqtaneCode.cshtml&quot;);
+} else {
+  // DnnStuff - same principles
+}
+</code></pre>
+<h2 id="the-preprocessor-directives-in-cs-files">The Preprocessor Directives in <code>.cs</code> files</h2>
+<p>C# has special <code>#if</code> <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives">preprocessor</a> statements which are evaluated during compilation.
+Using this you can define which code should be used in Dnn and Oqtane.</p>
+<pre><code class="lang-cs">#if NETCOREAPP
+  // OqtaneStuff
+#else
+  // DnnStuff
+#endif
+</code></pre>
+<p>The following <em>symbols</em> are set when Api Controllers are compiled:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th style="text-align: center;">True for Dnn</th>
+<th style="text-align: center;">True for Oqtane</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NETCOREAPP</code></td>
+<td style="text-align: center;">⛔</td>
+<td style="text-align: center;">✅</td>
+<td>Only works in WebAPIs and code (.cs)</td>
+</tr>
+<tr>
+<td><code>OQTANE</code></td>
+<td style="text-align: center;">⛔</td>
+<td style="text-align: center;">✅</td>
+<td>Only works in WebAPIs and code (.cs)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Important: These don't work in <strong>Razor</strong> on Oqtane 3+ because we cannot activate these in the compiler - so they only work in .cs files</em></p>
+<h2 id="different-c-and-net-frameworks">Different C# and .net Frameworks</h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Dnn 7</th>
+<th>Dnn 9</th>
+<th>Oqtane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C# Language</td>
+<td>ca. 7</td>
+<td>ca. 7</td>
+<td>C# 9</td>
+</tr>
+<tr>
+<td>.net Framework</td>
+<td>4.5.1</td>
+<td>4.7.2</td>
+<td>.net core 5</td>
+</tr>
+<tr>
+<td>.net Standard</td>
+<td>1.6</td>
+<td>2.0</td>
+<td>2.0</td>
+</tr>
+</tbody>
+</table>
+<p>Any hybrid controller must limit itself to features in .net standard 1.6 or 2.0, depending on the platforms you want to support. Note that any 2sxc standard apps are meant to still run in Dnn 4.7.2, so we'll restrict our work to support <em>.net standard 1.6</em>. This means our examples are more limited than what you will be doing.</p>
+<h2 id="differences-in-the-platforms">Differences in the Platforms</h2>
+<p>If you are creating hybrid controllers, we'll assume that you usually don't need to access properties of Dnn or Oqtane. If you do, you'll have to use the standard mechanisms provided by these.</p>
+<ul>
+<li>In Dnn - use global objects like <code>PortalSettings.Current</code></li>
+<li>In Oqtane use <a class="xref" href="../../dependency-injection/index.html">Dependency Injection</a></li>
+<li>To avoid the code from causing trouble during compilation, wrap the necessary differences in <code>#if NETCOREAPP ... #endif</code> and <code>#if !NETCOREAPP ... #endif</code> blocks in C#</li>
+<li>To avoid the Razor from causing trouble during compilation, wrap the necessary differences in <code>@if(CmsContext.Platform.Name == &quot;Oqtane&quot;) { ... }</code> blocks in Razor</li>
+</ul>
+<h2 id="limitations-for-using-statements">Limitations for <code>@using</code> Statements</h2>
+<p>The Razor Compiler in Dnn &amp; Oqtane behave a bit differently regarding preprocessor statements. So you cannot use them for <code>@using ...</code> statements. This WILL NOT WORK:</p>
+<pre><code class="lang-razor">@{#if unknown}
+@using DotNetNuke.Framework.JavaScriptLibraries;
+@{#endif}
+</code></pre>
+<p>In Dnn it will work, but in Oqtane / .net 5 it will not result in an error, because the <code>@using</code> statements are handled in a way which doesn't result in them being skipped.</p>
+<p>If you only need the namespace on a single command, just use the full namespace in your command, like this:</p>
+<pre><code class="lang-c#">if(fancybox || scripts) {
+    #if(CmsContext.Platform.Name == &quot;Dnn&quot;) {
+      // Put this line in a separate file to call from here
+      // DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(DotNetNuke.Framework.JavaScriptLibraries.CommonJs.jQuery);
+    }
+}
+</code></pre>
+<p>If you have complex code, a simple trick is to place it in a separate file (so the Razor compiler won't complain) and then use <code>CreateInstance(...)</code> or <code>Html.Partial(...)</code> to call that if you are in the correct system.</p>
+<h2 id="set-page-properties-and-headers-for-hybrid-apps">Set Page Properties and Headers for Hybrid Apps</h2>
+<p>In Dnn you were able to use RazorBlade to set Title or add Headers.
+Since RazorBlade has a static implementation, this cannot work in Oqtane.</p>
+<p>To solve this we created the <a class="xref" href="../../services/page/index.html">IPageService</a>.</p>
+<h2 id="set-http-status-codes-for-hybrid-apps">Set Http Status Codes for Hybrid Apps</h2>
+<p>In Dnn you could simply get the HttpContext and change the Response object.
+This uses a static implementation which dosen't work in Oqtane.</p>
+<p>To solve this we created the <a class="xref" href="../../services/page/index.html">IPageService</a>.</p>
+<h2 id="search-integration">Search Integration</h2>
+<p>Previously in Dnn you could write some <code>CustomizeSearch</code> code in the Razor-file which we decided to deprecate in future.
+From now on please use the the feature <a class="xref" href="../../search/index.html">described here</a>.
+Note that as of now, Oqtane doesn't have a search indexer, so there it will simply have no effect, but your code will run on both platforms.</p>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 12.00</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/hybrid/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Mermaid Diagrams | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Mermaid Diagrams | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/contribute/docs/edit/mermaid.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Contribute.Docs.Edit.Mermaid">
+<h1 id="mermaid-diagrams">Mermaid Diagrams</h1>
+
+<p>DocFx supports Mermaid diagrams, which are a simple way to create diagrams in markdown.
+Here is an example:</p>
+<pre><code class="lang-markdown">```mermaid
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+```
+</code></pre>
+<p>This will render as:</p>
+<pre><code class="lang-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+<h2 id="more-examples">More Examples</h2>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_flowchart" role="tab" aria-controls="tabpanel_1_flowchart" data-tab="flowchart" tabindex="0" aria-selected="true">Flowchart</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_sequence" role="tab" aria-controls="tabpanel_1_sequence" data-tab="sequence" tabindex="-1">Sequence Diagram</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_gantt" role="tab" aria-controls="tabpanel_1_gantt" data-tab="gantt" tabindex="-1">Gantt Chart</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_class" role="tab" aria-controls="tabpanel_1_class" data-tab="class" tabindex="-1">Class Diagram</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_chart" role="tab" aria-controls="tabpanel_1_chart" data-tab="chart" tabindex="-1">Pie Chart</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_state" role="tab" aria-controls="tabpanel_1_state" data-tab="state" tabindex="-1">State Diagram</a>
+</li>
+</ul>
+<section id="tabpanel_1_flowchart" role="tabpanel" data-tab="flowchart">
+
+<pre><code class="lang-mermaid">flowchart TD
+%% Nodes
+    A(&quot;fab:fa-youtube Starter Guide&quot;)
+    B(&quot;fab:fa-youtube Make Flowchart&quot;)
+    n1@{ icon: &quot;fa:gem&quot;, pos: &quot;b&quot;, h: 24}
+    C(&quot;fa:fa-book-open Learn More&quot;)
+    D{&quot;Use the editor&quot;}
+    n2(Many shapes)@{ shape: delay}
+    E(fa:fa-shapes Visual Editor)
+    F(&quot;fa:fa-chevron-up Add node in toolbar&quot;)
+    G(&quot;fa:fa-comment-dots AI chat&quot;)
+    H(&quot;fa:fa-arrow-left Open AI in side menu&quot;)
+    I(&quot;fa:fa-code Text&quot;)
+    J(fa:fa-arrow-left Type Mermaid syntax)
+
+%% Edge connections between nodes
+    A --&gt; B --&gt; C --&gt; n1 &amp; D &amp; n2
+    D -- Build and Design --&gt; E --&gt; F
+    D -- Use AI --&gt; G --&gt; H
+    D -- Mermaid js --&gt; I --&gt; J
+
+%% Individual node styling. Try the visual editor toolbar for easier styling!
+    style E color:#FFFFFF, fill:#AA00FF, stroke:#AA00FF
+    style G color:#FFFFFF, stroke:#00C853, fill:#00C853
+    style I color:#FFFFFF, stroke:#2962FF, fill:#2962FF
+
+%% You can add notes with two &quot;%&quot; signs in a row!
+</code></pre>
+</section>
+<section id="tabpanel_1_sequence" role="tabpanel" data-tab="sequence" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre>
+</section>
+<section id="tabpanel_1_gantt" role="tabpanel" data-tab="gantt" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-mermaid">gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2022-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2022-01-12  , 12d
+    another task     : 24d
+</code></pre>
+</section>
+<section id="tabpanel_1_class" role="tabpanel" data-tab="class" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-mermaid">classDiagram
+    Animal &lt;|-- Duck
+    Animal &lt;|-- Fish
+    Animal &lt;|-- Zebra
+    Animal : +int age
+    Animal
+    Fish : +int fins
+    Fish : +int scales
+    Zebra : +bool is_wild
+    Zebra : +bool is_striped
+</code></pre>
+</section>
+<section id="tabpanel_1_chart" role="tabpanel" data-tab="chart" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-mermaid">pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42
+    &quot;Potassium&quot; : 21
+    &quot;Magnesium&quot; : 12
+    &quot;Iron&quot; : 9
+</code></pre>
+</section>
+<section id="tabpanel_1_state" role="tabpanel" data-tab="state" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-mermaid">stateDiagram
+    [*] --&gt; Still
+    Still --&gt; [*]
+    Still --&gt; Moving
+    Moving --&gt; Still
+    Moving --&gt; Crash
+    Crash --&gt; [*]
+</code></pre>
+</section>
+</div>
+
+<p>To create your own diagrams, you can use</p>
+<ul>
+<li>the <a href="https://www.mermaidchart.com/play">Mermaid free Playground</a></li>
+<li>or the older <a href="https://mermaid-js.github.io/mermaid-live-editor/">Mermaid Live Editor</a>.</li>
+</ul>
+<p>Mermaid has so many features, so if you love it, best check out the <a href="https://mermaid.js.org/intro/">official docs</a>.</p>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Supported since ca. 2022</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/contribute/docs/edit/mermaid.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

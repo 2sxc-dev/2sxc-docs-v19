@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>JSON Value (Multilanguage) V1 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="JSON Value (Multilanguage) V1 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/data-formats/json-v01/value.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.DataFormats.JsonV1.Value">
+<h1 id="json-value-multilanguage-v1">JSON Value (Multilanguage) V1</h1>
+
+<p>JSON based entities are items which are stored as JSON. This is used in the history, in dynamic-entities in the DB and more.</p>
+<p>Attributes/Properties have one or move values depending on how they are translated, so the Value is always an Dictionary (object of keys/values).</p>
+<h2 id="example">Example</h2>
+<p>This example is showing part of a JSON. Most of it has been removed to just focus on the values:</p>
+<pre><code class="lang-json">{
+  &quot;_&quot;: {
+    &quot;V&quot;: 1
+  },
+  &quot;Entity&quot;: {
+    &quot;//1&quot;: &quot;Stuff skipped in this example&quot;,
+    &quot;Attributes&quot;: {
+      &quot;String&quot;: {
+        &quot;Description&quot;: {
+          &quot;*&quot;: &quot;Retrieve full list of all zones&quot;
+        },
+        &quot;Name&quot;: {
+          &quot;en-US&quot;: &quot;Zones&quot;,
+          &quot;de-DE&quot;: &quot;Zonen&quot;
+        },
+    },
+    &quot;//2&quot;: &quot;More stuff skipped for this example&quot;
+  }
+}
+</code></pre>
+<h2 id="value-format-explained">Value Format Explained</h2>
+<ul>
+<li><code>_</code> (header) mainly storing the version, in case we have to introduce a breaking change - see also <a class="xref" href="index.html">format v1</a></li>
+<li><code>Entity</code> - this marks an entity - at the moment a json package should only have 1, but later it could contain more
+<ul>
+<li><code>Attributes</code> - the values of this entity
+<ul>
+<li><code>String</code> - all the string values; <em>optional, only exists if there are string values</em>
+<ul>
+<li>[the field name]
+<ul>
+<li>[the languages this value applies to]
+<ul>
+<li>[the value]</li>
+</ul>
+</li>
+<li>[more languages / values]</li>
+</ul>
+</li>
+<li>[more fields / languages / values]</li>
+</ul>
+</li>
+<li>[next type] - all the boolean values; <em>optional, only exists if there are boelean values</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="language-codes">Language Codes</h2>
+<p>The keys of the dictionary determine what language is used and how.</p>
+<ul>
+<li>if the key is <code>*</code> then this value applies to all languages</li>
+<li>if the key is a culture code like <code>en-us</code> (always lower case) it applies to that language</li>
+<li>if the value is shared with multiple languages you'll see keys like <code>en-us,de-de</code></li>
+<li>if the value is shared but read-only in some languages the read-only-languages are prefixed with a <code>~</code> so you'll see <code>en-us,~de-de</code></li>
+</ul>
+<p>This can of course extend over many languages, so keys like <code>en-us,de-de,de-ch,~ar-ae</code> are valid.</p>
+<h2 id="entity-relationship-fields">Entity Relationship Fields</h2>
+<p>Note that entity-relationship fields cannot be multi-language, so it's always mapped to <code>*</code> and contains an array of references:</p>
+<pre><code class="lang-json">{
+  &quot;_&quot;: { &quot;V&quot;: 1 },
+  &quot;Entity&quot;: {
+    &quot;//1&quot;: &quot;Stuff skipped in this example&quot;,
+    &quot;Attributes&quot;: {
+      &quot;String&quot;: { &quot;Name&quot;: { &quot;en-us&quot;: &quot;Street&quot; } },
+      &quot;Entity&quot;: {
+        &quot;Calculations&quot;: { &quot;*&quot;: [] },
+        &quot;Errors&quot;: { &quot;*&quot;: [] },
+        &quot;Warnings&quot;: { &quot;*&quot;: [] }
+      }
+    },
+    &quot;//2&quot;: &quot;More stuff skipped for this example&quot;
+  }
+}
+</code></pre>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a class="xref" href="index.html">JSON Format V1</a></li>
+<li><a href="https://2sxc.org/en/blog/post/deep-dive-json-stored-content-items-entities">Blog post about the entity json format</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Added in 2sxc 9.4</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/data-formats/json-v01/value.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

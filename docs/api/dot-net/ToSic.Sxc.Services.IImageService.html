@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IImageService | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IImageService | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/api-docs/api/dot-net/ToSic.Sxc/Services/IImageService.md/#L2">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.IImageService">
+
+
+
+  <h1 id="ToSic_Sxc_Services_IImageService" data-uid="ToSic.Sxc.Services.IImageService" class="text-break">
+Interface IImageService  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/IImageService.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Sxc.html">Sxc</a>.<a class="xref" href="ToSic.Sxc.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Sxc.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Service on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Image"><code>Kit.Image</code></a> to help create responsive <code>img</code> and <code>picture</code> tags the best possible way.</p>
+</div>
+  <div class="markdown conceptual">
+<p>This service helps you generate advanced HTML for responsive / resized images.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We suggest you read the Image Guide for maximum power!</p>
+<p>📔 <a class="xref" href="../../basics/images/guide/index.html">Images Guide (Best Practices &amp; Code)</a></p>
+</div>
+</div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+public interface IImageService : ICanDebug</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="ToSic.Lib.Logging.ICanDebug.html#ToSic_Lib_Logging_ICanDebug_Debug">ICanDebug.Debug</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="ToSic_Sxc_Services_IImageService_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>History: Released 2sxc 13.10</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ToSic_Sxc_Services_IImageService_Img_" data-uid="ToSic.Sxc.Services.IImageService.Img*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IImageService_Img_System_Object_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakMedia_ToSic_Sxc_Images_ITweakMedia__System_Object_System_Object_System_String_System_String_System_String_System_Object_System_Object_System_Object_" data-uid="ToSic.Sxc.Services.IImageService.Img(System.Object,System.Object,ToSic.Lib.Coding.NoParamOrder,System.Func{ToSic.Sxc.Images.ITweakMedia,ToSic.Sxc.Images.ITweakMedia},System.Object,System.Object,System.String,System.String,System.String,System.Object,System.Object,System.Object)">
+  Img(object, object, NoParamOrder, Func&lt;ITweakMedia, ITweakMedia&gt;, object, object, string, string, string, object, object, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/IImageService.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a Responsive Image object which you can then either just show, or use to construct a more customized output as you need it.</p>
+<p>The resulting object can just be added to the html, like <code>@img</code> or you can work with sub-properties as specified in the <a class="xref" href="ToSic.Sxc.Images.IResponsiveImage.html">IResponsiveImage</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IResponsiveImage Img(object link = null, object settings = null, NoParamOrder noParamOrder = default, Func&lt;ITweakMedia, ITweakMedia&gt; tweak = null, object factor = null, object width = null, string imgAlt = null, string imgAltFallback = null, string imgClass = null, object imgAttributes = null, object toolbar = null, object recipe = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>link</code> <span class="xref">object</span></dt>
+    <dd><p>What should be in this, can be:</p>
+<ul>
+<li>a string url, in which case it would be used if <code>url</code> is not specified</li>
+<li>a <a class="xref" href="ToSic.Sxc.Data.IField.html">IField</a> in which case it would be used if <code>field</code> is not specified</li>
+</ul>
+</dd>
+    <dt><code>settings</code> <span class="xref">object</span></dt>
+    <dd><ul>
+<li>The name of a settings configuration, like &quot;Content&quot;, &quot;Screen&quot;, &quot;Square&quot;, etc.</li>
+<li>A standardized Image-Settings object like Settings.Images.Content - see <a href="https://go.2sxc.org/settings">https://go.2sxc.org/settings</a></li>
+<li>Or a dynamic object containing settings properties (this can also be a merged custom + standard settings)</li>
+<li>A <a class="xref" href="ToSic.Sxc.Images.IResizeSettings.html">IResizeSettings</a> object containing all settings created using <a class="xref" href="ToSic.Sxc.Services.IImageService.html#ToSic_Sxc_Services_IImageService_Settings_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakResize_ToSic_Sxc_Images_ITweakResize__System_Object_System_Object_System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object_">ResizeSettings</a></li>
+</ul>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>tweak</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ToSic.Sxc.Images.ITweakMedia.html">ITweakMedia</a>, <a class="xref" href="ToSic.Sxc.Images.ITweakMedia.html">ITweakMedia</a>&gt;</dt>
+    <dd><p>Tweak API to configure everything (new v18.03).
+This is recommended above using parameter names and all newer parameters will only be available on this.
+Note that tweak will be executed after applying other parameters.</p>
+</dd>
+    <dt><code>factor</code> <span class="xref">object</span></dt>
+    <dd><p>An optional multiplier, usually used to create urls which resize to a part of the default content-size. Like 0.5.</p>
+</dd>
+    <dt><code>width</code> <span class="xref">object</span></dt>
+    <dd><p>An optional, fixed width of the image</p>
+</dd>
+    <dt><code>imgAlt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional <code>alt</code> attribute on the created <code>img</code> tag for SEO etc.
+If supplied, it takes precedence to the alt-description in the image metadata which the editor added themselves.
+If you want to provide a fallback value (in case the metadata has no alt), use <code>imgAltFallback</code>.</p>
+</dd>
+    <dt><code>imgAltFallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional <code>alt</code> attribute which is only used if the <code>imgAlt</code> or the alt-text in the metadata are empty.
+<em>new in v15</em></p>
+</dd>
+    <dt><code>imgClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional <code>class</code> attribute on the created <code>img</code> tag</p>
+</dd>
+    <dt><code>imgAttributes</code> <span class="xref">object</span></dt>
+    <dd><p>Optional additional attributes - as anonymous object like <code>new { style = &quot;padding: 10px&quot; }</code> or Dictionary (new 16.07)</p>
+</dd>
+    <dt><code>toolbar</code> <span class="xref">object</span></dt>
+    <dd><p>Provide a custom toolbar or <code>false</code> to not show a toolbar</p>
+</dd>
+    <dt><code>recipe</code> <span class="xref">object</span></dt>
+    <dd><p>Optional recipe = instructions how to create the various variants of this link.
+Can be any one of these:</p>
+<ul>
+<li>string containing variants</li>
+<li>Rule object</li>
+</ul>
+<p>TODO: DOCS not quite ready</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Images.IResponsiveImage.html">IResponsiveImage</a></dt>
+    <dd><p>A ResponsiveImage object which can be rendered directly. See <a class="xref" href="../../net-code/images/index.html">Responsive Images API in .net</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_IImageService_Img_System_Object_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakMedia_ToSic_Sxc_Images_ITweakMedia__System_Object_System_Object_System_String_System_String_System_String_System_Object_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>Added in 2sxc 13.03</li>
+<li><code>toolbar</code> added in v16.04</li>
+<li><code>tweak</code> added in 18.03</li>
+</ul>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_IImageService_Picture_" data-uid="ToSic.Sxc.Services.IImageService.Picture*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IImageService_Picture_System_Object_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakMedia_ToSic_Sxc_Images_ITweakMedia__System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object_System_Object_System_Object_" data-uid="ToSic.Sxc.Services.IImageService.Picture(System.Object,System.Object,ToSic.Lib.Coding.NoParamOrder,System.Func{ToSic.Sxc.Images.ITweakMedia,ToSic.Sxc.Images.ITweakMedia},System.Object,System.Object,System.String,System.String,System.String,System.Object,System.String,System.Object,System.Object,System.Object)">
+  Picture(object, object, NoParamOrder, Func&lt;ITweakMedia, ITweakMedia&gt;, object, object, string, string, string, object, string, object, object, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/IImageService.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a Responsive Picture object which you can then either just show, or use to construct a more customized output as you need it.</p>
+<p>The resulting object can just be added to the html, like <code>@pic</code> or you can work with sub-properties as specified in the <a class="xref" href="ToSic.Sxc.Images.IResponsivePicture.html">IResponsivePicture</a>.</p>
+<p><strong>Important:</strong> This call only allows you to set the most common parameters <code>factor</code> and <code>width</code>.
+For other parameters like <code>height</code>, <code>aspectRatio</code>, <code>quality</code> etc. create Settings <a class="xref" href="ToSic.Sxc.Services.IImageService.html#ToSic_Sxc_Services_IImageService_Settings_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakResize_ToSic_Sxc_Images_ITweakResize__System_Object_System_Object_System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object_">Settings(object, NoParamOrder, Func&lt;ITweakResize, ITweakResize&gt;, object, object, object, object, string, string, string, object, string, object)</a> and pass them in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IResponsivePicture Picture(object link = null, object settings = null, NoParamOrder noParamOrder = default, Func&lt;ITweakMedia, ITweakMedia&gt; tweak = null, object factor = null, object width = null, string imgAlt = null, string imgAltFallback = null, string imgClass = null, object imgAttributes = null, string pictureClass = null, object pictureAttributes = null, object toolbar = null, object recipe = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>link</code> <span class="xref">object</span></dt>
+    <dd><p>What should be in this, can be:</p>
+<ul>
+<li>a string url, in which case it would be used if <code>url</code> is not specified</li>
+<li>a <a class="xref" href="ToSic.Sxc.Data.IField.html">IField</a> in which case it would be used if <code>field</code> is not specified</li>
+<li>a <a class="xref" href="ToSic.Sxc.Adam.IFile.html">IFile</a> (new 16.03)</li>
+</ul>
+</dd>
+    <dt><code>settings</code> <span class="xref">object</span></dt>
+    <dd><ul>
+<li>The name of a settings configuration, like &quot;Content&quot;, &quot;Screen&quot;, &quot;Square&quot;, etc.</li>
+<li>A standardized Image-Settings object like Settings.Images.Content - see <a href="https://go.2sxc.org/settings">https://go.2sxc.org/settings</a></li>
+<li>Or a dynamic object containing settings properties (this can also be a merged custom + standard settings)</li>
+<li>A <a class="xref" href="ToSic.Sxc.Images.IResizeSettings.html">IResizeSettings</a> object containing all settings created using <a class="xref" href="ToSic.Sxc.Services.IImageService.html#ToSic_Sxc_Services_IImageService_Settings_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakResize_ToSic_Sxc_Images_ITweakResize__System_Object_System_Object_System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object_">ResizeSettings</a></li>
+</ul>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>tweak</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ToSic.Sxc.Images.ITweakMedia.html">ITweakMedia</a>, <a class="xref" href="ToSic.Sxc.Images.ITweakMedia.html">ITweakMedia</a>&gt;</dt>
+    <dd><p>Tweak API to configure everything (new v18.03).
+This is recommended above using parameter names and all newer parameters will only be available on this.
+Note that tweak will be executed after applying other parameters.</p>
+</dd>
+    <dt><code>factor</code> <span class="xref">object</span></dt>
+    <dd><p>An optional multiplier, usually used to create urls which resize to a part of the default content-size. Like 0.5.</p>
+</dd>
+    <dt><code>width</code> <span class="xref">object</span></dt>
+    <dd><p>An optional, fixed width of the image</p>
+</dd>
+    <dt><code>imgAlt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional <code>alt</code> attribute on the created <code>img</code> tag for SEO etc.
+If supplied, it takes precedence to the alt-description in the image metadata which the editor added themselves.
+If you want to provide a fallback value (in case the metadata has no alt), use <code>imgAltFallback</code></p>
+</dd>
+    <dt><code>imgAltFallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional <code>alt</code> attribute which is only used if the <code>imgAlt</code> or the alt-text in the metadata are empty.
+<em>new in v15</em></p>
+</dd>
+    <dt><code>imgClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional <code>class</code> attribute on the created <code>img</code> tag</p>
+</dd>
+    <dt><code>imgAttributes</code> <span class="xref">object</span></dt>
+    <dd><p>Optional additional attributes - as anonymous object like <code>new { style = &quot;padding: 10px&quot; }</code> or Dictionary (new 16.07)</p>
+</dd>
+    <dt><code>pictureClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional <code>class</code> attribute on the created <code>picture</code> tag</p>
+</dd>
+    <dt><code>pictureAttributes</code> <span class="xref">object</span></dt>
+    <dd><p>Optional additional attributes - as anonymous object like <code>new { style = &quot;padding: 10px&quot; }</code> or Dictionary (new 16.07)</p>
+</dd>
+    <dt><code>toolbar</code> <span class="xref">object</span></dt>
+    <dd><p>Provide a custom toolbar or <code>false</code> to not show a toolbar</p>
+</dd>
+    <dt><code>recipe</code> <span class="xref">object</span></dt>
+    <dd><p>Optional recipe = instructions how to create the various variants of this link.
+Can be any one of these:</p>
+<ul>
+<li>string containing variants</li>
+<li>Rule object</li>
+</ul>
+<p>TODO: DOCS not quite ready</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Images.IResponsivePicture.html">IResponsivePicture</a></dt>
+    <dd><p>A ResponsivePicture object which can be rendered directly. See <a class="xref" href="../../net-code/images/index.html">Responsive Images API in .net</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_IImageService_Picture_System_Object_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakMedia_ToSic_Sxc_Images_ITweakMedia__System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>Added in v13.03</li>
+<li>Extended in v16.03 to also support IFile</li>
+<li><code>toolbar</code> added in v16.04</li>
+<li><code>imgAttributes</code>, <code>picClass</code> and <code>picAttributes</code> added in 16.07</li>
+<li><code>tweak</code> added in 18.03</li>
+</ul>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_IImageService_Recipe_" data-uid="ToSic.Sxc.Services.IImageService.Recipe*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IImageService_Recipe_System_String_" data-uid="ToSic.Sxc.Services.IImageService.Recipe(System.String)">
+  Recipe(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/IImageService.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Recipe Recipe(string variants)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>variants</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Images.Recipe.html">Recipe</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IImageService_Recipe_" data-uid="ToSic.Sxc.Services.IImageService.Recipe*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IImageService_Recipe_ToSic_Sxc_Images_Recipe_ToSic_Lib_Coding_NoParamOrder_System_String_System_Int32_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__System_Collections_Generic_IEnumerable_ToSic_Sxc_Images_Recipe__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_System_String_" data-uid="ToSic.Sxc.Services.IImageService.Recipe(ToSic.Sxc.Images.Recipe,ToSic.Lib.Coding.NoParamOrder,System.String,System.Int32,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IEnumerable{ToSic.Sxc.Images.Recipe},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String)">
+  Recipe(Recipe, NoParamOrder, string, int, string, IDictionary&lt;string, object&gt;, IEnumerable&lt;Recipe&gt;, bool?, bool?, string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/IImageService.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Recipe Recipe(Recipe recipe, NoParamOrder noParamOrder = default, string name = null, int width = 0, string variants = null, IDictionary&lt;string, object&gt; attributes = null, IEnumerable&lt;Recipe&gt; recipes = null, bool? setWidth = null, bool? setHeight = null, string forTag = null, string forFactor = null, string forCss = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>recipe</code> <a class="xref" href="ToSic.Sxc.Images.Recipe.html">Recipe</a></dt>
+    <dd></dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>variants</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>attributes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <span class="xref">object</span>&gt;</dt>
+    <dd></dd>
+    <dt><code>recipes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ToSic.Sxc.Images.Recipe.html">Recipe</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>setWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+    <dt><code>setHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+    <dt><code>forTag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>forFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>forCss</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Images.Recipe.html">Recipe</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_IImageService_Settings_" data-uid="ToSic.Sxc.Services.IImageService.Settings*"></a>
+
+  <h3 id="ToSic_Sxc_Services_IImageService_Settings_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakResize_ToSic_Sxc_Images_ITweakResize__System_Object_System_Object_System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object_" data-uid="ToSic.Sxc.Services.IImageService.Settings(System.Object,ToSic.Lib.Coding.NoParamOrder,System.Func{ToSic.Sxc.Images.ITweakResize,ToSic.Sxc.Images.ITweakResize},System.Object,System.Object,System.Object,System.Object,System.String,System.String,System.String,System.Object,System.String,System.Object)">
+  Settings(object, NoParamOrder, Func&lt;ITweakResize, ITweakResize&gt;, object, object, object, object, string, string, string, object, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/IImageService.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct custom Resize-Settings as needed, either based on existing settings or starting from scratch</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IResizeSettings Settings(object settings = null, NoParamOrder noParamOrder = default, Func&lt;ITweakResize, ITweakResize&gt; tweak = null, object factor = null, object width = null, object height = null, object quality = null, string resizeMode = null, string scaleMode = null, string format = null, object aspectRatio = null, string parameters = null, object recipe = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <span class="xref">object</span></dt>
+    <dd><ul>
+<li>A standardized Image-Settings object like <code>Settings.Images.Content</code> used as a template - see <a href="https://go.2sxc.org/settings">https://go.2sxc.org/settings</a></li>
+<li>The <code>string</code> name of a template settings , like &quot;Content&quot; or &quot;Screen&quot;</li>
+<li>a <code>bool</code> true/false - if true, the normal &quot;Content&quot; configuration is used as a template, if false, no initial configuration is used</li>
+<li>Or a dynamic object containing settings properties (this can also be a merged custom + standard settings)</li>
+<li>Or a specially prepared <a class="xref" href="ToSic.Sxc.Images.IResizeSettings.html">IResizeSettings</a> object containing all settings.</li>
+</ul>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>tweak</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ToSic.Sxc.Images.ITweakResize.html">ITweakResize</a>, <a class="xref" href="ToSic.Sxc.Images.ITweakResize.html">ITweakResize</a>&gt;</dt>
+    <dd><p>Tweak API to configure everything (new v18.03).
+This is recommended above using parameter names and all newer parameters will only be available on this.
+Note that tweak will be executed after applying other parameters.</p>
+</dd>
+    <dt><code>factor</code> <span class="xref">object</span></dt>
+    <dd><p>A multiplier, usually used to create urls which resize to a part of the default content-size. Like 0.5.</p>
+</dd>
+    <dt><code>width</code> <span class="xref">object</span></dt>
+    <dd><p>Optional width parameter. Cannot be used if <code>factor</code> is set. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>height</code> <span class="xref">object</span></dt>
+    <dd><p>Optional height parameter. Can only be 0 if <code>factor</code> is set, no not specify a height. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>quality</code> <span class="xref">object</span></dt>
+    <dd><p>Optional quality parameter. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>resizeMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional resize-mode, like <code>crop</code> or <code>max</code>. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>scaleMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional scale-mode to allow up-scaling images like <code>up</code> or <code>both</code>. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional file format like <code>jpg</code> or <code>png</code></p>
+</dd>
+    <dt><code>aspectRatio</code> <span class="xref">object</span></dt>
+    <dd><p>Aspect Ratio width/height, only relevant if a <code>factor</code> is supplied. Usually takes default from the <code>settings</code> or is ignored.</p>
+</dd>
+    <dt><code>parameters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><ul>
+<li>the parameters either as <code>id=47&amp;name=daniel</code> (Dnn also supports <code>/id/47/name/daniel</code>)</li>
+<li>it can also be an <a class="xref" href="ToSic.Sxc.Context.IParameters.html">IParameters</a></li>
+</ul>
+</dd>
+    <dt><code>recipe</code> <span class="xref">object</span></dt>
+    <dd><p>WIP - not ready yet</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ToSic.Sxc.Images.IResizeSettings.html">IResizeSettings</a></dt>
+    <dd><p>A settings object which has all the parameters as configured</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_IImageService_Settings_System_Object_ToSic_Lib_Coding_NoParamOrder_System_Func_ToSic_Sxc_Images_ITweakResize_ToSic_Sxc_Images_ITweakResize__System_Object_System_Object_System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>Added in v13.03</li>
+<li>Tweak added in v18.03</li>
+</ul>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/IImageService.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

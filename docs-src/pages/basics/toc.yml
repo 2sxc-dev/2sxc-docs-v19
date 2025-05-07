@@ -1,0 +1,106 @@
+- name: Basics Overview
+  href: index.md
+
+- name: App
+  topicUid: Basics.App.Index
+  href: app/toc.yml
+
+- name: Data
+  topicUid: Basics.Data.Index
+  href: data/toc.yml
+
+- name: Content
+  topicUid: Basics.Content.Index
+  href: content/toc.yml
+
+# A bit more advanced / CMS
+- name: "Deeper Dive"
+
+- name: Principles and Values
+  topicUid: Basics.Principles.Index
+
+- name: Images & Resizer
+  topicUid: Basics.Images.Index
+  href: images/toc.yml
+
+- name: Languages
+  topicUid: Basics.Languages.Index
+  href: languages/toc.yml
+
+- name: Metadata
+  topicUid: Basics.Metadata.Index
+  href: metadata/toc.yml
+
+
+# Stack
+- name: "Stack Layers / Parts"
+
+- name: Browser
+  topicUid: Basics.Browser.Index
+  href: browser/toc.yml
+
+- name: Server
+  topicUid: Basics.Server.Index
+  href: server/toc.yml
+
+- name: Prepare
+  topicUid: Basics.Prepare.Index
+
+- name: "Query & VisualQuery"
+  topicUid: Basics.Query.Index
+  href: query/toc.yml
+
+- name: LookUp Token System
+  topicUid: Basics.Query.LookUp.Index
+
+# Edit / CMS
+- name: "Editing and CMS"
+
+- name: Edit UX
+  topicUid: Basics.Browser.Edit.Index
+  href: edit/toc.yml
+
+- name: Content Management
+  topicUid: Basics.Cms.Index
+  href: cms/toc.yml
+
+- name: Settings & Configuration
+  topicUid: Basics.Configuration.Index
+  href: configuration/toc.yml
+
+- name: Polymorphism
+  topicUid: Basics.Polymorphism.Index
+
+# Productivity
+- name: "Productivity"
+
+- name: Notes 📝
+  topicUid: Basics.Notes
+
+# Topics
+- name: "Other Topics"
+
+- name: Mobile Apps & PWAs
+  topicUid: Basics.MobileApps.Index
+
+# Internal stuff
+
+- name: Licenses & Features
+  topicUid: Basics.LnF.Index
+  href: licenses-features/toc.yml
+
+
+# # Other Stuff
+- name: Permissions
+  topicUid: Basics.Permissions.Index
+  items:
+    - name: Permissions Overview
+      topicUid: Basics.Permissions.Index
+    - name: Restrict Admins to Content-Admin
+      topicUid: Basics.Permissions.Role.2sxcAdministrators
+
+- name: "Style Guide #todoc"
+  topicUid: Basics.StyleGuide.Index
+  items:
+    - name: Style Guide 2021 WIP
+      topicUid: Basics.StyleGuide.2021

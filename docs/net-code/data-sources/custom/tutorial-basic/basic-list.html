@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Tutorial Custom DataSources - BasicList | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Tutorial Custom DataSources - BasicList | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data-sources/custom/tutorial-basic/basic-list.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.DataSources.Custom.TutorialBasic.BasicList">
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>These documentations are for versions before 15.x.
+They don't apply to v15+ but are kept for reference.
+We highly recommend that you don't use them.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The code samples shown here are obsolete.
+But the code was updated to the latest version.
+So best get the real code from the <a href="https://https://github.com/2sic/datasource-tutorial-basic">DataSource Tutorial Repo</a></p>
+</div>
+<h1 id="tutorial-custom-datasources---basiclist">Tutorial Custom DataSources - BasicList</h1>
+<p>This explains the <strong>BasicList</strong> DataSource in the <a class="xref" href="index.html">DataSource Tutorial</a>.</p>
+<h2 id="add-to-visualquery">Add to VisualQuery</h2>
+<p>This is what it looks like in <a class="xref" href="../../../../basics/query/visual-query/index.html">VisualQuery</a>:</p>
+<img src="../../../../pages/net-code/data-sources/custom/tutorial-basic/assets/query-list-design.jpg" width="100%" class="full-width">
+<p>And this is what you see when you run it:</p>
+<img src="../../../../pages/net-code/data-sources/custom/tutorial-basic/assets/query-list-results.jpg" width="100%" class="full-width">
+<h2 id="source-of-the-basiclist-datasource">Source of the <code>BasicList</code> DataSource</h2>
+<p>This is the code for the simplest DataSource:</p>
+<pre><code class="lang-c#">using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using ToSic.Eav.Data;
+using ToSic.Eav.DataSources;
+using ToSic.Eav.DataSources.Queries;
+
+namespace ToSic.Tutorial.DataSource.Basic
+{
+  // additional info so the VisualQuery can provide the correct buttons and infos
+  [VisualQuery(
+    NiceName = &quot;Demo DateTime List&quot;,
+    Icon = &quot;date_range&quot;,
+    NameId = &quot;10ebb0af-4b4e-44cb-81e3-68c3b0bb388d&quot;   // random &amp; unique Guid
+  )]
+  public class DateTimeDataSourceBasicList: ExternalData
+  {
+    public const string DateFieldName = &quot;Date&quot;;
+    public const string IdField = &quot;Id&quot;;
+    public const int ItemsToGenerate = 27;
+
+    /// &lt;summary&gt;
+    /// Constructor to tell the system what out-streams we have
+    /// &lt;/summary&gt;
+    public DateTimeDataSourceBasicList()
+    {
+      Provide(GetList); // default out, if accessed, will deliver GetList
+    }
+
+    /// &lt;summary&gt;
+    /// Get-List method, which will load/build the items once requested 
+    /// Note that the setup is lazy-loading,
+    /// ...so this code will not execute unless it's really used
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    private ImmutableArray&lt;IEntity&gt; GetList()
+    {
+      var randomNumbers = new List&lt;IEntity&gt;();
+
+      for (var i = 0; i &lt; ItemsToGenerate; i++)
+      {
+        var values = new Dictionary&lt;string, object&gt;
+        {
+          {IdField, i},
+          {DateFieldName, RandomDay()}
+        };
+        var ent = DataBuilder.Entity(values, id: i, titleField: DateFieldName);
+        randomNumbers.Add(ent);
+      }
+
+      return randomNumbers.ToImmutableArray();
+    }
+
+    // helper to randomly generate dates
+    private readonly Random _randomizer = new Random();
+    private readonly DateTime _start = new DateTime(1995, 1, 1);
+
+    private DateTime RandomDay()
+    {
+      var range = (DateTime.Today - _start).Days;
+      return _start.AddDays(_randomizer.Next(range));
+    }
+    
+  }
+}
+</code></pre>
+<p>This is very similar to the <a class="xref" href="basic.html">Basic</a> case, just that we're now creating a list of Entities and returning them.</p>
+<p>What this does is...</p>
+<ol>
+<li>Inform <a class="xref" href="../../../../basics/query/visual-query/index.html">VisualQuery</a> that there is a DataSource and registers it with a unique GUID</li>
+<li>The constructor says it <a class="xref" href="../pre-v15/provide.html">provides</a> one <code>Default</code> stream which can be built by <code>GetList()</code></li>
+<li><code>GetList()</code> will simply create a simple entity and return it as a list</li>
+</ol>
+<hr>
+<h2 id="read-more">Read More</h2>
+<ul>
+<li>Discover the <a class="xref" href="index.html">Basic DataSourceTutorial</a> with more examples</li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Created 2017 for 2sxc 7</li>
+<li>Completely rebuilt for 2sxc 11.13 and <a class="xref" href="../../../../basics/query/visual-query/index.html">VisualQuery</a> 3</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/data-sources/custom/tutorial-basic/basic-list.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

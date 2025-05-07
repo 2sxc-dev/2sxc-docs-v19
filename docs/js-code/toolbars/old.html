@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Old APIs for In-Page Edit Toolbars and Buttons | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Old APIs for In-Page Edit Toolbars and Buttons | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/toolbars/old.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.Toolbars.Old">
+
+<img src="../../assets/features/toolbar.svg" class="feature">
+<h1 id="old-apis-for-in-page-edit-toolbars-and-buttons">Old APIs for In-Page Edit Toolbars and Buttons</h1>
+<div class="float-end context-box-summary highlight-max" width="400px">
+  <div class="fancybox-auto svg-highlight" style="width: 100%">
+<svg version="1.1" baseprofile="full" viewbox="0 0 3229 2529" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../pages/basics/stack/assets/stack-detailed.png" x="0" y="0" height="100%" width="100%"></image>
+  <!-- Data Highlights -->
+  <rect class="svg-highlight prepared data-all" x="0%" y="82%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-data" x="19%" y="82%" width="64%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-all" x="3%" y="82%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-app" x="3%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-assets-entities" x="18.5%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-configuration" x="3%" y="93%" width="17%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared data-entities" x="34%" y="82%" width="33%" height="10.5%"></rect>
+  <rect class="svg-highlight prepared data-content-types" x="34%" y="89%" width="33%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-app" x="34%" y="89%" width="17.5%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-global" x="50%" y="89%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-external" x="65.5%" y="82%" width="17%" height="10.5%"></rect>
+  <!-- ADAM -->
+  <rect class="svg-highlight prepared adam" x="18.5%" y="89%" width="17%" height="8%"></rect>
+  <!-- Server -->
+  <rect class="svg-highlight prepared server-all" x="0%" y="41%" width="84%" height="38%"></rect>
+  <!-- Prepare -->
+  <rect class="svg-highlight prepared prepare-all" x="0%" y="61%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared query" x="44.5%" y="61%" width="34%" height="18%"></rect>
+  <rect class="svg-highlight prepared query-engine" x="44.5%" y="70%" width="34%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-built-in" x="44.5%" y="62.5%" width="18%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-app" x="60.5%" y="62.5%" width="17%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-datasource" x="71%" y="70%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-params" x="65%" y="70%" width="10%" height="7%"></rect>
+  <!-- Data Source -->
+  <rect class="svg-highlight prepared datasource" x="86%" y="51%" width="13%" height="16%"></rect>
+  <rect class="svg-highlight prepared datasource-custom" x="87.5%" y="54.5%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared datasource-built-in" x="87.5%" y="59%" width="12%" height="7%"></rect>
+  <rect class="svg-highlight prepared lookup" x="86%" y="66%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared lookup-engine" x="87.5%" y="69%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared lookup-sources" x="87.5%" y="73%" width="12%" height="7%"></rect>
+  <!-- Optimzers -->
+  <rect class="svg-highlight prepared asset-optimizer" x="3%" y="49.5%" width="13.5%" height="8%"></rect>
+  <rect class="svg-highlight prepared image-resizer" x="15%" y="30%" width="17%" height="34%"></rect>
+  <!-- Process / Awesomize -->
+  <rect class="svg-highlight prepared process-all" x="0%" y="41%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-cs" x="34%" y="41%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-razor" x="34.3%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-razor-app" x="34.3%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-razor-engine" x="34.3%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-apis" x="50%" y="42%" width="34%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api" x="50%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api-app" x="50%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-web-api-engine" x="50%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-libraries" x="47%" y="47%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-headless" x="65.5%" y="49.5%" width="17%" height="7%"></rect>
+  <!-- Libraries -->
+  <rect class="svg-highlight prepared libraries" x="86%" y="38%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared libraries-app" x="87.5%" y="41%" width="12%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared libraries-built-in" x="87.5%" y="46%" width="12%" height="6%"></rect>
+  <!-- data formats -->
+  <rect class="svg-highlight prepared format-json-custom" x="50%" y="32%" width="17%" height="14%"></rect>
+  <rect class="svg-highlight prepared format-json-headless" x="65.5%" y="32%" width="17%" height="21%"></rect>
+  <rect class="svg-highlight prepared format-json-edit" x="74%" y="30%" width="19%" height="23%"></rect>
+  <!-- Browser -->
+  <rect class="svg-highlight prepared browser-all" x="0%" y="0%" width="100%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-show" x="0%" y="0%" width="50%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact-edit" x="47%" y="0%" width="37%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact" x="47%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit" x="64%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit-ui" x="81.5%" y="0%" width="18%" height="34%"></rect>
+  <!-- Frameworks -->
+  <rect class="svg-highlight prepared frameworks-browser" x="0%" y="0%" width="17.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared frameworks-CSS" x="0%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-js" x="0%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-spa" x="0%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- App show parts -->
+  <rect class="svg-highlight prepared show-html" x="15.8%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-js" x="15.8%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-spa" x="15.8%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- Interact parts -->
+  <rect class="svg-highlight prepared interact-mobile" x="48.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared interact-2sxc" x="48.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit parts -->
+  <rect class="svg-highlight prepared edit-auto" x="65.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared edit-custom" x="65.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit UI parts -->
+  <rect class="svg-highlight prepared edit-ui" x="82.5%" y="3%" width="17.5%" height="18%"></rect>
+  <rect class="svg-highlight prepared edit-ui-custom" x="82.5%" y="20%" width="17.5%" height="12%"></rect>
+  <!-- SPA parts -->
+  <rect class="svg-highlight prepared spa-all" x="0%" y="21%" width="83%" height="12%"></rect>
+  <rect class="svg-highlight prepared spa-2sxc-js" x="31.5%" y="21%" width="52%" height="12%"></rect>
+  <!-- Custom highlight boxes - can be controlled by in-page CSS -->
+  <rect class="svg-highlight highlight1"></rect>
+  <rect class="svg-highlight highlight2"></rect>
+  <rect class="svg-highlight highlight3"></rect>
+  <rect class="svg-highlight highlight4"></rect>
+  <rect class="svg-highlight highlight5"></rect>
+</svg>
+  </div>
+  <div class="overlay-description">
+<p>you are here (click to zoom) - discover the <a class="xref" href="../../basics/index.html">stack</a></p>
+  </div>
+</div>
+<style>.context-box-summary .edit-custom { visibility: visible; } </style>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>These are old APIs and fairly complicated.
+We suggest you don't use them any more!</p>
+</div>
+<h2 id="how-to-use-v940-old-not-recommended">How to Use v9.40 (old, not recommended)</h2>
+<p>The most common use-case is actually to provide some HTML, which the JavaScript will pick up automatically and convert into a menu. The syntax was revised in 2sxc 9.40+, which is what we show here. The previous syntax is still supported, but not recommended any more:</p>
+<pre><code class="lang-HTML">&lt;!-- this is the default toolbar for first content item assigned to this module --&gt;
+&lt;div sxc-toolbar='{
+    &quot;toolbar&quot;: {&quot;sortOrder&quot;:0,&quot;useModuleList&quot;:true}
+}'&gt;
+&lt;/div&gt;
+
+
+&lt;!-- this is a toolbar for a content-item with the id 6875 --&gt;
+&lt;div sxc-toolbar='{
+    &quot;toolbar&quot;: {&quot;entityId&quot;:6875}
+}'&gt;
+&lt;/div&gt;
+
+
+&lt;!-- this could be a custom toolbar for showing a new-button only --&gt;
+&lt;div sxc-toolbar='{
+    &quot;toolbar&quot;: {&quot;contentType&quot;:&quot;BlogPost&quot;,&quot;action&quot;:&quot;new&quot;}
+}'&gt;
+&lt;/div&gt;
+
+
+&lt;!-- this would have two buttons, each configured in a way --&gt; 
+&lt;div sxc-toolbar='{
+    &quot;toolbar&quot;: [{
+        &quot;action&quot;:&quot;edit&quot;,
+        &quot;useModuleList&quot;:true,
+        &quot;sortOrder&quot;: 0,
+        &quot;prefill&quot;: { &quot;DocumentedOnPage&quot;: &quot;page:@Dnn.Tab.TabID&quot;, &quot;title&quot;: &quot;@Dnn.Tab.Title&quot; }
+    }, {
+        &quot;action&quot; : &quot;new&quot;,
+        &quot;contentType&quot; : &quot;BlogPost&quot;
+    }]
+}'&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="what-was-changedenhanced-in-2sxc-940">What was Changed/Enhanced in 2sxc 9.40</h2>
+<p>There were some things which worked well, but bothered us as perfectionists :). It boils down to how much of the page html must be different just because editing is used. So this is what we wanted to change:</p>
+<ol>
+<li><p>the previous implementation always used a special class <code>sc-element</code> to mark the tag which detects mouse-over. This was necessary, because the tag itself was added in another place in the code. This is not necessary any more, since the <code>sxc-toolbar</code> attribute is now on the tag which does the hover-detect.</p>
+</li>
+<li><p>the previous implementation created a <code>&lt;ul&gt;</code> tag in the source code. Though this was not a big issue, it just didn't feel right.</p>
+</li>
+<li><p>the previous implementation spread the information for the toolbar on two attributes <code>toolbar</code> and <code>settings</code> - this just wasn't perfect. Now it's both in the <code>sxc-toolbar</code> attribute.</p>
+</li>
+</ol>
+<h2 id="how-to-use-before-2sxc-940">How to Use before 2sxc 9.40</h2>
+<pre><code class="lang-HTML">&lt;!-- this is the default toolbar for content assigned to this module --&gt;
+&lt;ul class=&quot;sc-menu&quot; toolbar='{&quot;sortOrder&quot;:0,&quot;useModuleList&quot;:true,&quot;isPublished&quot;:true}'&gt;&lt;/ul&gt;
+
+&lt;!-- this is a default toolbar for content-items not assigned to this module --&gt;
+&lt;ul class=&quot;sc-menu&quot; toolbar='{&quot;isPublished&quot;:true,&quot;entityId&quot;:6875}'&gt;&lt;/ul&gt;
+
+&lt;!-- this could be a custom toolbar for showing a new-button only --&gt;
+&lt;ul class=&quot;sc-menu&quot; toolbar='{&quot;contentType&quot;:&quot;BlogPost&quot;,&quot;action&quot;:&quot;new&quot;}'&gt;&lt;/ul&gt;
+
+&lt;!-- this would have two buttons, each configured in a way --&gt; 
+&lt;ul class='sc-menu' toolbar='[{
+    &quot;action&quot;:&quot;edit&quot;, 
+    &quot;useModuleList&quot;:true, 
+    &quot;sortOrder&quot;: 0, 
+    &quot;prefill&quot;: { &quot;DocumentedOnPage&quot;: &quot;page:@Dnn.Tab.TabID&quot;, &quot;title&quot;: &quot;@Dnn.Tab.Title&quot; } 
+}, {
+    &quot;action&quot; : &quot;new&quot;,
+    &quot;contentType&quot; : &quot;BlogPost&quot; 
+}]'&gt;&lt;/ul&gt;
+</code></pre>
+<h2 id="how-it-works">How it Works</h2>
+<p>Internally, a lot will happen to actually turn that into a real, usually floating, toolbar. Basically what happens is</p>
+<ol>
+<li>a script picks up all cases of <code>&lt;* sxc-toolbar=...&gt;</code> and <code>&lt;ul class=&quot;sc-menu ...&quot;&gt;&lt;/ul&gt;</code></li>
+<li>it will then pass it to a toolbar creator which will either create a standard-list of buttons, or a custom one</li>
+<li>the resulting buttons/links will be placed in <code>&lt;li&gt;</code> items and added to the <code>&lt;ul&gt;</code> tag</li>
+</ol>
+<p>But you could also do a whole lot more, including custom buttons and code (since 2sxc 08.06)</p>
+<pre><code class="lang-html">&lt;div sxc-toolbar='{ &quot;toolbar&quot;: {
+    &quot;groups&quot;: [
+        {
+            &quot;name&quot;: &quot;my default list&quot;,
+            &quot;buttons&quot;: &quot;edit,add,more&quot;
+        },
+        {
+            &quot;name&quot;: &quot;list buttons&quot;,
+            &quot;buttons: &quot;sort,moveup,movedown,more&quot;
+        },
+        {
+            &quot;name&quot;: &quot;really advanced stuff&quot;,
+            &quot;buttons&quot;: [
+                &quot;app&quot;,
+                &quot;zone&quot;,
+                {
+                    &quot;command&quot;:{
+                        &quot;action&quot;: &quot;custom&quot;,
+                        &quot;customCode&quot;: &quot;alert(&amp;apos;hello&amp;apos;)&quot;
+                    }
+                    &quot;icon&quot;: &quot;icon-sxc-bomb&quot;
+                },
+                &quot;more&quot;
+            ]
+        }
+    ],
+    &quot;defaults&quot;: {
+        &quot;entityId&quot;: 740,
+        &quot;contentType&quot;: &quot;BlogPost&quot;
+    }
+}}'&gt;
+...
+&lt;/div&gt;
+</code></pre>
+<p>All the configuration is in the <code>sxc-toolbar</code> attribute, which contains two main nodes:</p>
+<ol>
+<li><code>toolbar</code> - see below</li>
+<li><code>settings</code> - see <a class="xref" href="settings.html">Toolbar Settings</a></li>
+</ol>
+<p>In the old syntax (before 2sxc 9.40, using the <code>&lt;ul&gt;</code> tag, two attributes are handled</p>
+<ol>
+<li><code>toolbar</code> or <code>data-toolbar</code> - see below</li>
+<li><code>settings</code> or <code>data-settings</code> - see <a class="xref" href="settings.html">Toolbar Settings</a></li>
+</ol>
+<h2 id="more-background">More Background</h2>
+<p>The <code>toolbar</code> information is:</p>
+<ol>
+<li><p>an object with some properties (like <code>entityId</code>) and <em>no</em> <code>action</code> verbs --&gt; then it will auto-generate all default buttons<br>
+<code>{ entityId: 17, isPublished: true }</code></p>
+</li>
+<li><p>an object with some properties and 1 or more action verbs --&gt; generate only these buttons<br>
+<code>{ actions: &quot;new,edit&quot;, useModuleList: true, sortOrder: 1 }</code></p>
+</li>
+<li><p>an array with commands (objects with 1 verb) --&gt; generate these Buttons<br>
+<code>[{ action: ...}, { action: ...}]</code></p>
+</li>
+<li><p>on object containing a buton-group like<br>
+<code>{ buttons: [ { command: { action: ...}}, { command: ...}] }</code></p>
+</li>
+<li><p>a group of button-groups<br>
+<code>[ { buttons: ... }, {buttons: ...}]</code></p>
+</li>
+<li><p>a full toolbar configuration<br>
+<code>{ groups: [...], defaults: {...}, params: {...} }</code></p>
+</li>
+</ol>
+<p>For a full scope of what is possible, you should read the <a class="xref" href="advanced.html">js toolbar documentation</a>.</p>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<ul>
+<li><a href="http://2sxc.org/en/apps/app/tutorial-for-the-javascript-apis-and-custom-toolbars">JS Manage / Toolbar API Tutorial App</a></li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc v02.00</li>
+<li>Published API for use in templates in 2sxc v08.06</li>
+<li>Enhanced / Standardized in 2sxc v09.40</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/toolbars/old.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

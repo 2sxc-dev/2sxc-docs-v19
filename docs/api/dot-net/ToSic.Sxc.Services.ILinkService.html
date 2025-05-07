@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ILinkService | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ILinkService | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc/new/develop/apiSpec/new?filename=ToSic_Sxc_Services_ILinkService.md&amp;value=---%0Auid%3A%20ToSic.Sxc.Services.ILinkService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.ILinkService">
+
+
+
+  <h1 id="ToSic_Sxc_Services_ILinkService" data-uid="ToSic.Sxc.Services.ILinkService" class="text-break">
+Interface ILinkService  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/LinkService/ILinkService.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToSic.html">ToSic</a>.<a class="xref" href="ToSic.Sxc.html">Sxc</a>.<a class="xref" href="ToSic.Sxc.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ToSic.Sxc.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Helper on <a class="xref" href="ToSic.Sxc.Services.ServiceKit16.html#ToSic_Sxc_Services_ServiceKit16_Link"><code>Kit.Link</code></a> to create links to pages, APIs and images.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicApi]
+public interface ILinkService : ICanDebug</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="ToSic.Lib.Logging.ICanDebug.html#ToSic_Lib_Logging_ICanDebug_Debug">ICanDebug.Debug</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="ToSic_Sxc_Services_ILinkService_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>It is usually also available as a <code>Link</code> object in every Razor and WebApi file.</p>
+<p>This helps create links to:</p>
+<ul>
+<li>Pages</li>
+<li>APIs</li>
+<li>Images</li>
+</ul>
+<p>As well as create base-tag links (important for SPAs)</p>
+<p>You will never create this yourself, as get this automatically in Razor or WebAPIs on an object called <code>Link</code>.</p>
+<p>History</p>
+<ul>
+<li>Created ca. v2 as <code>ToSic.Sxc.Web.ILinkHelper</code></li>
+<li>Moved to this new <code>Services.ILinkService</code> in v13.05. The previous name will continue to work, but newer features will be missing on that interface.</li>
+</ul>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ToSic_Sxc_Services_ILinkService_Base_" data-uid="ToSic.Sxc.Services.ILinkService.Base*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ILinkService_Base" data-uid="ToSic.Sxc.Services.ILinkService.Base">
+  Base()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/LinkService/ILinkService.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A base url for the current page, for use in html-base tags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Base()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ToSic_Sxc_Services_ILinkService_Image_" data-uid="ToSic.Sxc.Services.ILinkService.Image*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ILinkService_Image_System_String_System_Object_System_Object_ToSic_Lib_Coding_NoParamOrder_ToSic_Sxc_Data_IField_System_Object_System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object_" data-uid="ToSic.Sxc.Services.ILinkService.Image(System.String,System.Object,System.Object,ToSic.Lib.Coding.NoParamOrder,ToSic.Sxc.Data.IField,System.Object,System.Object,System.Object,System.String,System.String,System.String,System.Object,System.String,System.Object)">
+  Image(string, object, object, NoParamOrder, IField, object, object, object, string, string, string, object, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/LinkService/ILinkService.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate an Image-Resizing link base on presets or custom parameters.<br>
+It will also ensure that the final url is safe, so it will encode umlauts, spaces etc.</p>
+<p>Note that you can basically just use presets, or set every parameter manually.</p>
+<ul>
+<li>All params are optional.</li>
+<li>Some combinations are not valid - like setting a factor and a width doesn't make sense and will throw an error</li>
+<li>Most parameters if set to 0 will cause a reset so that this aspect is not in the URL</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Image(string url = null, object settings = null, object factor = null, NoParamOrder noParamOrder = default, IField field = null, object width = null, object height = null, object quality = null, string resizeMode = null, string scaleMode = null, string format = null, object aspectRatio = null, string type = null, object parameters = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The image url. Use an empty string if you want to just get the params for re-use.</p>
+</dd>
+    <dt><code>settings</code> <span class="xref">object</span></dt>
+    <dd><ul>
+<li>A settings name such as &quot;Content&quot;, &quot;Lightbox&quot; etc. (new 17.06)</li>
+<li>A standardized Image-Settings object like Settings.Images.Content - see <a href="https://go.2sxc.org/settings">https://go.2sxc.org/settings</a></li>
+<li>An anonymous objects with properties such as <code>width</code>, <code>height</code>, <code>quality</code>, <code>resizeMode</code>, <code>scaleMode</code>, <code>format</code>, <code>aspectRatio</code> etc. like <code>new { width = 100, height = 100 }</code> (new v19.03.03)</li>
+<li>Or a dynamic object containing settings properties (this can also be a merged custom + standard settings)</li>
+<li>Or a specially prepared <a class="xref" href="ToSic.Sxc.Images.IResizeSettings.html">IResizeSettings</a> object containing all settings.
+If this is provided, only <code>factor</code> will still be respected, all other settings like <code>width</code> on this command will be ignored.</li>
+</ul>
+</dd>
+    <dt><code>factor</code> <span class="xref">object</span></dt>
+    <dd><p>A multiplier, usually used to create urls which resize to a part of the default content-size. Like 0.5.</p>
+</dd>
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>field</code> <a class="xref" href="ToSic.Sxc.Data.IField.html">IField</a></dt>
+    <dd><p>WIP v13.04 - not final yet</p>
+</dd>
+    <dt><code>width</code> <span class="xref">object</span></dt>
+    <dd><p>Optional width parameter. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>height</code> <span class="xref">object</span></dt>
+    <dd><p>Optional height parameter. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>quality</code> <span class="xref">object</span></dt>
+    <dd><p>Optional quality parameter. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>resizeMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional resize-mode, like <code>crop</code> or <code>max</code>. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>scaleMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional scale-mode to allow up-scaling images like <code>up</code> or <code>both</code>. Usually takes the default from the <code>settings</code>.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional file format like <code>jpg</code> or <code>png</code></p>
+</dd>
+    <dt><code>aspectRatio</code> <span class="xref">object</span></dt>
+    <dd><p>Aspect Ratio width/height, only relevant if a <code>width</code> is supplied. Can't be used together with height. Usually takes default from the <code>settings</code> or is ignored.</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional type changes how the link is generated. Possible values are:</p>
+<ul>
+<li>null / not specified / empty = return link as is generated</li>
+<li><code>&quot;full&quot;</code> return link with protocol and domain. If that was missing before, it will add current protocol/domain if possible, but not on relative <code>./</code> or <code>../</code> links</li>
+<li><code>&quot;//&quot;</code> return link with <code>//domain</code>. If that was missing before, will add current domain if possible, but not on relative <code>./</code> or <code>../</code> links</li>
+</ul>
+</dd>
+    <dt><code>parameters</code> <span class="xref">object</span></dt>
+    <dd><ul>
+<li>the parameters either as <code>id=47&amp;name=daniel</code> (Dnn also supports <code>/id/47/name/daniel</code>)</li>
+<li>in 2sxc 12.05+ it can also be an <a class="xref" href="ToSic.Sxc.Context.IParameters.html">IParameters</a></li>
+</ul>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ILinkService_Image_System_String_System_Object_System_Object_ToSic_Lib_Coding_NoParamOrder_ToSic_Sxc_Data_IField_System_Object_System_Object_System_Object_System_String_System_String_System_String_System_Object_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Usually a factor is applied to create a link which is possibly 50% of the content-width or similar.
+In these cases the height is not applied but the aspectRatio is used, which usually comes from <code>settings</code> if any were provided.</p>
+<p>History</p>
+<ul>
+<li>New in 2sxc 12.03</li>
+<li>type added ca. v12.08</li>
+<li>Option to use <a class="xref" href="ToSic.Sxc.Images.IResizeSettings.html">IResizeSettings</a> added in v13.03</li>
+<li><code>factor</code> originally didn't influence width/height if provided here, updated it v13.03 to influence that as well</li>
+<li><code>field</code> being added in 13.04, not ready yet</li>
+<li><code>settings</code> enhanced to also support simple anonymous objects in v19.03.03</li>
+</ul>
+</div>
+
+
+
+
+  <a id="ToSic_Sxc_Services_ILinkService_To_" data-uid="ToSic.Sxc.Services.ILinkService.To*"></a>
+
+  <h3 id="ToSic_Sxc_Services_ILinkService_To_ToSic_Lib_Coding_NoParamOrder_System_Nullable_System_Int32__System_String_System_Object_System_String_System_String_" data-uid="ToSic.Sxc.Services.ILinkService.To(ToSic.Lib.Coding.NoParamOrder,System.Nullable{System.Int32},System.String,System.Object,System.String,System.String)">
+  To(NoParamOrder, int?, string, object, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/LinkService/ILinkService.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>returns a link to the current page with parameters resolved in a way that DNN wants it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string To(NoParamOrder noParamOrder = default, int? pageId = null, string api = null, object parameters = null, string type = null, string language = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>noParamOrder</code> <a class="xref" href="ToSic.Lib.Coding.NoParamOrder.html">NoParamOrder</a></dt>
+    <dd><p>see <a class="xref" href="../../net-code/conventions/named-parameters.html">Convention: Named Parameters</a></p>
+</dd>
+    <dt><code>pageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>optional page ID (TabId) - if not supplied, will use current page</p>
+</dd>
+    <dt><code>api</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>optional api url &quot;api/name/method?id=something&quot;</p>
+</dd>
+    <dt><code>parameters</code> <span class="xref">object</span></dt>
+    <dd><ul>
+<li>the parameters either as <code>id=47&amp;name=daniel</code> (Dnn also supports <code>/id/47/name/daniel</code>)</li>
+<li>in 2sxc 12.05+ it can also be an <a class="xref" href="ToSic.Sxc.Context.IParameters.html">IParameters</a></li>
+</ul>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional type changes how the link is generated. Possible values are:</p>
+<ul>
+<li>null / not specified / empty = return link as is generated</li>
+<li><code>&quot;full&quot;</code> return link with protocol and domain. If that was missing before, it will add current protocol/domain if possible, but not on relative <code>./</code> or <code>../</code> links</li>
+<li><code>&quot;//&quot;</code> return link with <code>//domain</code>. If that was missing before, will add current domain if possible, but not on relative <code>./</code> or <code>../</code> links</li>
+</ul>
+</dd>
+    <dt><code>language</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><ul>
+<li>If not set, <code>null</code> or empty <code>&quot;&quot;</code> will use the specified pageId (pageIds can be language specific); api would always be the current language</li>
+<li>If set to <code>&quot;current&quot;</code> will adjust pageId to use the language of the current language. API will be as before, as it was already <code>current</code></li>
+<li>future <em>(not implemented yet)</em> <code>&quot;primary&quot;</code> would link to primary language</li>
+<li>future <em>(not implemented yet)</em> <code>&quot;en&quot;</code> or <code>&quot;en-us&quot;</code> would link to that specific language (page and API)</li>
+</ul>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="ToSic_Sxc_Services_ILinkService_To_ToSic_Lib_Coding_NoParamOrder_System_Nullable_System_Int32__System_String_System_Object_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>History</p>
+<ul>
+<li>v12 added the api parameter for liking APIs of the current app</li>
+<li>In v12.05 the type of parameters was changed from string to object, to allow <a class="xref" href="ToSic.Sxc.Context.IParameters.html">IParameters</a> as well</li>
+<li>In v13.02 introduced language with &quot;current&quot;</li>
+</ul>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc/blob/develop/Src/Sxc/ToSic.Sxc/Services/LinkService/ILinkService.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

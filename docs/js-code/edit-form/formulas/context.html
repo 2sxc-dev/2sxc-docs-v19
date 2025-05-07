@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>context Object in Formulas | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="context Object in Formulas | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/edit-form/formulas/context.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.EditForm.Formulas.Context">
+
+<img src="../../../assets/features/formulas.svg" class="feature">
+<h1 id="context-object-in-formulas"><code>context</code> Object in Formulas</h1>
+<p>The <code>context</code> contain additional information about the context we're running in.</p>
+<ul>
+<li><code>app</code> - contains information about the current app <em>new 13.07</em>
+<ul>
+<li><code>appId</code></li>
+<li><code>zoneId</code></li>
+<li><code>isContent</code></li>
+<li><code>isSite</code></li>
+<li><code>isGlobal</code></li>
+</ul>
+</li>
+<li><code>cache</code> - an object which is only for this function and will be persisted across calls - use it to save temporary values</li>
+<li><code>debug</code> - a true/false toggle if the form is in develop/debug mode - Use this to show/hide really advanced fields. <em>new in 12.02</em></li>
+<li><code>target</code> - everything about the target of the formula - the current field
+<ul>
+<li><code>type</code> = What the function processes <code>Field.Value</code> or <code>Field.Settings</code> (Future: <code>Form.Variable</code> etc.)</li>
+<li><code>name</code> - field name or setting-name, so <code>FirstName</code> or <code>Visible</code></li>
+<li><code>entity</code>
+<ul>
+<li><code>id</code> - the id of the entity - 0 if it's new</li>
+<li><code>guid</code> - the GUID of the entity, always provided</li>
+<li><code>type</code> - entity type information
+<ul>
+<li><code>guid</code></li>
+<li><code>name</code></li>
+</ul>
+<!-- 2dm v16 - plan to rework metadata and prefer to not publish this API since it would probably change again -->
+</li>
+</ul>
+<!-- * `for` - Metadata For information - a target pointer to another thing which this entity describes _new in 15.04_ -->
+  <!-- * `targetType` (int) - the type of the target, eg. `CmsItem` = 10, `Entity` = 4, etc. -->
+  <!-- * `guid` (string) - the guid of the target as string - if it's using a guid-key, otherwise null -->
+  <!-- * `number` (int) - the number of the target, if it's using a number-key, otherwise null -->
+  <!-- * `string` (string) the string of the target, if it's using a string-key, otherwise null -->
+</li>
+</ul>
+</li>
+<li><code>culture</code>
+<ul>
+<li><code>code</code></li>
+<li><code>name</code> - this will return <code>undefined</code> scenarios where no languages are activated</li>
+</ul>
+</li>
+<li><code>features</code> <em>new v13.10</em>
+<ul>
+<li><code>isEnabled('FeatureName')</code> - will return true if this feature is enabled.<br>
+<em>Important: only admins users will know about all available features, non-admins will only have a subset marked as public.</em></li>
+</ul>
+<!-- 2022-12-23 removed this again, believe it's never used and adds problems to the edit-ui -->
+<!-- * `get('FeatureName')` - will return the feature object -->
+</li>
+<li><code>form</code> <em>new v13.10</em>
+<ul>
+<li><del><code>runFormulas()</code></del> (deprecated in v2) - will run all formulas in the current form. This is typically meant for use in fetch-promises after the data returned and was put in the cache <em>new 13.07</em></li>
+</ul>
+</li>
+<li><code>user</code> <em>new in v13.11</em>
+<ul>
+<li><code>email</code> <em>new v16.00</em></li>
+<li><code>guid</code> <em>new v16.00</em></li>
+<li><code>id</code> user id or <code>-1</code> if anonymous</li>
+<li><code>isAnonymous</code> - <code>true</code> if the user is not logged in</li>
+<li><code>isContentAdmin</code> <em>new v16.00</em></li>
+<li><code>isSiteAdmin</code></li>
+<li><code>isSystemAdmin</code></li>
+<li><code>name</code> <em>new v16.00</em></li>
+<li><code>username</code> <em>new v16.00</em></li>
+</ul>
+</li>
+<li><code>experimental</code> - this is for internal APIs we're testing, they are not public. You can use them, but expect the APIs to change in near future</li>
+</ul>
+<h2 id="using-the-contextcache">Using the <code>context.cache</code></h2>
+<p>In some cases you may want to remember a result of intermediate work. For this you can use the <code>context.cache</code> object. A simple exammple would be if you only want to run something once, in which case you could write something like this</p>
+<pre><code class="lang-js">v1(data, context) {
+  // don't do anything on following runs / return existing value
+  if(context.cache.notFirstRun) return data.value;
+  context.cache.notFirstRun = true;
+  return true;
+}
+</code></pre>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Introduced in 2sxc 12.01</li>
+<li>Added <code>context.features.isEnabled('FeatureName')</code> in v13.10</li>
+<li>Added <code>context.features.get('FeatureName')</code> in v13.10</li>
+<li>Added <code>context.app</code> in v13.10</li>
+<li>Added <code>context.user</code> in v13.11</li>
+<li>Added <code>context.form.runFormulas()</code> in v13.11</li>
+</ul>
+<p>Shortlink to here: <a href="https://go.2sxc.org/js-fcontext">https://go.2sxc.org/js-fcontext</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/edit-form/formulas/context.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

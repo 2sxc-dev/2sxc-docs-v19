@@ -1,0 +1,98 @@
+- name: Abyss Overview
+  href: index.md
+
+# Advanced Guides
+- name: " "
+
+- name: Advanced Guides
+  # topicUid: Abyss.Advanced.Index
+- name: LightSpeed Output Cache ⚡
+  topicUid: Abyss.Lightspeed.Index
+
+- name: Encrypt Web Forms 🛡️ (new ⭐)
+  topicUid: Abyss.Security.EncryptBody.Index
+
+- name: Content Security Policy 🛡️
+  topicUid: Abyss.Security.Csp.Index
+  href: security/csp/toc.yml
+
+- name: Image Perfection
+
+- name: Resources, CDN & GDPR 🛡️
+  topicUid: Abyss.Cdn.Index
+
+- name: Infrastructure & Optimizations
+  topicUid: Abyss.Infrastructure.Index
+  items:
+    - name: SQL Compress DataTimeline
+      topicUid: Abyss.Infrastructure.SqlDataTimelineCompression
+
+- name: Enterprise Dev Workflows
+  topicUid: Abyss.EntDev.Index
+  items:
+    - name: Sync Apps Dev ➡️ Prod
+      topicUid: Abyss.EntDev.AppSync
+    - name: Deploy through Git
+      topicUid: Abyss.EntDev.AppSyncDeploy
+    - name: Re-Sync through Git
+      topicUid: Abyss.EntDev.AppSyncReSync
+
+# General entry-level stuff which is still commonly used
+- name: " "
+
+- name: Data Formats
+  topicUid: Basics.DataFormats.Index
+  href: data-formats/toc.yml
+
+# Topics
+- name: " "
+
+- name: Architecture
+  topicUid: Abyss.Architecture.Index
+  href: architecture/toc.yml
+
+- name: LookUp Token System
+  topicUid: Abyss.Parts.LookUp.Index
+  href: parts/look-up/toc.yml
+
+# todo - name this section
+- name: " "
+
+- name: Platforms
+  topicUid: Abyss.Platforms.Index
+  href: platforms/toc.yml
+
+
+- name: Integration With Your Platform
+  topicUid: Abyss.Integration.Index
+  items:
+    - name: Scenario 01 Read Data
+      topicUid: Abyss.Integration.Scenario01
+    - name: Scenario 02 Edit Data
+      topicUid: Abyss.Integration.Scenario02
+
+
+# Internal stuff
+- name: " "
+
+- name: Future Roadmap 🚀
+  topicUid: Abyss.Releases.Roadmap
+  items:
+    - name: Planned DB changes
+      topicUid: Abyss.Releases.Planned.DbSchema
+
+- name: Release Management
+  topicUid: Abyss.Releases.Management.Index
+  href: releases/management/toc.yml
+
+- name: History & Changes ⌛
+  href: releases/history/toc.yml
+
+- name: Contribute
+
+- name: Contribute to 2sxc
+  href: contribute/toc.yml
+
+- name: Contribute to Docs
+  topicUid: Abyss.Contribute.Docs.Index
+  href: ./contribute/docs/toc.yml

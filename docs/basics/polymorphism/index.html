@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Polymorphism aka Open-Heart-Surgery | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Polymorphism aka Open-Heart-Surgery | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/polymorphism/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Polymorphism.Index">
+
+<img src="../../assets/logos/polymorph/polymorph-logo-wide.svg" width="100%">
+<h1 id="polymorphism-aka-open-heart-surgery">Polymorphism aka Open-Heart-Surgery</h1>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The key concept behind <strong>Polymorphism</strong> is having the same template and code in various editions (morphs) which are automatically used based on certain rules.</p>
+</div>
+<h2 id="polymorphism-addresses-3-problems">Polymorphism Addresses 3 Problems</h2>
+<h3 id="1-workin-on-live-sites-aka-open-heart-surgery">#1 Workin on Live Sites aka Open-Heart-Surgery</h3>
+<p>Imagine you have a running system and you want to make some changes on the live installation. During the time you work, you would always risk breaking the site, but we usually don't have the time to create a staging environment.</p>
+<h3 id="2-creating-templates-that-work-with-multiple-css-frameworks">#2 Creating Templates that work with Multiple CSS-Frameworks</h3>
+<p>When the same design must work in various CSS-Frameworks, you actually need different templates for each - and switching between them must be automatic.</p>
+<h3 id="3-ab-testing">#3 A/B Testing</h3>
+<p>In marketing, we want to test various design with different audiences and measure what works best.</p>
+<h2 id="polymorph-folder-structure">Polymorph Folder Structure</h2>
+<p>Let's compare the perfect multi-edition (polymorph) setup to the classic solution:</p>
+<img src="../../pages/basics/polymorphism/assets/app-polymorph-classic-vs.png" width="100%" class="full-width">
+<div class="NOTE">
+<h5>Note</h5>
+<p>Automatic View-Polymorphism replaces the manual approach for CSS-Framework and common Open-Heart-Surgery scenarios. The manual approach is still recommended for complex polymorphism as well as A/B Testing.</p>
+</div>
+<h2 id="view-polymorphism">View Polymorphism</h2>
+<h3 id="automatic-view-polymorphism-based-on-css-framework">Automatic View Polymorphism based on CSS-Framework</h3>
+<p>The system is fairly easy to understand. So if polymorphism is activated for CSS-Framework detection, here are the rules:</p>
+<ol>
+<li>The default template file is the one configured in the view configuration</li>
+<li>2sxc will try to find file with the matching name in 2 locations using the name of css framework published by the skin in the <a href="https://connect-koi.net/dnn-themes">koi.json</a></li>
+<li>beneath the current folder</li>
+<li>in the app root folder</li>
+<li>If nothing is found, the default template file is used</li>
+</ol>
+<p>If a match is found, it will load that. Note that if the theme does not have a koi.json, the code used is <code>unk</code> for unknown.</p>
+<p>Here's a checklist how start using View Polymorphism with CSS-Frameworks:</p>
+<iframe src="https://azing.org/2sxc/r/XX6t8PZu?embed=1" width="100%" height="400" frameborder="0" allowfullscreen style="box-shadow: 0 1px 3px rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15)"></iframe>
+<h3 id="automatic-view-polymorphism-based-on-superuser-permissions">Automatic View Polymorphism based on SuperUser Permissions</h3>
+<p>This is meant for Open-Heart-Surgery - so you can work on templates on a live site without breaking the output for normal users. This is how it works (if you have turned it on):</p>
+<ol>
+<li>The default template is the one configured in the view configuration</li>
+<li>2sxc will try to find a file with matching name in either the <code>[root]/staging</code> (for super users) or <code>[root]/live</code> (for normal users)</li>
+<li>If it is found, 2sxc will render that template</li>
+<li>Otherwise the default template is used</li>
+</ol>
+<p>Here's a checklist to get started:</p>
+<iframe src="https://azing.org/2sxc/r/RF0NX0xZ?embed=1" width="100%" height="400" frameborder="0" allowfullscreen style="box-shadow: 0 1px 3px rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15)"></iframe>
+<h3 id="manual-view-polymorphs">Manual View Polymorphs</h3>
+<p>In case the automatic setup doesn't suit your needs, you can do it manually  like this:</p>
+<iframe src="https://azing.org/2sxc/r/hkzLSezS?embed=1" width="100%" height="400" frameborder="0" allowfullscreen style="box-shadow: 0 1px 3px rgba(60,64,67,.3), 0 4px 8px 3px rgba(60,64,67,.15)"></iframe>
+<h2 id="razor-guide-to-view-polymorphism">Razor Guide to View Polymorphism</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>These are just a few hints for you as you work with it.</p>
+</div>
+<ol>
+<li>Don't forget to activate it in the settings</li>
+<li>If the Razor code ever wants to know what edition (morph) it's in, check the <code>CmsContext.View.Edition</code> property. You would do this for things like
+<ol>
+<li>If you need a JS or CSS from the same folder</li>
+<li>If you need to link to a WebApi of the same edition</li>
+</ol>
+</li>
+</ol>
+<h2 id="webapi-polymorphims">WebAPI Polymorphims</h2>
+<ol>
+<li>Api Controllers are already fully polymorph. They can be placed in a subfolder like <code>[app-root]/live/api/WtfController.cs</code> and can be accessed using a url with the edition in the name, allowing multiple identically named controllers to be used.</li>
+<li>Views are polymorph if you do the view selection manually. This means, you can place your views in a subfolder like <code>[app-root]/live/list.cshtml</code> and then have an entry-point <code>[app-root]/list.cshtml</code> which will choose which edition to use - then using <code>@Html.Partial(...)</code> to pick that edition. This is still manual, because we're not sure yet what the perfect implementation is, so we would rather wait before standardizing a bad solution.</li>
+<li>Everything that is data (schemas, items, queries, settings and resources) is still one edition only. The data model is able to perform multi-edition content-management, but we're not ready yet to provide the UIs etc. for this, as it could lead to confusion, so we'll hold back on this for now.</li>
+</ol>
+<h3 id="how-to-use-webapi-polymorph">How to use WebApi Polymorph</h3>
+<p>As of now, to use the WebApi Polymorp, this is what you would do:</p>
+<ol>
+<li>instead of placing your <code>WtfController.cs</code> in the <code>[app-root]/api/</code> folder, you place it in a <code>[app-root]/live/api</code> folder.</li>
+<li>the live, default JS would then access it using<br>
+<code>[dnn-api-root]/app/auto/live/api/Wtf</code></li>
+<li>You can then copy this controller to <code>[app-root]/dev/api</code> and make your changes there.</li>
+<li>In your JS, you would then (while testing/developing) access this edition using<br>
+<code>[dnn-api-root]/app/auto/dev/api/Wtf</code><br>
+without causing problems on the live solution, as all other users are still accessing the <code>live</code> edition, while you're working on the <code>dev</code> edition.</li>
+<li>Once everything works, deploy (copy) the now modified <code>WtfController.cs</code> from the <code>dev/api</code> folder to <code>live/api</code> and all users benefit from the changes.</li>
+</ol>
+<h2 id="data-polymorphism">Data Polymorphism</h2>
+<p>Data Polymorphism has not been implemented yet. The idea would be that changes to data or even schemas (fields of a type) would be staged as we work.</p>
+<p>For now, Data-Polymorphism is low priority, because we're not sure yet if we can &quot;pull this off&quot; in a way that won't confuse the users.</p>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a class="xref" href="../../web-api/index.html">WebApi</a></li>
+<li><a class="xref" href="../../net-code/web-api/index.html">DotNet-WebApi</a></li>
+<li><a href="https://azing.org/2sxc/l/2I53UarY/polymorphism-automatically-switch-templates">Checklist for Polymorphism</a></li>
+<li><a href="https://2sxc.org/en/blog/tag/polymorph">Blog Post around Polymorphism</a></li>
+</ul>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<ul>
+<li>The default Content Templates use CSS-Framework Polymorphism to automatically look great in Bootstrap 3 and 4</li>
+<li>The Mobius Forms App uses SuperUser Polymorphism so you can develop new forms in the background without breaking functionality</li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>WebAPI Polymorphims was introduced in 2sxc 9.35</li>
+<li>Manual View-Polymorphism was introduced in 2sxc 9.35</li>
+<li>Automatic View Polymorphism introduced in 2sxc 11.0 (css-frameworks and super-user)</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/polymorphism/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

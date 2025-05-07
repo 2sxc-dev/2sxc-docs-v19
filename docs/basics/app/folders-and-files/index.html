@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>App Folder Structure | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="App Folder Structure | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/app/folders-and-files/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.App.FoldersAndFiles.Index">
+<h1 id="app-folder-structure">App Folder Structure</h1>
+
+<p>Every app has an own folder for its files. Within that folder the App can have zero or hundreds of folders.</p>
+<ul>
+<li>all apps are located in <code>[site-root]\2sxc\[app-name]</code></li>
+<li>the <em>primary</em> / <em>Content</em> App is located in <code>[site-root]\2sxc\Content</code></li>
+</ul>
+<p>You can create your own folders to organize your templates as you need as the structure is completely open.</p>
+<h2 id="special-folders-and-files">Special Folders and Files</h2>
+<ol>
+<li><code>/app-icon.png</code> is always used as the <a class="xref" href="icons.html">app-icon</a> if provided</li>
+<li><code>/App_Data</code> is protected for special configuration and data, see <a class="xref" href="folder-app-data.html">App_Data</a></li>
+<li><code>/App_Data/app.json</code> is an optional configuration file, see <a class="xref" href="../export-import/app-json.html">app.json</a></li>
+<li><code>/App_Data/[something]</code> is usually used for special data like <a class="xref" href="../../edit/edit-form/custom-fields.html">custom input field configuration</a></li>
+<li><code>/system</code> can contain <a class="xref" href="../../edit/edit-form/custom-fields.html">custom input fields JavaScripts</a></li>
+<li><code>/api</code> contains <code>...Controller.cs</code> files for the web services this app has. It's not available on the simpler <strong>Content App</strong>.<br>
+<em>Note: if you're using <a class="xref" href="../../polymorphism/index.html">Polymorphism</a> then the api folder is usually in a sub-folder, like <code>/live/api</code></em></li>
+</ol>
+<h2 id="non-exportable-folders">Non-Exportable Folders</h2>
+<p>Some folders are not exported by default, and in v14.10+ you can configure it in more detail.
+See <a class="xref" href="../export-import/app-json.html">Export restrictions and app.json</a></p>
+<h2 id="recommended-sub-folder-names">Recommended sub folder names</h2>
+<p>The following folders have no technical relevance, but we recommend this naming to improve consistency.</p>
+<ol>
+<li><code>src</code> and sub-folders should contain your javascript source files in original (unminified, etc.)</li>
+<li><code>dist</code> should contain your processed, minified, uglified and combined JS files<br>
+<em>Note: if you're using <a class="xref" href="../../polymorphism/index.html">Polymorphism</a> then the dist folder is usually in a sub-folder, like <code>live\dist</code></em></li>
+</ol>
+<h2 id="platform-differences-dnn---oqtane-">Platform Differences Dnn ☢️ &amp; Oqtane 🩸</h2>
+<p>In Dnn ☢️ the App-folder is located in</p>
+<p><code>[Website-Root]\Portals\[site-id]\2sxc\[App-Folder-Name]</code></p>
+<p>In Oqtane 🩸 the App-folder is located in</p>
+<p><code>[Website-Root]\2sxc\[Site-Id]\[App-Folder-Name]</code></p>
+<p>This difference is due to architecture and security differences.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/app/folders-and-files/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

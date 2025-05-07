@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>2sxc Style Guide - Best Practices v2020 DRAFT | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="2sxc Style Guide - Best Practices v2020 DRAFT | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/style-guide/style-guide-2020.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.StyleGuide.2021">
+<h1 id="2sxc-style-guide---best-practices-v2020-draft">2sxc Style Guide - Best Practices v2020 DRAFT</h1>
+
+<p>This <em>Style Guide</em> should help you create best-practice solutions with 2sxc. It has the version <strong>2017</strong> so that you can reference it as your standard, and if larger recommendation changes are made or if the standard grows, we'll create a new standard.</p>
+<p>This is the <strong>current version</strong></p>
+<h2 id="how-to-use">How to use</h2>
+<p>This style guide is built according to our role-model the <a href="https://angular.io/docs/ts/latest/guide/style-guide.html">Angular 2 style guide by John Papa</a>. This style guide presents our preferred conventions and, as importantly, explains why.</p>
+<h2 id="table-of-contents">Table Of Contents</h2>
+<ol>
+<li><a href="#general-principles">General Principles</a></li>
+<li>Solution Architecture</li>
+<li>File Structure</li>
+<li><a href="#content-types">Content Types</a></li>
+<li>Fields</li>
+<li>Using Items as Content or Data</li>
+<li>Working with Presentation and Demo-Data</li>
+<li>Templates in General</li>
+<li>Token Templates</li>
+<li>Razor Templates</li>
+<li>JavaScript Templates</li>
+<li>Querying Data</li>
+</ol>
+<h2 id="general-principles">General Principles</h2>
+<h2 id="use-visual-studio-code">Use Visual Studio Code</h2>
+<h3 id="style-0111">Style 01.11</h3>
+<pre><code class="lang-diff">+ Consider
+</code></pre>
+<ol>
+<li>use <a href="https://code.visualstudio.com/">Visual Studio Code</a> and your preferred code editor</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>it's the most agile, best aligned code-editor for modern solutions on the MS-stack</li>
+<li>it's great for editing all kinds of modern file formats incl. HTML, Razor, Markdown, etc.</li>
+<li>it's great for quickly opening a single file or an App-folder</li>
+<li>it offers full Git integration</li>
+<li>there is a <a href="https://marketplace.visualstudio.com/items?itemName=2sic.2sxc">2sxc code-snippet extension</a> for VS-Code</li>
+</ul>
+<h3 id="use-git-to-version-your-work---in-local-systems-as-well">Use Git to Version your Work - In Local Systems as Well</h3>
+<h4 id="style-2101">Style 21.01</h4>
+<pre><code class="lang-diff">+ Do
+</code></pre>
+<ol>
+<li>always initialize your solution (both <em>App</em> or <em>Content</em>) into a local git</li>
+<li>regularly commit your work into your local git</li>
+</ol>
+<pre><code class="lang-diff">+ Consider
+</code></pre>
+<ol>
+<li>publish your work to a server git, like github or your company internal git-repo</li>
+<li>adding a readme.md for everybody who is new to your system</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>if ever you want to undo something later on, you'll be glad you have older versions</li>
+<li>if ever you want to compare a deployed version with your dev-history, you'll be glad</li>
+<li>2sxc supports git and github by placing everything in files, and also exporting the database into a git-versionable XML</li>
+</ul>
+<h3 id="use-international-naming-strategy">Use International Naming Strategy</h3>
+<h4 id="style-1121">Style 11.21</h4>
+<pre><code class="lang-diff">+ Do
+</code></pre>
+<ol>
+<li>use english words for all content-types, fields, file-names, folder-names and variables</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>easier to share both code and partial solutions</li>
+<li>consistent setup, as often other languages will be added and English is the best shared language</li>
+<li>fewer problems when writing code using English variable names and english property names</li>
+<li>avoid special characters/words of other languages in code-parts</li>
+</ul>
+<h3 id="user-nice-localized-naming-for-editor-ux">User Nice, Localized Naming for Editor UX</h3>
+<h4 id="style-1122">Style 11.22</h4>
+<pre><code class="lang-diff">+ Do
+</code></pre>
+<ol>
+<li>provide localized (translated) names for everything the editor sees, to improve his user experience</li>
+<li>after creating the english-named items you can translate them into any other culture to improve the end-user experience</li>
+<li>use nice labels with spaces and more, making it easy to read</li>
+<li>apply this for all <strong>content-types</strong> in the main <em>Content</em> (as they are shown in normal drop-downs), <strong>view-names</strong> both in <em>Content</em> as well as <em>Apps</em> and <strong>field-names</strong> and <strong>help-texts</strong></li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>great editor user experience</li>
+<li>fewer editor mistakes and frustrations</li>
+</ul>
+<h2 id="solution-architecture">Solution Architecture</h2>
+<p>...to do...</p>
+<h2 id="file-and-folder-structure">File and Folder Structure</h2>
+<h3 id="lift">LIFT</h3>
+<h4 id="style-xxxx">Style xx.xx</h4>
+<pre><code class="lang-diff">+ Do
+</code></pre>
+<ol>
+<li>structure the app such that you can Locate code quickly, Identify the code at a glance, keep the Flattest structure you can, and Try to be DRY.</li>
+<li>place a nice app-icon.png file containing the app-image and place it in the main folder</li>
+<li>make sure it is square and at least 200x200, ideally 500x500px in size</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>LIFT Provides a consistent structure that scales well, is modular, and makes it easier to increase developer efficiency by finding code quickly. To confirm your intuition about a particular structure, ask: can I quickly open and start work in all of the related files for this feature?</li>
+<li>consistent with <a href="https://angular.io/docs/ts/latest/guide/style-guide.html#04-01">other style guides</a></li>
+</ul>
+<p>See also <a href="https://angular.io/docs/ts/latest/guide/style-guide.html#04-02">Locate</a>, <a href="https://angular.io/docs/ts/latest/guide/style-guide.html#04-03">Identify</a>, <a href="https://angular.io/docs/ts/latest/guide/style-guide.html#04-04">Flat</a> and <a href="https://angular.io/docs/ts/latest/guide/style-guide.html#04-05">T-DRY</a> of the Angular Style Guide.</p>
+<h3 id="provide-an-app-iconpng-in-each-app-folder">Provide an app-icon.png in each App folder</h3>
+<h4 id="style-xxxx-1">Style xx.xx</h4>
+<pre><code class="lang-diff">+ Do
+</code></pre>
+<ol>
+<li>create an icon for each app</li>
+<li>place a nice app-icon.png file containing the app-image and place it in the main folder</li>
+<li>make sure it is square and at least 200x200, ideally 500x500px in size</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>In a future version, app-choice will also show an icon. Provide one today to be sure that it will look great.</li>
+</ul>
+<h3 id="place-only-template-files-in-the-main-folder">Place only Template-Files in the Main Folder</h3>
+<h4 id="style-xxxx-2">Style xx.xx</h4>
+<pre><code class="lang-diff">+ Do
+</code></pre>
+<ol>
+<li>place all templates and sub-templates in the main folder of the <em>App</em> or the <em>Content</em></li>
+<li>place all non-template files in sub-folders</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>This provides for a maximum overview when working on solutions</li>
+<li>It ensures the developer sees all views that exist</li>
+</ul>
+<p>Note: there are a few system files which will also reside in this folder, especially the <code>app-icon.png</code>. This of course will also be in this folder.</p>
+<h3 id="use-src-and-dist-folders">Use src and dist folders</h3>
+<h4 id="style-xxxx-3">Style xx.xx</h4>
+<pre><code class="lang-diff">+ Consider
+</code></pre>
+<ol>
+<li>place all <em>original</em> assets incl. images, js, css into the <code>src</code> folder</li>
+<li>place all <em>runtime</em> files incl. copies of the images, compiled js/css into the <code>dist</code> folder</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>Modern developement uses many source files and much fewer runtime files</li>
+<li>it's a big help to keep them clearly desingnated</li>
+<li>the <code>src</code> with <code>dist</code> structure has been very established in the web and JS community</li>
+</ul>
+<h3 id="structure-the-folders-by-topiccomponent">Structure the folders by Topic/Component</h3>
+<h4 id="style-xxxx-4">Style xx.xx</h4>
+<pre><code class="lang-diff">+ Do
+</code></pre>
+<ol>
+<li>structure your folders - especially in <code>src</code> - by topic containing all files of that topic, no matter what type</li>
+<li>place different file types (js/css) belonging to the same topic into the same folder</li>
+</ol>
+<pre><code class="lang-diff">- Avoid
+</code></pre>
+<ol>
+<li>organizing your folders by data-type (js, images, etc.)</li>
+</ol>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li>consistently works both for large and simple solutions</li>
+<li>easier to maintain</li>
+<li>easier to grow into larger solutions</li>
+<li>consistent with recommendations of other style guides like the <a href="https://angular.io/docs/ts/latest/guide/style-guide.html">Angular Style-Guide</a></li>
+</ul>
+<h2 id="content-types">Content-Types</h2>
+<p>...to do...</p>
+<h3 id="use-singular-naming-for-content-types">Use Singular Naming for Content-Types</h3>
+<h4 id="style-2101-1">Style 21.01</h4>
+<pre><code class="lang-diff">+ Consider
+</code></pre>
+<ul>
+<li>Use the singular form to name a content type, so <code>BlogPost</code> instead of <code>BlogPosts</code>, <code>Tag</code> instead of <code>Tags</code></li>
+<li>The localized name can be different as your editors need it</li>
+</ul>
+<pre><code class="lang-diff">? Why
+</code></pre>
+<ul>
+<li><em>Content-Types</em> describe the type of an item, not the collection of all items. So by definition it's not the table-of-Tags but the schema-of-a-tag-item.</li>
+<li>consistency is key, and it helps to always do things the same way</li>
+</ul>
+<h2 id="fields">Fields</h2>
+<p>...to do...</p>
+<h2 id="using-items-as-content">Using Items as Content</h2>
+<p>...to do...</p>
+<h2 id="notes-and-clarifications">Notes and Clarifications</h2>
+<p>TOOD...</p>
+<h2 id="read-also">Read also</h2>
+<ul>
+<li><a class="xref" href="../../net-code/razor/purpose.html">InstancePurpose</a> - which tells you why the current code is running so you could change the data added</li>
+<li><a class="xref" href="../../net-code/razor/customizedata.html">CustomizeData</a></li>
+</ul>
+<h2 id="demo-app-and-further-links">Demo App and further links</h2>
+<p>You should find some code examples in this demo App</p>
+<ul>
+<li><a href="http://2sxc.org/en/apps/app/faq-with-categories-and-6-views">FAQ with Categories</a></li>
+</ul>
+<p>More links: <a href="http://2sxc.org/en/Docs-Manuals/Feature/feature/2683">Description of the feature on 2sxc docs</a></p>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc ??.??</li>
+<li></li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/style-guide/style-guide-2020.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

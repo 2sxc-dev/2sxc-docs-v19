@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Formulas Targets and Return Values | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Formulas Targets and Return Values | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/edit-form/formulas/targets-and-return.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="JsCode.EditForm.Formulas.TargetsReturn">
+
+<img src="../../../assets/features/formulas.svg" class="feature">
+<h1 id="formulas-targets-and-return-values">Formulas Targets and Return Values</h1>
+<div class="float-end context-box-summary highlight-max" width="400px">
+  <div class="fancybox-auto svg-highlight" style="width: 100%">
+<svg version="1.1" baseprofile="full" viewbox="0 0 3229 2529" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../../pages/basics/stack/assets/stack-detailed.png" x="0" y="0" height="100%" width="100%"></image>
+  <!-- Data Highlights -->
+  <rect class="svg-highlight prepared data-all" x="0%" y="82%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-data" x="19%" y="82%" width="64%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-all" x="3%" y="82%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared data-assets-app" x="3%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-assets-entities" x="18.5%" y="82%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-configuration" x="3%" y="93%" width="17%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared data-entities" x="34%" y="82%" width="33%" height="10.5%"></rect>
+  <rect class="svg-highlight prepared data-content-types" x="34%" y="89%" width="33%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-app" x="34%" y="89%" width="17.5%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-content-types-global" x="50%" y="89%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared data-external" x="65.5%" y="82%" width="17%" height="10.5%"></rect>
+  <!-- ADAM -->
+  <rect class="svg-highlight prepared adam" x="18.5%" y="89%" width="17%" height="8%"></rect>
+  <!-- Server -->
+  <rect class="svg-highlight prepared server-all" x="0%" y="41%" width="84%" height="38%"></rect>
+  <!-- Prepare -->
+  <rect class="svg-highlight prepared prepare-all" x="0%" y="61%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared query" x="44.5%" y="61%" width="34%" height="18%"></rect>
+  <rect class="svg-highlight prepared query-engine" x="44.5%" y="70%" width="34%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-built-in" x="44.5%" y="62.5%" width="18%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-app" x="60.5%" y="62.5%" width="17%" height="11%"></rect>
+  <rect class="svg-highlight prepared query-datasource" x="71%" y="70%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared query-params" x="65%" y="70%" width="10%" height="7%"></rect>
+  <!-- Data Source -->
+  <rect class="svg-highlight prepared datasource" x="86%" y="51%" width="13%" height="16%"></rect>
+  <rect class="svg-highlight prepared datasource-custom" x="87.5%" y="54.5%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared datasource-built-in" x="87.5%" y="59%" width="12%" height="7%"></rect>
+  <rect class="svg-highlight prepared lookup" x="86%" y="66%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared lookup-engine" x="87.5%" y="69%" width="12%" height="6%"></rect>
+  <rect class="svg-highlight prepared lookup-sources" x="87.5%" y="73%" width="12%" height="7%"></rect>
+  <!-- Optimzers -->
+  <rect class="svg-highlight prepared asset-optimizer" x="3%" y="49.5%" width="13.5%" height="8%"></rect>
+  <rect class="svg-highlight prepared image-resizer" x="15%" y="30%" width="17%" height="34%"></rect>
+  <!-- Process / Awesomize -->
+  <rect class="svg-highlight prepared process-all" x="0%" y="41%" width="84%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-cs" x="34%" y="41%" width="33%" height="18%"></rect>
+  <rect class="svg-highlight prepared process-razor" x="34.3%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-razor-app" x="34.3%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-razor-engine" x="34.3%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-apis" x="50%" y="42%" width="34%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api" x="50%" y="42%" width="17%" height="15%"></rect>
+  <rect class="svg-highlight prepared process-web-api-app" x="50%" y="42%" width="17%" height="10%"></rect>
+  <rect class="svg-highlight prepared process-web-api-engine" x="50%" y="50%" width="17%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-libraries" x="47%" y="47%" width="7%" height="7%"></rect>
+  <rect class="svg-highlight prepared process-headless" x="65.5%" y="49.5%" width="17%" height="7%"></rect>
+  <!-- Libraries -->
+  <rect class="svg-highlight prepared libraries" x="86%" y="38%" width="13%" height="15%"></rect>
+  <rect class="svg-highlight prepared libraries-app" x="87.5%" y="41%" width="12%" height="6.5%"></rect>
+  <rect class="svg-highlight prepared libraries-built-in" x="87.5%" y="46%" width="12%" height="6%"></rect>
+  <!-- data formats -->
+  <rect class="svg-highlight prepared format-json-custom" x="50%" y="32%" width="17%" height="14%"></rect>
+  <rect class="svg-highlight prepared format-json-headless" x="65.5%" y="32%" width="17%" height="21%"></rect>
+  <rect class="svg-highlight prepared format-json-edit" x="74%" y="30%" width="19%" height="23%"></rect>
+  <!-- Browser -->
+  <rect class="svg-highlight prepared browser-all" x="0%" y="0%" width="100%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-show" x="0%" y="0%" width="50%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact-edit" x="47%" y="0%" width="37%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-interact" x="47%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit" x="64%" y="0%" width="20.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared browser-edit-ui" x="81.5%" y="0%" width="18%" height="34%"></rect>
+  <!-- Frameworks -->
+  <rect class="svg-highlight prepared frameworks-browser" x="0%" y="0%" width="17.5%" height="34%"></rect>
+  <rect class="svg-highlight prepared frameworks-CSS" x="0%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-js" x="0%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared frameworks-spa" x="0%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- App show parts -->
+  <rect class="svg-highlight prepared show-html" x="15.8%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-js" x="15.8%" y="12%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared show-spa" x="15.8%" y="21%" width="17.5%" height="12%"></rect>
+  <!-- Interact parts -->
+  <rect class="svg-highlight prepared interact-mobile" x="48.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared interact-2sxc" x="48.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit parts -->
+  <rect class="svg-highlight prepared edit-auto" x="65.5%" y="3%" width="17.5%" height="12%"></rect>
+  <rect class="svg-highlight prepared edit-custom" x="65.5%" y="12%" width="17.5%" height="12%"></rect>
+  <!-- Edit UI parts -->
+  <rect class="svg-highlight prepared edit-ui" x="82.5%" y="3%" width="17.5%" height="18%"></rect>
+  <rect class="svg-highlight prepared edit-ui-custom" x="82.5%" y="20%" width="17.5%" height="12%"></rect>
+  <!-- SPA parts -->
+  <rect class="svg-highlight prepared spa-all" x="0%" y="21%" width="83%" height="12%"></rect>
+  <rect class="svg-highlight prepared spa-2sxc-js" x="31.5%" y="21%" width="52%" height="12%"></rect>
+  <!-- Custom highlight boxes - can be controlled by in-page CSS -->
+  <rect class="svg-highlight highlight1"></rect>
+  <rect class="svg-highlight highlight2"></rect>
+  <rect class="svg-highlight highlight3"></rect>
+  <rect class="svg-highlight highlight4"></rect>
+  <rect class="svg-highlight highlight5"></rect>
+</svg>
+  </div>
+  <div class="overlay-description">
+<p>you are here (click to zoom) - discover the <a class="xref" href="../../../basics/index.html">stack</a></p>
+  </div>
+</div>
+<style>
+  .context-box-summary .browser-edit-ui { visibility: visible; }
+</style>
+<p>These are additional infos about <strong>Formula Targets</strong> and cases where they need a special result, so you understand the behavior better.</p>
+<h2 id="the-target">The Target</h2>
+<p>The target key of a formula determines what your Formula will affect.
+Since <code>data.value</code> contains what would be used if your formula didn't run, then this of course will also contain the previous value of the target.
+These are the possible targets:</p>
+<ul>
+<li><code>Field.Value</code> - will get / set a value on a field</li>
+<li><code>Field.Settings</code> - will get will get/set a setting of the field. This is just the Type identifier. A full key often includes the exact setting to be addressed, like
+<ul>
+<li><code>Field.Settings.Name</code> - change the label / name / title of a field</li>
+<li><code>Field.Settings.Visible</code> - Controls the visibility of the field / group. <code>true</code> means visible</li>
+<li><code>Field.Settings.Disabled</code> - controls that the field can be interacted with or is disabled. <code>true</code> means it's blocked</li>
+<li><code>Field.Settings.Required</code> - shows if a field is required<br>
+<em>warning</em> required isn't fully implemented ATM - the form will not always reliably enforce this if it's changed dynamically
+*. <code>Field.Settings.Notes</code> to change the description / help-text (v14)</li>
+<li><code>Field.Settings._[Anything]_</code> - other Settings that can be changed, eg.
+<ul>
+<li><code>Field.Settings.Collapsed</code> on a field-group to change if it's open/closed</li>
+<li><code>Field.Settings.DropdownValues</code> on dropdown fields (new v15)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Field.Validation</code> - show errors/warnings on a field based on the input 🆕 v16</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Remember that <code>data.value</code> contains the value which is used if the formula doesn't run or doesn't return anything.</p>
+<p>If you need the value in the field/setting at form-load, use <code>data.default</code>.
+And if you are doing some prefill-magic, you can get that on <code>data.prefill</code>.</p>
+<p>👉 Read more about this is the <a class="xref" href="data.html">JS Docs</a>.</p>
+</div>
+<h2 id="field-value-formulas">Field Value Formulas</h2>
+<p>These are the most common formulas, as they are used to get/set the value of a field.
+Each field type or property may expect a different data type. Make sure you provide that.
+So if you are updating a boolean field, you should return a boolean value.</p>
+<h2 id="formulas-for-common-settings">Formulas for Common Settings</h2>
+<h3 id="fieldsettingsname---label-of-a-field"><code>Field.Settings.Name</code> - Label of a Field</h3>
+<p>This can be changed as needed.
+We recommend that you never add <code>*</code> to the name, as this is the indicator for <em>required</em> and would confuse users.</p>
+<p>On field groups we often use this to add emojis such as ✅ or ❌ to indicate if the fields inside are what is needed.</p>
+<p>Expected type: <code>string</code></p>
+<h3 id="fieldsettingsvisible---showhide-a-field"><code>Field.Settings.Visible</code> - Show/Hide a Field</h3>
+<p>Shows/hides a field or a group of fields.
+When you set this on a group, it applies to all properties in the group.
+So hiding a group hides all fields inside it, showing it shows all fields inside it.</p>
+<p>Expected type: <code>boolean</code></p>
+<h3 id="fieldsettingsdisabled---enabledisable-a-field"><code>Field.Settings.Disabled</code> - Enable/Disable a Field</h3>
+<p>If you return <code>true</code> to set <code>Disabled=true</code> it will disable the UI. Of course if the field is already not visible, the user won't see this.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Even if you set <code>Disabled=false</code> other rules may override this. For example, if the field may not be translated and you're on a secondary language, it will still remain disabled.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Disabling a group will not disable all the fields in it. We may consider implementing this some day, but as of now it won't happen, so you'll need to disable each field if this is what you need.</p>
+</div>
+<p>Expected type: <code>boolean</code></p>
+<h3 id="fieldsettingsrequired---mark-field-as-required"><code>Field.Settings.Required</code> - Mark Field as Required</h3>
+<p>This determines if the Field is required.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Changing the required changes the <code>*</code> indicator on the UI, but as of v12.01 it doesn't yet affect the validity checks in the form.
+This is an important limitation to be aware of.</p>
+</div>
+<p>Expected type: <code>boolean</code></p>
+<h2 id="formulas-for-special-settings">Formulas for Special Settings</h2>
+<h3 id="fieldsettingscollapsed---for-groups"><code>Field.Settings.Collapsed</code> - for Groups</h3>
+<p>This is a setting which only would affect group fields.
+Setting <code>Collapsed</code> to <code>true</code> collapses the group, to <code>false</code> opens it.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Remember that <code>data.default</code> will always give you the initial state of this setting.</p>
+</div>
+<p>Expected type: <code>boolean</code></p>
+<h3 id="fieldsettingsdropdownvalues---for-dropdowns"><code>Field.Settings.DropdownValues</code> - for DropDowns</h3>
+<h3 id="fieldsettingsanything"><code>Field.Settings.</code><em>[Anything]</em></h3>
+<p>Since many controls can have other settings these can be controlled by formulas as well.</p>
+<p><em>Important</em> We haven't tried every setting and some may not have the expected result, since the form has never been this dynamic before.
+We'll work on fixing issues as we hear about them.</p>
+<h2 id="formulas-for-validation">Formulas for Validation</h2>
+<h3 id="fieldvalidation---show-errorswarnings"><code>Field.Validation</code> - Show Errors/Warnings</h3>
+<p>This is a special kind of formula as it only affects the hints below the input field.
+Best check out the tutorials to see it in action.</p>
+<p>Expected type: json object</p>
+<pre><code class="lang-js">{
+  severity: 'warning',
+  message: 'please use lower case only',
+}
+</code></pre>
+<hr>
+<h2 id="history">History</h2>
+<ul>
+<li>Introduced in 2sxc 12.01</li>
+<li>Dramatically enhanced with v2 in 2sxc 16.00</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/js-code/edit-form/formulas/targets-and-return.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

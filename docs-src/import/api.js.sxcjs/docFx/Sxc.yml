@@ -1,0 +1,177 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.Sxc
+    name: Sxc
+    fullName: Sxc
+    children:
+      - Api.Js.SxcJs.Sxc.cbid
+      - Api.Js.SxcJs.Sxc.cms
+      - Api.Js.SxcJs.Sxc.data
+      - Api.Js.SxcJs.Sxc.id
+      - Api.Js.SxcJs.Sxc.isEditMode
+      - Api.Js.SxcJs.Sxc.query
+      - Api.Js.SxcJs.Sxc.webApi
+    langs:
+      - typeScript
+    type: class
+    summary: The typical sxc-instance object for a specific DNN module or content-block
+    extends:
+      name: Api.Js.SxcJs.HasLog
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.Sxc.cbid
+    name: cbid
+    fullName: cbid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      content-block ID, which is either the module ID, or the content-block
+      definition entity ID
+
+      this is an advanced concept you usually don't care about, otherwise you
+      should research it
+    syntax:
+      content: 'cbid: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.Sxc.cms
+    name: cms
+    fullName: cms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'CMS operations on this sxc-instance, such as opening the edit dialog etc.'
+    syntax:
+      content: 'cms: SxcCms'
+      return:
+        type:
+          - Api.Js.SxcJs.SxcCms
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.Sxc.data
+    name: data(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a data service for a specific content-type.
+    syntax:
+      content: 'function data<T>(contentType: string)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - Api.Js.SxcJs.SxcData<T>
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.Sxc.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'the sxc-instance ID, which is usually the DNN Module Id'
+    syntax:
+      content: 'id: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.Sxc.isEditMode
+    name: isEditMode()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Test if the current code is in edit-mode and additional javascripts have
+      been loaded to make it work
+    syntax:
+      content: function isEditMode()
+      parameters: []
+      return:
+        type:
+          - boolean
+        description: true if we are in edit-mode
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.Sxc.query
+    name: query(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function query(query: string)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - Api.Js.SxcJs.SxcQuery
+        description: ''
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.Sxc.webApi
+    name: webApi
+    fullName: webApi
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Web API calls for this instance.
+      This is the pure call APIs system.
+      To get data or queries, best use the data or query services.
+    syntax:
+      content: 'webApi: SxcWebApi'
+      return:
+        type:
+          - Api.Js.SxcJs.SxcWebApi
+        description: ''
+    package: Api.Js.SxcJs
+references:
+  - uid: Api.Js.SxcJs.HasLog
+    name: HasLog
+    spec.typeScript:
+      - name: HasLog
+        fullName: HasLog
+        uid: Api.Js.SxcJs.HasLog
+  - uid: Api.Js.SxcJs.SxcCms
+    name: SxcCms
+    spec.typeScript:
+      - name: SxcCms
+        fullName: SxcCms
+        uid: Api.Js.SxcJs.SxcCms
+  - uid: Api.Js.SxcJs.SxcWebApi
+    name: SxcWebApi
+    spec.typeScript:
+      - name: SxcWebApi
+        fullName: SxcWebApi
+        uid: Api.Js.SxcJs.SxcWebApi
+  - uid: Api.Js.SxcJs.SxcData<T>
+    name: SxcData<T>
+    spec.typeScript:
+      - name: SxcData
+        fullName: SxcData
+        uid: Api.Js.SxcJs.SxcData
+      - name: <T>
+        fullName: <T>
+  - uid: Api.Js.SxcJs.SxcQuery
+    name: SxcQuery
+    spec.typeScript:
+      - name: SxcQuery
+        fullName: SxcQuery
+        uid: Api.Js.SxcJs.SxcQuery

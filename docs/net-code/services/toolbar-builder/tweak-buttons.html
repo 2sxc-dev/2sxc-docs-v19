@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Toolbar Builder Guide – Tweak API for Buttons new 15.07 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Toolbar Builder Guide – Tweak API for Buttons new 15.07 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/services/toolbar-builder/tweak-buttons.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ToSic.Sxc.Services.ToolbarBuilder.TweakButtons">
+
+<img src="../../../assets/features/toolbar.svg" class="feature">
+<h1 id="toolbar-builder-guide--tweak-api-for-buttons-new-1507">Toolbar Builder Guide – Tweak API for Buttons <em>new 15.07</em></h1>
+<p>Buttons can be tweaked to change their look and behavior.</p>
+<p>Previously, this was done using parameters such as <code>ui</code>, <code>parameters</code>, <code>prefill</code> etc.
+Now, you can use the <code>tweak</code> API to do the same thing.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Using the <code>tweak</code> API is the recommended way to tweak buttons.
+It gives you compile time checking so it's less error-prone.</p>
+</div>
+<h2 id="example">Example</h2>
+<pre><code class="lang-c#">// Old way without tweak
+Kit.Toolbar.Default().Add(ui: &quot;color=green&quot;, parameters: new { app = 2, zone = 3 });
+
+// New way with tweak - one example
+Kit.Toolbar.Default().Add(tweak: b =&gt; b.Color(&quot;green&quot;).Parameters(new { app = 2, zone = 3 }));
+// Or another example
+Kit.Toolbar.Default().Add(tweak: b =&gt; b.Color(&quot;green&quot;).Parameters(&quot;app&quot;, 2).Parameters(&quot;zone&quot;, 3));
+</code></pre>
+<h2 id="how-it-works">How it Works</h2>
+<p>Almost every command on the <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Edit.Toolbar.IToolbarBuilder.html">IToolbarBuilder</a> has a <code>tweak</code> parameter.
+This parameter is a function which takes a <a class="xref" href="../../../api/dot-net/ToSic.Sxc.Edit.Toolbar.ITweakButton.html">ITweakButton</a> and returns a new one.
+The <code>ITweakButton</code> itself has a <a class="xref" href="../../conventions/functional-api/index.html">functional API</a> which allows you to chain multiple tweaks.</p>
+<p>This means when you do this:</p>
+<pre><code class="lang-c#">Kit.Toolbar.Default().Add(tweak: b =&gt; b.Color(&quot;green&quot;).Parameters(&quot;id&quot;, 93030)));
+</code></pre>
+<p>...it says</p>
+<ol>
+<li>Take the button <code>b</code></li>
+<li>Set the color to green</li>
+<li>Add the parameter <code>id</code> with the value <code>93030</code></li>
+</ol>
+<p>Each command returns a fresh <code>ITweakButton</code> with the changes applied using the <a class="xref" href="../../conventions/immutable/index.html">immutable</a> pattern.
+So the final result is returned by the function and used by the toolbar builder.</p>
+<h2 id="why-a-new-api">Why a New API?</h2>
+<p>The new method achieves the same purpose as the old, and the old way will continue to work indefinitely.</p>
+<p>But the advantages of the new API are:</p>
+<ol>
+<li>It's easier to document so it's also easier to discover the possibilities you have</li>
+<li>It's easier to use because it's more type-safe and less error-prone</li>
+<li>It's easier to extend - for example with the new <code>note</code> feature added in v15.07</li>
+<li>It's safer, for example the API will remove <code>#</code> characters in colors, which would otherwise cause problems</li>
+</ol>
+<h2 id="api-docs">API Docs</h2>
+<ul>
+<li><a class="xref" href="../../../api/dot-net/ToSic.Sxc.Edit.Toolbar.ITweakButton.html">Tweak API</a></li>
+<li>See also the JS <a class="xref" href="../../../js-code/toolbars/simple.html">toolbar docs</a></li>
+</ul>
+<h2 id="important-to-know">Important to Know</h2>
+<ul>
+<li>You cannot mix the tweak API with the previous parameters.<br>
+So if you use tweak on a button, you cannot also use <code>ui</code> or <code>parameters</code> etc.</li>
+<li>The tweak API is a fluid API, so you can chain multiple tweaks together.</li>
+<li>The tweak API is <a class="xref" href="../../conventions/immutable/index.html">immutable</a>, so every step returns a new object.</li>
+<li>The tweak API is <a class="xref" href="../../conventions/functional-api/index.html">functional</a>.</li>
+</ul>
+<h2 id="issues--challenges">Issues / Challenges</h2>
+<p>The tweak API uses <em>lambda expressions</em>.
+This can cause problems with <code>dynamic</code> objects which are very common in Razor.
+If you don't know about <code>dynamic</code>s you should briefly google it.</p>
+<p>Basically the following code will cause issues:</p>
+<pre><code class="lang-c#">// Note that Content is a dynamic object
+Kit.Toolbar.Default(Content).New(tweak: b =&gt; b.Color(&quot;pink,black&quot;))
+</code></pre>
+<p>This will result in a message like this:</p>
+<pre><code class="lang-text">...error CS1978: Cannot use an expression of type 'lambda expression' as an argument to a dynamically dispatched operation at...
+</code></pre>
+<img src="../../../pages/net-code/services/toolbar-builder/assets/tweak-error-lambda-after-dynamic.jpg" width="40%" align="right">
+<p>This means: because the initial part <code>Kit.Toolbar.Default(Content)</code> contains a dynamic parameter (<code>Content</code>),
+the compiler treats what comes after that as dynamic as well.
+So the following <code>.New(...)</code> is also treated as dynamic.
+This is usually not a problem, but the compiler will complain that the inner lambda
+<code>b =&gt; b.Color(&quot;pink,black&quot;)</code> can't be reliably compiled, since it could be anything.</p>
+<p>For now, the best workaround is to do one of the following:</p>
+<ul>
+<li>Tell the compiler that <code>Content</code> is an <code>object</code><br>
+<code>Kit.Toolbar.Default(Content as object).New(tweak: b =&gt; b.Color(&quot;pink,black&quot;))</code></li>
+<li>Place the dynamic parameter at the end<br>
+<code>Kit.Toolbar.Default().New(tweak: b =&gt; b.Color(&quot;pink,black&quot;)).For(Content)</code></li>
+</ul>
+<p>This is not ideal, and we're striving for improvements in future releases.</p>
+<hr>
+<p>History</p>
+<ol>
+<li>Added in v15.07</li>
+</ol>
+<p>ShortLink: <a href="https://go.2sxc.org/tweak-buttons">https://go.2sxc.org/tweak-buttons</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/services/toolbar-builder/tweak-buttons.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Content-Type (Schema/Object-Type) | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Content-Type (Schema/Object-Type) | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/content-types/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Basics.Data.ContentTypes.Index">
+<h1 id="content-type-schemaobject-type">Content-Type (Schema/Object-Type)</h1>
+
+<div class="overlay-container">
+  <div class="overlay-box" style="left: 28.5%; top: 46%; height: 45%; width: 47.5%"></div>
+  <img src="../../../pages/basics/data/assets/app-data.png" class="full-width">
+</div>
+
+<p>This explains <strong>Content-Types</strong>. For an overview check out <a class="xref" href="../index.html">Understanding Data...</a>.</p>
+<h2 id="what-is-a-content-type">What is a Content-Type?</h2>
+<p>Every <a class="xref" href="../entities/index.html">Entity</a> (<em>thing</em>, <em>record</em> or <em>object</em>) in 2sxc has a definition of fields it can have. So a <code>Book</code> may have fields like Name, Author, Title etc.
+The Content-Type will define what fields exist, what is required and what order the fields will appear in when editing the item.</p>
+<blockquote>
+<p>This definition of the <em>Type</em> is called a <strong>Content-Type</strong> and it contains specs as to the exact fields are used and what their field-types are.</p>
+<p>Other systems may call this <em>Schema</em>, <em>Object-Type</em>, <em>Object-Structure</em> or <em>Table Definition</em></p>
+</blockquote>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Before you start: Remember that you usually don't need this if you are creating Razor templates
+or WebApi - for that, you want to read <a class="xref" href="../../../net-code/dynamic-data/dynamic-entity.html">Dynamic Entity Objects</a>.</p>
+</div>
+<h2 id="where-are-content-types">Where are Content-Types</h2>
+<ul>
+<li><a class="xref" href="range-app.html">App Content-Types</a> - this is the default, these Types are part of an App</li>
+<li><a class="xref" href="range-app-shared.html">App Shared Content-Types</a> - for advanced use cases</li>
+<li><a class="xref" href="range-global-system.html">System Content-Types</a> - included in the default installation</li>
+<li><a class="xref" href="range-global.html">Global Shared Content-Types</a> - for very advanced use cases</li>
+</ul>
+<h2 id="whats-defined-in-a-content-type">What's Defined in a Content-Type?</h2>
+<p><strong>Content-Types</strong> are a configuration which contains:</p>
+<ol>
+<li>The list of fields the Content-Type has with the technical name, like <code>ProfilePhoto</code></li>
+<li>Edit-UI information for the edit form
+<ol>
+<li>The order of the fields should be shown in when editing</li>
+<li>A user friendly name like <code>Profile Photo</code> and editing help texts like <code>This should only contain head &amp; shoulders</code></li>
+<li>The <strong>Input-Type</strong> which the UI should show, like <code>Hyperlink</code> (which means that it's a link or file)</li>
+<li><strong>Input-Type</strong> configuration, for example <code>AllowUpload</code> etc.</li>
+</ol>
+</li>
+<li>Optionally some of the Edit-UI information in more languages like <code>Profilbild</code> in German</li>
+<li>Optionally permission information like <em>May be used in Mobile Apps for read-only</em></li>
+</ol>
+<h2 id="nice-to-know-edit-content-types">Nice to Know: Edit Content-Types</h2>
+<ol>
+<li>Content-Types are configured in the App-Management UIs</li>
+<li>You can create new Content-Types at any time</li>
+<li>You can rename a Content-Type at any time
+<ol>
+<li>If you change the display-name (like <code>Blog Post</code> to <code>Blog Entry</code>) then your code doesn't need changes.</li>
+<li>If you change the technical name (<code>BlogPost</code> to <code>BlogEntry</code>) then your code needs to be updated</li>
+</ol>
+</li>
+<li>You can delete Content-Types at any time<br>
+When you delete a Content-Type, all Entities/Items of that type are deleted</li>
+<li>Content-Types have additional descriptions and help-texts which are shown in the Edit-UI</li>
+<li>Content-Types can also have an icon, but that's only used in <a class="xref" href="../../content/index.html">Content Mode</a></li>
+</ol>
+<h2 id="nice-to-know-edit-fields-of-a-content-type">Nice to Know: Edit Fields of a Content-Type</h2>
+<ol>
+<li>You can always create new fields on a Content-Type<br>
+When you add new fields, then existing data will have that field, but no values on these fields</li>
+<li>You can always delete existing fields on a Content-Type<br>
+When you remove fields, existing data will lose those values</li>
+<li>You can always rename fields of a Content-Type
+<ol>
+<li>When you change the display name of a field (like <code>Persons Photo</code> to <code>Profile Picture</code>) the technical field name doesn't change, so your code doesn't need modification.</li>
+<li>If you change the technical field name (like <code>ProfilePic</code> to <code>ProfilePhoto</code>) the code must be updated</li>
+</ol>
+</li>
+</ol>
+<h2 id="nice-to-know-export--import-content-type-definition">Nice to Know: Export / Import Content-Type Definition</h2>
+<ol>
+<li>You can export a Content-Type into a JSON format</li>
+<li>You can import the Content-Type into another App using upload or drag-n-drop</li>
+</ol>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Exporting the <em>Content Type Definition</em> exports the schema / fields of that type.</p>
+<p>Exporting all the <em>Items of a Content-Type</em> is a table-export of all the data.</p>
+</div>
+<hr>
+<h2 id="content-type---more-information">Content-Type - More Information</h2>
+<h4 id="identity-of-a-content-type-name-and-staticname">Identity of a Content Type: Name and StaticName</h4>
+<p>Each content-type has a <em>Name</em>, which is nice for a human to read, use and program with. There is a second identifier called <em>StaticName</em> which is usually a GUID, but in rare cases it's a string like <code>App-Settings</code>. This identifier is used internally - for example when a View references a Content-Type.</p>
+<h4 id="storage">Storage</h4>
+<p>Most Content-Types in your App are stored in the <a class="xref" href="specs/sql-storage.html">SQL database</a>.
+System and global Content-Types are stored in the file system. These are called <a class="xref" href="specs/file-storage.html">File-Stored Content-Types</a></p>
+<h4 id="field-types">Field Types</h4>
+<p>Each field will be of a simple type like <em>text/string</em>, <em>number</em>, <em>boolean (yes/no)</em> or other. You can find the list of <a class="xref" href="../fields/index.html">types here</a>.</p>
+<h4 id="relationships">Relationships</h4>
+<p>Fields can also be of type <a class="xref" href="../fields/entity.html">Entity</a> in which case they point to other items. This would then establish a <a class="xref" href="../relationships/index.html">Relationship</a></p>
+<h4 id="input-forms-and-fields-like-wysiwyg">Input Forms and Fields (like WYSIWYG)</h4>
+<p>The input mask is automatically generated from the <strong>Content-Type</strong>. Based on the specifications, it will generate the correct <a class="xref" href="../fields/index.html">Input-Field</a> like a simple text field, a multiline text field, a WYSIWYG or even a file-uploader.</p>
+<h4 id="scopes">Scopes</h4>
+<p>Content-Types have a <em>Scope</em>. Read about it <a class="xref" href="scopes.html">Content-Type Scopes</a></p>
+<h2 id="apis">APIs</h2>
+<ul>
+<li><a class="xref" href="../../../api/dot-net/ToSic.Eav.Data.html">ToSic.Eav.Data</a> Namespace has almost everything you see here</li>
+<li><a class="xref" href="../../../api/dot-net/ToSic.Eav.Data.IContentType.html">IContentType</a> defines what fields exist, it's the ContentType / Schema</li>
+<li><a class="xref" href="../../../api/dot-net/ToSic.Eav.Data.IContentTypeAttribute.html">IContentTypeAttribute</a>
+contains the definition of an attribute</li>
+<li><a href="xref:ToSic.Eav.Data.ContentTypeMetadata"></a>, <a class="xref" href="../../../api/dot-net/ToSic.Eav.Metadata.IMetadataOf.html">IMetadataOf</a><br>
+contains information about the content-type (like nicer descriptions).
+This is also used for the Attribute-Metadata</li>
+</ul>
+<h2 id="history">History</h2>
+<ol>
+<li>Introduced in 2sxc 1.0</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/basics/data/content-types/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

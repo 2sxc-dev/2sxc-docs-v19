@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Razor Templates - Code-Behind | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Razor Templates - Code-Behind | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/code-behind.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.Razor.CodeBehind">
+<h1 id="razor-templates---code-behind">Razor Templates - Code-Behind</h1>
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>The code-behind feature has been deprecated but will continue to work for older code.
+So it will only work if you inherit from <code>ToSic.Sxc.Dnn.RazorComponent</code>.</p>
+<p>If you use any of the newer v12 or v14 base classes,
+you should either use <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/code-reuse-intro">shared C#</a>
+or partial views using <code>@Html.Partial(&quot;_something.cshtml&quot;)</code>.</p>
+</div>
+<p>2sxc 11 introduces a new way to split out most of the C# code from the main template Razor file. We call this code-behind. Best watch the video to get the idea.</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/wIa23gy26js" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>You can also see a <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/code-reuse-intro">live demo in the Dnn Tutorials</a>.</p>
+<div style="background: #0088F444; overflow: auto">
+  <img src="../../shared/tutorials/assets/razor.png" width="200px" style="padding-right: 20px; float: left">
+  <div style="font-size: x-large;font-weight: bold; margin-bottom: 20px;">
+    Discover More in the Razor Tutorials
+  </div>
+<p>We have an rich series of <a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor">Razor tutorials</a>. You should really check them out 👍.</p>
+</div>
+<br>
+<h2 id="how-code-behind-works">How Code Behind Works</h2>
+<p>Just create another file with the identical name as your main Razor file, but with <code>.code.cshtml</code> as the extension. So you'll then have something like:</p>
+<ul>
+<li><code>_My Message.cshtml</code> (the Razor file)<br>
+Inherits <code>ToSic.Sxc.Dnn.RazorComponent</code></li>
+<li><code>_My Message.code.cshtml</code> (the new code )<br>
+The <em>code</em> file looks just like a normal razor file.<br>
+Must inherit from <code>ToSic.Sxc.Dnn.RazorComponentCode</code>.</li>
+</ul>
+<p>Here's an example of such a <code>_My Message.code.cshtml</code>:</p>
+<pre><code class="lang-razor">@inherits ToSic.Sxc.Dnn.RazorComponentCode
+
+@functions {
+  public string Hello() {
+    return &quot;Hello from inner code&quot;;
+  }
+}
+
+@helper ShowDiv(string message) {
+  &lt;div&gt;@message&lt;/div&gt;
+}
+
+@helper AppName() {
+  &lt;div&gt;App Name is: @App.Name&lt;/div&gt;
+}
+</code></pre>
+<p>This is automatically compiled for you and provided to the <code>_My Message.cshtml</code> on the object <code>Code</code> so you can write this code:</p>
+<pre><code class="lang-razor">@inherits ToSic.Sxc.Dnn.RazorComponent
+
+&lt;h1&gt;Demo Code Use&lt;/h1&gt;
+
+&lt;div @Edit.TagToolbar(Content)&gt;
+    Something in it: @Code.Hello()
+&lt;/div&gt;
+
+@Code.ShowDiv(&quot;test helper!&quot;)
+</code></pre>
+<p>That's all there is to it 😉</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p><em>Why would you do this?</em><br>
+The main reason is to keep template-html separate from most of the code.
+This is common when designers like to modify the html but don't like all that programming stuff.</p>
+</div>
+<h2 id="events-on-code-behind-files">Events on Code Behind Files</h2>
+<p>The code-behind also has same methods/events which are automatically called. These methods can be overriden</p>
+<ol>
+<li><code>CustomizeData()</code><br>
+This has the same effect as overriding CustomizeData in the template file</li>
+<li><code>CustomizeSearch(Dictionary&lt;string, List&lt;ISearchItem&gt;&gt; searchInfos, IContainer moduleInfo, DateTime beginDate)</code><br>
+This has the same effect as overriding CustomizeSearch in the template file</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p><em>Why would you use this?</em><br>
+These methods could always be created in the main Razor file, but it looks daunting to have so much code there.</p>
+<p>A typical <code>CustomizeSearch</code> is very technical and feels scary to people who just want to change the look and feel.</p>
+</div>
+<h2 id="important-passing-around-anonymous-objects">Important: Passing Around Anonymous Objects</h2>
+<p>One of the advanced things you may want to do is have helper functions looking up multiple things, and returning a complex object like this example in the code-behind:</p>
+<pre><code class="lang-razor">@inherits ToSic.Sxc.Dnn.RazorComponentCode
+
+@functions {
+  public dynamic Hello() {
+    return new { Title = &quot;title&quot;, Message = &quot;msg&quot;};
+  }
+}
+</code></pre>
+<p>Which is used like this</p>
+<pre><code class="lang-razor">@inherits ToSic.Sxc.Dnn.RazorComponent
+
+&lt;h1&gt;Demo Code Use&lt;/h1&gt;
+
+&lt;div @Edit.TagToolbar(Content)&gt;
+  @{
+    var hello = Code.Hello();
+  }
+    Something in it: @hello.Title &lt;br&gt;
+&lt;/div&gt;
+</code></pre>
+<p>This works and is no big deal, but there are known cases where this breaks, usually with a message like somehing not found on <code>object</code>. The reason is bugs in the .net caching of compiled code, specifically if methods exists in various places with the same name. You can resolve this in 3 ways</p>
+<ol>
+<li>Restart iis (uncool)</li>
+<li>Rename the method (ok, bun not sexy)</li>
+<li>Return a typed object instead of untyped (recommended).<br>
+In the above example, change to this:</li>
+</ol>
+<pre><code class="lang-razor">@inherits ToSic.Sxc.Dnn.RazorComponentCode
+
+@functions {
+  public class TitleAndMessage {
+    public string Title;
+    public string Message;
+  }
+  public dynamic Hello() {
+    return new TitleAndMessage { Title = &quot;title&quot;, Message = &quot;msg&quot;};
+  }
+}
+</code></pre>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>Code-Behind Introduced in 2sxc 11.0</li>
+<li>Code-Behind deprecated in 2sxc 12 because it's not compatible with Oqtane</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/razor/code-behind.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

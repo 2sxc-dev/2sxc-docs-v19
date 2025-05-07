@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+  - uid: Api.Js.SxcJs.WorkflowPhases
+    name: WorkflowPhases
+    fullName: WorkflowPhases
+    children:
+      - Api.Js.SxcJs.WorkflowPhases.after
+      - Api.Js.SxcJs.WorkflowPhases.all
+      - Api.Js.SxcJs.WorkflowPhases.before
+    langs:
+      - typeScript
+    type: enum
+    summary: Phases / events of a specific workflow.
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowPhases.after
+    name: after
+    children: []
+    langs:
+      - typeScript
+    summary: Run after a specific event / command
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowPhases.all
+    name: all
+    children: []
+    langs:
+      - typeScript
+    summary: Run at every phase - before and after events/commands
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs
+  - uid: Api.Js.SxcJs.WorkflowPhases.before
+    name: before
+    children: []
+    langs:
+      - typeScript
+    summary: Run before a specific event / command
+    type: field
+    numericValue: null
+    package: Api.Js.SxcJs

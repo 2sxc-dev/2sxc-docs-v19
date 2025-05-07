@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>All Changes in EAV and 2sxc v14 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="All Changes in EAV and 2sxc v14 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v14/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Releases.History.V14">
+<h1 id="all-changes-in-eav-and-2sxc-v14">All Changes in EAV and 2sxc v14</h1>
+
+<h2 id="breaking-changes-in-eav-and-2sxc-v14">Breaking Changes in EAV and 2sxc v14</h2>
+<p>We try to minimize breaking changes, and most breaking changes won't affect your work, because it's internal API.
+We're documenting it here to ensure you know what happened, in case you still run into this.</p>
+<h3 id="summary">Summary</h3>
+<p>V14 did some clean-up of internal APIs, but otherwise there are no known breaking changes.</p>
+<p>Note that these changes could be seen as a breaking change for certain users:</p>
+<ol>
+<li><a class="xref" href="change-in-app-zip-package.html">Change in App Zip Package in v14.08</a> <em>v14.08</em></li>
+<li><a class="xref" href="change-in-app-data-folder.html">Change in App Data Folder in v14.08</a> <em>v14.08</em></li>
+</ol>
+<h2 id="all-changes-v14">All Changes V14</h2>
+<h3 id="1400---140705-2022-q2--2022-q3">14.00 - 14.07.05 (2022-Q2 &amp; 2022-Q3)</h3>
+<p>Q2</p>
+<ol>
+<li>✅ Image-Service/Picture</li>
+<li>✅ Image primary area / corner selector</li>
+<li>✅ Patron features with licensing &amp; payment system</li>
+<li>✅ LightSpeed cache</li>
+<li>✅ v14 Release</li>
+<li>✅ DNN 9.6.1 only</li>
+<li>✅ Formula Boost with many new features #1</li>
+<li>✅ DNN DI integration</li>
+<li>✅ Update turnOn to 0.1.2</li>
+<li>✅ CSP for the site (DNN only ATM)</li>
+<li>✅ Formula Boost #2 (more context info, features-infos, etc.)</li>
+<li>✅ NPM Types updated to latest release</li>
+<li>✅ Enterprise Features which will be availabe for bigger sponsors</li>
+<li>✅ Patron-System, where sponsors of 2sxc get some extra features</li>
+<li>✅ Standardize how to integrate into other systems (non-Dnn/Oqtane)</li>
+<li>✅ Service Kits</li>
+<li>✅ Deprecation System</li>
+<li>✅ Toolbar Services v1</li>
+<li>✅ JS Docs updated to the latest version and auto-generated</li>
+<li>✅ Tutorials Formulas</li>
+<li>✅ Update all Apps to the lastest/greatest conventions</li>
+<li>✅ v14 LTS</li>
+</ol>
+<p>Q3</p>
+<ol>
+<li>✅ Toolbars Service Improvements
+<ol>
+<li>✅ icon-metadata</li>
+<li>✅ group C# API - ToolbarBuilder now has <code>Group</code> command</li>
+<li>✅ SVG icons - Toolbar Buttons can now use SVGs for icons (usually base64 encoded)</li>
+<li>✅ base64</li>
+<li>✅ ui multiple params</li>
+<li>✅ bugfixes</li>
+<li>✅ params multiple params</li>
+<li>✅ array params</li>
+</ol>
+</li>
+<li>✅ Debug-logging on Oqtane client side code, bugfixing ca. 0.5d</li>
+<li>✅ Change storage of <code>app.xml</code> to <code>App_Data</code>, change how import works and enable import-from-folder/git</li>
+<li>✅ Clean up JS code, latest webpack, packages etc. ca. 1d</li>
+<li>✅ Infrastructure for automated testing of JS - ca. 5d</li>
+<li>Apps / App Maintenance
+<ol>
+<li>✅ Update most apps which used ephemeral variables for formulas to just use parameters (new in v14) ca. 0.5d</li>
+<li>✅ new Timeline Apps</li>
+<li>✅ new Files App</li>
+<li>✅ new Jobs</li>
+<li>✅ Make many Apps backwards compatible with Bootstrap 3 for a big customer</li>
+<li>✅ Have the core apps tested &amp; optimized for WCAG for a government customer</li>
+</ol>
+</li>
+<li>✅ Re-release sxc-angular</li>
+<li>✅ Remove dependency on SharpZipLib</li>
+</ol>
+<!-- ### 14.07.05
+
+* ToolbarBuilder now has `Group` command
+* Toolbar Buttons can now use SVGs for icons (usually base64 encoded)
+* ... -->
+<h2 id="1409---1412-2022-10">14.09 - 14.12 (2022-10)</h2>
+<ol>
+<li>✅ Improve UI/Flow of system registration (ATM still confusing)</li>
+<li>✅ Make sure edit-ui doesn't need material fonts from CDN for icons</li>
+<li>✅ Create a new <code>app.json</code> configuration file for 2sxc apps to tune how export/import works</li>
+<li>✅ Remove Newtonsoft JSON and migrate to System.Text.Json</li>
+<li>✅ Improve handling of app-metadata (resources, settings)</li>
+<li>✅ Enable init and import completely new app directly from folder/git copy 1d SDV</li>
+<li>✅ Ability to sync Apps through git including the Assets and ADAM</li>
+<li>✅ Improve handing feature details to edit-ui</li>
+<li>Data Sources
+<ol>
+<li>New data source <code>Users</code></li>
+<li>New data source <code>Roles</code></li>
+</ol>
+</li>
+<li>✅ Update Imageflow to latest version</li>
+<li>✅ Remove dependency on Newtonsoft - only use System.Text.Json</li>
+<li>✅ Create <a href="https://schemas.2sxc.org">https://schemas.2sxc.org</a> for json schemas</li>
+<li>✅ Create JSON Schemas for image recipe and app.json</li>
+<li>✅ More formula tutorials how to call a WebAPI</li>
+<li>✅ Security update System.Data.SqlClient</li>
+<li>✅ Oqtane 2shine Theme release</li>
+<li>✅ cre8magic v0.0.1 released</li>
+</ol>
+<h3 id="141200---141203-lts-november-2022">14.12.00 - 14.12.03 LTS (November 2022)</h3>
+<ol>
+<li>✅ Publish <a href="https://blazor-cms.org/">blazor-cms.org</a>
+<ol>
+<li>✅ get a great page speed - 95%+</li>
+<li>✅ Get blazor-cms.org to index really well in google</li>
+</ol>
+</li>
+<li>✅ v14 LTS #2 ca. v14.12 🚀</li>
+</ol>
+<h2 id="important-changes">Important Changes</h2>
+<ol>
+<li><a class="xref" href="issue-assembly-binding.html">Assembly Binding Issue on Installs from 2sxc 13.04 to 14.02</a></li>
+<li><a class="xref" href="change-in-app-zip-package.html">Change in App Zip Package in v14.08</a> <em>v14.08</em></li>
+<li><a class="xref" href="change-in-app-data-folder.html">Change in App Data Folder in v14.08</a> <em>v14.08</em></li>
+<li><a class="xref" href="export-exclude-in-app-json.html">New app.json with Export Exclude</a> <em>v14.09</em></li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v14/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

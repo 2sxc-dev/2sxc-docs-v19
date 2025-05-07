@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Breaking Changes in EAV and 2sxc v17 | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Breaking Changes in EAV and 2sxc v17 | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v17/breaking.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Abyss.Releases.History.V17.Breaking">
+<h1 id="breaking-changes-in-eav-and-2sxc-v17">Breaking Changes in EAV and 2sxc v17</h1>
+
+<h2 id="breaking-changes-in-eav-and-2sxc-v17">Breaking Changes in EAV and 2sxc v17</h2>
+<p>We try to minimize breaking changes, and most breaking changes won't affect your work, because it's internal API.
+We're documenting it here to ensure you know what happened, in case you still run into this.</p>
+<h3 id="summary">Summary</h3>
+<p>Minor breaking changes which probably won't affect you, unless you're using some very advanced features.</p>
+<h4 id="v1700">v17.00</h4>
+<ol>
+<li><code>ToSic.Eav.App.AppData</code> is renamed to <code>ToSic.Eav.Apps.DataSources.AppDataWithCrud</code></li>
+<li>In Typed mode, the <code>App.Data</code> now has a different interface <code>ToSic.Sxc.Apps.IAppDataTyped</code></li>
+<li><code>AppState</code> changes...</li>
+<li><code>App</code> object had a hidden <code>AppState</code> property which was never documented and is now removed.<br>
+If you were using it, then probably to access <code>GetContentType(string)</code>. You can find a replacement on <code>App.Data.GetContentType(...)</code>.</li>
+</ol>
+<hr>
+<p>Shortlink: <a href="https://go.2sxc.org/brc-17">https://go.2sxc.org/brc-17</a></p>
+<h2 id="planned-removals-for-2sxc-v17">Planned Removals for 2sxc v17</h2>
+<p>For 2sxc 17 we plan to remove some very old APIs.
+The process is as follows:</p>
+<ol>
+<li>Mark the API as deprecated in the code</li>
+<li>Add internal code which warns the admin that the App is using deprecated code</li>
+<li>Provide guidance here how to resolve</li>
+<li>Make sure the warnings have been around for at least 6 months</li>
+<li>Remove the code on the next major release</li>
+</ol>
+<p>For v17 we plan to remove some very old APIs, which we believe are probably not even used any more.
+This is the list:</p>
+<ul>
+<li>The old namespace <code>ToSic.SexyContent.Interfaces.IApp</code> and all related code<br>
+We believe this is probably not used at all, since it's probably only ever used to access <code>App.Configuration</code> which is <code>dynamic</code> when using this interface,
+but a normal object with typed properties when using the normal <code>ToSic.Sxc.Apps.IApp</code> interface.</li>
+</ul>
+<h2 id="guide-to-fixing-issues">Guide to Fixing Issues</h2>
+<h3 id="fixing-sexycontentinterfacesiapp-removal">Fixing SexyContent.Interfaces.IApp removal</h3>
+<h4 id="background">Background</h4>
+<p>A long time ago 2sxc was called <strong>SexyContent</strong> and we used the namespace <code>ToSic.SexyContent.Interfaces</code> for various things.
+Ca. 2014, we decided to rename it to <strong>2sxc</strong> and use a <code>ToSic.Sxc</code> namespace instead.
+In addition to that, we created a clearer namespace structure.</p>
+<h4 id="am-i-affected">Am I Affected?</h4>
+<p>Most code does <em>not</em> explicitly use namespaces, and if your code is newer than 2016, you are probably not affected.</p>
+<p>But if you have <strong>any</strong> code which uses the namespace <code>ToSic.SexyContent</code> in your Razor or C# code you are affected.</p>
+<p>This is especially true if you have code such as:</p>
+<pre><code class="lang-c#">using SexyContent.Interfaces;
+IApp app = App;
+var version = app.Configuration.Version;
+</code></pre>
+<h4 id="how-to-fix">How to Fix</h4>
+<p>It's difficult to give you an exact guideline, because we don't know what your code does.
+But in most cases, you'll just be working with the current <code>App</code> object which is typed as <a class="xref" href="../../../../api/dot-net/ToSic.Sxc.Apps.IApp.html">IApp</a>.
+So in most cases, you don't need to specify the type at all, just use something like:</p>
+<pre><code class="lang-c#">var app = App;
+var version = App.Configuration.Get(&quot;Version&quot;);
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/abyss/releases/history/v17/breaking.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

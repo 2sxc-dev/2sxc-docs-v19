@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <!-- 2sxc docs -->
+  <head>
+    <meta charset="utf-8">
+      <title>Custom C# Web API - JSON Format | 2sxc 19 for Dnn and Oqtane </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Custom C# Web API - JSON Format | 2sxc 19 for Dnn and Oqtane ">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/web-api/json-format.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">      
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PH2TVNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GTM-PH2TVNW');
+  </script>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logos/vcurrent/50.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+
+
+
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+
+                <a class="btn btn-sm border-0 text-nowrap version-button" xstyle="padding: 10px 0 0 0; width: 25px" href="https://go.2sxc.org/docs-versions" target="_blank">
+                  &nbsp; v18 <i class="bi bi-caret-down-fill fs-6"></i>
+                </a>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NetCode.WebApi.JsonFormat">
+<h1 id="custom-c-web-api---json-format">Custom C# Web API - JSON Format</h1>
+
+<h2 id="background-json-format-in-webapi-requests">Background: JSON Format in WebApi Requests</h2>
+<p>Today most JavaScript clients use JSON to communicate with the server.
+This is a very simple format, which is easy to read and write.
+It's also very easy to parse in JavaScript, which is why it's so popular.</p>
+<p>In the old days, Microsoft used XML for this, but it's much more complex and difficult to read and write.
+When 2sxc was created, JSON was already the standard, so we never used XML.
+But at that time, the json plugin <strong>Newtonsoft</strong> was the de-facto standard, so we used that.
+But nowadays <code>System.Text.Json</code> is the de-facto standard.
+This means that <em>by default</em> this is what is being used:</p>
+<ol>
+<li>On DNN on all base classes up until <code>Custom.Hybrid.Api14</code> Newtonsoft is used for serialization</li>
+<li>On Oqtane all base classes use the new .net core serializer</li>
+</ol>
+<h2 id="how-to-go-modern">How to Go Modern</h2>
+<p>In 2sxc 16 we introduced a new attribute called <code>[JsonFormatter]</code> - see <a class="xref" href="../../api/dot-net/ToSic.Sxc.WebApi.JsonFormatterAttribute.html">JsonFormatterAttribute</a>.
+When it's applied to:</p>
+<ol>
+<li>a WebApi Controller class</li>
+<li>a specific method of that class</li>
+</ol>
+<p>then it will use the new .net core serializer.
+It has the following effects:</p>
+<ol>
+<li>It can auto-convert <code>IEntity</code> objects as well as lists/arrays of <code>IEntity</code> objects</li>
+<li>By default it will use <strong>camelCase</strong> for all properties, which is the modern standard.</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Remember that this applies to both <code>POST</code> data from the client,
+as well as response data.</p>
+</div>
+<h2 id="example">Example</h2>
+<pre><code class="lang-c#">using ToSic.Sxc.WebApi;   // For the [JsonFormatter] (see below)
+
+[AllowAnonymous]
+[JsonFormatter]
+public class Api14AttController : Custom.Hybrid.Api14
+{
+    [HttpGet]
+    public object GetEntity()
+    {
+        return (App.Data.List.First());
+    }
+
+    [HttpGet]
+    public object GetEntities()
+    {
+        return App.Data.List;
+    }
+}
+</code></pre>
+<h2 id="effects-on-the-post-data">Effects on the POST Data</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p><code>POST</code> data is parsed case-insensitive, so it doesn't matter if the client sends <code>camelCase</code> or <code>PascalCase</code> - it will be parsed correctly.</p>
+</div>
+<p>There are 2 important effects to keep in mind:</p>
+<ol>
+<li>Most JSON in the POST will be the same no matter which serializer is used</li>
+<li>Only exotic data such as binary files will be different</li>
+</ol>
+<h2 id="effects-on-response-data">Effects on Response Data</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Response data is usually read by JavaScript, which is case sensitive.</p>
+</div>
+<p>The main impact on Response Data is the client should expect <code>camelCase</code> instead of <code>PascalCase</code>.
+This can be configured if you want it differently, like this:</p>
+<pre><code class="lang-c#">  [HttpGet]
+  [JsonFormatter(Casing = Casing.Preserve)] // auto-convert but preserve casing
+  public dynamic PersonsAutoPreserveCasing()
+  {
+    return App.Data[&quot;Persons&quot;];
+  }
+</code></pre>
+<p>It will also auto-convert Entities for you, which used to be very difficult.
+See <a class="xref" href="auto-convert-entities.html">Custom C# Web API - Auto Convert Entities</a></p>
+<h2 id="recommended-reading">Recommended Reading</h2>
+<ul>
+<li><a class="xref" href="https://2sxc.org/dnn-tutorials/en/razor/tut/webapi-intro">Web API Tutorials</a></li>
+<li><a class="xref" href="../../api/dot-net/ToSic.Sxc.WebApi.JsonFormatterAttribute.html">JsonFormatterAttribute</a></li>
+</ul>
+<hr>
+<h2 id="history">History</h2>
+<ol>
+<li>New JsonFormatter introduced in 2sxc 16.00</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/2sic/2sxc-docs/blob/master/docs-src/pages/net-code/web-api/json-format.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+          <span>
+            Made by <a href="https://www.2sic.com">2sic</a>
+            with 💖 and
+            <a href="https://dotnet.github.io/docfx">docfx</a>
+            — 
+            for <a href="https://2sxc.org">2sxc</a>,
+            <a href="https://dnncommunity.org/">Dnn</a> 
+            and <a href="https://www.oqtane.org/">Oqtane</a>
+            — 
+            see also <a href="">2sxc Github</a> and <a href="https://blazor-cms.org">Blazor CMS</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
