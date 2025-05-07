@@ -1,11 +1,25 @@
 
 <img src="../assets/logos/vcurrent/500.png" width="150px" align="right" class="float-end">
 
-# 2sxc and EAV Docs v19.03.05 LTS
+# 2sxc and EAV Docs v19.03 🔒
 
 This is the technical documentation for 2sxc and it's parts such as the EAV system.
 
 💡 If you're new to 2sxc, best start with [2sxc.org](https://2sxc.org/).
+
+## ARCHIVE 🔒 Documentation
+
+> [!TIP]
+> This is an archive of the documentation for 2sxc v17.00 to v19.03.05.
+> It may be out of date if you have a newer 2sxc.
+>
+> The latest docs are on <https://docs.2sxc.org>.
+>
+> Version list: <https://go.2sxc.org/docs-versions?version=19.03&path=/>
+
+Note that to avoid confusion, this site is _not_ in the google index.
+
+---
 
 ## 2sxc turns Dnn & Oqtane into a CMS
 
