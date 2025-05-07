@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/Projects/2sxc/2sxc-docs/docs-src",
+  "source_base_path": "C:/Projects/2sxc/V19/2sxc-docs-v19/docs-src",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -512,16 +512,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/Custom.Data.CustomData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/Custom.Data.CustomData.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api-generated/api/dot-net/Custom.Data.CustomItem.yml",
       "output": {
         ".html": {
@@ -726,66 +716,6 @@
       "output": {
         ".html": {
           "relative_path": "api/dot-net/Custom.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/System.Diagnostics.CodeAnalysis.SetsRequiredMembersAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/System.Diagnostics.CodeAnalysis.SetsRequiredMembersAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/System.Diagnostics.CodeAnalysis.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/System.Diagnostics.CodeAnalysis.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/System.Runtime.CompilerServices.RequiredMemberAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/System.Runtime.CompilerServices.RequiredMemberAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/System.Runtime.CompilerServices.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/System.Runtime.CompilerServices.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/System.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/System.html"
         }
       },
       "version": ""
@@ -1256,16 +1186,6 @@
       "output": {
         ".html": {
           "relative_path": "api/dot-net/ToSic.Eav.Data.ILanguage.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Eav.Data.IRelationshipManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Eav.Data.IRelationshipManager.html"
         }
       },
       "version": ""
@@ -2012,16 +1932,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Eav.Factory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Eav.Factory.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api-generated/api/dot-net/ToSic.Eav.LookUp.ILookUp.yml",
       "output": {
         ".html": {
@@ -2622,26 +2532,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Adam.FileTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Adam.FileTyped.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Adam.FolderTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Adam.FolderTyped.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Adam.IAsset.yml",
       "output": {
         ".html": {
@@ -2676,26 +2566,6 @@
       "output": {
         ".html": {
           "relative_path": "api/dot-net/ToSic.Sxc.Adam.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Apps.AppFileTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Apps.AppFileTyped.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Apps.AppFolderTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Apps.AppFolderTyped.html"
         }
       },
       "version": ""
@@ -2746,36 +2616,6 @@
       "output": {
         ".html": {
           "relative_path": "api/dot-net/ToSic.Sxc.Apps.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Assets.IFileModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Assets.IFileModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Assets.IFolderModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Assets.IFolderModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Assets.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Assets.html"
         }
       },
       "version": ""
@@ -3222,56 +3062,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.IDataModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.IDataModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.IDataModelOf-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.IDataModelOf-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.IDataWrapper-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.IDataWrapper-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.IDataWrapper.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.IDataWrapper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.IDataWrapperForType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.IDataWrapperForType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.IDynamicEntity.yml",
       "output": {
         ".html": {
@@ -3352,130 +3142,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.ITypedItemWrapper.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.ITypedItemWrapper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.ITypedStack.yml",
       "output": {
         ".html": {
           "relative_path": "api/dot-net/ToSic.Sxc.Data.ITypedStack.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.DataModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.DataModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.DataModelAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.DataModelAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.DataModelConversion.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.DataModelConversion.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.DataModelOfItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.DataModelOfItem.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.IDataModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.IDataModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.IDataModelOf-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.IDataModelOf-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.ModelFromEntity.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.ModelFromEntity.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.ModelFromItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.ModelFromItem.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.ModelOfItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.ModelOfItem.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Model.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Model.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Models.ModelCreation-3.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Models.ModelCreation-3.html"
         }
       },
       "version": ""
@@ -3532,36 +3202,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Sys.FileTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Sys.FileTyped.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Sys.FolderTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Sys.FolderTyped.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.Sys.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Data.Sys.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Data.yml",
       "output": {
         ".html": {
@@ -3596,16 +3236,6 @@
       "output": {
         ".html": {
           "relative_path": "api/dot-net/ToSic.Sxc.DataSources.Pages.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.DataSources.Roles.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.DataSources.Roles.html"
         }
       },
       "version": ""
@@ -3946,246 +3576,6 @@
       "output": {
         ".html": {
           "relative_path": "api/dot-net/ToSic.Sxc.LookUp.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.Attributes.DataModelAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.Attributes.DataModelAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.Attributes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.Attributes.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.DataModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.DataModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.DataModelOfItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.DataModelOfItem.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.FileInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.FileInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.FileModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.FileModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.FileTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.FileTyped.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.FolderInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.FolderInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.FolderModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.FolderModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.FolderTyped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.FolderTyped.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IDataModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IDataModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IDataModelForType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IDataModelForType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IDataModelOf-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IDataModelOf-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IFileModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IFileModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IFolderModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IFolderModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IPageModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IPageModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.ISiteModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.ISiteModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IUserModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IUserModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.IUserRoleModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.IUserRoleModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.PageModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.PageModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.SiteModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.SiteModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.UserModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.UserModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.UserRoleModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.UserRoleModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-generated/api/dot-net/ToSic.Sxc.Models.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/dot-net/ToSic.Sxc.Models.html"
         }
       },
       "version": ""
@@ -6519,26 +5909,6 @@
       "output": {
         ".html": {
           "relative_path": "api/js/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "node_modules/@gerrit0/mini-shiki/static/mini-shiki-dependency-tree.svg",
-      "output": {
-        "resource": {
-          "relative_path": "node_modules/@gerrit0/mini-shiki/static/mini-shiki-dependency-tree.svg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "node_modules/@gerrit0/mini-shiki/static/shiki-dependency-tree.svg",
-      "output": {
-        "resource": {
-          "relative_path": "node_modules/@gerrit0/mini-shiki/static/shiki-dependency-tree.svg"
         }
       },
       "version": ""
