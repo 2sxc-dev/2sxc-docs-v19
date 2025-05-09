@@ -16,6 +16,3 @@ uid: Archive.Index
 > Version list: <https://go.2sxc.org/docs-versions?version=19.03&path=/>
 
 Note: To avoid confusion, this site is _not_ in the google index.
-
-> [!NOTE]
-> 
