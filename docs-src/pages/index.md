@@ -10,14 +10,15 @@ This is the technical documentation for 2sxc and it's parts such as the EAV syst
 ## ARCHIVE 🔒 Documentation
 
 > [!TIP]
-> This is an archive of the documentation for 2sxc v17.00 to v19.03.05.
-> It may be out of date if you have a newer 2sxc.
+> This is an archive of the documentation for 2sxc v17.00 to v19.03.05 LTS.
+>
+> _This is probably out of date if you have a newer 2sxc._
 >
 > The latest docs are on <https://docs.2sxc.org>.
 >
 > Version list: <https://go.2sxc.org/docs-versions?version=19.03&path=/>
 
-Note that to avoid confusion, this site is _not_ in the google index.
+Note: To avoid confusion, this site is _not_ in the google index.
 
 ---
 
