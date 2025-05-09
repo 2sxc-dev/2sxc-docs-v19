@@ -1442,6 +1442,9 @@ references:
   commentId: T:AppCode._Help
   fullName: AppCode._Help
   nameWithType: _Help
+- uid: Archive.Index
+  name: "ARCHIVE Docs v19.03 \U0001F512"
+  href: archive.html
 - uid: Basics.App.Configuration
   name: App Configuration
   href: basics/app/configuration.html

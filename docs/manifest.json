@@ -9847,6 +9847,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "pages/archive.md",
+      "output": {
+        ".html": {
+          "relative_path": "archive.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "pages/basics/app/assets/app-configuration-path.jpg",
       "output": {
